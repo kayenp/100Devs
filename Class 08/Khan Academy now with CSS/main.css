@@ -1,0 +1,399 @@
+/* Eric Myers' CSS reset */
+
+html, body, menu, nav, div, header, footer, h1, h2, h3, h4, h5, h6, hgroup, section, article, aside, p, address, blockquote, pre, form, output, fieldset, legend, label, details, summary, figure, figcaption, table, caption, thead, th, tr, td, tbody, tfoot, ol, ul, dd, dt, dl, li, a, span, b, big, em, i, small, strong, var, q, u, mark, ins, del, s, strike, abbr, acronym, cite, dfn, code, kbd, samp, time, ruby, sub, sup, center, applet, embed, iframe, audio, video, img, object, tt, canvas {
+    padding: 0;
+    border: 0;
+    margin: 0;
+    font: inherit;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+/* Eric Myers' display-role reset for older browsers */
+
+menu, nav, header, footer, hgroup, section, article, aside, details, figure, figcaption {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol, ul, {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote::before, blockquote::after, q::before, q::after {
+    content: "";
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/*
+========================
+Temp outline
+========================
+*/
+
+{
+    outline: 2px dotted green;
+}
+
+/*
+========================
+Grid
+========================
+*/
+
+/* Box-sizing */
+
+*, *::before, *::after {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+.container {
+
+}
+
+
+/*
+========================
+Base Styles
+========================
+*/
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font: 1rem "Roboto", "Fira Sans", "Helvetica Nueu", "Helvetica", sans-serif;
+    line-height: 1.5rem;
+    background-color: white;
+    min-width: 360px;
+
+}
+
+main, footer {
+    padding: 20px;
+}
+
+h1 {
+    font-size: 2.8rem;
+    line-height: 3.5rem;
+    font-weight: 500;
+    
+}
+
+h2 {
+    font-size: 2.2rem;
+    line-height: 3.3rem;
+    font-weight: 500;
+}
+
+p {
+    margin-bottom: 2rem;
+}
+
+.landscape, .expand_btn {
+    display: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/*
+========================
+Typography
+========================
+*/
+
+
+
+/*
+========================
+Navigation
+========================
+*/
+
+nav {
+    background-color: rgb(245, 245, 245);
+    height: 60px;
+    border-bottom: 1px solid rgb(230, 230, 230);
+}
+
+nav > .wrapper { /* to get nav list icons to line up side-by-side */
+    display: inline-block;
+    min-width: 60px;
+    height: 60px;
+}
+
+nav > [class=wrapper]:nth-child(+3) { /* khan logo float left */
+
+}
+
+nav > [class=wrapper] ~ [class=wrapper] { /* float right all except khan logo */
+    float: right;
+    padding: 12px;
+}
+
+.wrapper > img { /* to make sure icons don't get too big */
+    max-height: 100%;
+}
+
+@media screen and (min-width: 768px) {
+    nav {
+        background-color: white;
+    }
+    .landscape {
+        display: inline-block;
+    }
+
+    .float {
+        float: right;
+    }
+
+    nav > .landscape:nth-child(+4) {
+        text-align: right:
+    }
+
+    .landscape > form {
+        float: left;
+        vertical-align: top;
+        padding-bottom: 18px;
+        margin: 0 .8vw 0;
+    }
+
+    .landscape > ul > li {
+        display: inline-block;
+        float: right;
+        padding-top: 20px;
+        margin: 0 12px 0;
+
+        font-size: 1.5rem;
+        font-weight: 500;
+    }
+
+    nav > [class=wrapper]:nth-child(+3) {
+        text-align: center;
+        width: 33vw;
+        
+    }
+
+
+    nav > [class=wrapper] ~ [class=wrapper] {
+        display: none;
+    }
+
+    .shrink {
+        display: none;
+    }
+
+}
+
+
+
+/*
+========================
+Main
+========================
+*/
+
+main > section:first-child { /* selects the .hero <section> */
+    position: relative; /* to position:absolute h1 & p */
+    width: 100%;
+}
+
+.hero > div > div:first-child { /* float left hero img div */
+    float: right;
+
+}
+
+.hero > div > div:first-child > img { /* responsive hero img div */
+    width: 80vw;
+}
+
+.hero > div > div:nth-child(+2) { /* setting position:absolute for h1 & p for responsive */
+    position: absolute; 
+    left: 0;
+    bottom: 60px;
+}
+
+.hero > div > div:nth-child(+2) > h1 {
+    width: 70%;
+}
+
+.hero > div > div:nth-child(+2) > h1 > span {
+    width: 100%;
+}
+
+.hero > div > div:nth-child(+2) > p {
+    width: 80%;
+    font-size: 1.5rem;
+    line-height: 1.875rem;
+}
+
+.hero h1 > p {
+    display:inline-block;
+    border-bottom: 3px solid rgb(0, 255, 255);
+    padding-bottom: 4px;
+}
+
+/* media query for landscape */
+
+@media screen and (min-width: 768px) {
+    .hero > div:first-child {
+        max-height: 50vw;
+    }
+
+    .hero > div > div:first-child { /* float left hero img div */
+        float: left;
+        max-width: 50%;
+    }
+   
+    .hero > div > div:first-child > img { /* responsive hero img div */
+        max-width: 100%;
+    }
+
+    .hero > div > div:nth-child(+2) { /* setting position:absolute for h1 & p for responsive */
+        position: static;
+        float: right;
+        max-width: 50%;
+        padding-top: 40px; 
+    }
+}
+
+@media screen and (min-width: 1008px) {
+    .expand_btn, .expand_btn > li { /*setting list links in main to full width buttons */
+        display: inline-block;
+        text-align: left;
+        padding: 0 2rem 0 2rem;
+        margin: 0 4px 0 4px;
+    }
+
+    .expand_btn {
+        padding-left: 0;
+        margin-left: 0;
+    }
+
+    .expand_btn > li:first-child { /*setting list links in main to full width buttons */
+        margin-left: 0;
+
+    }
+}
+
+@media screen and (min-width: 1008 px) {
+    .hero > ul:last-child > li { 
+        display: none;
+    }
+}
+/* Button Links */
+
+.hero > ul:last-child > li { /*setting list links in main to full width buttons */
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+}
+
+/* media query for 
+
+/*
+========================
+Footer
+========================
+*/
+
+footer {
+    text-align: center;
+}
+
+footer > h2 {
+    display: inline-block;
+}
+
+footer {
+    margin: auto;
+    width: 99.9%;
+    height: 100vh;
+    background-color: rgba(68, 68, 68, .1);
+    border-radius: 10px 30px;
+}
+
+/*
+========================
+Buttons
+========================
+*/
+
+.hero > ul > li:first-child ~ li { /*hide desktop buttons */
+    display: none;
+}
+
+@media screen and (min-width: 1008px) {
+    .hero > ul:last-child > li { 
+        display: none;
+        width: 100%;
+        text-align: center;
+    }
+ }
+
+.hero > ul > li, .expand_btn > li { /* button links at main bottom */
+    font-size: 1.7rem;
+    height: 40px;
+    border: 1px solid blue;
+    background-color: blue;
+    padding-top: 12px;
+    border-radius: 3px;
+    margin-bottom: 8px;   
+}
+
+.hero > ul > li > a, .expand_btn > li > a { /* anchor link styling */
+    color: white;
+    text-decoration: none;
+    
+}
+
+
+/*
+========================
+
+========================
+*/
+
+/*
+========================
+
+========================
+*/
+
+/*
+========================
+clearfix
+========================
+*/
+
+.float_contain::before, .float_contain::after {
+    display: table;
+    content: "";
+}
+
+.float_contain::after {
+    clear: both;
+}
+
+.float_contain {
+    clear: both;
+    *zoom: 1;
+}

@@ -1,0 +1,534 @@
+/* Eric Myers' CSS reset */
+html, body, div, menu, nav, header, footer, h1, h2, h3, h4, h5, h6, hgroup, section, article, aside, p, address, blockquote, pre, form, output, fieldset, legend, label, details, summary, figure, figcaption, table, caption, thead, th, tr, td, ol, ul, dd, dt, dl, li, a, span, b, big, em, i, small, strong, var, q, u, mark, ins, del, s, strike, abbr, acronym, cite, dfn, code, kbd, samp, time, ruby, sub, sup, center, applet, embed, iframe, audio, video, img, object, tt, canvas {
+    padding: 0;
+    border: 0;
+    margin: 0;
+    font: inherit;
+    font-size: 100%;
+    vertical-align: baseline;
+} 
+
+/* Eric Myers' display-role reset */
+menu, nav, header, footer, hgroup, section, article, aside, details, figure, figcaption {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote::before, blockquote::after, q::before, q::after {
+    content: "";
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/*
+====================
+Grid
+====================
+*/
+
+*, *::before, *::after {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+/*
+====================
+Base
+====================
+*/
+
+html {
+    font-size: 62.5%;
+    background-color: rgb(230, 233, 237);
+}
+
+body {
+    min-width: 320px;
+    min-height: 520px;
+    font: 1.6rem "Roboto", "Fira Sans", "Helvetica Neue", "Helvetica", sans-serif;
+    line-height: 2.4rem;
+    background-color: rgb(245, 249, 252); 
+}
+
+main {
+    padding: 0px;
+    position: relative;
+}
+
+h1 {
+    font-size: 3.6rem;
+    line-height: 4.2rem;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+h2 {
+    font-size: 4.2rem;
+    line-height: 4.9rem;
+    font-weight: 700;
+    margin-bottom: 3.2rem;
+}
+
+.icon {
+    width: 30px;
+    height: 30px;
+}
+
+a {
+    font-weight: 700;
+    color: rgb(48, 70, 89);
+}
+
+/* ===Nav base=== */
+
+nav {
+    max-width: 100%;
+    height: 80px;
+    border-bottom: 2px solid;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.landscape, .superwide {
+    display: none; 
+ }
+
+ nav a:nth-child(+2) {
+    padding-right: 20px;
+    padding-top: 40px;
+    vertical-align: middle;
+}
+
+nav a, nav img {
+    max-height: 30%;
+}
+
+nav img {
+    float: left;
+    margin: 20px 0 0 20px;
+}
+
+
+@media screen and (min-width: 808px ) {
+    
+    nav {
+        border-bottom: none;
+    }
+    
+    .portrait {
+        display: none;
+    }
+
+    .landscape {
+        display: block;
+    }
+
+    nav > .clearfix {
+        display: inline-block;
+        text-align: center;
+        width: 396.4px;
+        margin: auto;
+    }
+
+    .landscape li {
+        float: left;
+        margin-top: 16px;
+    }
+
+    .landscape li:nth-child(+2), .landscape li:nth-child(+3) {
+        margin-left: 16px;
+        margin-right: 16px;
+    }
+
+    .landscape li:first-child {
+        margin-right: 16px;
+    }
+
+    .landscape li:last-child {
+        margin-left: 16px;
+    }
+
+    nav span {
+        text-align: center;
+        vertical-align: middle;
+        float: right;
+        padding: 4px 16px 4px 16px;
+        margin-top: 12px;
+        margin-right: 32px;
+        background-color:rgb(48, 70, 89);
+    }
+
+    span > a {
+        font-weight: 400;
+    }
+
+    nav a:nth-child(+2) {
+        float: left;
+        padding-top: 16px;
+        padding-left: 20px;
+    }
+
+    
+}
+
+
+
+
+
+/* ===Hero base=== */
+
+.hero {
+    margin-bottom: 4.8rem;
+}
+
+@media screen and (min-width: 808px) {
+    .col-thin {
+        width: 35%;
+        float: left;
+    }
+    
+    .col-wide {
+        width: 65%;
+        float: right;
+    }
+}
+
+.hero p {
+    margin-bottom: 3.2rem;
+}
+
+.hero-div {
+    padding: 0 20px;
+}
+
+.hero-div > h5:first-child {
+    margin-bottom: 3.2rem;
+    font-weight: 700;
+    font-variant: small-caps;
+    color: rgb(128, 150, 169);
+}
+
+form {
+    text-align: center;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 1.2rem;
+    margin-bottom: 1.7rem;
+    color: rgb(128, 150, 169); 
+}
+
+main button {
+    width: 100%;
+    padding: 1.2rem;
+    margin-bottom: 3.2rem;
+}
+
+.label-btn {
+    font-size: 1.8rem;
+}
+
+main div {
+}
+
+main img {
+    width: 100%;
+}
+
+/* ===Sub-hero base=== */
+
+.sub-hero {
+    padding: 0 20px;
+}
+
+.sub-hero p {
+    margin-bottom: 1.6rem;
+}
+
+.sub-hero li {
+    margin-bottom: 4.8rem;
+}
+
+@media screen and (min-width: 808px) {
+
+    .sub-hero .col {
+        height: 244.5px;
+    }
+    .col > p {
+        height: 45%;
+
+    }
+}
+
+/* ===Footer base=== */
+
+footer {
+    padding: 0 20px;
+}
+
+footer p {
+    margin-bottom: 3.2rem;
+}
+
+@media screen and (min-width: 808px) {
+    .col {
+        width: 25%;
+        float: left;
+    }
+
+    ul > .col:nth-child(+2), ul > .col:nth-child(+3) {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    ul > .col:first-child {
+        padding-left: 8px;
+        padding-right: 16px;
+    }
+
+    ul > .col:last-child {
+        padding-left: 16px;
+        padding-right: 8px;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    body {
+        margin-left: 275px;
+
+        max-width: 1125px;
+    }
+
+    .hero-div, .sub-hero, footer {
+        padding-left: 137.5px;
+        padding-right: 137.5px;
+    }
+
+    .col-thin, .col-wide {
+        width: 50%;
+    }
+
+    .superwide {
+        display:block;
+        position: absolute;
+        left: -250px;
+        width: 321px;
+        height: 840px;
+        background-color:rgb(245, 249, 252);
+        box-shadow: 60px 60px 40px rgba(0, 0, 0, .1);
+    }
+
+    .superwide-nav {
+        max-width: 100%;
+        height: 80px;
+        border-bottom: 2px solid;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    
+     
+    
+    .superwide-nav a, .superwide-nav img {
+        max-height: 30px;
+        max-width: 30px;
+        display: block;
+    }
+    
+    .superwide-nav img {
+        float: left;
+        margin: 20px 0 0 20px;
+    }
+    
+    .superwide-nav a:nth-child(+2) {
+        float: none;
+        display: inline;
+        padding-right: 60px;
+        padding-top: 40px;
+        vertical-align: middle;
+    }
+
+    .superwide-hero {
+        margin-bottom: 4.8rem;
+    }
+
+    .superwide-hero p {
+        margin-bottom: 3.2rem;
+    }
+    
+    .superwide .hero-div {
+        padding: 0 20px;
+    }
+    
+    .superwide .hero-div > h5:first-child {
+        margin-bottom: 3.2rem;
+        font-weight: 700;
+        font-variant: small-caps;
+        color: rgb(128, 150, 169);
+    }
+    
+    .superwide form {
+        text-align: center;
+    }
+    
+    .superwide input[type="text"] {
+        width: 100%;
+        padding: 1.2rem;
+        margin-bottom: 1.7rem;
+        color: rgb(128, 150, 169); 
+    }
+    
+    .superwide .hero button {
+        width: 100%;
+        padding: 1.2rem;
+        margin-bottom: 3.2rem;
+    }
+    
+    .superwide .label-btn {
+        font-size: 1.8rem;
+    }
+    
+    .superwide > .hero div {
+    }
+    
+    .superwide > .hero img {
+        width: 100%;
+    }
+}
+
+
+
+/*
+====================
+Navigation
+====================
+*/
+
+nav > a:nth-child(+2) {
+    font-size: 2.8rem;
+}
+
+/*
+====================
+Theme
+====================
+*/
+
+a {
+    text-decoration: none;
+}
+
+#search > input {
+    border: none;
+    background-color: rgb(225, 233, 240);
+}
+
+.btn {
+    text-decoration: none;
+    color: white;
+    border-radius: 0px;
+    border: none;
+    background-color: rgb(48, 70, 89);
+}
+
+footer {
+    padding-top: 60px;
+    background-color: white;
+}
+
+
+@media screen and (min-width: 808px) {
+.container {
+    width:  50%;
+    padding-left: 60px;
+    }
+}
+
+.style {
+    width: 90%;
+    height: 36px;
+    background-color: rgb(225, 233, 240);
+    margin: auto;
+}
+
+/*
+====================
+Main
+====================
+*/
+
+#search > input {
+    width
+}
+
+/*
+====================
+
+====================
+*/
+
+/*
+====================
+
+====================
+*/
+
+/*
+====================
+
+====================
+*/
+
+/*
+====================
+
+====================
+*/
+
+/*
+====================
+
+====================
+*/
+
+/*
+====================
+
+====================
+*/
+
+/*
+====================
+Clearfix
+====================
+*/
+
+.clearfix::before, .clearfix::after {
+    display: table;
+    content: "";
+}
+
+.clearfix::after {
+    clear: both;
+}
+
+.clearfix {
+    clear: both;
+    *zoom: 1;
+}

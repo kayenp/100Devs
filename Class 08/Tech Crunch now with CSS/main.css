@@ -1,0 +1,351 @@
+/* Eric Myers' CSS reset */
+
+html, body, div, menu, nav, header, footer, h1, h2, h3, h4, h5, h6, hgroup, section, article, aside, p, address, blockquote, pre, form, output, fieldset, legend, label, details, summary, figure, figcaption, table, caption, thead, th, tr, td, tbody, tfoot, ol, ul, dd, dt, dl, li, a, span, b, big, em, i, small, strong, var, q, u, mark, ins, del, s, strong, abbr, acronym, cite, dfn, code, kbd, samp, time, ruby, sub, sup, center, applet, embed, iframe, audio, video, img, object, tt, canvas {
+    padding: 0;
+    border: 0;
+    margin: 0;
+    font: inherit;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+/* Eric Myers' display-role reset */
+
+menu, nav, header, footer, hgroup, section, article, aside, details, figure, figcaption {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote::before, blockquote::after, q::before, q::after {
+    content: "";
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: none;
+}
+
+/*
+======================
+Grid
+======================
+*/
+
+*, *::before, *::after {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+/*
+======================
+Column
+======================
+*/
+
+.col_1_3 {
+    width: 30%;
+}
+
+.col_2_3 {
+    width: 60%;
+}
+
+
+/*
+======================
+Base
+======================
+*/
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font: 1.6rem "Roboto", "Fira Sans", "Helvetica Neue", "Helvetica", sans-serif;
+    line-height: 2.4rem;
+    padding: 20px;
+    min-width: 320px;
+    min-height: 569px;
+    position: relative;
+}
+
+.widescreen {
+    display: none;
+}
+
+nav {
+    padding-bottom: 20px;
+}
+
+h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    line-height: 3.3rem;
+}
+
+h2 {
+    font-weight: 700;
+}
+
+h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+h4 {
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+h5 {
+    font-size: 1rem;
+    font-weight: 400;
+    color:rgb(175, 175, 175)
+}
+
+/*
+======================
+Body
+======================
+*/
+
+@media screen and (min-width: 700px) {
+    body {
+        margin-left: 140px;
+    }
+}
+
+/*
+======================
+Typography
+======================
+*/
+
+a {
+    text-decoration: none;
+}
+
+a[href="join+"] {
+    font-weight: 700;
+    color: orange;
+}
+
+@media screen and (min-width: 700px) {
+    h1 {
+        font-size: 
+    }
+    
+    h2 {
+        font-size: 
+    }
+
+    h3 {
+        font-size: 
+    }
+}
+
+/*
+======================
+Navigation
+======================
+*/
+
+/* mobile first */
+
+nav > .tclogo, .hamburger {
+    width: 30px;
+    height: 30px;
+}
+
+.tclogo > a, .tclogo img, .hamburger > a, .hamburger img {
+    height: 100%;
+}
+
+.tclogo {
+    float: left;
+}
+
+.hamburger {
+    float: right;
+}
+
+@media screen and (min-width: 700px) {
+    .landscape {
+        display: none;
+    }
+
+    .widescreen {
+        display: inline;
+    }
+
+    nav {
+        position: relative;
+    }
+
+    nav {
+        position: fixed;
+        top: 20px;
+        left: 20px;
+    }
+
+    .tclogo {
+        float: none;
+    }
+
+    nav > div, nav li {
+        margin-bottom: 12px;
+    }
+}
+
+/*
+======================
+Header
+======================
+*/
+
+.hero > img, .hero_right h4 {
+    padding-bottom: 8px;
+    border-bottom: 1px solid rgb(220, 220, 220);
+}
+
+.hero > img {
+    min-width: 100%;
+}
+
+.hero_right li {
+    padding: 0 8px 0 8px;
+    margin: 12px 0 12px 0;
+}
+
+.hero_right li:last-child h4:last-child {
+    border-bottom: 3px solid rgb(220, 220, 220);
+}
+
+@media screen and (min-width: 700px) {
+    header {
+       max-width: 83vw;
+    }
+
+    .hero {
+        width: 50%;
+        float: left;
+        margin-right: 20px;
+    }
+
+    .hero_right {
+        width: 45%;
+        height: 100%;
+        float: right;
+        
+    }
+
+    .hero > img, .hero_right li:last-child h4:last-child {
+        border-bottom: none;            
+    }
+}
+/*
+======================
+Main
+======================
+*/
+
+main {
+    width: 100%;
+}
+
+h3 {
+    padding: 8px 0 16px 0;
+    border-bottom: 1px solid rgb(220, 220, 220);
+}
+
+main li {
+
+    margin: 12px 0 12px 0;
+}
+
+main h2 {
+    font-size: 2.0rem;
+    line-height: 3.0rem;
+}
+
+.main_headling > ul > li > .col_1_3 > img {
+    vertical-align: top;
+}
+
+li > .col_2_3 {
+    float: left;
+}
+
+li > .col_1_3 {
+    float: right;
+}
+
+.col_1_3 > img {
+    width: 100%;
+}
+
+@media screen and (min-width: 700px) {
+    .main_headline p {
+        float: left;
+        margin: 0 12px 0 20px;
+    }
+    .main_headline div, .main_headline p {
+        width: 31%;
+    }
+
+    .main_headline li {
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+        border-bottom:1px solid rgb(220, 220, 220);
+    }
+}
+/*
+======================
+Footer
+======================
+*/
+
+/*
+======================
+
+======================
+*/
+/*
+======================
+
+======================
+*/
+/*
+======================
+Clearfix
+======================
+*/
+
+.clearfix::before, .clearfix::after {
+    display: table;
+    content:"";
+}
+
+.clearfix::after {
+    clear: both;
+}
+
+.clearfix {
+    clear: both;
+    *zoom: 1;
+}
