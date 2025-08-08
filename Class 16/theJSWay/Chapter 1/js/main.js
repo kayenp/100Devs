@@ -32,5 +32,3 @@ function sixAndThree() {
     body.insertBefore(h2, script);
     h2.textContent = `6 + 3 = ${6 + 3}, 6 - 3 = ${6 - 3}, 6 * 3 = ${6 * 3}, 6 / 3 = ${6 / 3}`;
 }
-
-sixAndThree();
