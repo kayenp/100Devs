@@ -1,25 +1,27 @@
-const andi = document.querySelector('#andi')
-const claire = document.querySelector('#claire')
-const sharleen = document.querySelector('#sharleen')
+const contestants = [...document.querySelectorAll("h2")];
+const images = [...document.querySelectorAll("img")];
 
-document.querySelector('#andiNext').addEventListener('click', /*INSERTCODE*/)
-document.querySelector('#claireNext').addEventListener('click', /*INSERTCODE*/)
-document.querySelector('#sharleenNext').addEventListener('click', /*INSERTCODE*/)
+for (let i = 0; i < contestants.length; i++) {
+	contestants[i].addEventListener("click", hideAll);
+	contestants[i].addEventListener("click", () => images[i].classList.remove("hidden"));
+	contestants[i].addEventListener("click", rotateImg);
 
-function andiNext(){
-	claire.classList.add(/*INSERTCODE*/)
-	sharleen.classList.add(/*INSERTCODE*/)
-	andi.classList.toggle(/*INSERTCODE*/)
-}
+	function hideAll() {
+		images.forEach((item) => item.classList.add("hidden"));
+	}
 
-function claireNext(){
-	/*INSERTCODE*/.classList.add(/*INSERTCODE*/)
-	/*INSERTCODE*/.classList.add(/*INSERTCODE*/)
-	/*INSERTCODE*/.classList.toggle(/*INSERTCODE*/)
-}
-
-function sharleenNext(){
-	/*INSERTCODE*/.classList.add(/*INSERTCODE*/)
-	/*INSERTCODE*/.classList.add(/*INSERTCODE*/)
-	/*INSERTCODE*/.classList.toggle(/*INSERTCODE*/)
-}
+	function rotateImg() {
+		let rotations = 0;
+		let setIntervalID = setInterval(rotate, 25);
+		
+		function rotate() {
+			images[i].style.transform = `rotateZ(${rotations * 15}deg)`;
+			
+			rotations++;
+			
+			if (rotations == 25) {
+			clearInterval(setIntervalID);
+			};	
+		}
+	}
+};
