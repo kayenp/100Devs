@@ -281,16 +281,5 @@ const groupByIdReduced = arr => {
     return newArr;   
 }
 
-/*
-const groupByIdReduced = arr => {
-    const newObj = arr.reduce((a,currVal) => {
-      a[currVal.id] = currVal
-      
-      return a
-    }, {})
-    
-    return [newObj];   
-}
-*/
 let usersById2 = groupByIdReduced(users3);
 console.log(groupByIdReduced(users3));
