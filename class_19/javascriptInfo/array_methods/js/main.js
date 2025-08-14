@@ -61,7 +61,6 @@ const filterRangeInPlace = (arr2,a,b) => {
             arr2.splice(arr2.indexOf(elem), 1);
         };
     };
-    console.log(arr2);
 }
 let fRIP = filterRangeInPlace(arr2, 1, 4);
 
@@ -174,7 +173,7 @@ let pete3 = { name: "Pete", age: 30 };
 let mary3 = { name: "Mary", age: 28 };
 let arr5 = [ pete3, john3, mary3 ];
 const sortByAge = users => users.sort((a,b) => a["age"] - b["age"]);
-console.log(sortByAge(arr5), arr5);
+
 // now: [john, mary, pete]
 //alert(arr5[0].name); // John
 //alert(arr5[1].name); // Mary
@@ -224,14 +223,74 @@ Filter unique array members
 let strings = ["Hare", "Krishna", "Hare", "Krishna",
   "Krishna", "Krishna", "Hare", "Hare", ":-O"
 ];
-const unique = arr => {
-    let filtered = arr.filter((elem) => {
-        for(let i = 0; i < arr.length; i++){
-            elem != elem[i];
-        };
-    })
-    return filtered;
+const unique = arr => { 
+    let emptyArr = [];
+    arr.forEach((elem) => {
+        if (!emptyArr.includes(elem)) {emptyArr.push(elem)};
+        }
+    );
+    return emptyArr;
 }
-console.log(unique(strings));
+
 
 //alert( unique(strings) ); // Hare, Krishna, :-O
+
+/*
+Create keyed object from array
+*/
+//Let’s say we received an array of users in the form {id:..., name:..., age:... }.
+//Create a function groupById(arr) that creates an object from it, with id as the key, and array items as values.
+let users3 = [
+  {id: 'john', name: "John Smith", age: 20},
+  {id: 'ann', name: "Ann Smith", age: 24},
+  {id: 'pete', name: "Pete Peterson", age: 31},
+];
+
+/*
+// after the call we should have:
+usersById = {
+  john: {id: 'john', name: "John Smith", age: 20},
+  ann: {id: 'ann', name: "Ann Smith", age: 24},
+  pete: {id: 'pete', name: "Pete Peterson", age: 31},
+}
+*/
+const groupById = arr => {
+    let newObj = {};
+    arr.forEach((elem) => {
+        newObj[`${elem["id"]}`] = {
+            id: elem["id"],
+            name: elem["name"],
+            age: elem["age"],
+        }
+    })
+    let newArr = [newObj];
+    return newArr;
+}
+let usersById = groupById(users3);
+
+
+
+
+const groupByIdReduced = arr => {
+    let newObj = {};
+    arr.reduce((acc, currVal) => {
+        acc[currVal["id"]] = currVal;
+        return acc;
+    }, newObj)
+    let newArr = [newObj];
+    return newArr;   
+}
+
+/*
+const groupByIdReduced = arr => {
+    const newObj = arr.reduce((a,currVal) => {
+      a[currVal.id] = currVal
+      
+      return a
+    }, {})
+    
+    return [newObj];   
+}
+*/
+let usersById2 = groupByIdReduced(users3);
+console.log(groupByIdReduced(users3));
