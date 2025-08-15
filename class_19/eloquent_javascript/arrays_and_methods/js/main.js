@@ -1,37 +1,30 @@
 "use strict";
 
-//Define String.prototype.toAlternatingCase (or a similar function/method such as to_alternating_case/toAlternatingCase/ToAlternatingCase in your selected language; see the initial solution for details) such that each lowercase letter becomes uppercase and each uppercase letter becomes lowercase. 
-// For example:
 /*
-"hello world".toAlternatingCase() === "HELLO WORLD"
-"HELLO WORLD".toAlternatingCase() === "hello world"
-"hello WORLD".toAlternatingCase() === "HELLO world"
-"HeLLo WoRLD".toAlternatingCase() === "hEllO wOrld"
-"12345".toAlternatingCase()       === "12345"                   // Non-alphabetical characters are unaffected
-"1a2b3c4d5e".toAlternatingCase()  === "1A2B3C4D5E"
-"String.prototype.toAlternatingCase".toAlternatingCase() === "sTRING.PROTOTYPE.TOaLTERNATINGcASE"
-As usual, your function/method should be pure, i.e. it should not mutate the original string.
+Sum of a Range
 */
-/*
-STEPS
-GOAL - convert every character to it's alternate case without mutating string
-- determine case of characters
-    - ignore non-alphabetical chars
-    - check each individual character
-        - determine if character is alphabetical or not
-        - for loop and iterate through?
-            - needs to output results to new str
-        - an array?
-    - needs to be pure function, not mutating original str
-        - an array?
-        - slice()?
-*/
+//Write a range function that takes two arguments, start and end, and returns an array containing all the numbers from start up to and including end.
+const range = (start,end) => {
+    let newArr = [];
+    for (let i = (start - 1); i < end; i++) {
+        newArr.push(i+1);
+    };
+    return newArr;
+}
+console.log(range(32,50));
 
-String.prototype.toAlternatingCase = function () {
-    let arr = this.split("");
-    return arr = arr.map((elem) => {
-        return (elem === elem.toLowerCase()) ? elem = elem.toUpperCase() : elem = elem.toLowerCase();
-     });
-};
+//Next, write a sum function that takes an array of numbers and returns the sum of these numbers. Run the example program and see whether it does indeed return 55.
+const sum = (arr) => arr.reduce((acc,currVal) => acc + currVal);
+console.log(sum(range(1,10)));
 
-console.log("1a2b3c4d5e".toAlternatingCase());
+//As a bonus assignment, modify your range function to take an optional third argument that indicates the “step” value used when building the array. If no step is given, the elements should go up by increments of one, corresponding to the old behavior. 
+// The function call range(1, 10, 2) should return [1, 3, 5, 7, 9]. Make sure this also works with negative step values so that range(5, 2, -1) produces [5, 4, 3, 2].
+const rangeBetter = (start,end,step = 0) => {
+    let difference = (start < end) ? end - start : start - end;
+    let newArr = [];
+    for (let i = 0; i <= difference; i++) {
+        newArr.push((i + 1))
+    };
+    return newArr;
+}
+console.log(rangeBetter(5,2));
