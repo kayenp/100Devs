@@ -37,4 +37,21 @@ String.prototype.toAlternatingCase = function () {
      });
 };
 
-console.log("1a2b3c4d5e".toAlternatingCase());
+/*
+==========
+2025_08_16
+==========
+*/
+//Write a function that always returns 5
+//Just bear in mind that you can't use any of the following characters: 0123456789*+-/
+function unusualFive() {
+    const str = "fixed"
+    return str.length;
+};
+
+//This kata is about multiplying a given number by eight if it is an even number and by nine otherwise.
+const simpleMultiplication = number => (number % 2 === 0) ? number * 8 : number * 9
+
+
+
+
