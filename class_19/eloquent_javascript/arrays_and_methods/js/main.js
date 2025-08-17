@@ -63,4 +63,64 @@ const reverseArrayInPlace = arr => {
 //Thinking back to the notes about side effects and pure functions in the previous chapter, which variant do you expect to be useful in more situations? Which one runs faster?
 //A: reverseArray should run faster and be more flexible/useful than reverseArrayInPlace
 
+/*
+A list
+*/
+//Write a function arrayToList that builds up a list structure like the one shown when given [1, 2, 3] as argument.
+let arr = [1,2,3];
 
+const arrayToList = arr => {
+    let obj = {
+        value: undefined,
+        rest: undefined,
+    };
+
+
+    for (let i = (arr.length -1); i > 0; i--) {
+        obj = objRest(i);
+    }
+
+    return obj;
+
+    function objVal(i) {
+        let newObj = {
+            value: i,
+        };
+        return newObj;
+    };
+
+    function objRest(i) {
+        let newObj = {
+            value: objVal(i),
+        };
+        if (i === arr.length - 1) {newObj.rest = null};
+        return {newObj};
+    }
+}
+    console.log(arrayToList(arr));
+
+
+
+
+// Also write a listToArray function that produces an array from a list. 
+// Add the helper functions prepend, which takes an element and a list and creates a new list that adds the element to the front of the input list, and nth, which takes a list and a number and returns the element at the given position in the list (with zero referring to the first element) or undefined when there is no such element.
+//Goal - 
+//==================================
+
+//==============================
+/*
+let list = {
+  value: 1,
+  rest: {
+    value: 2,
+    rest: {
+      value: 3,
+      rest: null
+    }
+  }
+};
+*/
+
+/*
+Deep comparison
+*/
