@@ -76,8 +76,17 @@ const arrayToList = arr => {
     };
 
 
-    for (let i = (arr.length -1); i > 0; i--) {
-        obj = objRest(i);
+    for (let i = (arr.length - 1); i > 0; i--) {
+        let tempObj = {};
+        if (i < (arr.length - 1)) {
+            tempObj = obj;
+        }
+        tempObj.value = objVal(i);
+        if ((i === (arr.length - 1))) {
+            tempObj.rest = null;
+        };
+        obj.rest = {tempObj};
+        console.log(obj);
     }
 
     return obj;
@@ -91,11 +100,11 @@ const arrayToList = arr => {
 
     function objRest(i) {
         let newObj = {
-            value: objVal(i),
+            rest: (i === (arr.length - 1)) ? obj.rest = null : obj.rest = {},
         };
-        if (i === arr.length - 1) {newObj.rest = null};
-        return {newObj};
+        return newObj;
     }
+
 }
     console.log(arrayToList(arr));
 
