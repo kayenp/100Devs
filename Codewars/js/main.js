@@ -71,5 +71,53 @@ const summation = num => {
     return sum;
 }
 
-console.log(summation(8));
+/*
+==========
+2025_08_20
+==========
+*/
+//Your task is to find the first element of an array that is not consecutive.
+//By not consecutive we mean not exactly 1 larger than the previous element of the array.
+//E.g. If we have an array [1,2,3,4,6,7,8] then 1 then 2 then 3 then 4 are all consecutive but 6 is not, so that's the first non-consecutive number.
+//If the whole array is consecutive then return null2.
+//The array will always have at least 2 elements1 and all elements will be numbers. The numbers will also all be unique and in ascending order. The numbers could be positive or negative and the first non-consecutive could be either too!
+const firstNonConsecutive = arr => {
+    for (let i = 0; i < (arr.length - 1); i++) {
+        let currVal = arr[i];
+        let nextVal = arr[i+1];
+        if ((nextVal - currVal) !== 1) {
+            return nextVal;
+        }
+    }
+    return null;
+}
 
+/*
+==========
+2025_08_XX
+==========
+*/
+//Complete the function which converts hex number (given as a string) to a decimal number.
+/*
+Pseudo code:
+    Requirements
+        1. Needs to account for input length
+        2. Needs to check if character is hexadecimal
+            a. Needs to automatically convert character case if not uppercase
+        3. Needs to ignore operator symbols
+    Steps:
+        1. Set string to all uppercase & split string into array & assign to variable
+        2. Get length of array & assign length to variable
+        3. Create regex pattern & assign to variable
+        4. Use .map() to run expression on each element & assign output results to array variable
+            a. Expression will:
+                i. Check whether element is alphabetical or numerical character
+                ii. Convert numbers to base 16 equivalent; formula is (digit * 16^digitPosition + nextDigit * 16^digitPosition...)
+                iii. Convert alphabetical characters to base 16 equivlant
+                    a. Convert alphabetical characters to hexadecimal value; (A = 10, B = 11, C = 12, D = 13, E = 14, F = 15)
+                        i. Create object array containing values
+                            a. Object name should be character (A, B, C...)
+                            b. Object .value should be hexadecimal value
+                iv. Ignores non-alphanumeric characters and leaves them in place
+        5. Return array variable
+*/
