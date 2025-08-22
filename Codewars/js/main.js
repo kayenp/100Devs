@@ -112,7 +112,7 @@ const calcAvg = arr => {
 
 /*
 ==========
-2025_08_XX
+2025_08_22
 ==========
 */
 //Complete the function which converts hex number (given as a string) to a decimal number.
@@ -139,8 +139,6 @@ Pseudo code:
                 iv. Ignores non-alphanumeric characters and leaves them in place
         5. Return array variable
 */
-/*
-========================================================
 const hexToDec = str => {
     let strArr = str.toUpperCase().split("");
     let totalDigits = str.length;
@@ -169,24 +167,35 @@ const hexToDec = str => {
     ]
     let letterVals = letterObj[0];
     let valuesArr = [];
+    let symbol = [];
     
 
-    for (let i = (totalDigits - 1); i >= 0; i--) {
+    for (let i = 0; i < totalDigits; i++) {
         let digitPos = (totalDigits - i);
         let exponent = (digitPos - 1);
         let currVal = strArr[i];
         let val;
         
-        ((isNaN(currVal) === true) && regPattern.test(currVal) === true) ? val = letterVals[currVal].value : val = currVal;
+       if ((isNaN(currVal) === true) && regPattern.test(currVal) === true)  {
+        val = letterVals[currVal].value 
+        } else if ((isNaN(currVal) === true)) {
+            symbol = currVal;
+            val = 0;
+        } else {
+            val = currVal;
+        };
 
         let hexToDecFormula = (val * 16**exponent);
+        (Number.isInteger(Number(val)) === true) ? valuesArr.push(hexToDecFormula) : valuesArr.push(val);
 
-        (Number.isInteger(val) === true) ? valuesArr.push(hexToDecFormula) : valuesArr.push(val);
+        console.log(valuesArr);
     }
     
+    let total = [valuesArr.reduce((acc, currVal) => acc + currVal)];
 
+    total.unshift(symbol);
+
+    return Number(total.join(""));
 }
 
-console.log(hexToDec("ff"));
-========================================================
-*/
+
