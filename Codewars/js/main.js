@@ -94,6 +94,26 @@ const firstNonConsecutive = arr => {
 
 /*
 ==========
+2025_08_21
+==========
+*/
+//Write a function which calculates the average of the numbers in a given array.
+const calcAvg = arr => {
+    if (arr.length > 0) {
+        let reduced = arr.reduce((acc, currVal) => {
+            acc =  acc + currVal;
+            return acc;
+        })
+        return reduced/arr.length;
+    } else {
+        return 0;
+    };
+}
+
+console.log(calcAvg([]));
+
+/*
+==========
 2025_08_XX
 ==========
 */
@@ -120,4 +140,55 @@ Pseudo code:
                             b. Object .value should be hexadecimal value
                 iv. Ignores non-alphanumeric characters and leaves them in place
         5. Return array variable
+*/
+/*
+========================================================
+const hexToDec = str => {
+    let strArr = str.toUpperCase().split("");
+    let totalDigits = str.length;
+    let regPattern = /[A-F]/;
+    let letterObj = [
+        {
+            A: {
+                value: 10,
+            },
+            B: {
+                value: 11,
+            },
+            C: {
+                value: 12,
+            },
+            D: {
+                value: 13,
+            },
+            E: {
+                value: 14,
+            },
+            F: {
+                value: 15,
+            },
+        }
+    ]
+    let letterVals = letterObj[0];
+    let valuesArr = [];
+    
+
+    for (let i = (totalDigits - 1); i >= 0; i--) {
+        let digitPos = (totalDigits - i);
+        let exponent = (digitPos - 1);
+        let currVal = strArr[i];
+        let val;
+        
+        ((isNaN(currVal) === true) && regPattern.test(currVal) === true) ? val = letterVals[currVal].value : val = currVal;
+
+        let hexToDecFormula = (val * 16**exponent);
+
+        (Number.isInteger(val) === true) ? valuesArr.push(hexToDecFormula) : valuesArr.push(val);
+    }
+    
+
+}
+
+console.log(hexToDec("ff"));
+========================================================
 */

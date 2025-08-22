@@ -67,47 +67,6 @@ const reverseArrayInPlace = arr => {
 A list
 */
 //Write a function arrayToList that builds up a list structure like the one shown when given [1, 2, 3] as argument.
-let arr = [1,2,3];
-
-const arrayToList = arr => {
-    let obj = {
-        value: undefined,
-        rest: undefined,
-    };
-
-
-    for (let i = (arr.length - 1); i > 0; i--) {
-        let tempObj = {};
-        if (i < (arr.length - 1)) {
-            tempObj = obj;
-        }
-        tempObj.value = objVal(i);
-        if ((i === (arr.length - 1))) {
-            tempObj.rest = null;
-        };
-        obj.rest = {tempObj};
-        console.log(obj);
-    }
-
-    return obj;
-
-    function objVal(i) {
-        let newObj = {
-            value: i,
-        };
-        return newObj;
-    };
-
-    function objRest(i) {
-        let newObj = {
-            rest: (i === (arr.length - 1)) ? obj.rest = null : obj.rest = {},
-        };
-        return newObj;
-    }
-
-}
-    console.log(arrayToList(arr));
-
 
 
 
