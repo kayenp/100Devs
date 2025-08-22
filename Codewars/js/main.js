@@ -110,8 +110,6 @@ const calcAvg = arr => {
     };
 }
 
-console.log(calcAvg([]));
-
 /*
 ==========
 2025_08_XX
