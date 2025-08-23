@@ -198,4 +198,11 @@ const hexToDec = str => {
     return Number(total.join(""));
 }
 
-
+/*
+==========
+2025_08_23
+==========
+*/
+//Write a function that returns the total surface area and volume of a box.
+//The given input will be three positive non-zero integers: width, height, and depth.
+const getSize = (w, h, d) => [(2*((w*h) + (h*d) + (w*d))), (w*h*d)]

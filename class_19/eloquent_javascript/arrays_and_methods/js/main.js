@@ -67,7 +67,55 @@ const reverseArrayInPlace = arr => {
 A list
 */
 //Write a function arrayToList that builds up a list structure like the one shown when given [1, 2, 3] as argument.
+class Node {
+    constructor(value, rest = null) {
+        this.value = value;
+        this.rest = rest;
+    };
+};
 
+const n1 = new Node(100);
+
+class LinkedList {
+    constructor() {
+        this.head = null;
+        this.size = 0;
+    }
+
+    //Insert first node
+    insertFirst(value) {
+        this.head = new Node(value, this.head);
+    }
+
+    //Insert last node
+
+
+    //Insert at index
+
+
+    //Get at index
+
+
+    //Remove at index
+
+
+    //Clear list
+
+
+    //Print list data
+
+    //Insert test
+    insertTest(value) {
+        this.head = new Node(value, this.extra);
+    }
+}
+
+const ll = new LinkedList();
+
+ll.insertFirst(100);
+ll.insertFirst(200);
+
+console.log(ll);
 
 
 // Also write a listToArray function that produces an array from a list. 
