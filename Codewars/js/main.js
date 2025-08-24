@@ -206,3 +206,19 @@ const hexToDec = str => {
 //Write a function that returns the total surface area and volume of a box.
 //The given input will be three positive non-zero integers: width, height, and depth.
 const getSize = (w, h, d) => [(2*((w*h) + (h*d) + (w*d))), (w*h*d)]
+
+/*
+==========
+2025_08_24
+==========
+*/
+//You are given two sorted arrays that contain only integers. These arrays may be sorted in either ascending or descending order. 
+//Your task is to merge them into a single array, ensuring that:
+//The resulting array is sorted in ascending order.
+//Any duplicate values are removed, so each integer appears only once.
+//If both input arrays are empty, return an empty array.
+//No input validation is needed, as both arrays are guaranteed to contain zero or more integers.
+const mergeArrays = (arr1, arr2) => {
+    arr1.splice(-1, 0, ...arr2);
+    return [...new Set(arr1.sort((a,b) => a - b ))];
+}
