@@ -222,3 +222,39 @@ const mergeArrays = (arr1, arr2) => {
     arr1.splice(-1, 0, ...arr2);
     return [...new Set(arr1.sort((a,b) => a - b ))];
 }
+
+/*
+==========
+2025_08_25
+==========
+*/
+//When provided with a number between 0-9, return it in words. Note that the input is guaranteed to be within the range of 0-9.
+//If your language supports it, try using a switch statement.
+const switchItUp = num => {
+    switch(num) {
+        case 0:
+            return "Zero";
+        case 1:
+            return "One";
+        case 2:
+            return "Two";
+        case 3:
+            return "Three";
+        case 4:
+            return "Four";
+        case 5:
+            return "Five";
+        case 6:
+            return "Six";
+        case 7:
+            return "Seven";
+        case 8:
+            return "Eight";
+        case 9:
+            return "Nine";
+        default:
+            return "Please enter a single digit number";
+    };
+}
+
+console.log(switchItUp(3));
