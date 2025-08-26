@@ -138,17 +138,14 @@ const prepend = (objElem, list) => {
 
 //nth, which takes a list and a number and returns the element at the given position in the list (with zero referring to the first element) or undefined when there is no such element.
 //If you haven’t already, also write a recursive version of nth.
-const nth = (list,num) => {
-    
-
-    for (let i = 0; i < num; i++) {
-            
+const nth = (list, num) => {
+    if (num === 1) {
+        return list;
+    } else {
+        return nthAgain(list = list.rest, num - 1);
+        
     }
-
-}
-
-
-
+};
 
 //Goal - 
 //==================================
