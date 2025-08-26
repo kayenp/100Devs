@@ -257,4 +257,11 @@ const switchItUp = num => {
     };
 }
 
-console.log(switchItUp(3));
+/*
+==========
+2025_08_26
+==========
+*/
+//Given an array of integers as strings and numbers, return the sum of the array values as if all were numbers.
+const sumMix = x => x.map((elem) => Number(elem)).reduce((a,b) => a + b);
+
