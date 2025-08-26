@@ -67,6 +67,8 @@ const reverseArrayInPlace = arr => {
 A list
 */
 //Write a function arrayToList that builds up a list structure like the one shown when given [1, 2, 3] as argument.
+
+let arr = [1,2,3];
 class Node {
     constructor(value, rest = null) {
         this.value = value;
@@ -74,52 +76,84 @@ class Node {
     };
 };
 
-const n1 = new Node(100);
-
-class LinkedList {
-    constructor() {
-        this.head = null;
-        this.size = 0;
-    }
-
-    //Insert first node
-    insertFirst(value) {
-        this.head = new Node(value, this.head);
-    }
-
-    //Insert last node
-
-
-    //Insert at index
-
-
-    //Get at index
-
-
-    //Remove at index
-
-
-    //Clear list
-
-
-    //Print list data
-
-    //Insert test
-    insertTest(value) {
-        this.head = new Node(value, this.extra);
-    }
+const arrayToList = arr => {
+    let newObj;
+    for (let i = arr.length - 1; i >= 0; i--) {
+        (newObj === undefined) ? newObj = new Node(arr[i]) : newObj = new Node(arr[i], newObj);
+    };
+    return newObj;
 }
 
-const ll = new LinkedList();
+// Also write a listToArray function that produces an array from a list.
+let list = {
+    value: 1,
+    rest: {
+        value: 2,
+        rest: {
+            value: 3,
+            rest: null
+        },
+    },
+};
 
-ll.insertFirst(100);
-ll.insertFirst(200);
+const listToArray = list => {
+    let newArr = Object.values(list);
+    while (true) {
+        let lastElem = newArr.length - 1;
+        if (newArr[lastElem] !== null) {
+            newArr = newArr.concat(Object.values(newArr[lastElem]));
+        } else {
+            break;
+        }
+    }
+    return newArr = newArr.filter(elem => (Number.isInteger(elem) === true));
+}
 
-console.log(ll);
+
+// nth, which takes a list and a number and returns the element at the given position in the list (with zero referring to the first element) or undefined when there is no such element
+const arrayToList2 = arr => {
+    let newObj;
+    for (let i = arr.length - 1; i >= 0; i--) {
+        (newObj === undefined) ? newObj = new Node(arr[i]) : newObj = new Node(arr[i], newObj);
+    };
+    return newObj;
+}
+
+// Add the helper functions prepend, which takes an element and a list and creates a new list that adds the element to the front of the input list
+let list2 = {
+    value: 4,
+    rest: {
+        value: 5,
+        rest: {
+            value: 6,
+            rest: null
+        },
+    },
+};
+
+const prepend = (objElem, list) => {
+    objElem.rest = list;
+    return objElem;
+};
+
+let resultObj = prepend(list,list2);
+let {rest} = resultObj;
+console.log(rest);
+
+//nth, which takes a list and a number and returns the element at the given position in the list (with zero referring to the first element) or undefined when there is no such element.
+//If you haven’t already, also write a recursive version of nth.
+const nth = (list,num) => {
+    
+
+    for (let i = 0; i < num; i++) {
+        
+    }
+
+}
 
 
-// Also write a listToArray function that produces an array from a list. 
-// Add the helper functions prepend, which takes an element and a list and creates a new list that adds the element to the front of the input list, and nth, which takes a list and a number and returns the element at the given position in the list (with zero referring to the first element) or undefined when there is no such element.
+
+
 //Goal - 
 //==================================
 
