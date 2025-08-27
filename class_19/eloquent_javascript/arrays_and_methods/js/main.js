@@ -154,18 +154,41 @@ Deep comparison
 - object reference is same = true
 - object properties and values are same = true
 - typeof returns "obj" when checking "null"
-    -need to differentiate between obj & null
+    - need to differentiate between obj & null
+        - check for null
 - needs to compare values of properties with recursive call to deepEqual
 */
 let obj = {here: {is: "an"}, object: 2};
 let untrueObj = {here: 1, object: 2}
 
 const deepEqual = (val1, val2) => {
-    if (val1 && val2) {
-
+    if ((Array.isArray(val1) === true) && (Array.isArray(val2) === true) && (typeof val1[0] !== "object") && (typeof val2[0] !== "object")) {
+        if (val1.length !== val2.length) {
+            return false;
+        } else {
+            for (let i = 0; i < val1.length; i++) {
+                if (val1[i] !== val2[i]) {
+                    return false;
+                } else {
+                    return true;
+                }
+            }
+        }
+    } else if (((Array.isArray(val1) === true) && (Array.isArray(val2) === true)) && ((typeof val1[0] === "object") && (typeof val2[0] === "object"))) {
+        return deepEqual(val1 = val1[0], val2 = val2[0]);
+    } else if (typeof val1[0] !== typeof val2[0]) {
+        return false;
+    } else {
+        if (((typeof Object.keys(val1) === "object") && (Object.keys(val1) !== null)) && ((typeof Object.keys(val2) === "object") && (Object.keys(val2) !== null))) {
+            if (Object.keys(val1).length !== Object.keys(val2).length) {
+                return false;
+            }
+            for (let i = 0; i < Object.keys(val1).length; i++) {
+                if (Object.keys(val1)[i] !== Object.keys(val2)[i]) {
+                    return false;
+                }
+            }
+        } 
     }
-
-}
-
-
-console.log(deepEqual(obj, ({here: {is: "an"}, object: 2})));
+    return deepEqual(val1 = Object.values(val1), val2 = Object.values(val2));
+};
