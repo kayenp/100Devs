@@ -67,7 +67,6 @@ const reverseArrayInPlace = arr => {
 A list
 */
 //Write a function arrayToList that builds up a list structure like the one shown when given [1, 2, 3] as argument.
-
 let arr = [1,2,3];
 class Node {
     constructor(value, rest = null) {
@@ -109,7 +108,6 @@ const listToArray = list => {
     return newArr = newArr.filter(elem => (Number.isInteger(elem) === true));
 }
 
-
 // nth, which takes a list and a number and returns the element at the given position in the list (with zero referring to the first element) or undefined when there is no such element
 const arrayToList2 = arr => {
     let newObj;
@@ -147,23 +145,27 @@ const nth = (list, num) => {
     }
 };
 
-//Goal - 
-//==================================
-
-//==============================
-/*
-let list = {
-  value: 1,
-  rest: {
-    value: 2,
-    rest: {
-      value: 3,
-      rest: null
-    }
-  }
-};
-*/
-
 /*
 Deep comparison
 */
+//Write a function deepEqual that takes two values and returns true only if they are the same value or are objects with the same properties, where the values of the properties are equal when compared with a recursive call to deepEqual.
+//PSEUDOCODE
+/*
+- object reference is same = true
+- object properties and values are same = true
+- typeof returns "obj" when checking "null"
+    -need to differentiate between obj & null
+- needs to compare values of properties with recursive call to deepEqual
+*/
+let obj = {here: {is: "an"}, object: 2};
+let untrueObj = {here: 1, object: 2}
+
+const deepEqual = (val1, val2) => {
+    if (val1 && val2) {
+
+    }
+
+}
+
+
+console.log(deepEqual(obj, ({here: {is: "an"}, object: 2})));

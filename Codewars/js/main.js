@@ -265,3 +265,53 @@ const switchItUp = num => {
 //Given an array of integers as strings and numbers, return the sum of the array values as if all were numbers.
 const sumMix = x => x.map((elem) => Number(elem)).reduce((a,b) => a + b);
 
+/*
+==========
+2025_08_27
+==========
+*/
+//https://www.codewars.com/kata/577bd026df78c19bca0002c0
+//Your task is correct the errors in the digitised text. You only have to handle the following mistakes:
+/*
+S is misinterpreted as 5
+O is misinterpreted as 0
+I is misinterpreted as 1
+The test cases contain numbers only by mistake.
+*/
+const correct = string => string.replaceAll("5", "S").replaceAll("0", "O").replaceAll("1", "I")
+
+/*
+==========
+2025_08_XX
+==========
+*/
+//https://www.codewars.com/kata/57096af70dad013aa200007b
+//Given an array of Boolean values and a logical operator, return a Boolean result based on sequentially applying the operator to the values in the array.
+/*
+==============================================================================================
+const logicalCalc = (array, op) => {
+    let booleanArr = [];
+    switch(op) {
+        case "AND":
+            for (let i = 0; i < array.length - 1; i++) {
+                booleanArr.push(array[i] && array[i+1]);
+            };
+            return booleanArr.every((elem) => elem === true);
+        case "OR":
+            for (let i = 0; i < array.length - 1; i++) {
+                booleanArr.push(array[i] || array[i+1]);
+            };
+            return booleanArr.some((elem) => elem === true);
+        case "XOR":
+            for (let i = 0; i < array.length - 1; i++) {
+                booleanArr.push(array[i] ^ array[i+1]);
+                console.log(booleanArr);
+            };
+            return booleanArr.every((elem) => ((elem === true) && (elem === false)));
+    };
+}
+
+console.log(logicalCalc([true, true, true, false], "XOR"), true);
+console.log(logicalCalc([true, true, false, false], "XOR"), false);
+==============================================================================================
+*/
