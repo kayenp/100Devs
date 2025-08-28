@@ -279,6 +279,13 @@ I is misinterpreted as 1
 The test cases contain numbers only by mistake.
 */
 const correct = string => string.replaceAll("5", "S").replaceAll("0", "O").replaceAll("1", "I")
+/*
+==========
+2025_08_28
+==========
+*/
+//Complete the method that takes a boolean value and return a "Yes" string for true, or a "No" string for false.
+const boolToWord = bool => (bool === true) ? "Yes" : "No"
 
 /*
 ==========
