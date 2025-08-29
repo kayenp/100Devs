@@ -289,6 +289,18 @@ const boolToWord = bool => (bool === true) ? "Yes" : "No"
 
 /*
 ==========
+2025_08_29
+==========
+*/
+//Write function parseF which takes an input and returns a number or null if conversion is not possible. The input can be one of many different types so be aware.
+// - filters out NaN values
+const parseF = input => {
+    return (isNaN(Number(input))) ? null
+    : ((`${input}` === "true") || (`${input}` === "false")) ? null : Number.parseFloat(input);
+}
+
+/*
+==========
 2025_08_XX
 ==========
 */
