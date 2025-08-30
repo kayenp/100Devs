@@ -301,6 +301,14 @@ const parseF = input => {
 
 /*
 ==========
+2025_08_30
+==========
+*/
+//
+const hello = name => name ? `Hello, ${(name[0].toUpperCase().concat(name.slice(1).toLowerCase()))}!` : `Hello, World!`
+
+/*
+==========
 2025_08_XX
 ==========
 */

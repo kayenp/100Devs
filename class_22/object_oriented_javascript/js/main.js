@@ -62,7 +62,3 @@ function ConstructorSw() {
 
 let sw = new ConstructorSw();
 
-let start = Date.now;
-let stop = Date.now;
-
-console.log(sw.now)
