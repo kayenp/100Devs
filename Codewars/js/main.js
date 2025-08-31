@@ -313,6 +313,7 @@ const hello = name => name ? `Hello, ${(name[0].toUpperCase().concat(name.slice(
 2025_08_31
 ==========
 */
+//https://www.codewars.com/kata/53d16bd82578b1fb5b00128c
 //Create a function that takes a number as an argument and returns a grade based on that number.
 const grader = score => (score >= .9 && score <= 1.0) ? "A"
                         : (score >= .8 && score < .9) ? "B"
