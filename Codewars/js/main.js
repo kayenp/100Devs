@@ -304,8 +304,20 @@ const parseF = input => {
 2025_08_30
 ==========
 */
-//
+//Define a method hello that returns "Hello, Name!" to a given name, or says Hello, World! if name is not given (or passed as an empty String).
+//Assuming that name is a String and it checks for user typos to return a name with a first capital letter (Xxxx).
 const hello = name => name ? `Hello, ${(name[0].toUpperCase().concat(name.slice(1).toLowerCase()))}!` : `Hello, World!`
+
+/*
+==========
+2025_08_31
+==========
+*/
+//Create a function that takes a number as an argument and returns a grade based on that number.
+const grader = score => (score >= .9 && score <= 1.0) ? "A"
+                        : (score >= .8 && score < .9) ? "B"
+                        : (score >= .7 && score < .8) ? "C"
+                        : (score >= .6 && score < .7) ? "D" : "F"
 
 /*
 ==========
