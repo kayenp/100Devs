@@ -322,6 +322,57 @@ const grader = score => (score >= .9 && score <= 1.0) ? "A"
 
 /*
 ==========
+2025_09_01
+==========
+*/
+//https://www.codewars.com/kata/5865918c6b569962950002a1
+//Create a function that accepts a string and a single character, and returns an integer of the count of occurrences the 2nd argument is found in the first one.
+//If no occurrences can be found, a count of 0 should be returned.
+/*
+PLAN
+    I. CONSTRAINTS
+        A. Only accepts a string and a single character.
+        B. Must return integer count of occurrances second argument is found in the first one.
+        C. No occurances can be found, 0 must be returned.
+    II. OPERATIONS
+        A. Function takes in 1 string and 1 character.
+        B. Function returns a positive integer or 0.
+        C. Character is compared to string.
+            i. Character is looped through to compare against each string char.
+        D. Instances of character in string are counted and kept track of.
+    III. DIVIDE
+        A. Declare function and parameters.
+        B. Declare variable for storing character instances.
+        C. Determine loop type to use for comparison.
+        D. Include increment counter within loop.
+        E. Return value after all loops have completed.
+    IV. DO WHAT YOU KNOW
+        A. Solve most obvious portion
+        B. Solve most constrained portion
+        C. Use existing tools
+        D. Experiment by testing with a hypothesis, not guessing
+    V. REDUCE
+        A. Break into smaller chunks/components
+    
+    Possible solutions:
+        - Delete all characters except the Character in string, return the length of the string
+        - Compare each Str char with Character and count instances, return count
+        - Convert all Str chars to array elements and count element instances, return count
+        - Delete all instances of Character from string, return difference between input Str and new Str
+*/
+const strCount = (str, letter) => {  
+    let count = 0;
+    for (let char of str) {
+        if (letter === char) {
+            count++;
+        };
+    };
+    return count;
+};
+
+
+/*
+==========
 2025_08_XX
 ==========
 */
