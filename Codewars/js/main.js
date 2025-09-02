@@ -370,6 +370,42 @@ const strCount = (str, letter) => {
     return count;
 };
 
+/*
+==========
+2025_09_02
+==========
+*/
+//https://www.codewars.com/kata/54edbc7200b811e956000556
+//Consider an array/list of sheep where some sheep may be missing from their place. We need a function that counts the number of sheep present in the array (true means present).
+/*
+PLAN
+    I. CONSTRAINTS
+        A. Input is array
+        B. Only booleans
+        C. Must return number of "TRUE" values
+
+    II. OPERATIONS
+        A. Boolean test for "TRUE"
+        B. Stores value when test passes
+        B. Iterate through each element
+        C. Increments stored value when additional tests pass
+        C. Return result of function call
+
+    III. DIVIDE
+        A. Steps
+        1. Create function
+        2. Create variable to store "TRUE" values
+        3. Loop through array
+        4. Return result
+
+    IV. DO WHAT YOU KNOW
+
+    V. REDUCE
+
+    Possible solutions:
+*/
+const countSheeps = sheep => sheep.filter((elem) => elem).length
+
 
 /*
 ==========

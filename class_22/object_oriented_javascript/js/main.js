@@ -40,6 +40,7 @@ function ConstructorSw() {
         }
     });
 
+
     Object.defineProperty(this, `stop`, {
         get: function() {
             stop();
