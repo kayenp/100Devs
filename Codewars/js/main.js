@@ -372,39 +372,54 @@ const strCount = (str, letter) => {
 
 /*
 ==========
-2025_09_02
+2025_09_03
 ==========
 */
-//https://www.codewars.com/kata/54edbc7200b811e956000556
-//Consider an array/list of sheep where some sheep may be missing from their place. We need a function that counts the number of sheep present in the array (true means present).
+//https://www.codewars.com/kata/573f5c61e7752709df0005d2
+//Write a function that merges two sorted arrays into a single one. The arrays only contain integers. 
+// Also, the final outcome must be sorted and not have any duplicate.
 /*
 PLAN
     I. CONSTRAINTS
-        A. Input is array
-        B. Only booleans
-        C. Must return number of "TRUE" values
-
+        A. Input is two sorted arrays.
+        B. Inputs contain only integers.
+        C. Output must be a single sorted array, no duplicates.
+    
     II. OPERATIONS
-        A. Boolean test for "TRUE"
-        B. Stores value when test passes
-        B. Iterate through each element
-        C. Increments stored value when additional tests pass
-        C. Return result of function call
+        A. Merge the two input arrays.
+        A. Sorting elements within merged array.
+            1. Loop through elements to sort.
+        B. Remove duplicates.
+            1. Loop through elements to check for duplicates.
+        C. Output merged, sorted array with no duplicates.
 
-    III. DIVIDE
+    III. GOAL
+        A. Output merged, sorted array with no duplicates.
+
+    IV. DIVIDE
         A. Steps
-        1. Create function
-        2. Create variable to store "TRUE" values
-        3. Loop through array
-        4. Return result
+            1. Merge input arrays.
+            2. Sort arrays.
+            3. Remove duplicates.
+            4. Output results.
 
-    IV. DO WHAT YOU KNOW
+    V. DO WHAT YOU KNOW
+        A. Obvious actions
+            1. Merge .concat()
+            2. Rearrange for order. .sort((a,b) => a - b)
+            3. Check for duplicates. Set()
+            4. Remove duplicates. Set()
+            5. Output results. return
+        
 
-    V. REDUCE
+    VI. REDUCE
+
 
     Possible solutions:
 */
-const countSheeps = sheep => sheep.filter((elem) => elem).length
+const mergArrays = (a,b) => [...new Set(a.concat(b).sort((a,b) => a - b))]
+
+
 
 
 /*
