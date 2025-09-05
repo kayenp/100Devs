@@ -419,7 +419,107 @@ PLAN
 */
 const mergArrays = (a,b) => [...new Set(a.concat(b).sort((a,b) => a - b))]
 
+/*
+==========
+2025_09_04
+==========
+*/
+//https://www.codewars.com/kata/58bf9bd943fadb2a980000a7
+//Don Drumphet lives in a nice neighborhood, but one of his neighbors has started to let his house go. 
+// Don Drumphet wants to build a wall between his house and his neighbor’s, and is trying to get the neighborhood association to pay for it. 
+// He begins to solicit his neighbors to petition to get the association to build the wall. 
+// Unfortunately for Don Drumphet, he cannot read very well, has a very limited attention span, and can only remember two letters from each of his neighbors’ names. 
+// As he collects signatures, he insists that his neighbors keep truncating their names until two letters remain, and he can finally read them.
+// Your code will show Full name of the neighbor and the truncated version of the name as an array. 
+// If the number of the characters in name is less than or equal to two, it will return an array containing only the name as is.
+/*
+PLAN
+    I. CONSTRAINTS
+        A. Takes in a string
+        B. Returns an array 
+            1. Array contains the input string 
+            2. Array contains first 2 letters of input string
+                i. If characters in name less than or equal to two, returns only input string
+    
+    II. OPERATIONS  
+        A. Checks length of string
+            1. If string length <= 2, return array containing string
+            2. Otherwise, return array containing string and 1st 2 chars of string (2 elements)
 
+    III. GOAL
+        A. Return 2 different types of arrays, depending on inputs
+
+    IV. DIVIDE
+        A. PHASE - Plan operations
+            1. Methods/properties used
+                i. Array.from()
+                ii. .length
+                iii. .slice()
+        B. STEPS
+            1. Test to check length
+            2. Ternary for conditional
+            3. 'true' array containing 2 elements
+            4. 'false' array containing 1 element
+
+    V. DO WHAT YOU KNOW
+
+    VI. REDUCE
+
+    Possible solutions:
+*/
+const whoIsPaying = name => (name.length > 2) ? [name, name.slice(0,2)] : [name]
+
+/*
+==========
+2025_09_05
+==========
+*/
+//https://www.codewars.com/kata/5866fc43395d9138a7000006
+//Given a string, write a function that returns the string with a question mark ("?") appends to the end, unless the original string ends with a question mark, in which case, returns the original string.
+/*
+PLAN
+    I. CONSTRAINTS
+        A. Accepts a string
+        B. May or may not end with a question mark
+        C. Output needs to:
+            1. End with question mark if input doesn't have one
+            2. OR return original string
+    
+    II. OPERATIONS
+        A. Checks end of string for question mark
+            1. Determines end of string by using .length
+            2. Selects last character by using .length
+            3. Last char is stored for comparison to "?"
+        B. Returns string:
+            1. With question mark if none on original string
+            2. OR original string  
+
+    III. GOAL
+        A. Return string with question mark if original doesn't have one
+        B. OR return original string
+
+    IV. DIVIDE
+        A. PHASES
+            1. Variables
+                i. Last character for comparison to "?"
+            2. Methods/Properties
+                i. .length
+            3. Conditionals/Loops
+                i. IF/ternary for determining output with "?" or without
+        B. STEPS
+            1. Function expression
+            2. Variable to store last char
+            3. .length for input last char
+            4. Conditional for output
+            5. Output
+
+    V. DO WHAT YOU KNOW
+
+    VI. REDUCE
+
+    Possible solutions:
+*/
+const ensureQuestion = s => (s[s.length-1] === "?") ? s : s + "?"
 
 
 /*

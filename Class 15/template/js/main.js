@@ -1,54 +1,45 @@
 "use strict";
 
-//factory function
-function createFactoryFuncObj(value) {
+/*
+PLAN
+    - Test how function behaves when attached using addEventListener
+        - Check context of "this"
+    - Test how function method behaves when attached using addEventListener
+        - Check context of "this"
+    - Test how new instance of object behaves vs the 2 situations above
+*/
+
+let testBtn = document.querySelector(".testBtn");
+let output = document.querySelector(".output");
+
+let objLiteral = {
+    method: function() {
+        console.log("objLiteral", this, this.innerText)
+    },
+};
+
+function CreateConFnObj() {
+    this.value = "";
+    this.method = function(){
+        console.log(`conFnObj`, this, this.innerText);
+    };
+};
+let conFnObj = new CreateConFnObj();
+
+function createFactFnObj() {
     return {
-        value,
-        method: function() {
-            console.log(`This is a factory function with a label value of ${value}`);
+        method: function(){
+            console.log("factFnObj", this, this.innerText);
         },
     };
-};
+}
+let factFnObj = createFactFnObj();
 
-createFactoryFuncObj.call({}, 100).method();
+let hello = "hello";
 
-//constructor function
-function CreateConstructorFuncObj(value) {
-    this.value = value;
-    this.method = function() {
-        console.log(`This is a constructor function with a label value of ${value}`);
-    };
-};
+console.log(testBtn.innerText);
+//testBtn.addEventListener("click", console.log);
+testBtn.addEventListener("click", objLiteral.method);
+//testBtn.addEventListener("click", conFnObj.method);
+//testBtn.addEventListener("click", factFnObj.method);
 
-let constructorFuncObj = new CreateConstructorFuncObj(50);
-console.log(constructorFuncObj.method())
-
-//class object
-class CreateClassObj {
-    constructor(value) {
-        this.value = value;
-        this.method = function() {
-            console.log(`This is a class object with a label value of ${value}`);
-        };
-    };
-};
-
-let classObjFunc = new CreateClassObj(25);
-console.log(classObjFunc.method());
-
-//constructor function with private members
-function PrivateMembersObj() {
-    let value = 0;
-    let method = function(){
-        value = 12.5;
-        console.log(`The value of value is ${value}`);
-    };
-    Object.defineProperty(this, "method", {
-        get: function(){
-            method();
-        }
-    });
-};
-
-let newPrivMembObj = new PrivateMembersObj();
-console.log(newPrivMembObj);
