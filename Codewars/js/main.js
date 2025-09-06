@@ -521,6 +521,79 @@ PLAN
 */
 const ensureQuestion = s => (s[s.length-1] === "?") ? s : s + "?"
 
+/*
+==========
+2025_09_05
+==========
+*/
+//https://www.codewars.com/kata/570597e258b58f6edc00230d
+//You are given a string containing a sequence of character sequences separated by commas.
+//Write a function which returns a new string containing the same character sequences except the first and the last ones but this time separated by spaces.
+//If the input string is empty or the removal of the first and last items would cause the resulting string to be empty, return an empty value (represented as a generic value NULL in the examples below).
+/*
+PLAN
+    I. CONSTRAINTS
+        A. Inputs are a sequence of characters separated by commas
+            e.g. test('A1,B2');
+            e.g. test('1,2,3');
+        B. Returns a new string in the same sequence, without first and last characters, space separated
+            e.g. "1,2,3"      =>  "2"
+            e.g. "1,2,3,4"    =>  "2 3"
+            e.g. "1,2,3,4,5"  =>  "2 3 4"
+        C. If input is empty or result would be empty, return NULL
+    
+    II. OPERATIONS
+        A. Split each sequence into an element within an array (arr)
+        B. Remove first and last elements in arr
+        C. Convert arr to str and space separate each former element in new str
+        D. Check if string is empty. 
+            - If string contains a space (" "), then will return false for null, undefined and 'false' for (" " === false)
+            - Need to make sure that array contains no elements with spaces in them
+            - Space between sequences need to be added during string conversion, not while input is an array (during .join())
+        E. If length is 0, return NULL otherwise return new string
+
+    III. GOAL(S)
+        A. Function returns new string where first and and last elements are deleted and new str has all sequences space separated; return NULL if string would be empty
+
+    IV. DIVIDE
+        A. PHASES
+            1. Variables
+                i. Array to mutate
+                ii. String to output
+            2. Methods/Properties
+                i. .length to find end of array/string
+                ii. .split() to convert string into array
+                iii. .join() to combine array into string
+                iv. .slice() to output copy of array minus first and last elements
+            3. Conditionals/Loops
+                i. IF/ternary to return new string or NULL
+        B. STEPS
+            1. Convert string into array
+            2. Delete last element in array  <-----------
+            3. Delete first element in array <----------- Can also use slice to return subsection of array
+            4. Convert array to string with " " as the concatenation character
+                - Don't need to check if array is empty before .join(" "), will output empty string regardless
+            5. Conditional to check .length of returned string, NULL if 0; new str otherwise
+
+    V. DO WHAT YOU KNOW
+        A. OBVIOUS SOLUTIONS
+        
+        B. PROBLEMS WITH MOST CONSTRAINTS
+
+    VI. REDUCE
+
+    Possible solutions:
+*/
+function array(string) {
+  let arr = string.split(",")
+  let copyArr = arr.slice(1,arr.length-1);
+  let newStr = copyArr.join(" ");
+  if (newStr.length < 1) {
+    return null
+  } else {
+    return newStr;
+  }
+}
 
 /*
 ==========
