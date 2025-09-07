@@ -646,8 +646,6 @@ PLAN
 */
 const digitize = n => Array.from(n.toString()).map((elem) => Number(elem)).reverse();
 
-console.log(digitize(456));
-
 /*
 ==========
 2025_08_XX
