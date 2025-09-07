@@ -597,6 +597,59 @@ function array(string) {
 
 /*
 ==========
+2025_09_07
+==========
+*/
+//https://www.codewars.com/kata/5583090cbe83f4fd8c000051
+//Given a random non-negative number, you have to return the digits of this number within an array in reverse order.
+/*
+PLAN
+    I. CONSTRAINTS
+        A. Will be given random non-negative number
+        B. Must return the digits of number in reverse order
+        C. Each individual number is an element within an array
+    
+    II. OPERATIONS
+        A. Convert input to array
+        B. Split array element into multiple elements
+        C. Reverse order of array elements
+        D. Return reversed array
+
+    III. GOAL(S)
+       A. Return number as reversed array
+
+    IV. DIVIDE
+        A. PHASES
+            1. Variables
+                i. Array
+            2. Methods/Properties
+                i. Array.from()
+                ii. 
+            3. Conditionals/Loops
+                i. n/a 
+
+        B. STEPS
+            1. Convert number to string
+            2. String to individual array elements
+            3. Array elements to numbers
+            4. Reverse elements
+            5. Return result
+
+    V. DO WHAT YOU KNOW
+        A. OBVIOUS SOLUTIONS
+        
+        B. PROBLEMS WITH MOST CONSTRAINTS
+
+    VI. REDUCE
+
+    Possible solutions:
+*/
+const digitize = n => Array.from(n.toString()).map((elem) => Number(elem)).reverse();
+
+console.log(digitize(456));
+
+/*
+==========
 2025_08_XX
 ==========
 */
