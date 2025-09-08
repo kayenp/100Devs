@@ -648,6 +648,60 @@ const digitize = n => Array.from(n.toString()).map((elem) => Number(elem)).rever
 
 /*
 ==========
+2025_09_08
+==========
+*/
+//Remove String Spaces
+//https://www.codewars.com/kata/57eae20f5500ad98e50002c5
+//Write a function that removes the spaces from the string, then return the resultant string.
+/*
+PLAN
+    I. CONSTRAINTS
+        A. Must remove all spaces from string
+        B. Returns the string with all spaces removed       
+
+    II. OPERATIONS
+       A. Convert string to array
+       B. Delete empty array elements
+       C. Join array
+       D. Output result
+
+    III. GOAL(S)
+
+    IV. DIVIDE
+        A. PHASES
+            1. Variables
+                i.n/a
+            2. Methods/Properties
+                i.split()
+                ii.join()
+                iii.filter()
+            3. Conditionals/Loops
+                i.filter()
+
+        B. STEPS
+            1. Convert string to array with .split("")
+            2. .filter() elements that are " "
+            3. .join() filtered array
+            4. Return result
+        
+    V. DO WHAT YOU KNOW
+        A. OBVIOUS SOLUTIONS
+        
+        B. PROBLEMS WITH MOST CONSTRAINTS
+
+    VI. REDUCE
+
+    Possible solutions:
+
+    Thoughts: 
+        - Will .join(",") concatenate array elements that contain a space?
+            ^ leaves empty space
+*/
+const noSpace = x => x.split("").filter((elem) => (elem !== " ")).join("");
+
+/*
+==========
 2025_08_XX
 ==========
 */
