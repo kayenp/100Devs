@@ -702,6 +702,76 @@ const noSpace = x => x.split("").filter((elem) => (elem !== " ")).join("");
 
 /*
 ==========
+2025_09_09
+==========
+*/
+//Total amount of points
+//https://www.codewars.com/kata/5bb904724c47249b10000131
+//Our team's match results are recorded in a collection of strings. 
+// Each match is represented by a string in the format "x:y", where x is our team's score and y is our opponents score.
+//For example: ["3:1", "2:2", "0:1", ...]
+//Points are awarded for each match as follows:
+//if x > y: 3 points (win)
+//if x < y: 0 points (loss)
+//if x = y: 1 point (tie)
+//We need to write a function that takes this collection and returns the number of points our team (x) got in the championship by the rules given above.
+/*
+PLAN
+    I. CONSTRAINTS  
+        A. Input is an array containing strings in X:Y format
+        B. Fn returns accumulated value of all elements in string
+        C. Element values are based on X > Y  = 3, X < Y = 0 & X = Y = 1
+
+    II. OPERATIONS
+        A. MAYBE convert each string element to sub-array element
+        A. Callback function on each element:
+            1. Comparison between X & Y values
+        B. Stores points in variable based on X & Y values
+        C. Returns value of variable based on X
+
+    III. GOAL(S)
+
+    IV. DIVIDE
+        A. PHASES
+            1. Variables
+                i. value based on accumulated X & Y ratios (maybe?)
+
+            2. Methods/Properties
+                i. Array.from()
+
+            3. Conditionals/Loops
+                i. iterate through each element string and convert to value OR 
+                ii. iterate through each 
+
+        B. STEPS
+
+        
+    V. DO WHAT YOU KNOW
+        A. OBVIOUS SOLUTIONS
+        
+        B. PROBLEMS WITH MOST CONSTRAINTS
+
+    VI. REDUCE
+
+    Possible solutions:
+
+    Thoughts: 
+    
+*/
+function points(games) {
+    let newArr = [];
+    for (let score of games){
+        newArr.push(Array.from(score));
+    }
+    return newArr.map((elem) => (elem[0] > elem[2] ? 3
+                            : (elem[0] < elem[2]) ? 0
+                            : 1                    
+        )
+    ).reduce((acc,currVal) => acc + currVal);
+}
+
+/*
+==========
 2025_08_XX
 ==========
 */
