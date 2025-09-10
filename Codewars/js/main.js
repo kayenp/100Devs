@@ -827,9 +827,6 @@ function doubleChar(str) {
 	return newStr;
 }
 
-console.log(doubleChar("%^&*("))
-
-
 /*
 ==========
 2025_08_XX
