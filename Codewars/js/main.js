@@ -772,6 +772,66 @@ function points(games) {
 
 /*
 ==========
+2025_09_10
+==========
+*/
+//Double Char
+//https://www.codewars.com/kata/56b1f01c247c01db92000076
+//Given a string, you have to return a string in which each character (case-sensitive) is repeated once.
+/*
+PLAN
+    I. CONSTRAINTS  
+        A. Input is a string
+        B. Output is a string
+        C. Characters in output have to be repeated 1 time
+
+    II. OPERATIONS
+        A. Loop through string
+        B. Output copy of each character in string
+
+    III. GOAL(S)
+
+    IV. DIVIDE
+        A. PHASES
+            1. Variables
+                i. output string
+
+            2. Methods/Properties
+                
+
+            3. Conditionals/Loops
+                i. for...of
+
+        B. STEPS
+            1. for...of iterates through each character in string
+                i. copies char twice to new str
+            2. returns new str
+        
+    V. DO WHAT YOU KNOW
+        A. OBVIOUS SOLUTIONS
+        
+        B. PROBLEMS WITH MOST CONSTRAINTS
+
+    VI. REDUCE
+
+    Possible solutions:
+
+    Thoughts: 
+    
+*/
+function doubleChar(str) {
+    let newStr = "";
+  	for(let char of str){
+		newStr += char+char;
+  	}
+	return newStr;
+}
+
+console.log(doubleChar("%^&*("))
+
+
+/*
+==========
 2025_08_XX
 ==========
 */
