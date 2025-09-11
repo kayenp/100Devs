@@ -829,6 +829,73 @@ function doubleChar(str) {
 
 /*
 ==========
+2025_09_11
+==========
+*/
+//Count by X
+//https://www.codewars.com/kata/5513795bd3fafb56c200049e
+//Create a function with two arguments that will return an array of the first n multiples of x.
+//Assume both the given number and the number of times to count will be positive numbers greater than 0.
+//Return the results as an array or list ( depending on language ).
+/*
+PLAN
+    I. CONSTRAINTS  
+        A. Two values input
+        B. Output is an array
+        C. Maximum value is xn
+        D. Step count is x
+
+    II. OPERATIONS
+        A. Find range (x * n)
+        B. Increase step count by x until x * n is reached
+        C. Output result as array
+
+    III. GOAL(S)
+        A. Given 2 numbers, output an array that contains 2n at a step count of x
+
+    IV. DIVIDE
+        A. PHASES
+            1. Variables
+
+
+            2. Methods/Properties
+                i. 
+
+
+            3. Conditionals/Loops
+                i. iterate x n times as steps
+
+        B. STEPS
+            1. 
+        
+    V. DO WHAT YOU KNOW
+        A. OBVIOUS SOLUTIONS
+        
+        B. PROBLEMS WITH MOST CONSTRAINTS
+
+    VI. REDUCE
+
+    Possible solutions:
+
+    Thoughts: 
+        - can use .push to an empty array, must create empty array
+        - can wrap results in [], avoids creating separate empty array
+        - can't use map, creating array from inputs (no source array)
+*/
+function countBy(x, n) {
+    let z = [];
+    for (let i = 1; i <= n; i++){
+        z.push(x * i)    
+    }
+    return z;
+}
+
+
+
+console.log(countBy(1,10));
+
+/*
+==========
 2025_08_XX
 ==========
 */
