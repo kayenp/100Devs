@@ -890,9 +890,57 @@ function countBy(x, n) {
     return z;
 }
 
+/*
+==========
+2025_09_12
+==========
+*/
+//Convert a string to an array
+//https://www.codewars.com/kata/57e76bc428d6fbc2d500036d
+//Write a function to split a string and convert it into an array of words.
+/*
+PLAN
+    I. CONSTRAINTS  
+        A. Input is a string
+        B. Output is an array
+        C. Individual string words should be separate elements
 
+    II. OPERATIONS
+        A. Check string for spaces
+        B. Split each word at the space into an element
+        C. Output the resulting element
 
-console.log(countBy(1,10));
+    III. GOAL(S)
+        A. Split an input string into an array containing each separate word as an element
+
+    IV. DIVIDE
+        A. PHASES
+            1. Variables
+                i. not necessary
+
+            2. Methods/Properties
+                i. .split()
+
+            3. Conditionals/Loops
+                i. n/a
+
+        B. STEPS
+            1. use .split() on input string
+            2. output resulting array
+        
+    V. DO WHAT YOU KNOW
+        A. OBVIOUS SOLUTIONS
+        
+        B. PROBLEMS WITH MOST CONSTRAINTS
+
+    VI. REDUCE
+
+    Possible solutions:
+
+    Thoughts: 
+
+*/
+const stringToArray = string => string.split(" ");
 
 /*
 ==========
