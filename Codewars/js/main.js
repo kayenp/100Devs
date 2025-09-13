@@ -944,6 +944,62 @@ const stringToArray = string => string.split(" ");
 
 /*
 ==========
+2025_09_12
+==========
+*/
+//If you can't sleep, just count sheep!!
+//https://www.codewars.com/kata/5b077ebdaf15be5c7f000077
+//Given a non-negative integer, 3 for example, return a string with a murmur:
+//"1 sheep...2 sheep...3 sheep..."
+// Input will always be valid, i.e. no negative integers.
+/*
+PLAN
+    I. CONSTRAINTS  
+        A. Input will be non-negative integer
+        B. Output will count from 1 to input in "n sheep...n+1 sheep...n+2 sheep..." format
+        C. Output is a single string with above concatenated
+
+    II. OPERATIONS
+        A. Count from 1 to n
+        B. Return template literal "n sheep...n+1 sheep..."
+
+    III. GOAL(S)
+      
+
+    IV. DIVIDE
+        A. PHASES
+            1. Variables
+
+            2. Operations
+                A. += 
+
+            3. Methods/Properties
+
+            4. Conditionals/Loops
+                A. Loop from 1 to n
+
+
+        B. STEPS
+            
+        
+    V. DO WHAT YOU KNOW
+        A. OBVIOUS SOLUTIONS
+        
+        B. PROBLEMS WITH MOST CONSTRAINTS
+
+    VI. REDUCE
+
+    Possible solutions:
+
+    Thoughts: 
+        -Uses concatenation
+*/
+const countSheep = num => Array.from({length: num}, ((k,v) => (`${v+1} sheep...`))).join("");
+
+
+
+/*
+==========
 2025_08_XX
 ==========
 */
