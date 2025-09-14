@@ -1,7 +1,10 @@
 "use strict";
 
-for (var i = 0; i < 5; i++) {
-  setTimeout(() => {
-    console.log(i);
-  }, 0);
-}
+fetch("https://dog.ceo/api/breeds/image/random")
+  .then(res => res.json())
+  .then(data => {
+    console.log(data)
+  })
+  .catch(err => {
+    console.log(`error ${err}`)
+  });
