@@ -944,7 +944,7 @@ const stringToArray = string => string.split(" ");
 
 /*
 ==========
-2025_09_12
+2025_09_13
 ==========
 */
 //If you can't sleep, just count sheep!!
@@ -996,7 +996,55 @@ PLAN
 */
 const countSheep = num => Array.from({length: num}, ((k,v) => (`${v+1} sheep...`))).join("");
 
+/*
+==========
+2025_09_14
+==========
+*/
+//DNA to RNA Conversion
+//https://www.codewars.com/kata/5556282156230d0e5e000089
+//Create a function which translates a given DNA string into RNA.
+/*
+PLAN
+    I. CONSTRAINTS  
+        A. Input will be arbitrary length or even empty
+        B. All input is valid (G, C, A and/or T)    
 
+    II. OPERATIONS
+        A. Check string for "T"
+        B. Replace "T" with "U"
+        C. Output replaced string
+        
+    III. GOAL(S)
+      A. Convert all Ts in string to U and output result
+
+    IV. DIVIDE
+        A. PHASES
+            1. Variables
+                i. Output string
+
+            2. Operators
+
+            3. Methods/Properties
+                .replaceAll()
+
+            4. Conditionals/Loops
+
+        B. STEPS
+            1. Use replaceAll() method on input and output result            
+        
+    V. DO WHAT YOU KNOW
+        A. OBVIOUS SOLUTIONS
+        
+        B. PROBLEMS WITH MOST CONSTRAINTS
+
+    VI. REDUCE
+
+    Possible solutions:
+
+    Thoughts: 
+*/
+const DNAtoRNA = dna => dna.replaceAll("T", "U")
 
 /*
 ==========
