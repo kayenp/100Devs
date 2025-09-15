@@ -1048,6 +1048,91 @@ const DNAtoRNA = dna => dna.replaceAll("T", "U")
 
 /*
 ==========
+2025_09_15
+==========
+*/
+//Capitals first!
+//https://www.codewars.com/kata/55c353487fe3cc80660001d4
+//Create a function that takes an input String and returns a String, where all the uppercase words of the input String are in front and all the lowercase words at the end. 
+//The order of the uppercase and lowercase words should be the order in which they occur.
+//If a word starts with a number or special character, skip the word and leave it out of the result.
+//Input String will not be empty.
+//For an input String: "hey You, Sort me Already!" the function should return: "You, Sort Already! hey me"
+/*
+PLAN
+    I. CONSTRAINTS  
+        A. Input is a string, will not be empty
+        B. Output is a string
+        C. Output has all uppercase words at front
+        D. Output has all lowercase words at back
+        E. Uppercase/lowercase words output respects input string order
+        F. Word starts with number or special character, skip and omit from output
+
+    II. OPERATIONS
+        A. Create copy of original string for output string
+        B. Split string into array elements
+        C. Checks first character of word in element if capital, number/symbol
+        D. Passes through input string and copies all capital words to new str first
+        E. Passes through input string and copies all lowercase words to new str second
+        F. Outputs new string.
+        
+    III. GOAL(S)
+
+
+    IV. DIVIDE
+        A. PHASES
+            1. Variables
+                i. Array for manipulation
+                i. Output string
+
+            2. Operators
+
+            3. Methods/Properties
+                .split(" ") to split input into array
+                .filter for filtering uppercase, lowercase, number/symbol
+                .join(" ") for string output
+                .length for # of iterations???
+                .push() to add to array???
+
+            4. Conditionals/Loops
+                i. Loops through first character in each array element
+                ii. IF for skipping number/symbol first char
+                iii. IF for checking uppercase
+
+        B. STEPS
+            1. Input to array
+            2. Filter inputs
+
+        
+    V. DO WHAT YOU KNOW
+        A. OBVIOUS SOLUTIONS
+        
+        B. PROBLEMS WITH MOST CONSTRAINTS
+
+    VI. REDUCE PROBLEM
+
+    Possible solutions:
+
+    Thoughts:
+        -single pattern leaves behind capital and lower unsorted
+            -need way to move all 
+        
+*/
+const capitalsFirst = str => {
+    const arr = str.split(" ");
+    const pattern = /[A-Z]/;
+    const pattern2 = /[a-z]/;
+    let filtered = arr.filter((elem) => (pattern.test(elem[0])));
+    arr.forEach((elem) => {
+        if (pattern2.test(elem[0])){
+            filtered.push(elem);
+        }
+    });
+    return filtered.join(" ");
+};
+
+/*
+==========
 2025_08_XX
 ==========
 */
