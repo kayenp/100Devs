@@ -1133,6 +1133,63 @@ const capitalsFirst = str => {
 
 /*
 ==========
+2025_09_16
+==========
+*/
+//Sum of two lowest positive integers
+//https://www.codewars.com/kata/558fc85d8fd1938afb000014
+//Create a function that returns the sum of the two lowest positive numbers given an array of minimum 4 positive integers. 
+//No floats or non-positive integers will be passed.
+/*
+PLAN
+    I. CONSTRAINTS  
+        A. Input is an array
+        B. Inputs are not floats/non-positive integers
+        C. Output is sum of two lowest positive numbers
+        D. Output is a number, not array
+
+    II. OPERATIONS
+        A. Sort array in ascending order of value
+        B. Add 2 lowest values
+        C. Output result as a single number
+        
+    III. GOAL(S)
+        A. Output sum of two lowest numbers of input array
+
+    IV. DIVIDE
+        A. PHASES
+            1. Variables
+                A. none
+
+            2. Operators
+
+
+            3. Methods/Properties
+                A. .sort()
+
+
+            4. Conditionals/Loops
+                A. .sort() callback fn
+
+        B. STEPS
+
+
+        
+    V. DO WHAT YOU KNOW
+        A. OBVIOUS SOLUTIONS
+        
+        B. PROBLEMS WITH MOST CONSTRAINTS
+
+    VI. REDUCE PROBLEM
+
+    Possible solutions:
+
+    Thoughts:
+*/
+const sumTwoSmallestNumbers = num => num.sort((a,b) => a - b).reduce((acc,cVal,cInd) => (cInd < 2) ? acc = acc + cVal : acc)
+
+/*
+==========
 2025_08_XX
 ==========
 */
