@@ -1190,6 +1190,87 @@ const sumTwoSmallestNumbers = num => num.sort((a,b) => a - b).reduce((acc,cVal,c
 
 /*
 ==========
+2025_09_17
+==========
+*/
+//Previous multiple of three
+//https://www.codewars.com/kata/61123a6f2446320021db987d
+//Given a positive integer n: 0 < n < 1e6, remove the last digit until you're left with a number that is a multiple of three.
+//Return n if the input is already a multiple of three, and if no such number exists, return null, a similar empty value, or -1.
+/*
+PLAN
+    I. CONSTRAINTS  
+        A. Input is > 0
+        B. Input is < 1,000,000 (1e6)
+        C. May only remove last digit per iteration
+        D. Must return number that is a multiple of 3
+            1. If no such number exists, return null, empty or -1
+            2. If number is already multiple of 3, return n
+
+    II. OPERATIONS
+        A. Create variable to store value
+        B. Assign input to variable
+        B. Check variable with % 3
+            1. IF result === 0 
+                i. return variable
+            2. ELSE remove last digit of variable
+            3. LOOP through 1 & 2 until length of 0
+                i. When 0, return null, empty or -1
+
+        
+    III. GOAL(S)
+
+
+    IV. DIVIDE
+        A. PHASES
+            1. Variables
+                i. Store input as a string
+
+            2. Operators
+
+
+            3. Methods/Properties
+                i. Convert input to string .toString()
+                ii. .slice(0,string.length-2) to return string without last digit removal
+                iii. Number(string) to return value as number
+
+            4. Conditionals/Loops
+                i. Recursion with % 3 and last digit removal
+                ii. IF ELSE for last digit removal, recursion
+
+        B. STEPS
+
+
+        
+    V. DO WHAT YOU KNOW
+        A. OBVIOUS SOLUTIONS
+        
+        B. PROBLEMS WITH MOST CONSTRAINTS
+
+    VI. REDUCE PROBLEM
+
+    Possible solutions:
+
+    Thoughts:
+*/
+const prevMultOfThree = n => {
+  let str = n.toString();
+  for (let i = str.length-1; i >= 0; i--){
+    if(str % 3 !== 0){
+        if(i === 0){
+            return null;
+        }
+        str = str.slice(0,str.length-1);
+    } else {
+        return Number(str);
+    }
+  }
+}
+
+
+
+/*
+==========
 2025_08_XX
 ==========
 */
