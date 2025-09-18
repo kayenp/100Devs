@@ -1267,40 +1267,55 @@ const prevMultOfThree = n => {
   }
 }
 
-
-
 /*
 ==========
-2025_08_XX
+2025_09_18
 ==========
 */
-//https://www.codewars.com/kata/57096af70dad013aa200007b
-//Given an array of Boolean values and a logical operator, return a Boolean result based on sequentially applying the operator to the values in the array.
+//String ends with?
+//https://www.codewars.com/kata/51f2d1cafc9c0f745c00037d
+//Complete the solution so that it returns true if the first argument(string) passed in ends with the 2nd argument (also a string).
 /*
-==============================================================================================
-const logicalCalc = (array, op) => {
-    let booleanArr = [];
-    switch(op) {
-        case "AND":
-            for (let i = 0; i < array.length - 1; i++) {
-                booleanArr.push(array[i] && array[i+1]);
-            };
-            return booleanArr.every((elem) => elem === true);
-        case "OR":
-            for (let i = 0; i < array.length - 1; i++) {
-                booleanArr.push(array[i] || array[i+1]);
-            };
-            return booleanArr.some((elem) => elem === true);
-        case "XOR":
-            for (let i = 0; i < array.length - 1; i++) {
-                booleanArr.push(array[i] ^ array[i+1]);
-                console.log(booleanArr);
-            };
-            return booleanArr.every((elem) => ((elem === true) && (elem === false)));
-    };
-}
+PLAN
+    I. CONSTRAINTS  
+        A. Both inputs are strings
+        B. Returns true if 1st arg ends with 2nd arg
 
-console.log(logicalCalc([true, true, true, false], "XOR"), true);
-console.log(logicalCalc([true, true, false, false], "XOR"), false);
-==============================================================================================
+    II. OPERATIONS
+        A. Checks 2nd arg against the end of the 1st arg
+        B. Returns true if so
+        C. Returns false if not
+        
+    III. GOAL(S)
+
+
+    IV. DIVIDE
+        A. PHASES
+            1. Variables
+        
+
+            2. Operators
+
+
+            3. Methods/Properties
+                i. .endsWith()
+
+            4. Conditionals/Loops
+                i. ternary for true/false
+
+        B. STEPS
+
+
+        
+    V. DO WHAT YOU KNOW
+        A. OBVIOUS SOLUTIONS
+        
+        B. PROBLEMS WITH MOST CONSTRAINTS
+
+    VI. REDUCE PROBLEM
+
+    Possible solutions:
+
+    Thoughts:
 */
+const solution = (str, ending) => str.endsWith(ending)
