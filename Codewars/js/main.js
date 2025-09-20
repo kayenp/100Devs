@@ -1382,6 +1382,74 @@ function randomCase(x) {
 
 /*
 ==========
+2025_09_20
+==========
+*/
+//Name Array Capping
+//https://www.codewars.com/kata/5356ad2cbb858025d800111d
+//Create a function that accepts an array of names, and returns an array of each name with its first letter capitalized and the remainder in lowercase.
+/*
+PLAN
+    I. CONSTRAINTS  
+        A. Input is an array
+		B. Names within the array need to start with a capital letter
+		C. Letters after the first letter need to be lowercase
+        D. Output result as an array
+
+    II. OPERATIONS
+        A. Create a new array to store the results
+		B. Select each element of the array
+		C. Select the first character of each element and capitalize it
+        D. Select each remaining character and set them to lowercase
+        E. Return result as an array
+        
+    III. GOAL(S)
+
+    IV. DIVIDE
+        A. PHASES
+            1. Variables
+
+            2. Operators
+
+            3. Methods/Properties
+                i. .map() for outputting new array with operation performed on elements
+                ii. .toLowerCase() to change all characters in element to lowercase
+                iii. 
+
+            4. Conditionals
+				i. 
+
+			5. Loops
+				i. loop through each element in the array
+                ii. loop through the first character of each element
+
+        B. STEPS
+            1. .map() to loop through and output results
+            2. set elem to lowercase
+            3. select first char of elem and set to uppercase
+            4. return elem
+
+    V. DO WHAT YOU KNOW
+        A. OBVIOUS SOLUTIONS
+        
+        B. SOLVE MOST CONSTRAINED
+
+    VI. REDUCE PROBLEM
+
+    Possible solutions:
+
+    Thoughts:    
+*/
+const capMe = names => {
+    return names.map(((elem) => {
+        elem = elem.toLowerCase();
+        elem = elem.replace(elem[0], elem[0].toUpperCase());
+        return elem;
+    }))
+}
+
+/*
+==========
 2025_09_XX
 ==========
 */
