@@ -47,96 +47,49 @@ let yourGroup = Group.from([8,9,10]);
 Iterable groups
 */
 class SecondGroup {
-	static from(...obj){
-		return new SecondGroup(...obj);
-	}
-	constructor(obj = null){
-		if (obj === null){
-			this.arr = []
-		} else {
-			this.arr = obj;
-		};
-		Group.prototype[Symbol.iterator] = function(){
-			return new GroupIterator(this);
-		}
+	constructor(){
+		this[0] = [];
 	}
 
 	add(value){
-		(this.arr.indexOf(value) === -1) ? this.arr.push(value) : "";
+		(this[0].indexOf(value) === -1) ? this[0].push(value) : "";
 	}
 	delete(value){
-		(this.arr.indexOf(value) !== -1) ? this.arr.splice(this.arr.indexOf(value), 1) : "";
+		(this[0].indexOf(value) !== -1) ? this[0].splice(this[0].indexOf(value), 1) : "";
 	}
 	has(value){
-		return (this.arr.indexOf(value) !== -1)
+		return (this[0].indexOf(value) !== -1)
+	}
+	static from(group){
+		let newGroup = new this;
+		for(let i = 0; i < group.length; i++){
+			newGroup.add(group[i]);
+		}
+		return newGroup;
 	}
 }
 
 class GroupIterator {
-	constructor(group){
-		this.group = group;
-	}
-	next(){
-		if (this.group === null){
-			return {done: true};
-		}
-		let val = this.group.arr.val;
-		this.group.arr = this.group.arr.rest;
-		return {val, done: false};
-	}
-}
-let myGroup = new SecondGroup({a: 1, b: 2, c: 3});
-console.log(yourGroup, myGroup);
-
-//
-
-class List {
-  constructor(value, rest) {
-    this.value = value;
-    this.rest = rest;
-  }
-
-  get length() {
-	console.log(this.rest);
-    //return 1 + (this.rest ? this.rest.length : 0);
-  }
-
-  static fromArray(array) {
-    let result = null;
-    for (let i = array.length - 1; i >= 0; i--) {
-      result = new this(array[i], result);
-    }
-    return result;
-  }
-}
-
-class ListIterator {
-  constructor(list) {
-    this.list = list;
+  constructor(group) {
+    this.group = group;
+	this.i = 0;
   }
 
   next() {
-    if (this.list == null) {
+    if (this.group[0][this.i] == null) {
       return {done: true};
     }
-    let value = this.list.value;
-    this.list = this.list.rest;
+    let value = this.group[0][this.i]
+	this.i++;
     return {value, done: false};
   }
 }
-
-List.prototype[Symbol.iterator] = function() {
-  return new ListIterator(this);
+SecondGroup.prototype[Symbol.iterator] = function(){
+	return new GroupIterator(this);
 };
 
-let myList = List.fromArray(["a", "b", "c"])
-console.log(myList.length)
+let testSecondGroup = SecondGroup.from(["x", "y", "z"]);
 
-class TestObj {
-	constructor(value){
-		this.value = value;
-	}
-};
-
-let myTestObj = new TestObj("one");
-console.log(myTestObj.value.length);
+for(let elem of testSecondGroup){
+	console.log(elem);
+}
