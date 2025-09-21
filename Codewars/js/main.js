@@ -1450,6 +1450,59 @@ const capMe = names => {
 
 /*
 ==========
+2025_09_21
+==========
+*/
+//Flatten
+//https://www.codewars.com/kata/5250a89b1625e5decd000413
+//Write a function that flattens an Array of Array objects into a flat Array. 
+// Your function must only do one level of flattening.
+/*
+PLAN
+    I. CONSTRAINTS  
+        A. Input is an array.
+        B. Must only flatten 1 level.
+
+    II. OPERATIONS
+        A. Flatten by one level
+        B. Return result.
+        
+    III. GOAL(S)
+
+    IV. DIVIDE
+        A. PHASES
+            1. Variables
+
+            2. Operators
+
+            3. Methods/Properties
+                i. .flat() 
+
+            4. Conditionals
+				i. 
+
+			5. Loops
+				
+
+        B. STEPS
+            1. .flat() on input
+            2. return result
+
+    V. DO WHAT YOU KNOW
+        A. OBVIOUS SOLUTIONS
+        
+        B. SOLVE MOST CONSTRAINED
+
+    VI. REDUCE PROBLEM
+
+    Possible solutions:
+
+    Thoughts:    
+*/
+const flatten = array => array.flat(1)
+
+/*
+==========
 2025_09_XX
 ==========
 */

@@ -41,7 +41,7 @@ class Group{
 		return (this.arr.indexOf(value) !== -1)
 	}
 }
-let yourGroup = new Group([8,9,10]);
+let yourGroup = Group.from([8,9,10]);
 
 /*
 Iterable groups
@@ -87,3 +87,56 @@ class GroupIterator {
 }
 let myGroup = new SecondGroup({a: 1, b: 2, c: 3});
 console.log(yourGroup, myGroup);
+
+//
+
+class List {
+  constructor(value, rest) {
+    this.value = value;
+    this.rest = rest;
+  }
+
+  get length() {
+	console.log(this.rest);
+    //return 1 + (this.rest ? this.rest.length : 0);
+  }
+
+  static fromArray(array) {
+    let result = null;
+    for (let i = array.length - 1; i >= 0; i--) {
+      result = new this(array[i], result);
+    }
+    return result;
+  }
+}
+
+class ListIterator {
+  constructor(list) {
+    this.list = list;
+  }
+
+  next() {
+    if (this.list == null) {
+      return {done: true};
+    }
+    let value = this.list.value;
+    this.list = this.list.rest;
+    return {value, done: false};
+  }
+}
+
+List.prototype[Symbol.iterator] = function() {
+  return new ListIterator(this);
+};
+
+let myList = List.fromArray(["a", "b", "c"])
+console.log(myList.length)
+
+class TestObj {
+	constructor(value){
+		this.value = value;
+	}
+};
+
+let myTestObj = new TestObj("one");
+console.log(myTestObj.value.length);
