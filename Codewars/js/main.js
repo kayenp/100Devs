@@ -1503,99 +1503,90 @@ const flatten = array => array.flat(1)
 
 /*
 ==========
-2025_09_XX
+2025_09_22
 ==========
 */
-//Minimize Sum Of Array (Array Series #1)
-//https://www.codewars.com/kata/5a523566b3bfa84c2e00010b
-//Given an array of integers, find the minimum sum which is obtained from summing each two integers product.
-//Example: minSum({5,4,2,3}) ==> return (22) 
+//You Can't Code Under Pressure #1 
+//https://www.codewars.com/kata/53ee5429ba190077850011d4 8kyu
+//Double the integer and return it
 /*
 PLAN
     I. CONSTRAINTS  
-        A. Number of array elements are always even
-        B. Element values are always positive
-        C. Must return the LOWEST SUM of the PRODUCTS of the element values
-
+        
     II. OPERATIONS
-        A. Multiple each array item by each other
-        B. Find the lowest sum value from the possible product combinations
-        C. Return lowest sum
         
     III. GOAL(S)
-
 
     IV. DIVIDE
         A. PHASES
             1. Variables
 
-
             2. Operators
 
-
             3. Methods/Properties
-                i. 
+                
 
-            4. Conditionals/Loops
-                i. Loops through array elements
+            4. Conditionals
+				 
+
+			5. Loops
+				
 
         B. STEPS
 
-
-        
     V. DO WHAT YOU KNOW
         A. OBVIOUS SOLUTIONS
         
-        B. PROBLEMS WITH MOST CONSTRAINTS
+        B. SOLVE MOST CONSTRAINED
 
     VI. REDUCE PROBLEM
 
     Possible solutions:
 
-    Thoughts:
-    - Each element has to be multiplied by every other item, but no duplicate pairings
-        - Results have to be kept for tracking
-    - Sum n values where n = arr.length/2
-        - if no duplicates, this would just be the number of results anyway?
-    - How to check and eliminate combinations?
-        - when running loop, index would be reference to the array value
-            - index value could be used to keep track of combinations
-			- store all values (including operands) in subarrays for tracking?
+    Thoughts:    
 */
-function minSum(arr) {
-	let productArr = [];
-	for(let i = 0; i < arr.length; i++){
-		for(let j = i+1; j < arr.length; j++){
-			productArr.push([[arr[i], arr[j]],[arr[i] * arr[j]]]);
-		}
-	}
-	console.log(productArr);
-	/* for(let k = 0; k < productArr[0][0]; k++){ 		//number of sum operands take into account arr.length/2
-		for(let l = 0; l < productArr.length; i++){		//arr
-			if(productArr)
-		}	
-	} */
-} 
+const doubleInteger = i => i+i
 
-console.log(minSum([5,4,2,3]))
-console.log(minSum([12,6,10,26,3,24]))
-
-let test = [5, 4];	//let i = 0; i < productArr.length; i += array.length-1
-let match = [5, 1];	//let j = arr.length + 1; j < productArr.length; j++
-					
-
-console.log();
 /*
-arr[0][0][0]
-arr[1][0][0]
-arr[2][0][0]
-arr[3][0][0]
-arr[4][0][0]
-arr[5][0][0]
-arr[1][0][1]
-arr[2][0][1]
-arr[3][0][1]
-arr[4][0][1]
-arr[5][0][1]
-inputArr.length/2 = iterations that first array comparison starts at; each subsequent comparison starts at 1 less than previous
+==========
+2025_09_22
+==========
 */
+//
+/*
+PLAN
+    I. CONSTRAINTS  
+        
+    II. OPERATIONS
+        
+    III. GOAL(S)
+
+    IV. DIVIDE
+        A. PHASES
+            1. Variables
+
+            2. Operators
+
+            3. Methods/Properties
+                
+
+            4. Conditionals
+				 
+
+			5. Loops
+				
+
+        B. STEPS
+
+    V. DO WHAT YOU KNOW
+        A. OBVIOUS SOLUTIONS
+        
+        B. SOLVE MOST CONSTRAINED
+
+    VI. REDUCE PROBLEM
+
+    Possible solutions:
+
+    Thoughts:    
+*/
+
