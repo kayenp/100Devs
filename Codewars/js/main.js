@@ -1552,13 +1552,22 @@ const doubleInteger = i => i+i
 2025_09_22
 ==========
 */
-//
+//Most digits
+//https://www.codewars.com/kata/58daa7617332e59593000006 7kyu
+//Find the number with the most digits.
+//If two numbers in the argument array have the same number of digits, return the first one in the array.
 /*
 PLAN
     I. CONSTRAINTS  
-        
+        A. Input is an array
+        B. Output is number with most digits
+        C. If tied for most digits, return first encountered element
+
     II. OPERATIONS
-        
+        A. Checks the .length of each element in the array
+        B. IF statement to break ties between 2 or more highest .length values
+        C. Return element
+
     III. GOAL(S)
 
     IV. DIVIDE
@@ -1568,15 +1577,19 @@ PLAN
             2. Operators
 
             3. Methods/Properties
-                
+                i. .length to determine most digits
+                ii. .sort() to sort array by length?
+                    - if using .sort(), will alter original array index values
 
             4. Conditionals
-				 
+				 i. IF to handle multiple elements with highest length
 
 			5. Loops
-				
+				i. loop through each element
 
         B. STEPS
+            1. Create for loop that goes through each element in array.
+            2. Loop body contains ex
 
     V. DO WHAT YOU KNOW
         A. OBVIOUS SOLUTIONS
@@ -1587,6 +1600,19 @@ PLAN
 
     Possible solutions:
 
-    Thoughts:    
+    Thoughts:
+        - How to keep track of element with longest length?
+            - Could use reduce to compare and reassign acc once longer length has been found
+            - Doesn't switch if new length isn't longer
+            - Can return that element    
 */
 
+const findLongest = array => array.reduce((acc,currVal) => {
+    if (acc.toString().length < currVal.toString().length) {
+        acc = currVal;
+        return acc;
+    } 
+    return acc;
+})
+
+console.log(findLongest([1, 10, 100]))
