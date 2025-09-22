@@ -1606,13 +1606,72 @@ PLAN
             - Doesn't switch if new length isn't longer
             - Can return that element    
 */
+const findLongest = array => array.reduce((acc,currVal) => (acc.toString().length < currVal.toString().length) ? acc = currVal : acc)
 
-const findLongest = array => array.reduce((acc,currVal) => {
-    if (acc.toString().length < currVal.toString().length) {
-        acc = currVal;
-        return acc;
-    } 
-    return acc;
-})
+/*
+==========
+2025_09_23
+==========
+*/
+//Who likes it?
+//https://www.codewars.com/kata/5266876b8f4bf2da9b000362 6kyu
+//Implement the function which takes an array containing the names of people that like an item. 
+//It must return the display text as shown in the examples:
+//[]                                -->  "no one likes this"
+//["Peter"]                         -->  "Peter likes this"
+//["Jacob", "Alex"]                 -->  "Jacob and Alex like this"
+//["Max", "John", "Mark"]           -->  "Max, John and Mark like this"
+//["Alex", "Jacob", "Mark", "Max"]  -->  "Alex, Jacob and 2 others like this"
+/*
+PLAN
+    I. CONSTRAINTS  
+        A. Input is an array of names
+        B. Output must be a string in the example format
+        C. Output text "and N others like this" must be accounted for
 
-console.log(findLongest([1, 10, 100]))
+    II. OPERATIONS
+        A. Count array length
+        B. Output string as a template literal
+
+    III. GOAL(S)
+
+    IV. DIVIDE
+        A. PHASES
+            1. Variables
+                
+
+            2. Operators
+
+
+            3. Methods/Properties
+                i. .length
+
+            4. Conditionals
+                i. IF empty array
+
+			5. Loops 
+                
+
+        B. STEPS
+            1. Count array length
+            2. IF/ternary for empty array
+            3. Output text as string literal
+
+    V. DO WHAT YOU KNOW
+        A. OBVIOUS SOLUTIONS
+        
+        B. SOLVE MOST CONSTRAINED
+
+    VI. REDUCE PROBLEM
+
+    Possible solutions:
+
+    Thoughts:
+       
+*/
+const likes = (names) => 
+         names.length === 0 ? 'no one likes this' :
+         names.length === 1 ? `${names[0]} likes this` :
+         names.length === 2 ? `${names[0]} and ${names[1]} like this` :
+         names.length === 3 ? `${names[0]}, ${names[1]} and ${names[2]} like this` :
+         `${names[0]}, ${names[1]} and ${names.length-2} others like this`;
