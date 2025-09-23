@@ -1684,7 +1684,6 @@ const likes = (names) =>
 //Sort the odd 6kyu
 //You will be given an array of numbers. 
 //You have to sort the odd numbers in ascending order while leaving the even numbers at their original positions.
-
 /*
 PLAN
     I. CONSTRAINTS  
@@ -1738,3 +1737,194 @@ function sortArray(array) {
     };
     return array;
 }
+/*
+==========
+2025_09_22
+==========
+*/
+//Filter Coffee 7kyu
+//The first argument to your search function will be a number which represents your budget.
+//The second argument will be an array of coffee bean prices.
+//Your 'search' function should return the stores that sell coffee within your budget.
+//The search function should return a string of prices for the coffees beans you can afford. The prices in this string are to be sorted in ascending order.
+/*
+PLAN
+    I. CONSTRAINTS  
+
+    II. OPERATIONS
+        
+    III. GOAL(S)
+
+    IV. DIVIDE
+        A. PHASES
+            1. Variables
+
+            2. Operators
+
+
+            3. Methods/Properties
+
+            4. Conditionals
+
+			5. Loops
+
+        B. STEPS
+
+
+    V. DO WHAT YOU KNOW
+        A. OBVIOUS SOLUTIONS
+        
+        B. SOLVE MOST CONSTRAINED
+
+    VI. REDUCE PROBLEM
+
+    Possible solutions:
+
+    Thoughts:
+       
+*/
+const search = (budget, prices) => prices.filter((price) => price <= budget).sort((a,b) => a - b).join()
+
+/*
+==========
+2025_09_22
+==========
+*/
+//We Have Liftoff 7kyu
+//You have an array of numbers 1 through n (where 1 <= n <= 10). The array needs to be formatted correctly for the person reading the countdown of a spaceship launch.
+//Unfortunately, the person reading the countdown only knows how to read strings. After the array is sorted correctly make sure it's in a format he can understand.
+//Between each number should be a space and after the final number (n) should be the word 'liftoff!'
+/*
+PLAN
+    I. CONSTRAINTS  
+
+    II. OPERATIONS
+        
+    III. GOAL(S)
+
+    IV. DIVIDE
+        A. PHASES
+            1. Variables
+
+            2. Operators
+
+
+            3. Methods/Properties
+
+            4. Conditionals
+
+			5. Loops
+
+        B. STEPS
+
+
+    V. DO WHAT YOU KNOW
+        A. OBVIOUS SOLUTIONS
+        
+        B. SOLVE MOST CONSTRAINED
+
+    VI. REDUCE PROBLEM
+
+    Possible solutions:
+
+    Thoughts:
+       
+*/
+function liftoff(instructions){
+  return instructions.sort((a,b) => b - a)
+              .join(" ") + " liftoff!"
+}
+
+/*
+==========
+2025_09_22
+==========
+*/
+//Beginner - Reduce but Grow 8kyu
+//Given a non-empty array of integers, return the result of multiplying the values together in order. 
+/*
+PLAN
+    I. CONSTRAINTS  
+
+    II. OPERATIONS
+        
+    III. GOAL(S)
+
+    IV. DIVIDE
+        A. PHASES
+            1. Variables
+
+            2. Operators
+
+
+            3. Methods/Properties
+
+            4. Conditionals
+
+			5. Loops
+
+        B. STEPS
+
+
+    V. DO WHAT YOU KNOW
+        A. OBVIOUS SOLUTIONS
+        
+        B. SOLVE MOST CONSTRAINED
+
+    VI. REDUCE PROBLEM
+
+    Possible solutions:
+
+    Thoughts:
+       
+*/
+const grow = x => x.reduce((acc,currVal) => {
+    return acc = acc * currVal;
+}, 1)
+
+/*
+==========
+2025_09_22
+==========
+*/
+//Sentence Smash 8kyu
+//Write a function that takes an array of words and smashes them together into a sentence and returns the sentence. 
+// You can ignore any need to sanitize words or add punctuation, but you should add spaces between each word. 
+// Be careful, there shouldn't be a space at the beginning or the end of the sentence!
+/*
+PLAN
+    I. CONSTRAINTS  
+
+    II. OPERATIONS
+        
+    III. GOAL(S)
+
+    IV. DIVIDE
+        A. PHASES
+            1. Variables
+
+            2. Operators
+
+
+            3. Methods/Properties
+
+            4. Conditionals
+
+			5. Loops
+
+        B. STEPS
+
+
+    V. DO WHAT YOU KNOW
+        A. OBVIOUS SOLUTIONS
+        
+        B. SOLVE MOST CONSTRAINED
+
+    VI. REDUCE PROBLEM
+
+    Possible solutions:
+
+    Thoughts:
+       
+*/
+const smash = words => words.join(" ");
