@@ -1928,3 +1928,94 @@ PLAN
        
 */
 const smash = words => words.join(" ");
+
+/*
+==========
+2025_09_23
+==========
+*/
+//Mexican Wave 6kyu
+//create a function that turns a string into a Mexican Wave. 
+//You will be passed a string and you must return an array of strings where an uppercase letter is a person standing up.
+//The input string will always consist of lowercase letters and spaces, but may be empty, in which case you must return an empty array. 
+//If the character in the string is whitespace then pass over it as if it was an empty seat
+/*
+PLAN
+    I. CONSTRAINTS  
+        A. Input is string
+            1. If input is composed of multiple words, words are remain a single element in output
+        B. Output is array of strings
+            1. Array of strings consists of 1st character capitalized, all else lowercase
+            2. Each subsequent element becomes the new capitalized character, all else lowecase
+            3. Repeat until last character is capital
+            4. White space is skipped over
+        C. Empty strings must return empty array
+
+    II. OPERATIONS
+        A. Loop through string
+        B. First encountered letter is capitalized
+        C. Characters before capital + capital + characters after capital pushed to new array
+        D. Repeat until whole length of string has been looped
+        E. Output array
+
+    III. GOAL(S)
+
+    IV. DIVIDE
+        A. PHASES
+            1. Variables
+                i. newStr for adding letters
+                ii. newArr for pushing completed words
+                iii. interimArr if splitting newStr into array
+
+            2. Operators
+                i. "+" for concatenating string chars
+
+            3. Methods/Properties
+                i. .push() for pushing newStr to array
+                ii. .map() if splitting input string into array
+                    a. .join() if above
+                    b. 
+                iii. .slice() if using string
+                
+
+            4. Conditionals
+                i. IF for white space    
+
+			5. Loops
+                i. loop for each individual string char
+
+        B. STEPS
+            1. Split string into array of characters
+
+    V. DO WHAT YOU KNOW
+        A. OBVIOUS SOLUTIONS
+        
+        B. SOLVE MOST CONSTRAINED
+
+    VI. REDUCE PROBLEM
+
+    Possible solutions:
+
+    Thoughts:
+
+*/
+function wave(str){
+  let output = [];
+  let i = 0;
+  capitalize();
+
+  function capitalize() {
+    let strArr = str.split("")
+    if (i > (strArr.length-1)) {
+        return;
+    } else {
+      if (!(strArr[i] === " ")) {
+        strArr[i] = strArr[i].toUpperCase();
+        output.push(strArr.join(""));
+      }
+      i++;
+      capitalize();
+    }
+  }
+  return output;
+};
