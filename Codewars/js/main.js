@@ -1610,7 +1610,7 @@ const findLongest = array => array.reduce((acc,currVal) => (acc.toString().lengt
 
 /*
 ==========
-2025_09_23
+2025_09_22
 ==========
 */
 //Who likes it?
@@ -1675,3 +1675,66 @@ const likes = (names) =>
          names.length === 2 ? `${names[0]} and ${names[1]} like this` :
          names.length === 3 ? `${names[0]}, ${names[1]} and ${names[2]} like this` :
          `${names[0]}, ${names[1]} and ${names.length-2} others like this`;
+
+/*
+==========
+2025_09_22
+==========
+*/
+//Sort the odd 6kyu
+//You will be given an array of numbers. 
+//You have to sort the odd numbers in ascending order while leaving the even numbers at their original positions.
+
+/*
+PLAN
+    I. CONSTRAINTS  
+
+    II. OPERATIONS
+        
+    III. GOAL(S)
+
+    IV. DIVIDE
+        A. PHASES
+            1. Variables
+
+            2. Operators
+
+
+            3. Methods/Properties
+
+            4. Conditionals
+
+			5. Loops
+
+        B. STEPS
+
+
+    V. DO WHAT YOU KNOW
+        A. OBVIOUS SOLUTIONS
+        
+        B. SOLVE MOST CONSTRAINED
+
+    VI. REDUCE PROBLEM
+
+    Possible solutions:
+
+    Thoughts:
+       
+*/
+function sortArray(array) {
+    let newArr = array.map((elem) => {
+        if (elem % 2 !== 0) {
+            return elem;
+        };
+    }).sort((a,b) => a - b);
+
+    let index = 0;
+ 
+    for (let i = 0; i < array.length; i++) {
+        if ( array[i] % 2 !== 0) {
+            array[i] = newArr[index];
+            index++;
+        };
+    };
+    return array;
+}
