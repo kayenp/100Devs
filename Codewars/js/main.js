@@ -2019,3 +2019,78 @@ function wave(str){
   }
   return output;
 };
+
+/*
+==========
+2025_09_23
+==========
+*/
+//Alphabetical Sequence 7kyu
+//In this kata you will be given a random string of letters and tasked with returning them as a string of 
+//comma-separated sequences sorted alphabetically, with each sequence starting with an uppercase character followed 
+//by n-1 lowercase characters, where n is the letter's alphabet position 1-26.
+/*
+PLAN
+    I. CONSTRAINTS  
+        A. Input is a string with only letters
+        B. Output should be first letter capitalized followed by n-1 lowercase that is the letter's alphabet position
+        C. Output sequences are comma separated
+        D. Output is a string
+
+    II. OPERATIONS
+        A. Use character codes to determine distance between characters
+        B. Convert input string to array of characters
+        C. Set character to uppercase
+        D. Append n-1 lowercase characters based on character position in alphabet
+
+    III. GOAL(S)
+
+    IV. DIVIDE
+        A. PHASES
+            1. Variables
+                i. array to store string chars
+                ii. working array to add 
+
+            2. Operators
+                i. + to append characters
+
+            3. Methods/Properties
+                i. .repeat() to append n characters
+                ii. split() to split input into array
+                iii. .join() if split is used 
+                iv. .charCodeAt() to find character's code and difference in alphabet position
+                v. toUpperCase() to set chars to uppercase
+                vi. toLowerCase() to set chars to lowercase
+                vii. .map() go through all elements
+                
+            4. Conditionals
+                i. 
+
+			5. Loops
+                i. loop through all characters within input string 
+
+        B. STEPS
+            1. Set string to uppercase
+            2. Split string into array
+            3. 
+
+    V. DO WHAT YOU KNOW
+        A. OBVIOUS SOLUTIONS
+        
+        B. SOLVE MOST CONSTRAINED
+
+    VI. REDUCE PROBLEM
+
+    Possible solutions:
+
+    Thoughts:
+
+*/
+function alphaSeq (str) {
+    let newArr = str.toUpperCase().split("");
+    let mapped = newArr.map((elem) => {
+        elem = elem + elem.toLowerCase().repeat(elem.charCodeAt(elem) - 65)
+        return elem;
+    })
+    return mapped.sort().join()
+}
