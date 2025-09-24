@@ -2283,3 +2283,103 @@ PLAN
   
 */
 const arrowFunc = (arr) => arr.map((elem) => String.fromCharCode(elem)).join("")
+
+/*
+==========
+2025_09_24
+==========
+*/
+//Reversed sequence
+//https://www.codewars.com/kata/5a00e05cc374cb34d100000d
+/*
+PLAN
+    I. CONSTRAINTS  
+
+
+    II. OPERATIONS
+        
+
+    III. GOAL(S)
+
+    IV. DIVIDE
+        A. PHASES
+            1. Variables
+
+
+            2. Operators
+  
+
+            3. Methods/Properties
+        
+
+            4. Conditionals
+  
+
+			5. Loops
+  
+
+        B. STEPS
+            
+
+    V. DO WHAT YOU KNOW
+        A. OBVIOUS SOLUTIONS
+        
+        B. SOLVE MOST CONSTRAINED
+
+    VI. REDUCE PROBLEM
+
+    Possible solutions:
+
+    Thoughts:
+  
+*/
+const reverseSeq = n => [...Array(n)].map((elem, index) => elem = index + 1).reverse()
+
+/*
+==========
+2025_09_24
+==========
+*/
+//MakeUpperCase
+//http://codewars.com/kata/57a0556c7cb1f31ab3000ad7
+/*
+PLAN
+    I. CONSTRAINTS  
+
+    II. OPERATIONS
+
+    III. GOAL(S)
+
+    IV. DIVIDE
+        A. PHASES
+            1. Variables
+
+
+            2. Operators
+  
+
+            3. Methods/Properties
+        
+
+            4. Conditionals
+  
+
+			5. Loops
+  
+
+        B. STEPS
+            
+
+    V. DO WHAT YOU KNOW
+        A. OBVIOUS SOLUTIONS
+        
+        B. SOLVE MOST CONSTRAINED
+
+    VI. REDUCE PROBLEM
+
+    Possible solutions:
+
+    Thoughts:
+  
+*/
+const makeUpperCase = str => str.toUpperCase()
