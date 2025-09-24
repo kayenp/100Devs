@@ -2231,3 +2231,55 @@ PLAN
   
 */
 const check = (a,x) => a.includes(x)
+
+/*
+==========
+2025_09_24
+==========
+*/
+//Take an Arrow to the knee, Functionally 8kyu
+/*
+PLAN
+    I. CONSTRAINTS  
+        A. Input is an array of numbers
+        B. Convert to letters using String.fromCharCode()
+
+    II. OPERATIONS
+        A. Pass array elements through String.fromCharCode()
+
+    III. GOAL(S)
+
+    IV. DIVIDE
+        A. PHASES
+            1. Variables
+
+
+            2. Operators
+  
+
+            3. Methods/Properties
+                   i. String.fromCharCode()
+                  ii. .map()
+
+            4. Conditionals
+  
+
+			5. Loops
+  
+
+        B. STEPS
+            
+
+    V. DO WHAT YOU KNOW
+        A. OBVIOUS SOLUTIONS
+        
+        B. SOLVE MOST CONSTRAINED
+
+    VI. REDUCE PROBLEM
+
+    Possible solutions:
+
+    Thoughts:
+  
+*/
+const arrowFunc = (arr) => arr.map((elem) => String.fromCharCode(elem)).join("")
