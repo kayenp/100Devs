@@ -2173,3 +2173,61 @@ function missingWord(nums, str) {
     }
     return decoded.toLowerCase();
 }
+
+/*
+==========
+2025_09_24
+==========
+*/
+//You only need one - Beginner 8kyu
+//https://www.codewars.com/kata/57cc975ed542d3148f00015b
+//You will be given an array a and a value x. All you need to do is check whether the provided array contains the value.
+//"a" can contain numbers or strings. "x" can be either.
+//Return "true" if the array contains the value, "false" if not.
+/*
+PLAN
+    I. CONSTRAINTS  
+        A. Input will be an array and a value
+        B. Need to check whether the array contains the value
+        C. array can contain number or strings, value can be either
+        D. Return "true" if array contains value, "false" otherwise
+
+    II. OPERATIONS
+        A. Check if array has a given value
+        B. Return true or false as appropriate
+
+    III. GOAL(S)
+
+    IV. DIVIDE
+        A. PHASES
+            1. Variables
+
+
+            2. Operators
+  
+
+            3. Methods/Properties
+                   i. .includes()    
+
+            4. Conditionals
+  
+
+			5. Loops
+  
+
+        B. STEPS
+            1. .includes on array with value as argument
+
+    V. DO WHAT YOU KNOW
+        A. OBVIOUS SOLUTIONS
+        
+        B. SOLVE MOST CONSTRAINED
+
+    VI. REDUCE PROBLEM
+
+    Possible solutions:
+
+    Thoughts:
+  
+*/
+const check = (a,x) => a.includes(x)
