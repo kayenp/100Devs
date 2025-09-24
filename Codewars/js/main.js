@@ -2094,3 +2094,82 @@ function alphaSeq (str) {
     })
     return mapped.sort().join()
 }
+
+/*
+==========
+2025_09_24
+==========
+*/
+//Jenny the youngest detective 7kyu
+//https://www.codewars.com/kata/58b972cae826b960a300003e
+//Each of the numbers in the array refers to the position of a letter in the string, in increasing order.
+//Spaces are not places, you need the actual letters. No spaces.
+//The returned word should be all lowercase letters.
+//If you can't find one of the letters using the index numbers, return "No mission today".
+/*
+PLAN
+    I. CONSTRAINTS  
+        A. Input is a string and an array
+        B. Output is a decoded lowercase string 
+        C. If a letter is missing, return "No mission today"
+        D. Array values correspond to letters, in ascending order
+        E. Array values are unsorted
+
+
+    II. OPERATIONS
+        A. Sort input array
+        B. Correspond array value with index value in string
+        C. Concatenate string characters until all array values have been looped
+        D. Return completed string as lowercase
+        E. If no string character corresponds to array value, return "No mission today"
+
+    III. GOAL(S)
+
+    IV. DIVIDE
+        A. PHASES
+            1. Variables
+                   i. return string
+
+            2. Operators
+                   i. + for concatenation of string chars
+
+            3. Methods/Properties
+                   i. .sort() for array
+                  ii. 
+                
+            4. Conditionals
+                   i. IF array value has no corresponding string index
+
+			5. Loops
+                   i. loop through all array values
+
+        B. STEPS
+            1. sort input array
+            2. create loop 
+
+    V. DO WHAT YOU KNOW
+        A. OBVIOUS SOLUTIONS
+        
+        B. SOLVE MOST CONSTRAINED
+
+    VI. REDUCE PROBLEM
+
+    Possible solutions:
+
+    Thoughts:
+        - account for empty spaces
+            - concatenate all individual characters to ignore spaces
+            - checks each character value 
+*/
+function missingWord(nums, str) {
+    let decoded = "";
+    let sorted = nums.toSorted((a,b) => a - b);
+    let nated = str.split(" ").join("");
+    for (let i = 0; i < sorted.length; i++) {
+        if (nated[sorted[i]] === undefined) {
+            return "No mission today."
+        }
+        decoded += nated[sorted[i]];
+    }
+    return decoded.toLowerCase();
+}
