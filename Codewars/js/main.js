@@ -2402,5 +2402,6 @@ const positiveSum = array => array.reduce((acc,currVal) => {
 const isReallyNaN = (val) => Number.isNaN(val)
 
 //#
-//isReallyNaN
-//https://www.codewars.com/kata/56c24c58e0c0f741d4001aef
+//Template Strings
+//https://www.codewars.com/kata/55a14f75ceda999ced000048
+var templateStrings = (noun, adjective) => `${noun} are ${adjective}`
