@@ -2401,7 +2401,13 @@ const positiveSum = array => array.reduce((acc,currVal) => {
 //https://www.codewars.com/kata/56c24c58e0c0f741d4001aef
 const isReallyNaN = (val) => Number.isNaN(val)
 
-//#
+//#3
 //Template Strings
 //https://www.codewars.com/kata/55a14f75ceda999ced000048
 var templateStrings = (noun, adjective) => `${noun} are ${adjective}`
+
+//#4
+//Add Length
+//https://www.codewars.com/kata/559d2284b5bb6799e9000047
+const addLength = (str) => str.split(" ").map((elem) => elem = `${elem} ${elem.length}`)
+
