@@ -2411,3 +2411,7 @@ var templateStrings = (noun, adjective) => `${noun} are ${adjective}`
 //https://www.codewars.com/kata/559d2284b5bb6799e9000047
 const addLength = (str) => str.split(" ").map((elem) => elem = `${elem} ${elem.length}`)
 
+//#5
+//Area or Perimeter
+//https://www.codewars.com/kata/5ab6538b379d20ad880000ab
+const areaOrPerimeter = (l , w) => (l === w) ? l*w : l*2 + w*2
