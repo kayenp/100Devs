@@ -2384,3 +2384,23 @@ PLAN
 */
 const makeUpperCase = str => str.toUpperCase()
 
+/*
+==========
+2025_09_25
+==========
+*/
+//#1
+//Sum of positive
+//https://www.codewars.com/kata/5715eaedb436cf5606000381
+const positiveSum = array => array.reduce((acc,currVal) => {
+  return currVal >= 0 ? acc + currVal : acc
+}, 0);
+
+//#2
+//isReallyNaN
+//https://www.codewars.com/kata/56c24c58e0c0f741d4001aef
+const isReallyNaN = (val) => Number.isNaN(val)
+
+//#
+//isReallyNaN
+//https://www.codewars.com/kata/56c24c58e0c0f741d4001aef
