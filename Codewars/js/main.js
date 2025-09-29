@@ -2415,3 +2415,92 @@ const addLength = (str) => str.split(" ").map((elem) => elem = `${elem} ${elem.l
 //Area or Perimeter
 //https://www.codewars.com/kata/5ab6538b379d20ad880000ab
 const areaOrPerimeter = (l , w) => (l === w) ? l*w : l*2 + w*2
+
+/*
+==========
+2025_09_26
+==========
+*/
+//#1
+//Thinkful - Number Drills: Blue and red marbles
+//https://www.codewars.com/kata/5862f663b4e9d6f12b00003b
+function guessBlue(blueStart, redStart, blueTaken, redTaken) {
+    return (blueStart - blueTaken)/((blueStart - blueTaken) + (redStart - redTaken))
+}
+
+//#2
+//String repeat
+//https://www.codewars.com/kata/57a0e5c372292dd76d000d7e
+function repeatStr (n, s) {
+  return s.repeat(n);
+}
+
+//#3
+//L1: Bartender, drinks!
+//https://www.codewars.com/kata/568dc014440f03b13900001d
+function getDrinkByProfession(param) {
+  param = param.toLowerCase();
+  
+  switch(param) {
+    case "jabroni": return "Patron Tequila";
+    case "school counselor": return "Anything with Alcohol";
+    case "programmer": return "Hipster Craft Beer";
+    case "bike gang member": return "Moonshine";
+    case "politician": return	"Your tax dollars";
+    case "rapper": return "Cristal";
+    default: return "Beer";
+  }
+}
+
+//#4
+//Basic Training: Add item to an Array
+//https://www.codewars.com/kata/511f0fe64ae8683297000001
+//Answer: websites.push("codewars")
+
+//#5
+//The Wide-Mouthed frog!
+//https://www.codewars.com/kata/57ec8bd8f670e9a47a000f89
+function mouthSize(animal) {
+   return (animal.toLowerCase() !== "alligator") ? "wide" : "small";
+}
+
+/*
+==========
+2025_09_29
+==========
+*/
+//#1
+//Parse nice int from char problem
+//https://www.codewars.com/kata/557cd6882bfa3c8a9f0000c1
+function getAge(inputString){
+    return Number(inputString[0]);
+}
+
+//#2
+//Name Shuffler
+//https://www.codewars.com/kata/559ac78160f0be07c200005a
+function nameShuffler(str){
+    return str.split(" ").reverse().join(" ");
+}
+
+//#3
+//Contamination #1 -String-
+//https://www.codewars.com/kata/596fba44963025c878000039
+function contamination(text, char){
+     return char.repeat(text.length);
+}
+
+//#4
+//How many stairs will Suzuki climb in 20 years?
+//https://www.codewars.com/kata/56fc55cd1f5a93d68a001d4e
+function stairsIn20(s){
+     return s.flat(1).reduce((acc,currVal) => acc + currVal) * 20;
+}
+
+//#5
+//Are there any arrows left?
+//https://www.codewars.com/kata/559f860f8c0d6c7784000119
+function anyArrows(arrows){
+    return (arrows.length === 0) ? false
+        : (arrows.every((obj) => obj.damaged === true)) ? false : true;
+};
