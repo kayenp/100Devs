@@ -2504,3 +2504,51 @@ function anyArrows(arrows){
     return (arrows.length === 0) ? false
         : (arrows.every((obj) => obj.damaged === true)) ? false : true;
 };
+
+/*
+==========
+2025_09_30
+==========
+*/
+//#1
+//Third Angle of a Triangle
+//https://www.codewars.com/kata/5a023c426975981341000014
+function otherAngle(a, b) {
+   return 180 - (a + b);
+}
+
+//#2
+//Remove the time
+//https://www.codewars.com/kata/56b0ff16d4aa33e5bb00008e
+function shortenToDate(longDate) {
+    return longDate.split(",")[0];
+}
+
+//#3
+//Volume of a Cuboid
+//https://www.codewars.com/kata/58261acb22be6e2ed800003a
+class Kata {
+  static getVolumeOfCuboid(length, width, height) {
+      return length * width * height;
+  }
+}
+
+//#4
+//Quarter of the year
+//https://www.codewars.com/kata/5ce9c1000bab0b001134f5af
+const quarterOf = (month) => {
+    return (month >= 1 && month <= 3) ? 1 
+         : (month >= 4 && month <= 6) ? 2
+         : (month >= 7 && month <= 9) ? 3 : 4; 
+}
+
+//#5
+//String cleaning
+//https://www.codewars.com/kata/57e1e61ba396b3727c000251
+function stringClean(s){
+    let cleaned = "";
+    for (let i = 0; i < s.length; i++) {
+        (s.charCodeAt(i) < 48 || s.charCodeAt(i) > 57) ? cleaned = cleaned + s[i] : "";
+    };
+    return cleaned;
+}
