@@ -2552,3 +2552,45 @@ function stringClean(s){
     };
     return cleaned;
 }
+
+/*
+==========
+2025_10_01
+==========
+*/
+//#1
+//Batman Quotes
+//https://www.codewars.com/kata/551614eb77dd9ee37100003e
+let quotes = ["WHERE IS SHE?!", "Holy haberdashery, Batman!", "Let's put a smile on that faaaceee!"];
+
+let getQuote = (quotes, hero) => {
+    let num = hero.split("").find((elem) => !Number.isNaN(+elem));
+    let name = "";
+    (hero.length === 6) ? name = "Batman"
+        : (hero.split("").slice(2).some((elem) => elem === "b")) ? name = "Robin" : name = "Joker";
+    return `${name}: ${quotes[num]}`;
+}
+
+//#2
+//Band name generator
+//https://www.codewars.com/kata/59727ff285281a44e3000011
+function bandNameGenerator(str) {
+    return (str.endsWith(str[0])) ? str[0].toUpperCase() + str.slice(1).repeat(2) : "The " + str[0].toUpperCase() + str.slice(1);
+};
+
+//#3
+//Geometry Basics: Circle Circumference in 2D
+//https://www.codewars.com/kata/58e43389acfd3e81d5000a88
+function circleCircumference(circle) {
+    return 2 * Math.PI * circle.radius;
+};
+
+//#4
+//Be Concise I - The Ternary Operator
+//https://www.codewars.com/kata/56f3f6a82010832b02000f38
+const describeAge = a => (a > 64) ? "You're a(n) elderly" : (a >= 18) ? "You're a(n) adult" : (a > 12) ? "You're a(n) teenager" : "You're a(n) kid"
+
+//#5
+//Training JS #16: Methods of String object--slice(), substring() and substr()
+//https://www.codewars.com/kata/57274562c8dcebe77e001012
+const cutIt = arr => arr.map((el) => el.slice(0, (arr.reduce((a,c) => (a.length > c.length) ? a = c : a).length)))
