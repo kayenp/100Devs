@@ -2594,3 +2594,51 @@ const describeAge = a => (a > 64) ? "You're a(n) elderly" : (a >= 18) ? "You're 
 //Training JS #16: Methods of String object--slice(), substring() and substr()
 //https://www.codewars.com/kata/57274562c8dcebe77e001012
 const cutIt = arr => arr.map((el) => el.slice(0, (arr.reduce((a,c) => (a.length > c.length) ? a = c : a).length)))
+
+/*
+==========
+2025_10_02
+==========
+*/
+//#1
+//Find the anonymous function
+//https://www.codewars.com/kata/55a12bb8f0fac1ba340000aa
+const FindFunction = (func, arr) => arr.filter(func.find((ele) => Number.isNaN(Number(ele))))
+
+//#2
+//Array Info
+//https://www.codewars.com/kata/57f12b4d5f2f22651c00256d
+function arrayInfo(arr){
+    let newArr = [];
+    newArr.push(
+        [arr.length],
+        [arr.filter((ele) => Number.isInteger(ele)).length],
+        [arr.filter((ele) => (!Number.isInteger(Number(ele)) && (Number.parseFloat(ele)))).length],
+        [arr.filter((ele) => typeof ele === "string" && ele !== " ").length],
+        [arr.filter((ele) => ele === " ").length]
+    )
+    return ((newArr.length === 0) || (newArr.every((elem) => +elem === 0))) ? "Nothing in the array!" : newArr.map((elem) => (+elem === 0) ? elem = [null] : elem);
+}
+
+//#3
+//A Needle in the Haystack
+//https://www.codewars.com/kata/56676e8fabd2d1ff3000000c
+function findNeedle(haystack) {
+    return `found the needle at position ${haystack.indexOf("needle")}`;
+}
+
+//#4
+//Find the Remainder
+//https://www.codewars.com/kata/524f5125ad9c12894e00003f
+function remainder(n, m){
+    return (n >= m && m !== 0) ? (n % m)
+        : (m >= n && n !== 0) ? (m % n)
+        : NaN
+}
+
+//#5
+//Exclamation marks series #4: Remove all exclamation marks from sentence but ensure a exclamation mark at the end of string
+//https://www.codewars.com/kata/57faf12b21c84b5ba30001b0
+function remove (string) {
+    return string.replaceAll("!", "") + "!"
+}
