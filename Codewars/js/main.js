@@ -2642,3 +2642,64 @@ function remainder(n, m){
 function remove (string) {
     return string.replaceAll("!", "") + "!"
 }
+
+/*
+==========
+2025_10_03
+==========
+*/
+//#1
+//Makes the Sentence
+//https://www.codewars.com/kata/59fb4d89ff58e5e816002efc
+function makesTheSentence(characterArray, sentenceString) {
+    return characterArray.sort().join("") === sentenceString.split("").filter(ele => ele !== " ").sort().join("");
+}
+
+//#2
+//Easy Time Convert
+//https://www.codewars.com/kata/5a084a098ba9146690000969
+function timeConvert(num) { 
+  return (num % 60 <= 0 && num / 60 <= 0) ? `00:00` : `${(Math.floor(num / 60)).toString().padStart(2, "0")}:${(num % 60).toString().padStart(2, "0")}`
+}
+
+//#3
+//Maxed Out
+//https://www.codewars.com/kata/584bf3b969ebc573ed00000f
+function maxedOut(arr) {
+    let total = arr.reduce((acc,currVal) => {
+        acc = acc + currVal**3;
+        return acc;
+    }, 0);  
+    return total <= Number.MAX_SAFE_INTEGER ? total : "You've pushed me to the max!";
+}
+
+//#4
+//Colored Hexes!
+//https://www.codewars.com/kata/57e17750621bca9e6f00006f
+function hexColor(codes) {
+    let codeArr = codes.split(" ");
+    let red = +codeArr[0];
+    let green = +codeArr[1];
+    let blue = +codeArr[2];
+
+    if (codeArr.reduce(((acc, currVal) => acc + +currVal), 0) === 0) {
+        return 'black';
+    }
+    if (red === green && green === blue) {
+        return 'white';
+    }
+    return (
+        (red > green && red > blue) ? "red"
+        : (red === green && red > blue) ? "yellow"
+        : (red === blue && red > green) ? "magenta"
+        : (green > blue) ? "green"
+        : (green === blue) ? "cyan" : "blue"
+  )
+}
+
+//#5
+//pick a set of first elements
+//https://www.codewars.com/kata/572b77262bedd351e9000076
+function first(arr, n=1) {
+  return (n === 0) ? [] : arr.slice(0,n);
+}
