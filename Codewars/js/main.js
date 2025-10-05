@@ -2719,7 +2719,7 @@ function makeNegative(num) {
 //#2
 //Reversed Strings
 //https://www.codewars.com/kata/5168bb5dfe9a00b126000018
-function solution(str) {
+function solution2(str) {
     return str.split("").reverse().join("");
 }
 
@@ -2744,3 +2744,39 @@ function opposite(number) {
 function findSmallestInt(arr) {
   return Math.min(...arr);
 };
+
+/*
+==========
+2025_10_05
+==========
+*/
+//#1
+//Binary Zoo
+//https://www.codewars.com/kata/5a1d91698ba9145199000141
+function countTheAnimals(animals) {
+    return (
+      Object.values(animals)
+        .map(elem => parseInt(elem, 2))
+        .reduce(((acc,currVal) => acc + currVal), 0));
+}
+
+//#2
+//Odder Than the Rest
+//https://www.codewars.com/kata/5983cba828b2f1fd55000114
+function oddOne(arr) {
+    return arr.findIndex(elem => elem % 2 !== 0);
+}
+
+//#3
+//Alphabetically ordered
+//https://www.codewars.com/kata/5a8059b1fd577709860000f6
+function alphabetic(s) {
+  return s === s.split("").sort().join("");
+}
+
+//#4
+//
+
+//Uppcase consonant 
+
+console.log([[1]].length);
