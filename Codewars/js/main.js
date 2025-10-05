@@ -2703,3 +2703,44 @@ function hexColor(codes) {
 function first(arr, n=1) {
   return (n === 0) ? [] : arr.slice(0,n);
 }
+
+/*
+==========
+2025_10_04
+==========
+*/
+//#1
+//Return Negative
+//https://www.codewars.com/kata/55685cd7ad70877c23000102
+function makeNegative(num) {
+    return num.toString().split("")[0] == "-" ? num : -num
+}
+
+//#2
+//Reversed Strings
+//https://www.codewars.com/kata/5168bb5dfe9a00b126000018
+function solution(str) {
+    return str.split("").reverse().join("");
+}
+
+//#3
+//Convert a Number to String!
+//https://www.codewars.com/kata/5265326f5fda8eb1160004c8
+
+function numberToString(num) {
+    return num.toString();
+}
+
+//#4
+//Opposite number
+//https://www.codewars.com/kata/56dec885c54a926dcd001095
+function opposite(number) {
+  return -number;
+};
+
+//#5
+//Find the smallest integer in the array
+//https://www.codewars.com/kata/55a2d7ebe362935a210000b2
+function findSmallestInt(arr) {
+  return Math.min(...arr);
+};
