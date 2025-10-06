@@ -2775,8 +2775,64 @@ function alphabetic(s) {
 }
 
 //#4
-//
+//Basic Mathematical Operations
+//https://www.codewars.com/kata/57356c55867b9b7a60000bd7
+function basicOp(operation, value1, value2){
+  switch(operation) {
+      case "+":
+        return value1 + value2;
+      case "-":
+        return value1 - value2;
+      case "*":
+        return value1 * value2;
+      case "/":
+        return value1 / value2;
+  };
+};
 
-//Uppcase consonant 
+//#5
+//Abbreviate a Two Word Name
+//https://www.codewars.com/kata/57eadb7ecd143f4c9c0000a3
+function abbrevName(name){
+  return name.split(" ")[0][0].toUpperCase() + "." + name.split(" ")[1][0].toUpperCase();
+}
 
-console.log([[1]].length);
+/*
+==========
+2025_10_06
+==========
+*/
+//#1
+//Opposites Attract
+//https://www.codewars.com/kata/555086d53eac039a2a000083
+function lovefunc(flower1, flower2) {
+    return Math.abs(flower1 - flower2) % 2 !== 0
+}
+
+//#2
+//Returning Strings
+//https://www.codewars.com/kata/55a70521798b14d4750000a4
+function greet(name){
+  return `Hello, ${name} how are you doing today?`;
+}
+
+//#3
+//Function 1-hello world
+//https://www.codewars.com/kata/523b4ff7adca849afe000035
+function greet() {
+  return "hello world!";
+}
+
+//#4
+//Are You Playing Banjo?
+//https://www.codewars.com/kata/53af2b8861023f1d88000832
+function areYouPlayingBanjo(name) {
+  return name.toLowerCase()[0] === 'r' ? `${name} plays banjo` : `${name} does not play banjo`
+}
+
+//#5
+//Beginner Series #1 School Paperwork
+//https://www.codewars.com/kata/55f9b48403f6b87a7c0000bd
+function paperwork(n, m) {
+  return (n <= 0 || m <= 0) ? 0 : n * m;
+}
