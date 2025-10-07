@@ -2836,3 +2836,62 @@ function areYouPlayingBanjo(name) {
 function paperwork(n, m) {
   return (n <= 0 || m <= 0) ? 0 : n * m;
 }
+
+/*
+==========
+2025_10_07
+==========
+*/
+//#1
+//Ones and Zeroes
+//https://www.codewars.com/kata/578553c3a1b8d5c40300037c
+const binaryArrayToNumber = arr => {
+  return parseInt(arr.join(""), 2);
+};
+
+//#2
+//Odd or Even?
+//https://www.codewars.com/kata/5949481f86420f59480000e7
+function oddOrEven(array) {
+    return (array === 0) ? "even"
+        : (array.reduce(((acc,currVal) => acc + currVal), 0) % 2 === 0) ? "even"
+        : "odd";
+}
+
+
+//#3
+//The museum of incredibly dull things
+//https://www.codewars.com/kata/563cf89eb4747c5fb100001b
+function removeSmallest(numbers) {
+    let newArr = [...numbers];
+    if (numbers.length === 0) {
+      return numbers;
+    }
+    newArr.splice(
+      (numbers.indexOf(
+        numbers.reduce(
+          (acc, currVal) => {
+        if (acc >= currVal) {
+            acc = currVal;
+        }
+        return acc;
+        })
+      )
+    ), 1);
+    return newArr;
+}
+
+//#4
+//Testing 1-2-3
+//https://www.codewars.com/kata/54bf85e3d5b56c7a05000cf9
+var number=function(array){
+  return array.map((elem, index) => `${index+1}: ${elem}`);
+}
+
+
+//#5
+//The highest profit wins!
+//https://www.codewars.com/kata/559590633066759614000063
+function minMax(arr){
+  return [Math.min(...arr), Math.max(...arr)];
+}
