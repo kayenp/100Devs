@@ -2895,3 +2895,62 @@ var number=function(array){
 function minMax(arr){
   return [Math.min(...arr), Math.max(...arr)];
 }
+
+/*
+==========
+2025_10_08
+==========
+*/
+//#1
+//Friday the 13th Part 1
+//https://www.codewars.com/kata/5925acf31a9825d616000e74
+function killcount(counselors, jason){
+  return counselors.filter((ele) => ele[1] < jason).map((ele) => ele[0]);
+}
+
+//#2
+//Chinese Zodiac
+//https://www.codewars.com/kata/57a73e697cb1f31dd70000d2
+function chineseZodiac(year){
+    return `${elements[Math.floor((year - 1924) / 2) % 5]} ${animals[(year-1924) % 12]}`;
+}
+
+//#3
+//Nth Smallest Element (Array Series #4)
+//https://www.codewars.com/kata/5a512f6a80eba857280000fc
+function nthSmallest(arr, pos){
+  return arr.sort((a, b) => a - b)[pos-1];
+}
+
+//#4
+//Find all non-consecutive
+//http://codewars.com/kata/58f8b35fda19c0c79400020f
+function allNonConsecutive (arr) {
+  return arr.filter((ele, ind) => {
+    if (ind === 0) {
+      return;
+    }
+    return (ele - 1 !== arr[ind - 1]);
+  }).map((ele) => ({i: arr.indexOf(ele), n: ele}))
+}
+
+//#5
+//Fifa 17 Launch
+//https://www.codewars.com/kata/57ed6361e77282ee9300019f
+function fifa(ticket, results){
+    let splitResults = results.map((ele) => ele.split('-'));
+    let namedResults = splitResults.map((ele) => {
+      return (ele[0] > ele[1]) ? "Home" 
+        : (ele[1] > ele[0]) ? "Away" : "Draw";
+    });
+    let winnings = '£'
+    let winArr = [];
+    let ticketResults = Object.entries(ticket)
+    for (let i = 0; i < 3; i++){
+      if (namedResults[i] === ticketResults[i][0]) {
+        winArr.push(ticketResults[i][1]);
+      }
+    }
+    winArr = winArr.join("").split('£');
+    return winnings + winArr.reduce(((acc, currVal) => +acc + +currVal), 0);
+} 
