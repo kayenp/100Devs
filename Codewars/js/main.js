@@ -2954,3 +2954,49 @@ function fifa(ticket, results){
     winArr = winArr.join("").split('£');
     return winnings + winArr.reduce(((acc, currVal) => +acc + +currVal), 0);
 } 
+
+
+/*
+==========
+2025_10_09
+==========
+*/
+//#1
+//String Scramble
+//https://www.codewars.com/kata/57cc4853fa9fc57a6a0002c2
+function scramble(str, arr) {
+  let newArr = [];
+  newArr.length = str.length;
+  arr.forEach((ele, ind) => {
+    newArr.splice(arr[ind], 1, str[ind])
+  });
+  return newArr.join('');
+}
+
+//#2
+//Grasshopper - Array Mean
+//https://www.codewars.com/kata/55d277882e139d0b6000005d
+function findAverage(nums) {
+   return nums.reduce(((acc, currVal) => acc + currVal), 0)/nums.length
+}
+
+//#3
+//UEFA EURO 2016
+//https://www.codewars.com/kata/57613fb1033d766171000d60
+function uefaEuro2016(teams, scores){
+  return (
+    `At match ${teams[0]} - ${teams[1]}, ` 
+    + ((scores[0] == scores[1]) ? 'teams played draw.' 
+        : ((scores[0] > scores[1]) ? `${teams[0]}` : `${teams[1]}`) + ' won!'));
+}
+
+//#4
+//CSV representation of array
+//https://www.codewars.com/kata/5a34af40e1ce0eb1f5000036
+function toCsvText(array) {
+  return array.map(elem => `${elem}\n`).join('').slice(0, -1)
+}
+
+let testArr = [[1],[2],[3]]
+
+console.log(testArr.join('\n'));
