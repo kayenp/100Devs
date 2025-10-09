@@ -2997,6 +2997,12 @@ function toCsvText(array) {
   return array.map(elem => `${elem}\n`).join('').slice(0, -1)
 }
 
-let testArr = [[1],[2],[3]]
-
-console.log(testArr.join('\n'));
+//#5
+//Sum of differences in array
+//https://www.codewars.com/kata/5b73fe9fb3d9776fbf00009e
+function sumOfDifferences(arr) {
+  return (
+    arr.sort((a, b) => b - a)
+        .map((_, ind, arr) => (arr[ind+1] !== undefined) ? arr[ind] - arr[ind+1] : 0)
+        .reduce(((acc, currVal) => acc + currVal), 0));
+}
