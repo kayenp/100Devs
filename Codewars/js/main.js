@@ -3006,3 +3006,82 @@ function sumOfDifferences(arr) {
         .map((_, ind, arr) => (arr[ind+1] !== undefined) ? arr[ind] - arr[ind+1] : 0)
         .reduce(((acc, currVal) => acc + currVal), 0));
 }
+
+/*
+==========
+2025_10_10
+==========
+*/
+//#1
+//No Loops 1 - Small enough?
+//https://www.codewars.com/kata/57cc4853fa9fc57a6a0002c2
+function smallEnough(a, limit){
+    return a.every(ele => ele <= limit);
+}
+
+//#2
+//Convert the score
+//https://www.codewars.com/kata/5b6c220fa0a661fbf200005d
+function scoreboard(string) {
+  return string.split(" ").slice(-2).map(ele => {
+    switch(ele) {
+        case 'one'
+          : return ele = 1;
+        case 'two'
+          : return ele = 2;
+        case 'three'
+          : return ele = 3;
+        case 'four'
+          : return ele = 4;
+        case 'five'
+          : return ele = 5;
+        case 'six'
+          : return ele = 6;
+        case 'seven'
+          : return ele = 7;
+        case 'eight'
+          : return ele = 8;
+        case 'nine'
+          : return ele = 9;
+        default: return ele = 0;
+    }
+  })
+}
+
+//#3
+//Driving Licence
+//https://www.codewars.com/kata/586a1af1c66d18ad81000134
+function driver(data) {
+  const monthArr = ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec'];
+  const surname = data[2].slice(0,5);
+  const dob = data[3].split("-"); //split dob into array
+  const month = dob[1].slice(0,3).toLowerCase(); //first 3 chars of month
+  const monthNum = (monthArr.indexOf(month) + 1).toString().padStart(2, '0');
+  
+ return (((surname.length < 5) ? surname + "9".repeat(5 - surname.length) : surname)
+            + dob[2][2]
+            + ((data[data.length-1] == 'F') ? `${(+monthNum[0] + 5)}` + monthNum[1] : `${monthNum[0]}` + `${monthNum[1]}`)
+            + dob[0]
+            + dob[2][3]
+            + ((data[1][0] == undefined) ? data[0][0] + '9' : data[0][0] + data[1][0])
+            + '9AA').toUpperCase();
+}
+
+//#4
+//Filter out the geese
+//https://www.codewars.com/kata/57ee4a67108d3fd9eb0000e7
+function gooseFilter (birds) {
+  var geese = ["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"];
+  return birds.filter(bird => !geese.includes(bird));
+};
+
+//#5
+//Find Multiples of a Number
+//https://www.codewars.com/kata/58ca658cc0d6401f2700045f
+function findMultiples(integer, limit, arr = [], incr = 0) {
+  if (limit/integer < 1) {
+    return arr;
+  }
+  arr.push(integer+incr);
+  return findMultiples(integer, limit-integer, arr, incr+integer);
+}
