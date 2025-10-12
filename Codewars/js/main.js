@@ -3136,3 +3136,68 @@ function multipleOfIndex(array) {
 function reverse(string){
   return string.split(' ').reverse().join(' ');
 }
+
+/*
+==========
+2025_10_12
+==========
+*/
+//#1
+//Double Trouble
+//https://www.codewars.com/kata/57f7796697d62fc93d0001b8
+function trouble(x, t){
+  for(let i = 0; i < x.length; i++) {
+    if(x[i] + x[i+1] == t) {
+      x.splice(i+1, 1)
+      i--;
+    } 
+  }
+  return x;
+}
+
+//#2
+//Help the Fruit Guy
+//https://www.codewars.com/kata/557af4c6169ac832300000ba
+function removeRotten(bagOfFruits){
+  return (bagOfFruits?.[0] == undefined) ? [] : bagOfFruits.join(' ').toLowerCase().replaceAll('rotten', '').split(' ');
+}
+
+//#3
+//CompoundArray
+//https://www.codewars.com/kata/56044de2aa75e28875000017
+function compoundArray(a, b) {
+    let newArr = [];
+    let i = 0;
+    while(i > -1){
+      if (a[i] == undefined) {
+        newArr = newArr.concat(b.slice(i));
+        break;
+      } else if (b[i] == undefined){
+        newArr = newArr.concat(a.slice(i));
+        break;
+      } else {
+        newArr.push(a[i], b[i]);
+        i++;
+      };
+    };
+  return newArr;
+}
+
+//#4
+//Alternate Square Sum
+//https://www.codewars.com/kata/559d7951ce5e0da654000073
+function alternateSqSum(arr){
+    for(let i = 0; i < arr.length; i++) {
+    if(i % 2 !== 0) {
+        arr.splice(i, 1, arr[i]**2);
+    };
+    }
+    return arr.reduce(((acc, currVal) => acc + currVal), 0);
+}
+
+//#5
+//Exclamation marks series #1: Remove an exclamation mark from the end of the string
+//https://www.codewars.com/kata/57fae964d80daa229d000126
+function remove (string) {
+  return (string.endsWith('!')) ? string.slice(0,-1) : string;
+}
