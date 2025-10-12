@@ -3085,3 +3085,54 @@ function findMultiples(integer, limit, arr = [], incr = 0) {
   arr.push(integer+incr);
   return findMultiples(integer, limit-integer, arr, incr+integer);
 }
+
+/*
+==========
+2025_10_11
+==========
+*/
+//#1
+//Hit Count
+//https://www.codewars.com/kata/57b6f850a6fdc76523001162
+function counterEffect(hitCount) {
+  return hitCount.split('').map(ele => [+ele]).map(outEle => {
+    for(let i = 0; i < outEle[0]; i++) {
+      outEle.push(i);
+    };
+    return outEle.sort((a, b) => a - b);
+  })
+}
+
+//#2
+//Fake Binary
+//https://www.codewars.com/kata/57eae65a4321032ce000002d
+function fakeBin(x){
+  return x.split('').map(ele => (ele < 5) ? ele = 0 : ele = 1).join('');
+}
+
+//#3
+//A wolf in sheep's clothing
+//https://www.codewars.com/kata/5c8bfa44b9d1192e1ebd3d15
+function warnTheSheep(queue) {
+  if(queue.indexOf('wolf') == queue.length-1) {
+    return `Pls go away and stop eating my sheep`
+  } else {
+    return `Oi! Sheep number ${queue.length-1 - queue.indexOf('wolf')}! You are about to be eaten by a wolf!`
+  };
+};
+
+//#4
+//Multiple of index
+//https://www.codewars.com/kata/5a34b80155519e1a00000009
+function multipleOfIndex(array) {
+  return array.filter((ele, ind) => {
+    return (ele == 0 || (Math.abs(ele) % ind == 0)) 
+  })
+}
+
+//#5
+//Reversing Words in a String
+//https://www.codewars.com/kata/57a55c8b72292d057b000594
+function reverse(string){
+  return string.split(' ').reverse().join(' ');
+}
