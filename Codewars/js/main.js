@@ -3201,3 +3201,49 @@ function alternateSqSum(arr){
 function remove (string) {
   return (string.endsWith('!')) ? string.slice(0,-1) : string;
 }
+
+/*
+==========
+2025_10_13
+==========
+*/
+//#1
+//Product of Maximums Of Array (Array Series #2)
+//https://www.codewars.com/kata/5a63948acadebff56f000018
+function maxProduct(numbers, size){
+  let newArr = [];
+  for (let i = 0; i <= size-1; i++) {
+    newArr.push(Math.max(...numbers));
+    numbers.splice(numbers.indexOf(Math.max(...numbers)), 1);
+  }
+  return newArr.reduce((acc, currVal) => acc * currVal);
+}
+
+//#2
+//Dominant array elements
+//https://www.codewars.com/kata/5a04133e32b8b998dc000089
+const solve = arr => [...new Set(arr.filter((ele, ind) => ele == Math.max(...arr.slice(ind))))]
+
+//#3
+//The Feast of Many Beasts
+//https://www.codewars.com/kata/5aa736a455f906981800360d
+const feast = (beast, dish) => beast.startsWith(dish[0]) && beast.endsWith(dish.slice(-1))
+
+//#4
+//Safen User Input Part I - htmlspecialchars
+//https://www.codewars.com/kata/56bcaedfcf6b7f2125001118
+function htmlspecialchars(formData) {
+  return formData
+            .replaceAll('&', '&amp;')
+            .replaceAll('<', '&lt;')
+            .replaceAll('>', '&gt;')
+            .replaceAll('"', '&quot;')
+};
+
+//#5
+//ES6 string addition
+//https://www.codewars.com/kata/582e4c3406e37fcc770001ad
+function joinStrings(string1, string2){
+   return `${string1} ${string2}`
+}
+
