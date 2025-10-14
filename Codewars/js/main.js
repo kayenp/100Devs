@@ -3247,3 +3247,46 @@ function joinStrings(string1, string2){
    return `${string1} ${string2}`
 }
 
+/*
+==========
+2025_10_14
+==========
+*/
+//#1
+//Well of Ideas - Easy Version
+//https://www.codewars.com/kata/57f222ce69e09c3630000212
+function well(x){
+  if (x.every(ele => ele == 'bad')) {
+    return 'Fail!';
+  } else {
+    return (x.join(" ").split("good").length-1 > 2) ? 'I smell a series!' : 'Publish!';
+  };
+}
+
+//#2
+//Find the Difference in Age between Oldest and Youngest Family Members
+//https://www.codewars.com/kata/5720a1cb65a504fdff0003e2
+function differenceInAges(ages){
+  return [Math.min(...ages), Math.max(...ages), (Math.max(...ages) - Math.min(...ages))];
+}
+
+//#3
+//Find numbers which are divisible by given number
+//https://www.codewars.com/kata/55edaba99da3a9c84000003b
+function divisibleBy(numbers, divisor){
+  return numbers.filter(elem => elem % divisor == 0);
+}
+
+//#4
+//SpeedCode #2 - Array Madness
+//https://www.codewars.com/kata/56ff6a70e1a63ccdfa0001b1
+function arrayMadness(a, b) {
+  return (a.map(ele => ele**2).reduce((acc, currVal) => acc + currVal) > b.map(ele => ele**3).reduce((acc, currVal) => acc + currVal))
+}
+
+//#5
+//To square(root) or not to square(root)
+//https://www.codewars.com/kata/57f6ad55cca6e045d2000627
+function squareOrSquareRoot(array) {
+    return array.map(elem => (Number.isInteger(Math.sqrt(elem))) ? Math.sqrt(elem) : elem**2);
+}
