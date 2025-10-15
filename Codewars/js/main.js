@@ -3290,3 +3290,56 @@ function arrayMadness(a, b) {
 function squareOrSquareRoot(array) {
     return array.map(elem => (Number.isInteger(Math.sqrt(elem))) ? Math.sqrt(elem) : elem**2);
 }
+
+/*
+==========
+2025_10_15
+==========
+*/
+//#1
+//Sort array by string length
+//https://www.codewars.com/kata/57ea5b0b75ae11d1e800006c
+function sortByLength (array) {
+ return array.sort((a, b) => a.length - b.length)
+}
+
+//#2
+//Find the middle element
+//https://www.codewars.com/kata/545a4c5a61aa4c6916000755
+function gimme (triplet) {
+  return triplet.indexOf(triplet.find(ele => ele !== Math.max(...triplet) && ele !== Math.min(...triplet)));
+}
+
+//#3
+//Small enough? - Beginner
+//https://www.codewars.com/kata/57cc981a58da9e302a000214
+function smallEnough(a, limit){
+ return a.every(ele => ele <= limit) 
+}
+
+//#4
+//Check the exam
+//https://www.codewars.com/kata/5a3dd29055519e23ec000074
+function checkExam(array1, array2) {
+  let score = 0;
+  for (let i = 0; i < array1.length; i++) {
+    if (array1[i] == array2[i]) {
+      score +=4;
+    } else if (array2[i] == '') {
+      score +=0;
+    } else {
+      score--;
+    }
+  }
+  if (score < 0) {
+    score = 0;
+  }
+  return score;
+}
+
+//#5
+//Sum of Minimums!
+//https://www.codewars.com/kata/5d5ee4c35162d9001af7d699
+function sumOfMinimums(arr) {
+  return arr.map(ele => Math.min(...ele)).reduce((acc, currVal) => acc + currVal);
+}
