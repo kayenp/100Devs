@@ -3343,3 +3343,43 @@ function checkExam(array1, array2) {
 function sumOfMinimums(arr) {
   return arr.map(ele => Math.min(...ele)).reduce((acc, currVal) => acc + currVal);
 }
+
+/*
+==========
+2025_10_16
+==========
+*/
+//#1
+//Simple Comparison?
+//https://www.codewars.com/kata/57f6ecdfcca6e045d2001207
+function add(a, b){
+	return +a == +b;
+}
+
+//#2
+//My head is at the wrong end!
+//https://www.codewars.com/kata/56f699cd9400f5b7d8000b55
+function fixTheMeerkat(arr) {
+  return arr.reverse();
+}
+
+//#3
+//Get the mean of an array
+//https://www.codewars.com/kata/563e320cee5dddcf77000158
+function getAverage(marks){
+  return Math.floor(marks.reduce(((acc, currVal) => acc + currVal), 0)/marks.length);
+}
+
+//#4
+//Reversed Words
+//https://www.codewars.com/kata/51c8991dee245d7ddf00000e
+function reverseWords(str){
+  return str.split(' ').reverse().join(' ');
+}
+
+//#5
+//Neutralisation
+//https://www.codewars.com/kata/65128732b5aff40032a3d8f0
+function neutralise(s1, s2) {
+  return s1.split('').map((ele, ind) => ele != s2[ind] ? 0 : (ele == '+') ? '+' : '-').join('');
+}
