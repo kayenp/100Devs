@@ -3383,3 +3383,47 @@ function reverseWords(str){
 function neutralise(s1, s2) {
   return s1.split('').map((ele, ind) => ele != s2[ind] ? 0 : (ele == '+') ? '+' : '-').join('');
 }
+
+/*
+==========
+2025_10_17
+==========
+*/
+//#1
+//How many consecutive numbers are needed?
+//https://www.codewars.com/kata/559cc2d2b802a5c94700000c
+function consecutive(array) {
+  let newArr = [];
+  for (let i = Math.min(...array); i <= Math.max(...array); i++) {
+    newArr.push(i);
+  };
+  return newArr.length - array.length;
+}
+
+//#2
+//Difference between two collections
+//https://www.codewars.com/kata/594093784aafb857f0000122
+function diff(a, b){
+  let aSet = [...new Set(a)];
+  let bSet = [...new Set(b)];
+  return aSet.concat(bSet).sort().filter((ele, ind, arr) => ele != arr[ind+1] && ele != arr[ind-1]);
+}
+
+//#3
+//String Templates - Bug Fixing #5
+//https://www.codewars.com/kata/55c90cad4b0fe31a7200001f
+function buildString(...template){
+  return `I like ${template.join(', ')}!`;
+}
+
+//#4
+//Name on billboard
+//https://www.codewars.com/kata/570e8ec4127ad143660001fd
+const billboard = (name, price = 30, total = 0) => (total/name.length == price) ? total : billboard(name, price, total += price);
+
+//#5
+//Alan Partridge II - Apple Turnover
+//https://www.codewars.com/kata/580a094553bd9ec5d800007d
+function apple(x){
+  return (x**2 > 1000) ? "It's hotter than the sun!!" : "Help yourself to a honeycomb Yorkie for the glovebox.";
+}
