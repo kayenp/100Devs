@@ -3427,3 +3427,50 @@ const billboard = (name, price = 30, total = 0) => (total/name.length == price) 
 function apple(x){
   return (x**2 > 1000) ? "It's hotter than the sun!!" : "Help yourself to a honeycomb Yorkie for the glovebox.";
 }
+
+/*
+==========
+2025_10_18
+==========
+*/
+//#1
+//Find the capitals
+//https://www.codewars.com/kata/539ee3b6757843632d00026b
+var capitals = function (word) {
+	return word.split('').map((ele, ind) => {
+    return (ele == ele.toUpperCase()) ? ele = ind : null;
+    }).filter(ele => ele != null);
+};
+
+//#2
+//Flatten and sort an array
+//https://www.codewars.com/kata/57ee99a16c8df7b02d00045f
+function flattenAndSort(array) {
+  return array.flat(1).sort((a, b) => a - b);
+}
+
+//#3
+//Row Weights
+//https://www.codewars.com/kata/5abd66a5ccfd1130b30000a9
+function rowWeights(array){
+  let arr1 = [];
+  let arr2 = [];
+  array.forEach((ele, ind) => (ind % 2 == 0) ? arr1.push(ele) : arr2.push(ele));
+  arr1 = [arr1.reduce(((acc, val) => acc + val), 0)];
+  arr2 = [arr2.reduce(((acc, val) => acc + val), 0)];
+  return arr1.concat(arr2)
+}
+
+//#4
+//Coding Meetup #1 - Higher-Order Functions Series - Count the number of Javascript developers coming from Europe
+//https://www.codewars.com/kata/582746fa14b3892727000c4f
+function countDevelopers(list) {
+  return list.filter(ele => (ele.language == 'JavaScript' && ele.continent == 'Europe')).length;
+}
+
+//#5
+//No oddities here
+//http://codewars.com/kata/51fd6bc82bc150b28e0000ce
+function noOdds( values ){
+  return values.filter(ele => ele % 2 == 0);
+}
