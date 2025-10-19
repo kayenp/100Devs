@@ -3474,3 +3474,51 @@ function countDevelopers(list) {
 function noOdds( values ){
   return values.filter(ele => ele % 2 == 0);
 }
+
+/*
+==========
+2025_10_19
+==========
+*/
+//#1
+//Even numbers in an array
+//https://www.codewars.com/kata/5a431c0de1ce0ec33a00000c
+function evenNumbers(array, number) {
+  return array.filter(ele => ele % 2 == 0).slice(-number)
+}
+
+//#2
+//Sorted? yes? no? how?
+//https://www.codewars.com/kata/580a4734d6df748060000045
+function isSortedAndHow(array) {
+  const ascend = array.slice().sort((a, b) => a - b).every((ele, ind) => ele == array[ind]);
+  const descend = array.slice().sort((a, b) => b - a).every((ele, ind) => ele == array[ind]);
+  return (ascend) ? 'yes, ascending'
+    : (descend) ? 'yes, descending' : 'no';
+}
+
+//#3
+//Fizz Buzz
+//https://www.codewars.com/kata/5300901726d12b80e8000498
+function fizzbuzz(n)
+{
+  return [...Array(n)].map((ele, ind) => {
+    return ((ind + 1) % 3 == 0 && (ind + 1) % 5 == 0) ? ele = 'FizzBuzz'
+      : ((ind + 1) % 3 == 0) ? ele = 'Fizz'
+      : ((ind + 1) % 5 == 0) ? ele = 'Buzz' : ele = (ind + 1)
+  })
+}
+
+//#4
+//Do I get a bonus?
+//https://www.codewars.com/kata/56f6ad906b88de513f000d96
+function bonusTime(salary, bonus) {
+  return (bonus) ? `£${salary * 10}` : `£${salary}`
+}
+
+//#5
+//Stringy Strings
+//https://www.codewars.com/kata/563b74ddd19a3ad462000054
+function stringy(size) {
+  return Array.from({length: size}, (v, k) => (k % 2 == 0) ? v = 1 : v = 0).join('');
+}
