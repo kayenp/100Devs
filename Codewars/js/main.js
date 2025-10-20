@@ -3522,3 +3522,53 @@ function bonusTime(salary, bonus) {
 function stringy(size) {
   return Array.from({length: size}, (v, k) => (k % 2 == 0) ? v = 1 : v = 0).join('');
 }
+
+/*
+==========
+2025_10_20
+==========
+*/
+//#1
+//Convert an array of strings to array of numbers
+//https://www.codewars.com/kata/5783d8f3202c0e486c001d23
+function toNumberArray(stringarray){
+  return stringarray.map(ele => ele - 0);
+}
+
+//#2
+//Divide and Conquer
+//https://www.codewars.com/kata/57eaec5608fed543d6000021
+function divCon(x){
+  const numArr = [];
+  const strArr = [];
+  for (let i = 0; i < x.length; i++) {
+    if (typeof x[i] == 'number') {
+      numArr.push(x[i]);
+    } else {
+      strArr.push(Number(x[i]));
+    }
+  }
+  return numArr.reduce(((a, c) => a + c), 0) - strArr.reduce(((a, c) => a + c), 0);
+}
+
+//#3
+//max diff - easy
+//https://www.codewars.com/kata/588a3c3ef0fbc9c8e1000095
+function maxDiff(list) {
+  return (list.length <= 1) ? 0 : Math.max(...list) - Math.min(...list);
+};
+
+//#4
+//https://www.codewars.com/kata/580dda86c40fa6c45f00028a
+function cubeOdd(arr) {
+  let result = arr.reduce(((a, c) => (c % 2 != 0) ? a = a + c**3 : a), 0);
+  return (Number.isNaN(result)) ? undefined : result;
+}
+
+//#5
+//Short Long Short
+//https://www.codewars.com/kata/50654ddff44f800200000007
+function solution(a, b){
+  return (a.length < b.length) ? a+b+a : b+a+b;
+}
+
