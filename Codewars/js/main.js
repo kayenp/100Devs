@@ -3572,3 +3572,70 @@ function solution(a, b){
   return (a.length < b.length) ? a+b+a : b+a+b;
 }
 
+/*
+==========
+2025_10_21
+==========
+*/
+//#1
+//Smallest value of an array
+//https://www.codewars.com/kata/544a54fd18b8e06d240005c0
+function min(arr, toReturn) { 
+    return (toReturn == 'value') ? Math.min(...arr) : arr.indexOf(Math.min(...arr));
+}
+
+//#2
+//The Office I - Outed
+//https://www.codewars.com/kata/57ecf6efc7fe13eb070000e1
+function outed(meet, boss){
+  const meetArr = Object.entries(meet);
+  const score = meetArr.map(ele => ele[0] == boss ? ele[1] * 2 : ele[1]).reduce(((a, c) => {
+    return a + c;
+  }), 0);  
+  return (score/meetArr.length <= 5) ? 'Get Out Now!' : 'Nice Work Champ!';
+}
+
+//#3
+//The Office II - Boredom Score
+//https://www.codewars.com/kata/57ed4cef7b45ef8774000014
+function boredom(staff){
+  const objKeys = {
+    'accounts': 1,
+    'finance': 2,
+    'canteen': 10,
+    'regulation': 3,
+    'trading': 6,
+    'change': 6,
+    'IS': 8,
+    'retail': 5,
+    'cleaning': 4,
+    'pissing about': 25,
+  };
+  const depts = Object.values(staff);
+  let teamScore = depts.reduce(((a, c, i) => a += objKeys[c]), 0);
+  return (teamScore <= 80) ? 'kill me now'
+    : (teamScore < 100 && teamScore > 80) ? 'i can handle this' : 'party time!!'; 
+}
+
+//#4
+//Simple consecutive pairs
+//https://www.codewars.com/kata/5a3e1319b6486ac96f000049
+function pairs(ar){
+  let count = 0;
+  for (let i = 0; i < ar.length; i = i+2) {
+    if (ar[i+1] == undefined) {
+      return count;
+    } 
+    if (Math.abs(ar[i] - ar[i+1]) == 1) {
+      count++;
+    }
+  }
+  return count;
+};
+
+//#5
+//Capitalization and Mutability
+//https://www.codewars.com/kata/595970246c9b8fa0a8000086
+function capitalizeWord(word) {
+  return word[0].toUpperCase() + word.slice(1);
+}
