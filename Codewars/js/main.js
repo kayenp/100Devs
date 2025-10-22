@@ -3639,3 +3639,68 @@ function pairs(ar){
 function capitalizeWord(word) {
   return word[0].toUpperCase() + word.slice(1);
 }
+
+/*
+==========
+2025_10_22
+==========
+*/
+//#1
+//Char Code Calculation
+//https://www.codewars.com/kata/57f75cc397d62fc93d000059
+function calc(x){
+  let total1 = '';
+  for (let i = 0; i < x.length; i++) {
+    total1 += x.charCodeAt(i);
+  }
+  const total2 = (
+    total1
+      .replaceAll('7', '1')
+      .split('')
+      .map(ele => Number(ele))
+      .reduce((acc, currVal) => acc + currVal)
+  );
+  total1 = (
+    total1
+      .split('')
+      .map(ele => Number(ele))
+      .reduce((acc, currVal) => acc + currVal)
+  )
+  return total1 - total2;
+}
+
+//#2
+//Last Survivor
+//https://www.codewars.com/kata/609eee71109f860006c377d1
+function lastSurvivor(letters, coords) {
+  const letterArr = letters.split('');
+  for (let i = 0; i < coords.length; i++) {
+   letterArr.splice(coords[i], 1);
+  }
+  return letterArr[0];
+}
+
+//#3
+//Century From Year
+//https://www.codewars.com/kata/5a3fe3dde1ce0e8ed6000097
+function century(year) {
+  return Math.ceil(year/100);
+};
+
+//#4
+//Calculate BMI
+//https://www.codewars.com/kata/57a429e253ba3381850000fb
+function bmi(weight, height) {
+  let bmi = weight/height**2;
+  return (bmi > 30) ? 'Obese'
+    : (bmi <= 30 && bmi > 25) ? 'Overweight'
+    : (bmi <= 25 && bmi > 18.5) ? 'Normal' : 'Underweight';
+}
+
+//#5
+//Is he gonna survive?
+//https://www.codewars.com/kata/59ca8246d751df55cc00014c
+function hero(bullets, dragons){
+  return (bullets/dragons) < 2 ? false : true;
+}
+
