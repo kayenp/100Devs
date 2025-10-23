@@ -3704,3 +3704,62 @@ function hero(bullets, dragons){
   return (bullets/dragons) < 2 ? false : true;
 }
 
+/*
+==========
+2025_10_23
+==========
+*/
+//#1
+//Head, Tail, Init and Last
+//https://www.codewars.com/kata/54592a5052756d5c5d0009c3
+function head(arr) {
+  return arr[0];
+}
+function tail(arr) {
+  return arr.slice(1);
+}
+function init(arr) {
+  return arr.slice(0, arr.length-1);
+}
+function last(arr) {
+  return arr.slice(-1)[0];
+}
+
+//#2
+//Distance from the average
+//https://www.codewars.com/kata/568ff914fc7a40a18500005c
+function distancesFromAverage(arr) {
+  const avg = (arr.reduce(((acc, currVal) => acc + currVal), 0)/arr.length).toFixed(2);
+  return arr.map(ele => (avg - ele).valueOf());
+}
+
+//#3
+//Grasshopper - Basic Function Fixer
+//https://www.codewars.com/kata/56200d610758762fb0000002
+function addFive(num) {
+  var total = num + 5
+  return total;
+}
+
+//#4
+//Rock Paper Scissors!
+//https://www.codewars.com/kata/5672a98bdbdd995fad00000f
+const rps = (p1, p2) => {
+  if (p1 == p2) {
+    return 'Draw!';
+  } else if (p1 == 'rock' && p2 == 'scissors' 
+             || p1 == 'scissors' && p2 == 'paper' 
+             || p1 == 'paper' && p2 == 'rock') {
+    return 'Player 1 won!';
+  } else {
+    return 'Player 2 won!'
+  }
+};
+
+//#5
+//How many lightsabers do you own?
+//https://www.codewars.com/kata/51f9d93b4095e0a7200001b8
+function howManyLightsabersDoYouOwn(name) {
+  return name == 'Zach' ? 18 : 0;
+};
+
