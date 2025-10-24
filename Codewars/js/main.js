@@ -3763,3 +3763,72 @@ function howManyLightsabersDoYouOwn(name) {
   return name == 'Zach' ? 18 : 0;
 };
 
+/*
+==========
+2025_10_24
+==========
+*/
+//#1
+//Partial Word Searching
+//https://www.codewars.com/kata/54b81566cd7f51408300022d
+function wordSearch(query, seq) {
+  const result = seq.reduce(((acc, currVal) => {
+    currVal.toLowerCase().includes(query.toLowerCase()) && acc.push(currVal);
+    return acc;
+  }), []);
+  return result.length >= 1 ? result : ['Empty'];
+}
+
+//#2
+//The 'if' function
+//https://www.codewars.com/kata/54147087d5c2ebe4f1000805
+function _if(bool, func1, func2) {
+  console.log(bool);
+  return bool ? func1() : func2();
+}
+
+//#3
+//Find the position!
+//https://www.codewars.com/kata/5808e2006b65bff35500008f
+function position(letter){
+  return `Position of alphabet: ${letter.charCodeAt(0) - 96}`;
+}
+
+//#4
+//Training JS #4: Basic data types -- Array
+//https://www.codewars.com/kata/571effabb625ed9b0600107a
+function getLength(arr){
+  //return length of arr
+  return arr.length;
+}
+function getFirst(arr){
+  //return the first element of arr
+  return arr[0];
+}
+function getLast(arr){
+  //return the last element of arr
+  return arr[arr.length-1];
+}
+function pushElement(arr){
+  var el=1;
+  //push el to arr
+  arr.push(el);
+  return arr;
+}
+function popElement(arr){
+  //pop an element from arr
+  arr.pop();
+  return arr;
+}
+
+//#5
+//Training JS #10: loop statement -- for
+//https://www.codewars.com/kata/5721a78c283129e416000999
+function pickIt(arr){
+  let odd = [], even = [];
+  //coding here
+  for (let i = 0; i < arr.length; i++) {
+    (arr[i] % 2 != 0) ? odd.push(arr[i]) : even.push(arr[i]);
+  }
+  return [odd,even];
+}
