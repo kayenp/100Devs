@@ -3832,3 +3832,49 @@ function pickIt(arr){
   }
   return [odd,even];
 }
+
+/*
+==========
+2025_10_25
+==========
+*/
+//#1
+//Arithmetic List!
+//https://www.codewars.com/kata/541da001259d9ca85d000688
+function seqlist(first, c, l) {
+  return [...Array(l)].map((ele, ind, arr) => (ind == 0) ? first : c * ind + first);
+};
+
+//#2
+//Array Array Array
+//https://www.codewars.com/kata/57eb936de1051801d500008a
+function explode(x) {
+  let score = x.filter(ele => !(Number.isNaN(Number(ele))));
+  return (score.length < 1) ? 'Void!'
+    : (Number(...score) == 0) ? []
+    : Array.from({length: score.reduce(((acc, currVal) => acc + currVal), 0)}, (v, k) => v = x);
+}
+
+//#3
+//Sum without highest or lowest number
+//https://www.codewars.com/kata/576b93db1129fcf2200001e6
+function sumArray(array) {
+  return (array && array.length > 1) ? array.reduce((a, c) => a + c) - (Math.max(...array) + Math.min(...array))
+    : 0;
+}
+
+//#4
+//Transportation on vacation
+//https://www.codewars.com/kata/568d0dd208ee69389d000016
+function rentalCarCost(d) {
+  const rate = d * 40;
+  return (d > 6) ? rate - 50
+    : (d > 2) ? rate - 20 : rate;
+};
+
+//#5
+//L1: Set Alarm
+//https://www.codewars.com/kata/568dcc3c7f12767a62000038
+function setAlarm(employed, vacation){
+  return (employed && !vacation);
+}
