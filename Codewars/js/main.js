@@ -3878,3 +3878,56 @@ function rentalCarCost(d) {
 function setAlarm(employed, vacation){
   return (employed && !vacation);
 }
+
+/*
+==========
+2025_10_26
+==========
+*/
+//#1
+//Array Leaders (Array Series #3)
+//https://www.codewars.com/kata/5a651865fd56cb55760000e0
+function arrayLeaders(numbers){
+  let arr = [];
+  let numbersRight;
+  for (let i = 0; i < numbers.length; i++) {
+    numbersRight = 0;
+    for (let j = i+1; j < numbers.length; j++) {
+      numbersRight += numbers[j];
+    }
+    if (numbers[i] > numbersRight) {
+      arr.push(numbers[i]);
+    };
+  }
+  return arr;
+}
+
+//#2
+//Largest Elements
+//https://www.codewars.com/kata/53d32bea2f2a21f666000256
+function largest(n, array) {
+  return n ? array.sort((a, b) => a - b).slice(-n) : [];
+}
+
+//#3
+//The Office IV - Find a Meeting Room
+//https://www.codewars.com/kata/57f604a21bd4fe771b00009c
+function meeting(x){
+  const room = x.indexOf('O');
+  return room < 0 ? 'None available!' : room;
+}
+
+//#4
+//Check three and two
+//https://www.codewars.com/kata/5a9e86705ee396d6be000091
+function checkThreeAndTwo(array) {
+  let map = {
+    'a': 0,
+    'b': 0,
+    'c': 0,
+  }
+  for (let elem of array) {
+    map[elem] += 1;
+  }
+  return (Object.values(map).includes(3) && Object.values(map).includes(2)) ? true : false;
+}
