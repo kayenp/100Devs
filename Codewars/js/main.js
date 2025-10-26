@@ -3931,3 +3931,13 @@ function checkThreeAndTwo(array) {
   }
   return (Object.values(map).includes(3) && Object.values(map).includes(2)) ? true : false;
 }
+
+//#5
+//Clean up after your dog
+//https://www.codewars.com/kata/57faa6ff9610ce181b000028
+function crap(x, bags, cap){
+  const garden = x.flat();
+  const poops = garden.filter(ele => ele == '@');
+  return (garden.includes('D')) ? 'Dog!!'
+    : (poops.length > bags * cap) ? 'Cr@p' : 'Clean'
+}
