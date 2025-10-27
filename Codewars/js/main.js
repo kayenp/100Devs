@@ -3941,3 +3941,58 @@ function crap(x, bags, cap){
   return (garden.includes('D')) ? 'Dog!!'
     : (poops.length > bags * cap) ? 'Cr@p' : 'Clean'
 }
+
+/*
+==========
+2025_10_27
+==========
+*/
+//#1
+//Between Extremes
+//https://www.codewars.com/kata/56d19b2ac05aed1a20000430
+function betweenExtremes(numbers) {
+    return Math.max(...numbers) - Math.min(...numbers);
+}
+
+//#2
+//Insert dashes
+//https://www.codewars.com/kata/55960bbb182094bc4800007b
+function insertDash(num) {
+  let output = '';
+  const numStr = num.toString();
+  for (let i = 0; i < numStr.length; i++) {
+    output += numStr[i];
+    if (numStr[i] % 2 != 0 && numStr[i+1] % 2 != 0 && numStr[i+1] != undefined) {
+      output += '-';
+    };
+  };
+  return output;
+}
+
+//#3
+//Return the Missing Element
+//https://www.codewars.com/kata/5299413901337c637e000004function getMissingElement(superImportantArray){
+function getMissingElement(superImportantArray) {
+  superImportantArray.sort((a, b) => a - b);
+  for (let i = 0; i < superImportantArray.length; i++) {
+    if (i != superImportantArray[i]) {
+      return i;
+    }
+  }
+}
+
+//#4
+//https://www.codewars.com/kata/5a1a9e5032b8b98477000004
+//https://www.codewars.com/kata/5a1a9e5032b8b98477000004
+function evenLast(numbers) {
+  (numbers.length < 1) && 0;
+  return numbers.reduce(((a, cV, cI) => (cI % 2 == 0) ? a + cV : a), 0) * numbers.slice(-1);
+}
+
+//#5
+//Bingo (Or Not)
+//https://www.codewars.com/kata/5a1ee4dfffe75f0fcb000145
+function bingo(a) {
+  const bingo = [2, 7, 9, 14, 15]
+  return bingo.every(ele => a.includes(ele)) ? "WIN" : "LOSE"
+}
