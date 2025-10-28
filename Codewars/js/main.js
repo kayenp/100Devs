@@ -4010,9 +4010,23 @@ function arithmeticSequenceElements(a, d, n) {
 }
 
 //#2
-//
-//
+//Stanton measure
+//https://www.codewars.com/kata/59a1cdde9f922b83ee00003b
 function stantonMeasure(a){
   const n = a.filter(ele => ele == 1).length;
   return a.filter(ele => ele == n).length;
 };
+
+//#3
+//By 3, or not by 3? That is the question...
+//https://www.codewars.com/kata/59f7fc109f0e86d705000043
+function divisibleByThree(str){
+  return (str.split('').reduce((a, cV) => Number(a) + Number(cV)) % 3 == 0);
+}
+
+//#4
+//Length and two values.
+//https://www.codewars.com/kata/62a611067274990047f431a8
+function alternate(n, firstValue, secondValue){
+  return [...Array(n)].map((_, ind) => (ind % 2 == 0) ? firstValue : secondValue);
+}
