@@ -3995,7 +3995,6 @@ function evenLast(numbers) {
 function bingo(a) {
   const bingo = [2, 7, 9, 14, 15]
   return bingo.every(ele => a.includes(ele)) ? "WIN" : "LOSE"
-<<<<<<< HEAD
 }
 
 /*
