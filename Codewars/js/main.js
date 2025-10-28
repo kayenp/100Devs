@@ -4016,4 +4016,4 @@ function arithmeticSequenceElements(a, d, n) {
 function stantonMeasure(a){
   const n = a.filter(ele => ele == 1).length;
   return a.filter(ele => ele == n).length;
-}
+};
