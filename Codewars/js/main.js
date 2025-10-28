@@ -3085,3 +3085,914 @@ function findMultiples(integer, limit, arr = [], incr = 0) {
   arr.push(integer+incr);
   return findMultiples(integer, limit-integer, arr, incr+integer);
 }
+
+/*
+==========
+2025_10_11
+==========
+*/
+//#1
+//Hit Count
+//https://www.codewars.com/kata/57b6f850a6fdc76523001162
+function counterEffect(hitCount) {
+  return hitCount.split('').map(ele => [+ele]).map(outEle => {
+    for(let i = 0; i < outEle[0]; i++) {
+      outEle.push(i);
+    };
+    return outEle.sort((a, b) => a - b);
+  })
+}
+
+//#2
+//Fake Binary
+//https://www.codewars.com/kata/57eae65a4321032ce000002d
+function fakeBin(x){
+  return x.split('').map(ele => (ele < 5) ? ele = 0 : ele = 1).join('');
+}
+
+//#3
+//A wolf in sheep's clothing
+//https://www.codewars.com/kata/5c8bfa44b9d1192e1ebd3d15
+function warnTheSheep(queue) {
+  if(queue.indexOf('wolf') == queue.length-1) {
+    return `Pls go away and stop eating my sheep`
+  } else {
+    return `Oi! Sheep number ${queue.length-1 - queue.indexOf('wolf')}! You are about to be eaten by a wolf!`
+  };
+};
+
+//#4
+//Multiple of index
+//https://www.codewars.com/kata/5a34b80155519e1a00000009
+function multipleOfIndex(array) {
+  return array.filter((ele, ind) => {
+    return (ele == 0 || (Math.abs(ele) % ind == 0)) 
+  })
+}
+
+//#5
+//Reversing Words in a String
+//https://www.codewars.com/kata/57a55c8b72292d057b000594
+function reverse(string){
+  return string.split(' ').reverse().join(' ');
+}
+
+/*
+==========
+2025_10_12
+==========
+*/
+//#1
+//Double Trouble
+//https://www.codewars.com/kata/57f7796697d62fc93d0001b8
+function trouble(x, t){
+  for(let i = 0; i < x.length; i++) {
+    if(x[i] + x[i+1] == t) {
+      x.splice(i+1, 1)
+      i--;
+    } 
+  }
+  return x;
+}
+
+//#2
+//Help the Fruit Guy
+//https://www.codewars.com/kata/557af4c6169ac832300000ba
+function removeRotten(bagOfFruits){
+  return (bagOfFruits?.[0] == undefined) ? [] : bagOfFruits.join(' ').toLowerCase().replaceAll('rotten', '').split(' ');
+}
+
+//#3
+//CompoundArray
+//https://www.codewars.com/kata/56044de2aa75e28875000017
+function compoundArray(a, b) {
+    let newArr = [];
+    let i = 0;
+    while(i > -1){
+      if (a[i] == undefined) {
+        newArr = newArr.concat(b.slice(i));
+        break;
+      } else if (b[i] == undefined){
+        newArr = newArr.concat(a.slice(i));
+        break;
+      } else {
+        newArr.push(a[i], b[i]);
+        i++;
+      };
+    };
+  return newArr;
+}
+
+//#4
+//Alternate Square Sum
+//https://www.codewars.com/kata/559d7951ce5e0da654000073
+function alternateSqSum(arr){
+    for(let i = 0; i < arr.length; i++) {
+    if(i % 2 !== 0) {
+        arr.splice(i, 1, arr[i]**2);
+    };
+    }
+    return arr.reduce(((acc, currVal) => acc + currVal), 0);
+}
+
+//#5
+//Exclamation marks series #1: Remove an exclamation mark from the end of the string
+//https://www.codewars.com/kata/57fae964d80daa229d000126
+function remove (string) {
+  return (string.endsWith('!')) ? string.slice(0,-1) : string;
+}
+
+/*
+==========
+2025_10_13
+==========
+*/
+//#1
+//Product of Maximums Of Array (Array Series #2)
+//https://www.codewars.com/kata/5a63948acadebff56f000018
+function maxProduct(numbers, size){
+  let newArr = [];
+  for (let i = 0; i <= size-1; i++) {
+    newArr.push(Math.max(...numbers));
+    numbers.splice(numbers.indexOf(Math.max(...numbers)), 1);
+  }
+  return newArr.reduce((acc, currVal) => acc * currVal);
+}
+
+//#2
+//Dominant array elements
+//https://www.codewars.com/kata/5a04133e32b8b998dc000089
+const solve = arr => [...new Set(arr.filter((ele, ind) => ele == Math.max(...arr.slice(ind))))]
+
+//#3
+//The Feast of Many Beasts
+//https://www.codewars.com/kata/5aa736a455f906981800360d
+const feast = (beast, dish) => beast.startsWith(dish[0]) && beast.endsWith(dish.slice(-1))
+
+//#4
+//Safen User Input Part I - htmlspecialchars
+//https://www.codewars.com/kata/56bcaedfcf6b7f2125001118
+function htmlspecialchars(formData) {
+  return formData
+            .replaceAll('&', '&amp;')
+            .replaceAll('<', '&lt;')
+            .replaceAll('>', '&gt;')
+            .replaceAll('"', '&quot;')
+};
+
+//#5
+//ES6 string addition
+//https://www.codewars.com/kata/582e4c3406e37fcc770001ad
+function joinStrings(string1, string2){
+   return `${string1} ${string2}`
+}
+
+/*
+==========
+2025_10_14
+==========
+*/
+//#1
+//Well of Ideas - Easy Version
+//https://www.codewars.com/kata/57f222ce69e09c3630000212
+function well(x){
+  if (x.every(ele => ele == 'bad')) {
+    return 'Fail!';
+  } else {
+    return (x.join(" ").split("good").length-1 > 2) ? 'I smell a series!' : 'Publish!';
+  };
+}
+
+//#2
+//Find the Difference in Age between Oldest and Youngest Family Members
+//https://www.codewars.com/kata/5720a1cb65a504fdff0003e2
+function differenceInAges(ages){
+  return [Math.min(...ages), Math.max(...ages), (Math.max(...ages) - Math.min(...ages))];
+}
+
+//#3
+//Find numbers which are divisible by given number
+//https://www.codewars.com/kata/55edaba99da3a9c84000003b
+function divisibleBy(numbers, divisor){
+  return numbers.filter(elem => elem % divisor == 0);
+}
+
+//#4
+//SpeedCode #2 - Array Madness
+//https://www.codewars.com/kata/56ff6a70e1a63ccdfa0001b1
+function arrayMadness(a, b) {
+  return (a.map(ele => ele**2).reduce((acc, currVal) => acc + currVal) > b.map(ele => ele**3).reduce((acc, currVal) => acc + currVal))
+}
+
+//#5
+//To square(root) or not to square(root)
+//https://www.codewars.com/kata/57f6ad55cca6e045d2000627
+function squareOrSquareRoot(array) {
+    return array.map(elem => (Number.isInteger(Math.sqrt(elem))) ? Math.sqrt(elem) : elem**2);
+}
+
+/*
+==========
+2025_10_15
+==========
+*/
+//#1
+//Sort array by string length
+//https://www.codewars.com/kata/57ea5b0b75ae11d1e800006c
+function sortByLength (array) {
+ return array.sort((a, b) => a.length - b.length)
+}
+
+//#2
+//Find the middle element
+//https://www.codewars.com/kata/545a4c5a61aa4c6916000755
+function gimme (triplet) {
+  return triplet.indexOf(triplet.find(ele => ele !== Math.max(...triplet) && ele !== Math.min(...triplet)));
+}
+
+//#3
+//Small enough? - Beginner
+//https://www.codewars.com/kata/57cc981a58da9e302a000214
+function smallEnough(a, limit){
+ return a.every(ele => ele <= limit) 
+}
+
+//#4
+//Check the exam
+//https://www.codewars.com/kata/5a3dd29055519e23ec000074
+function checkExam(array1, array2) {
+  let score = 0;
+  for (let i = 0; i < array1.length; i++) {
+    if (array1[i] == array2[i]) {
+      score +=4;
+    } else if (array2[i] == '') {
+      score +=0;
+    } else {
+      score--;
+    }
+  }
+  if (score < 0) {
+    score = 0;
+  }
+  return score;
+}
+
+//#5
+//Sum of Minimums!
+//https://www.codewars.com/kata/5d5ee4c35162d9001af7d699
+function sumOfMinimums(arr) {
+  return arr.map(ele => Math.min(...ele)).reduce((acc, currVal) => acc + currVal);
+}
+
+/*
+==========
+2025_10_16
+==========
+*/
+//#1
+//Simple Comparison?
+//https://www.codewars.com/kata/57f6ecdfcca6e045d2001207
+function add(a, b){
+	return +a == +b;
+}
+
+//#2
+//My head is at the wrong end!
+//https://www.codewars.com/kata/56f699cd9400f5b7d8000b55
+function fixTheMeerkat(arr) {
+  return arr.reverse();
+}
+
+//#3
+//Get the mean of an array
+//https://www.codewars.com/kata/563e320cee5dddcf77000158
+function getAverage(marks){
+  return Math.floor(marks.reduce(((acc, currVal) => acc + currVal), 0)/marks.length);
+}
+
+//#4
+//Reversed Words
+//https://www.codewars.com/kata/51c8991dee245d7ddf00000e
+function reverseWords(str){
+  return str.split(' ').reverse().join(' ');
+}
+
+//#5
+//Neutralisation
+//https://www.codewars.com/kata/65128732b5aff40032a3d8f0
+function neutralise(s1, s2) {
+  return s1.split('').map((ele, ind) => ele != s2[ind] ? 0 : (ele == '+') ? '+' : '-').join('');
+}
+
+/*
+==========
+2025_10_17
+==========
+*/
+//#1
+//How many consecutive numbers are needed?
+//https://www.codewars.com/kata/559cc2d2b802a5c94700000c
+function consecutive(array) {
+  let newArr = [];
+  for (let i = Math.min(...array); i <= Math.max(...array); i++) {
+    newArr.push(i);
+  };
+  return newArr.length - array.length;
+}
+
+//#2
+//Difference between two collections
+//https://www.codewars.com/kata/594093784aafb857f0000122
+function diff(a, b){
+  let aSet = [...new Set(a)];
+  let bSet = [...new Set(b)];
+  return aSet.concat(bSet).sort().filter((ele, ind, arr) => ele != arr[ind+1] && ele != arr[ind-1]);
+}
+
+//#3
+//String Templates - Bug Fixing #5
+//https://www.codewars.com/kata/55c90cad4b0fe31a7200001f
+function buildString(...template){
+  return `I like ${template.join(', ')}!`;
+}
+
+//#4
+//Name on billboard
+//https://www.codewars.com/kata/570e8ec4127ad143660001fd
+const billboard = (name, price = 30, total = 0) => (total/name.length == price) ? total : billboard(name, price, total += price);
+
+//#5
+//Alan Partridge II - Apple Turnover
+//https://www.codewars.com/kata/580a094553bd9ec5d800007d
+function apple(x){
+  return (x**2 > 1000) ? "It's hotter than the sun!!" : "Help yourself to a honeycomb Yorkie for the glovebox.";
+}
+
+/*
+==========
+2025_10_18
+==========
+*/
+//#1
+//Find the capitals
+//https://www.codewars.com/kata/539ee3b6757843632d00026b
+var capitals = function (word) {
+	return word.split('').map((ele, ind) => {
+    return (ele == ele.toUpperCase()) ? ele = ind : null;
+    }).filter(ele => ele != null);
+};
+
+//#2
+//Flatten and sort an array
+//https://www.codewars.com/kata/57ee99a16c8df7b02d00045f
+function flattenAndSort(array) {
+  return array.flat(1).sort((a, b) => a - b);
+}
+
+//#3
+//Row Weights
+//https://www.codewars.com/kata/5abd66a5ccfd1130b30000a9
+function rowWeights(array){
+  let arr1 = [];
+  let arr2 = [];
+  array.forEach((ele, ind) => (ind % 2 == 0) ? arr1.push(ele) : arr2.push(ele));
+  arr1 = [arr1.reduce(((acc, val) => acc + val), 0)];
+  arr2 = [arr2.reduce(((acc, val) => acc + val), 0)];
+  return arr1.concat(arr2)
+}
+
+//#4
+//Coding Meetup #1 - Higher-Order Functions Series - Count the number of Javascript developers coming from Europe
+//https://www.codewars.com/kata/582746fa14b3892727000c4f
+function countDevelopers(list) {
+  return list.filter(ele => (ele.language == 'JavaScript' && ele.continent == 'Europe')).length;
+}
+
+//#5
+//No oddities here
+//http://codewars.com/kata/51fd6bc82bc150b28e0000ce
+function noOdds( values ){
+  return values.filter(ele => ele % 2 == 0);
+}
+
+/*
+==========
+2025_10_19
+==========
+*/
+//#1
+//Even numbers in an array
+//https://www.codewars.com/kata/5a431c0de1ce0ec33a00000c
+function evenNumbers(array, number) {
+  return array.filter(ele => ele % 2 == 0).slice(-number)
+}
+
+//#2
+//Sorted? yes? no? how?
+//https://www.codewars.com/kata/580a4734d6df748060000045
+function isSortedAndHow(array) {
+  const ascend = array.slice().sort((a, b) => a - b).every((ele, ind) => ele == array[ind]);
+  const descend = array.slice().sort((a, b) => b - a).every((ele, ind) => ele == array[ind]);
+  return (ascend) ? 'yes, ascending'
+    : (descend) ? 'yes, descending' : 'no';
+}
+
+//#3
+//Fizz Buzz
+//https://www.codewars.com/kata/5300901726d12b80e8000498
+function fizzbuzz(n)
+{
+  return [...Array(n)].map((ele, ind) => {
+    return ((ind + 1) % 3 == 0 && (ind + 1) % 5 == 0) ? ele = 'FizzBuzz'
+      : ((ind + 1) % 3 == 0) ? ele = 'Fizz'
+      : ((ind + 1) % 5 == 0) ? ele = 'Buzz' : ele = (ind + 1)
+  })
+}
+
+//#4
+//Do I get a bonus?
+//https://www.codewars.com/kata/56f6ad906b88de513f000d96
+function bonusTime(salary, bonus) {
+  return (bonus) ? `£${salary * 10}` : `£${salary}`
+}
+
+//#5
+//Stringy Strings
+//https://www.codewars.com/kata/563b74ddd19a3ad462000054
+function stringy(size) {
+  return Array.from({length: size}, (v, k) => (k % 2 == 0) ? v = 1 : v = 0).join('');
+}
+
+/*
+==========
+2025_10_20
+==========
+*/
+//#1
+//Convert an array of strings to array of numbers
+//https://www.codewars.com/kata/5783d8f3202c0e486c001d23
+function toNumberArray(stringarray){
+  return stringarray.map(ele => ele - 0);
+}
+
+//#2
+//Divide and Conquer
+//https://www.codewars.com/kata/57eaec5608fed543d6000021
+function divCon(x){
+  const numArr = [];
+  const strArr = [];
+  for (let i = 0; i < x.length; i++) {
+    if (typeof x[i] == 'number') {
+      numArr.push(x[i]);
+    } else {
+      strArr.push(Number(x[i]));
+    }
+  }
+  return numArr.reduce(((a, c) => a + c), 0) - strArr.reduce(((a, c) => a + c), 0);
+}
+
+//#3
+//max diff - easy
+//https://www.codewars.com/kata/588a3c3ef0fbc9c8e1000095
+function maxDiff(list) {
+  return (list.length <= 1) ? 0 : Math.max(...list) - Math.min(...list);
+};
+
+//#4
+//https://www.codewars.com/kata/580dda86c40fa6c45f00028a
+function cubeOdd(arr) {
+  let result = arr.reduce(((a, c) => (c % 2 != 0) ? a = a + c**3 : a), 0);
+  return (Number.isNaN(result)) ? undefined : result;
+}
+
+//#5
+//Short Long Short
+//https://www.codewars.com/kata/50654ddff44f800200000007
+function solution(a, b){
+  return (a.length < b.length) ? a+b+a : b+a+b;
+}
+
+/*
+==========
+2025_10_21
+==========
+*/
+//#1
+//Smallest value of an array
+//https://www.codewars.com/kata/544a54fd18b8e06d240005c0
+function min(arr, toReturn) { 
+    return (toReturn == 'value') ? Math.min(...arr) : arr.indexOf(Math.min(...arr));
+}
+
+//#2
+//The Office I - Outed
+//https://www.codewars.com/kata/57ecf6efc7fe13eb070000e1
+function outed(meet, boss){
+  const meetArr = Object.entries(meet);
+  const score = meetArr.map(ele => ele[0] == boss ? ele[1] * 2 : ele[1]).reduce(((a, c) => {
+    return a + c;
+  }), 0);  
+  return (score/meetArr.length <= 5) ? 'Get Out Now!' : 'Nice Work Champ!';
+}
+
+//#3
+//The Office II - Boredom Score
+//https://www.codewars.com/kata/57ed4cef7b45ef8774000014
+function boredom(staff){
+  const objKeys = {
+    'accounts': 1,
+    'finance': 2,
+    'canteen': 10,
+    'regulation': 3,
+    'trading': 6,
+    'change': 6,
+    'IS': 8,
+    'retail': 5,
+    'cleaning': 4,
+    'pissing about': 25,
+  };
+  const depts = Object.values(staff);
+  let teamScore = depts.reduce(((a, c, i) => a += objKeys[c]), 0);
+  return (teamScore <= 80) ? 'kill me now'
+    : (teamScore < 100 && teamScore > 80) ? 'i can handle this' : 'party time!!'; 
+}
+
+//#4
+//Simple consecutive pairs
+//https://www.codewars.com/kata/5a3e1319b6486ac96f000049
+function pairs(ar){
+  let count = 0;
+  for (let i = 0; i < ar.length; i = i+2) {
+    if (ar[i+1] == undefined) {
+      return count;
+    } 
+    if (Math.abs(ar[i] - ar[i+1]) == 1) {
+      count++;
+    }
+  }
+  return count;
+};
+
+//#5
+//Capitalization and Mutability
+//https://www.codewars.com/kata/595970246c9b8fa0a8000086
+function capitalizeWord(word) {
+  return word[0].toUpperCase() + word.slice(1);
+}
+
+/*
+==========
+2025_10_22
+==========
+*/
+//#1
+//Char Code Calculation
+//https://www.codewars.com/kata/57f75cc397d62fc93d000059
+function calc(x){
+  let total1 = '';
+  for (let i = 0; i < x.length; i++) {
+    total1 += x.charCodeAt(i);
+  }
+  const total2 = (
+    total1
+      .replaceAll('7', '1')
+      .split('')
+      .map(ele => Number(ele))
+      .reduce((acc, currVal) => acc + currVal)
+  );
+  total1 = (
+    total1
+      .split('')
+      .map(ele => Number(ele))
+      .reduce((acc, currVal) => acc + currVal)
+  )
+  return total1 - total2;
+}
+
+//#2
+//Last Survivor
+//https://www.codewars.com/kata/609eee71109f860006c377d1
+function lastSurvivor(letters, coords) {
+  const letterArr = letters.split('');
+  for (let i = 0; i < coords.length; i++) {
+   letterArr.splice(coords[i], 1);
+  }
+  return letterArr[0];
+}
+
+//#3
+//Century From Year
+//https://www.codewars.com/kata/5a3fe3dde1ce0e8ed6000097
+function century(year) {
+  return Math.ceil(year/100);
+};
+
+//#4
+//Calculate BMI
+//https://www.codewars.com/kata/57a429e253ba3381850000fb
+function bmi(weight, height) {
+  let bmi = weight/height**2;
+  return (bmi > 30) ? 'Obese'
+    : (bmi <= 30 && bmi > 25) ? 'Overweight'
+    : (bmi <= 25 && bmi > 18.5) ? 'Normal' : 'Underweight';
+}
+
+//#5
+//Is he gonna survive?
+//https://www.codewars.com/kata/59ca8246d751df55cc00014c
+function hero(bullets, dragons){
+  return (bullets/dragons) < 2 ? false : true;
+}
+
+/*
+==========
+2025_10_23
+==========
+*/
+//#1
+//Head, Tail, Init and Last
+//https://www.codewars.com/kata/54592a5052756d5c5d0009c3
+function head(arr) {
+  return arr[0];
+}
+function tail(arr) {
+  return arr.slice(1);
+}
+function init(arr) {
+  return arr.slice(0, arr.length-1);
+}
+function last(arr) {
+  return arr.slice(-1)[0];
+}
+
+//#2
+//Distance from the average
+//https://www.codewars.com/kata/568ff914fc7a40a18500005c
+function distancesFromAverage(arr) {
+  const avg = (arr.reduce(((acc, currVal) => acc + currVal), 0)/arr.length).toFixed(2);
+  return arr.map(ele => (avg - ele).valueOf());
+}
+
+//#3
+//Grasshopper - Basic Function Fixer
+//https://www.codewars.com/kata/56200d610758762fb0000002
+function addFive(num) {
+  var total = num + 5
+  return total;
+}
+
+//#4
+//Rock Paper Scissors!
+//https://www.codewars.com/kata/5672a98bdbdd995fad00000f
+const rps = (p1, p2) => {
+  if (p1 == p2) {
+    return 'Draw!';
+  } else if (p1 == 'rock' && p2 == 'scissors' 
+             || p1 == 'scissors' && p2 == 'paper' 
+             || p1 == 'paper' && p2 == 'rock') {
+    return 'Player 1 won!';
+  } else {
+    return 'Player 2 won!'
+  }
+};
+
+//#5
+//How many lightsabers do you own?
+//https://www.codewars.com/kata/51f9d93b4095e0a7200001b8
+function howManyLightsabersDoYouOwn(name) {
+  return name == 'Zach' ? 18 : 0;
+};
+
+/*
+==========
+2025_10_24
+==========
+*/
+//#1
+//Partial Word Searching
+//https://www.codewars.com/kata/54b81566cd7f51408300022d
+function wordSearch(query, seq) {
+  const result = seq.reduce(((acc, currVal) => {
+    currVal.toLowerCase().includes(query.toLowerCase()) && acc.push(currVal);
+    return acc;
+  }), []);
+  return result.length >= 1 ? result : ['Empty'];
+}
+
+//#2
+//The 'if' function
+//https://www.codewars.com/kata/54147087d5c2ebe4f1000805
+function _if(bool, func1, func2) {
+  console.log(bool);
+  return bool ? func1() : func2();
+}
+
+//#3
+//Find the position!
+//https://www.codewars.com/kata/5808e2006b65bff35500008f
+function position(letter){
+  return `Position of alphabet: ${letter.charCodeAt(0) - 96}`;
+}
+
+//#4
+//Training JS #4: Basic data types -- Array
+//https://www.codewars.com/kata/571effabb625ed9b0600107a
+function getLength(arr){
+  //return length of arr
+  return arr.length;
+}
+function getFirst(arr){
+  //return the first element of arr
+  return arr[0];
+}
+function getLast(arr){
+  //return the last element of arr
+  return arr[arr.length-1];
+}
+function pushElement(arr){
+  var el=1;
+  //push el to arr
+  arr.push(el);
+  return arr;
+}
+function popElement(arr){
+  //pop an element from arr
+  arr.pop();
+  return arr;
+}
+
+//#5
+//Training JS #10: loop statement -- for
+//https://www.codewars.com/kata/5721a78c283129e416000999
+function pickIt(arr){
+  let odd = [], even = [];
+  //coding here
+  for (let i = 0; i < arr.length; i++) {
+    (arr[i] % 2 != 0) ? odd.push(arr[i]) : even.push(arr[i]);
+  }
+  return [odd,even];
+}
+
+/*
+==========
+2025_10_25
+==========
+*/
+//#1
+//Arithmetic List!
+//https://www.codewars.com/kata/541da001259d9ca85d000688
+function seqlist(first, c, l) {
+  return [...Array(l)].map((ele, ind, arr) => (ind == 0) ? first : c * ind + first);
+};
+
+//#2
+//Array Array Array
+//https://www.codewars.com/kata/57eb936de1051801d500008a
+function explode(x) {
+  let score = x.filter(ele => !(Number.isNaN(Number(ele))));
+  return (score.length < 1) ? 'Void!'
+    : (Number(...score) == 0) ? []
+    : Array.from({length: score.reduce(((acc, currVal) => acc + currVal), 0)}, (v, k) => v = x);
+}
+
+//#3
+//Sum without highest or lowest number
+//https://www.codewars.com/kata/576b93db1129fcf2200001e6
+function sumArray(array) {
+  return (array && array.length > 1) ? array.reduce((a, c) => a + c) - (Math.max(...array) + Math.min(...array))
+    : 0;
+}
+
+//#4
+//Transportation on vacation
+//https://www.codewars.com/kata/568d0dd208ee69389d000016
+function rentalCarCost(d) {
+  const rate = d * 40;
+  return (d > 6) ? rate - 50
+    : (d > 2) ? rate - 20 : rate;
+};
+
+//#5
+//L1: Set Alarm
+//https://www.codewars.com/kata/568dcc3c7f12767a62000038
+function setAlarm(employed, vacation){
+  return (employed && !vacation);
+}
+
+/*
+==========
+2025_10_26
+==========
+*/
+//#1
+//Array Leaders (Array Series #3)
+//https://www.codewars.com/kata/5a651865fd56cb55760000e0
+function arrayLeaders(numbers){
+  let arr = [];
+  let numbersRight;
+  for (let i = 0; i < numbers.length; i++) {
+    numbersRight = 0;
+    for (let j = i+1; j < numbers.length; j++) {
+      numbersRight += numbers[j];
+    }
+    if (numbers[i] > numbersRight) {
+      arr.push(numbers[i]);
+    };
+  }
+  return arr;
+}
+
+//#2
+//Largest Elements
+//https://www.codewars.com/kata/53d32bea2f2a21f666000256
+function largest(n, array) {
+  return n ? array.sort((a, b) => a - b).slice(-n) : [];
+}
+
+//#3
+//The Office IV - Find a Meeting Room
+//https://www.codewars.com/kata/57f604a21bd4fe771b00009c
+function meeting(x){
+  const room = x.indexOf('O');
+  return room < 0 ? 'None available!' : room;
+}
+
+//#4
+//Check three and two
+//https://www.codewars.com/kata/5a9e86705ee396d6be000091
+function checkThreeAndTwo(array) {
+  let map = {
+    'a': 0,
+    'b': 0,
+    'c': 0,
+  }
+  for (let elem of array) {
+    map[elem] += 1;
+  }
+  return (Object.values(map).includes(3) && Object.values(map).includes(2)) ? true : false;
+}
+
+//#5
+//Clean up after your dog
+//https://www.codewars.com/kata/57faa6ff9610ce181b000028
+function crap(x, bags, cap){
+  const garden = x.flat();
+  const poops = garden.filter(ele => ele == '@');
+  return (garden.includes('D')) ? 'Dog!!'
+    : (poops.length > bags * cap) ? 'Cr@p' : 'Clean'
+}
+
+/*
+==========
+2025_10_27
+==========
+*/
+//#1
+//Between Extremes
+//https://www.codewars.com/kata/56d19b2ac05aed1a20000430
+function betweenExtremes(numbers) {
+    return Math.max(...numbers) - Math.min(...numbers);
+}
+
+//#2
+//Insert dashes
+//https://www.codewars.com/kata/55960bbb182094bc4800007b
+function insertDash(num) {
+  let output = '';
+  const numStr = num.toString();
+  for (let i = 0; i < numStr.length; i++) {
+    output += numStr[i];
+    if (numStr[i] % 2 != 0 && numStr[i+1] % 2 != 0 && numStr[i+1] != undefined) {
+      output += '-';
+    };
+  };
+  return output;
+}
+
+//#3
+//Return the Missing Element
+//https://www.codewars.com/kata/5299413901337c637e000004function getMissingElement(superImportantArray){
+function getMissingElement(superImportantArray) {
+  superImportantArray.sort((a, b) => a - b);
+  for (let i = 0; i < superImportantArray.length; i++) {
+    if (i != superImportantArray[i]) {
+      return i;
+    }
+  }
+}
+
+//#4
+//https://www.codewars.com/kata/5a1a9e5032b8b98477000004
+//https://www.codewars.com/kata/5a1a9e5032b8b98477000004
+function evenLast(numbers) {
+  (numbers.length < 1) && 0;
+  return numbers.reduce(((a, cV, cI) => (cI % 2 == 0) ? a + cV : a), 0) * numbers.slice(-1);
+}
+
+//#5
+//Bingo (Or Not)
+//https://www.codewars.com/kata/5a1ee4dfffe75f0fcb000145
+function bingo(a) {
+  const bingo = [2, 7, 9, 14, 15]
+  return bingo.every(ele => a.includes(ele)) ? "WIN" : "LOSE"
+}

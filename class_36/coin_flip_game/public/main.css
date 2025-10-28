@@ -1,0 +1,63 @@
+/*
+========================
+BASE
+========================
+*/
+
+*,
+*::before,
+*::after {
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	    -ms-box-sizing: border-box;
+			box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-size: 1.6rem;
+	line-height: 1.5;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/*
+========================
+LAYOUT
+========================
+*/
+
+/*
+========================
+MODULES
+========================
+*/
+
+h1, h2, h3 {
+	line-height: 1.2;
+}
+
+h1 {
+	font-size: 2.4rem;
+	font-weight: bold;
+}
+
+h2 {
+	font-size: 2rem;
+	font-weight: bold;
+}
+
+/*
+========================
+STATE
+========================
+*/
+
+/*
+========================
+THEME
+========================
+*/

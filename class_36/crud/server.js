@@ -9,11 +9,14 @@ import { MongoClient } from 'mongodb';
 const PORT = process.env.PORT;
 const __dirname = url.fileURLToPath(import.meta.url);
 const __pathname = path.dirname(__dirname);
+console.log(__dirname);
+console.log(__pathname);
 const app = express();
+const connectionString = 'mongodb+srv://mongodbdotcom202510091438_db_user:2CjjorSkvRkeKdbn@cluster0.kig7unp.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
 
 
 
-MongoClient.connect('mongodb+srv://mongodbdotcom202510091438_db_user:2CjjorSkvRkeKdbn@cluster0.kig7unp.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0')
+MongoClient.connect(connectionString)
 	
 	.then(client => {
 		const db = client.db('node-crud-test-thing');
@@ -24,19 +27,13 @@ MongoClient.connect('mongodb+srv://mongodbdotcom202510091438_db_user:2CjjorSkvRk
 
 		// Middleware to add form data to db object
 		app.use(express.urlencoded({ extended: true }))
-		
-
-		
-
+		app.use(express.static('public'));
 		// Middleware to accept JSON data
 		app.use(express.json())
 
-		app.use(express.static('public'));
 		// GET handler
 		console.log(Date.now())
 		app.get('/', (req, res) => {
-		//	res.sendFile(__pathname + '/public/index.html');
-
 			db.collection('quotes')
 				.find()
 				.toArray()
@@ -46,7 +43,6 @@ MongoClient.connect('mongodb+srv://mongodbdotcom202510091438_db_user:2CjjorSkvRk
 				.catch(err => {
 					console.log(`ERROR ${err}`)
 				});
-			//res.render('index.ejs', {});
 		})
 
 		// Middleware to access /public
@@ -90,15 +86,29 @@ MongoClient.connect('mongodb+srv://mongodbdotcom202510091438_db_user:2CjjorSkvRk
 				})
 		})
 
-		app.listen(3000, () => {
-			console.log(`Express listening on 3000`)
+		app.delete('/quotes', (req, res) => {
+			quotesCollection
+				.deleteOne({ name: req.body.name })
+				.then(result => {
+					if (result.deletedCount === 0) {
+						return res.json('No quote to delete');
+					}
+					res.json("Deleted Darth Vadar's quote");
+				})
+				.catch(err => {
+					console.log(`Error ${err}`);
+				})
 		})
+
 		
 	})
 	.catch(err => {
 		console.log(`Error ${err}`)
 	});
 
+app.listen(3000, () => {
+	console.log(`Express listening on 3000`)
+})
 
 const server = http.createServer((req, res) => {
 });
