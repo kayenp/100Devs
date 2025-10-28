@@ -4030,3 +4030,20 @@ function divisibleByThree(str){
 function alternate(n, firstValue, secondValue){
   return [...Array(n)].map((_, ind) => (ind % 2 == 0) ? firstValue : secondValue);
 }
+
+//#5
+//Looking for a benefactor
+//https://www.codewars.com/kata/569b5cec755dd3534d00000f
+function newAvg(arr, newavg) {
+  try {
+    const newcontributor = (newavg * (arr.length+1) - arr.reduce(((a, cV) => a + cV), 0));
+    if (newcontributor > 0) {
+      return Math.ceil(newcontributor);
+    } else {
+      throw new Error('Expected New Average is too low')
+    }
+  }
+  catch(err){
+    throw err;
+  }
+}
