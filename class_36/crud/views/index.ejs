@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>HOME PAGE</title>
+</head>
+<body>
+	<header>
+		<h1>HOME PAGE!</h1>
+	</header>
+
+	<form action="/quotes" method="POST">
+		<input type="text" placeholder="name" name="name">
+		<input type='text' placeholder='quote' name="quote">
+		<button>Submit</button>
+	</form>
+
+	<div>
+		<h2>Remove Darth Vadar!</h2>
+		<p>Delete one of Darth Vadar's quotes. Does nothing if there are no more Darth Vadar quotes.</p>
+		<button id="delete-button">Delete Darth Vadar's quote</button>
+	</div>
+
+	<div id="message"></div>
+
+	<div>
+		<h2>Darth Vadar invades!</h2>
+		<p>Replace first Yoda's quote with a quote written by Darth Vadar</p>
+		<button id="update-button">Replace Yoda's quote</button>
+	</div>
+	<h2>Stuff you put in</h2>
+	<ul>
+
+		<% for(var i = 0; i < quotes.length; i++) {%>
+		<li class="quote">
+
+			<span><%= quotes[i].name %></span>
+
+			<span><%= quotes[i].quote %></span>
+		</li>	
+		<% } %>
+
+	</ul>
+	<script src="/main.js"></script>
+</body>
+</html>

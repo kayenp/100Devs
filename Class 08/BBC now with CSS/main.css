@@ -1,0 +1,582 @@
+/* Eric Myers' CSS reset */
+
+html, body, div, menu, nav, header, footer, h1, h2, h3, h4, h5, h6, hgroup, section, article, aside, p, address, blockquote, pre, form, output, fieldset, legend, label, details, summary, figure, figcaption, table, caption, thead, th, tr, td, tbody, tfoot, ol, ul, dd, dt, dl, li, a, span, b, big, em, i, small, strong, var, q, u, mark, ins, del, s, strike, abbr, acronym, cite, dfn, code, kbd, samp, time, ruby, sub, sup, center, applet, embed, iframe, audio, video, img, object, tt, canvas {
+    padding: 0;
+    border: 0;
+    margin: 0;
+    font: inherit;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+/* Eric Myers' display-role reset */
+
+menu, nav, header, footer, hgroup, section, article, aside, details, figure, figcaption {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote::before, blockquote::after, q::before, q::after {
+    content: "";
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* Focus on using relationship selectors as much as possible and classes only if necessary */
+
+/*
+====================
+Temp
+====================
+*/
+
+  {
+    outline: 2px dotted green;
+}
+
+/*
+====================
+Grid
+====================
+*/
+
+*, *::before, *::after {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+/*
+====================
+Rows
+====================
+*/
+
+/*
+====================
+Columns
+====================
+*/
+
+/*
+====================
+Base
+====================
+*/
+
+body, nav {
+    font: 1em "Helvetica", "Times New Roman", sans-serif;
+    line-height: 1.5em;
+    background: white;
+    width: 100vw;
+    height: 100vh;
+}
+
+h4 {
+    padding-left: 12px;
+    padding-bottom: 8px;
+    border-left: .2em solid red;
+    
+}
+
+.canada, .work-life, .culture {
+    border-left: .2em solid lightskyblue;
+}
+
+/*
+====================
+Typography
+====================
+*/
+
+li a {
+    text-decoration: none;
+    color: white;
+}
+
+h1 {
+    font: bold 1.75em "Helvetica", "Times New Roman", sans-serif;
+    color: white;
+    text-shadow: 0 0 2px rgba(0, 0, 0, 1); 
+}
+
+h2 {
+    margin-top: 12px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+h3 {
+    margin-bottom: 8px;
+}
+
+h4 {
+    font: small-caps 400 .75em "Helvetica", "Times New Roman", sans-serif;
+}
+
+h1 ~ h4 {
+    text-shadow: 0 0 2px rgba(0, 0, 0, 1);
+    color: white;
+}
+
+h2 ~ h4 {
+    color: rgba(150, 150, 150, 1);
+    border-bottom: .1em solid rgba(218, 223, 225, 1);
+}
+
+section > h4:first-child {
+    font-size: 1.5em;
+    font-variant: normal;
+    font-weight: 700;
+    color:rgba(100, 100, 100, 1);
+}
+
+
+/*
+====================
+Header
+====================
+*/
+
+header {
+    width: 100vw;
+    height: 60px;
+}
+
+/*
+===========
+Navigation
+===========
+*/
+
+.expand1, .expand2, .expand3, .expand4, .expand5 {
+    display: none;
+    min-width: 70px;
+    padding-left: 4px;
+    padding-top: 16px;
+    font-weight: 700;
+}
+
+nav, ul {
+    min-width: 360px;
+    width: 100vw;
+    height: 60px;
+    background: black;
+}
+
+li {
+    height: 100%;
+    background-color: black;
+    float: left;
+}
+
+li:first-child, li:first-child + li {
+    float: left;
+    width: 25%;
+}
+
+li:nth-child(+3), li:nth-child(+4) {
+    float: right;
+    width: 15%;
+}
+
+li:first-child + li {
+    margin-left: 5%;
+}
+
+img[src="login.png"], img[src="hamburger.png"], 
+img[src="magnify.png"] {
+        max-height: 100%;
+}
+
+img[src="bbclogo.png"] {
+    max-height: 70%;
+    padding-top: 16px;
+    margin-left: 15%;
+}
+
+img[src="hamburger.png"] {
+    margin-right: 20px;
+    min-width: 60px;
+    min-height: 60px;
+}
+
+@media screen and (min-width: 600px) {
+    li:first-child, li:first-child + li {
+        max-width: 15%;
+        
+    }
+    
+    li:first-child + li {
+        margin-left: 0;
+        margin-right: 12px;
+    }
+
+    .expand1 {
+        display: inline-block;
+    }
+}
+
+@media screen and (min-width: 730px) { 
+    li:first-child, li:first-child + li {
+        max-width: 15%;
+    }
+    .expand2 {
+            display: inline-block;
+        }
+
+}
+
+@media screen and (min-width: 780px) {
+    li:first-child, li:first-child + li {
+        max-width: 11%;
+    }
+
+    li:first-child + li {
+        margin-right: 24px;
+    }
+
+    .expand3 {
+        display: inline-block;
+    }
+
+}
+
+@media screen and (min-width: 1000px) {
+    li:first-child, li:first-child + li {
+        max-width: 10%;
+    }
+    .expand4 {
+        display: inline-block;
+    }
+
+}
+
+@media screen and (min-width: 1168px) {
+    li:first-child, li:first-child + li {
+        max-width: 10%;
+    }
+    .expand5 {
+        display: inline-block;
+    }
+
+}
+
+@media screen and (min-width: 894px ) {
+    li:first-child + li {
+        margin-right: 8vw;
+    }
+}
+
+/*
+====================
+Footer
+====================
+*/
+
+/*
+====================
+Main
+====================
+*/
+
+.expand-main, .expand-submain {
+    display: none;
+}
+
+main {
+    width: 100vw;
+    height: 100%;
+    padding: 20px;
+}
+
+main > div:nth-child(+3) {
+    margin-bottom: 20px;
+}
+
+/* hero & subhero size*/
+
+.hero, main > div {
+    max-width: 100%;
+}
+
+.hero {
+    position: relative;
+    margin-bottom: 12px;
+}
+
+.hero-img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+h1, h1 ~ h4 {
+    position: absolute;
+    margin-left: 12px;
+}
+
+h1 {
+    bottom: 2em;
+    
+}
+
+h1 ~ h4 {
+    bottom: 1.5em;
+}
+
+.subhero {
+    position: relative;
+}
+
+.floatgrp > .subherodiv:last-child > .subhero:last-child h4 {
+    margin-bottom: 24px;
+}
+
+/* 
+=====
+responsive to expand main elements in landscape mode
+=====
+ */
+
+@media screen and (min-aspect-ratio: 1.4111/1) {
+    
+    .container {
+        width: 100%;
+    }
+
+    .herodiv {
+        width: 50%;        
+        display: inline-block;
+    }
+    
+    .hero {
+        max-width: 100%;
+        float: left;
+        margin-right: 12px;
+    }
+
+    .hero-img {
+        height: 100%;
+        vertical-align: bottom;
+    }
+
+    .floatgrp {
+        max-width: 50%;
+        float: right;
+    }
+
+    .subherodiv {
+        width: 100%;
+        vertical-align: top;
+    }
+
+    .subhero {
+        max-width: 50%;
+        display:inline-block;
+    }
+
+    .floatgrp > .subherodiv:last-child {
+        outline: px dotted green;
+        padding-top: 14px;
+        vertical-align: bottom;
+    }
+    
+    .subherodiv > .subhero:first-child {
+        outline: 0px dotted green;
+
+    }
+
+    .subhero > img {
+        max-width: 90%;
+        margin-left: 8px;
+
+    }
+    
+    .subhero > h2, .subhero > h4 {
+        position: absolute;
+        max-width: 80%;
+        left: 1em;
+    }
+
+/* landscape fonts for subhero */    
+
+    .subhero > h2 {
+        bottom: 1.5em;
+        margin-bottom: 20px;
+        text-shadow: 0 0 2px rgba(0, 0, 0, 1);
+        color: white;
+    }
+
+    .subhero > h4 {
+        bottom: 1em;
+        text-shadow: 0 0 2px rgba(0, 0, 0, 1);
+        color: white;
+    }
+
+    .expand-main {
+        display: inline-block;
+        max-width: 100%;
+    }
+
+    main h4 {
+        border-bottom: none;
+    }
+}
+
+/* 
+=====
+responsive to expand submain elements in landscape mode
+=====
+ */
+
+ @media screen and (min-aspect-ratio: 1.4111/1) {
+    main > section:last-child {
+        width: 100%;
+        height: 478px;
+    }    
+    
+    .submain {
+        width: 33.3333%;
+        float: left;
+        padding: 20px 20px 20px 0;
+    }
+    
+    .expand-submain {
+        display: inline-block;
+        width: 100%;
+    }
+ }
+
+/*
+===== 
+responsive to expand main elements in portrait mode
+=====
+ */
+
+@media screen and (min-width: 600px) and (max-aspect-ratio: 1.4/1) {
+    .expand-main, .expand-submain {
+        display: inline;
+    }
+
+/* subhero floated left */
+
+    .subhero {
+        float: left;
+        max-width: 50%;
+        margin-bottom: 8px;
+    }
+
+    .expand-main {
+        max-width: 100%;
+    }
+
+    .subhero h2, .subhero h4 {
+        position: absolute;
+        max-width: 75%;
+        bottom: 1.5em;
+        margin-left: 8px;
+        border-bottom: none;
+        text-shadow: 0 0 2px rgba(0, 0, 0, 1);
+        color: white;
+    }
+
+    .subherodiv > section:first-child {
+        padding-right: 8px;
+    }
+
+    .subherodiv > section:last-child {
+        padding-left: 8px;
+    }
+
+    main > div:nth-child(+3) {
+        margin-top: 0px;
+    }
+
+    .subhero > h2 {
+        margin-bottom: 20px;
+    }
+
+/* parent of submain section size */
+
+    main > section:last-child {
+        height: 20vh;
+    }
+
+/* news section h4 */
+
+    .group > h4:first-child {
+        margin-bottom: 8px;
+    }
+
+/* submain floated left */
+
+    .submain {
+        float: left;
+        max-width: 33.3333%;
+        height: 100%;
+        padding: 4px;
+    }
+
+    .expand-submain {
+        max-width: 100%;
+    }
+
+/* expand-submain ~ h3 to fill empty space */
+
+    .expand-submain ~ h3 {
+        height: 100%;
+    }
+
+/* submain */
+
+    main > section:last-child {
+
+    }
+
+    .group > h4:first-child {
+        margin-bottom: 
+    }
+
+    .expand-submain {
+
+    }
+
+}
+
+
+/*
+====================
+Clearfix
+====================
+*/
+
+.group::before, .group::after {
+    display: table;
+    content: "";
+}
+
+.group::after {
+    clear: both;
+}
+
+.group {
+    clear: both;
+    *zoom: 1;
+}
+

@@ -1,0 +1,175 @@
+/* Eric Myers' CSS reset */
+
+html, body, div, menu, nav, header, footer, h1, h2, h3, h4, h5, h6, hgroup, section, article, aside, p, address, blockquote, pre, form, output, fieldset, legend, label, details, summary, figure, figcaption, table, caption, thead, th, tr, td, tbody, tfoot, ol, ul, dd, dt, dl, li, a, span, b, big, em, i, small, strong, var, q, u, mark, ins, del, s, strike, abbr, acronym, cite, dfn, code, kbd, samp, time, ruby, sub, sup, center, applet, embed, iframe, audio, video, image, object, tt, canvas {
+    padding: 0;
+    border: 0;
+    margin: 0;
+    font: inherit;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+/* Eric Myers' display-role reset */
+
+menu, nav, header, footer, hgroup, section, article, aside, details, figure, figcaption {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote::before, blockquote::after, q::before, q::after {
+    content: "";
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/*
+====================
+Temp 
+====================
+*/
+
+main, header, footer, section {
+    outline: 2px solid black;
+}
+
+/*
+====================
+Grid
+====================
+*/
+
+*, *::before, *::after {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+/*
+====================
+Row
+====================
+*/
+
+/*
+====================
+Column
+====================
+*/
+
+
+
+/*
+====================
+Base
+====================
+*/
+
+body {
+    font: 16px "Helvetica", "Times New Roman", sans-serif;
+    line-height: 1.5em;
+    padding: 1vw;
+    width: 100%;
+}
+
+@media screen and (min-aspect-ratio: .9/1) {
+    body {
+        font-size: 18px;
+        }
+    } 
+
+header, footer, main {
+    width: 100%;
+    margin: auto;
+}
+
+header, footer, section {
+    height: 20vw;
+    background: grey;
+
+}
+
+/*
+====================
+Header
+====================
+*/
+
+@media screen and (min-aspect-ratio: .9/1) {
+header {
+    min-height: 15vw;
+    }
+}
+
+/*
+====================
+Footer
+====================
+*/
+@media screen and (min-aspect-ratio: .9/1) {
+    footer {
+        min-height: 15vw;
+        }
+    }
+    
+/*
+====================
+Main
+====================
+*/
+
+main {
+}
+
+section {
+    width: 100%;
+}
+
+@media screen and (min-aspect-ratio: .9/1) {
+    section {
+        width: 33.3333%;
+        min-height: 40vw;
+        float: left;
+    }
+}
+
+/*
+====================
+
+====================
+*/
+
+/*
+====================
+Clearfix
+====================
+*/
+
+.group::before, .group::after {
+    display: table;
+    content: "";
+}
+
+.group::after {
+    clear: both;
+}
+
+.group {
+    clear: both;
+    *zoom: 1;
+}

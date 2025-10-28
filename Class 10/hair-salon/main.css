@@ -1,0 +1,656 @@
+/* Eric Myers' CSS reset */
+
+html, body, div, menu, nav, header, footer, h1, h2, h3, h4, h5, h6, hgroup, section, article, aside, p, address, blockquote, pre, form, output, fieldset, legend, label, details, summary, figure, figcaption, table, caption, thead, th, tr, td, tbody, ol, ul, dd, dt, dl, li, a, span, b, big, em, i, small, strong, var, q, u, mark, ins, del, s, strike, abbr, acronym, cite, dfn, code, kbd, samp, time, ruby, sub, sup, center, applet, embed, iframe, audio, video, img, object, tt, canvas {
+    padding: 0;
+    border: 0;
+    margin: 0;
+    font: inherit;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+/* Eric Myers' display-role reset */
+
+menu, nav, header, footer, hgroup, section, article, aside, details, figure, figcaption {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote::before, blockquote::after, q::before, q::after {
+    content: "";
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/*
+========================================
+Grid
+========================================
+*/
+
+*, *::before, *::after {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+/*
+========================================
+Column
+========================================
+*/
+
+
+
+/*
+========================================
+Base
+========================================
+*/
+
+/* ===== html ===== */
+
+html {
+    font-size: 62.5%;
+}
+
+/* ===== body ===== */
+
+body {
+    min-width: 32rem;
+    min-height: 56rem;
+    font: 1.6rem "Roboto", "Fira Sans", "Helvetica Neue", "Helvetica", sans-serif;
+    color: black;
+    line-height: 2.4rem;
+    background-color: white;    
+}
+
+/* ===== landscape media query ===== */
+
+.landscape {
+    display: none;
+}
+
+
+
+/* ===== header ===== */
+
+header {
+    padding: 2rem 2rem 0 2rem;
+}
+
+/* ===== nav ===== */
+
+nav {
+    width: 100%;
+    height: 4rem;
+    text-align: center;
+    font-variant: small-caps;
+}
+
+/* ===== main ===== */
+
+main {
+    height: 100%;
+    padding-top: 2rem;
+    margin: auto;
+}
+
+/* hero */
+
+.hero {
+    width: 100%;
+    height: 540px;
+    padding-top: 10rem;
+    padding-left: 10rem;
+    color: white;
+}
+
+/* subhero */
+
+.subhero {
+    padding: 0 7rem;
+}
+
+.subhero p {
+    margin-bottom: 3rem;
+}
+
+/* ===== footer ===== */
+
+footer {
+    width: 100%;
+    padding: 7rem;
+    text-align: center;
+    background-color: rgb(243, 244, 246);
+    
+}
+
+/* ===== h1 ===== */
+
+h1 {
+    margin-bottom: 1.8rem;
+    font-size: 3.6rem;
+    font-weight: 700;
+    line-height: 4.5rem;
+    color: white;
+}
+
+h2 {
+    margin-bottom: 2rem;
+    font-size: 2.8rem;
+    font-weight: 700;
+    line-height: 3.5rem;
+}
+
+h3 {
+    margin-bottom: 2rem;
+    font-weight: 700;
+}
+
+
+p {
+    font-size: 1.3rem;
+}
+
+/* ===== anchor links ===== */
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+/* ===== logo ===== */
+
+nav > .logo {
+    display: inline-block;
+}
+
+img[src="logo.png"] {
+    height: 3rem;
+}
+
+/* ===== container ===== */
+
+.container {
+    padding: 0 7rem;
+    margin-bottom: 7rem;
+    text-align: center;
+}
+
+/* ===== inline divs ===== */
+
+.inline {
+    display: inline;
+}
+
+/* ===== universal icons ===== */
+
+.unicon {
+    height: 2rem;
+}
+
+/* ===== decorative icons ===== */
+
+.decon {
+    height: 5rem;
+    margin-bottom: 2rem;
+}
+
+.blkbox {
+    width: 170px;
+    padding: 1rem 3rem 1rem 3rem;
+    font-variant: small-caps;
+    line-height: 1.3rem;
+    color: white;
+    background-color: black;
+}
+
+/* footer {
+    width: 100%;
+    padding: 7rem;
+    text-align: center;
+    background-color: rgb(243, 244, 246);
+    
+} */
+
+/*
+========================================
+Header
+========================================
+*/
+
+/*
+========================================
+Navigation
+========================================
+*/
+
+/* ===== menu ===== */
+
+.unicon[alt="menu icon"] {
+    float: left;
+}
+
+/* ===== logo ===== */
+
+
+img[src="logo.png"] {
+    float: left;
+}
+
+/* ===== book online ===== */
+
+nav div a:last-child {
+    float: right;
+}
+
+/* @media and screen (width=) */
+
+@media screen and (min-width: 1024px) {
+
+    .portrait {
+        display: none;
+    }
+
+    .landscape {
+        display: inline-block;
+    }
+
+    li {
+        margin: 0 1.6rem 0 1.6rem;
+    }
+        
+}
+
+/*
+========================================
+Main
+========================================
+*/
+
+/* ===== hero ===== */
+
+main {
+    margin-bottom: 8rem;
+}
+
+.hero {
+
+    background-color: grey;
+    background-image: url("./background.png");
+    background-size: cover;
+    background-position: 100vw 50px;
+    background-repeat: no-repeat;
+    margin-bottom: 9rem;
+    font-variant: small-caps;    
+}
+
+.floatl {
+    float: left;
+}
+
+.floatr {
+    float: right;
+    height: 100%;
+    writing-mode: vertical-rl;
+}
+
+/* first div */
+
+.hero > .floatl:first-child {
+    margin-left: 10%;
+}
+
+div > .inline:first-child {
+    width: 85%;
+}
+
+.hero > .inline:first-child p {
+    padding-bottom: 1.6rem;
+}
+
+.hero span {
+    padding: .8rem 1rem .8rem 1rem;
+    font-size: 1.3rem;
+    font-variant: small-caps;
+    background-color: black;
+
+}
+
+/* box1 */
+
+.box1 {
+    width: 100%;
+    height: 60%;
+}
+
+.box1 > .floatl > div:first-child {
+    margin-bottom: 3.2rem;
+}
+
+.box1 span { /* our services */
+    padding: .8rem 2.4rem;
+}
+
+/* box2 */
+
+.box2 {
+    height: 46%;
+    padding: 2.4rem 2.4rem 2.4rem 0;
+    line-height: 3.2rem;
+    background-color: black;
+}
+
+.box2 p, .box2 div {
+    background-color: black;
+}
+
+.box2 > p:first-child {
+    padding-left: 2.4rem;
+    margin-bottom: .8rem;
+    border-left: .2rem solid white;
+}
+
+.box2 > p:nth-child(+2) {
+    padding-left: 2.6rem;
+    margin-bottom: 1.2rem;
+}
+
+.box2 > p > span {
+    padding: 0;
+    font-size: 2.4rem;
+    font-weight: 700;
+    background-color: black;
+}
+
+.box2 > div {
+    padding-left: 2.6rem;
+}
+
+.box2 > div > p {
+    width: 70%;
+    height: 100%;
+    padding: 0 12px;
+    color: black;
+    background-color: white;
+}
+
+
+
+
+
+/* ===== subhero ===== */
+
+.subhero {
+    text-align: center;
+}
+
+@media screen and (min-width: 1024px) {
+    .subhero > .col-1-3 {
+        width: 33.3333%;
+        float: left;
+        padding: 0 3rem 0 3rem;
+    }
+}
+
+.col-1-2 {
+    text-align: center;
+}
+
+.col-1-2 > div:last-child {
+    width: 125px;
+    margin: auto;
+}
+
+.col-1-2 > div p {
+    width: 125px;
+    padding: .4rem 3rem .6rem 3rem;
+    margin-bottom: 4rem;
+    font-variant: small-caps;
+    color: white;
+    background-color: black;
+}
+
+.col-1-2 > p {
+    margin-bottom: 2.6rem;
+}
+
+.col-1-2 > img {
+  width: 75%;
+}
+
+@media screen and (min-width: 1024px) {
+    .col-1-2 {
+        float: left;
+    }
+
+    .col-1-2 {
+        width: 50%;
+        padding: 0 5%;
+    }
+
+    .col-1-2 > p {
+        margin-bottom: 2.6rem;
+    }
+
+    .col-1-2 > div p {
+        padding: .4rem 3rem .6rem 3rem;
+        font-variant: small-caps;
+        color: white;
+        background-color: black;
+    }
+
+    .col-1-2 > img {
+        width: 100%;
+    }
+}
+
+/* ===== page 2 ===== */
+
+.pg2 .floatl {
+    float: none;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.anchor {
+    position: relative;
+    display: block;
+}
+
+.pg2 .col-1-3 {
+    max-width: 370px;
+    position: relative;
+    margin-bottom: 100px;
+    margin: 0 auto 100px auto;
+    
+} 
+
+.pg2 .col-1-3 img {
+    max-width: 100%;
+
+}
+
+.blkbox {
+    position: absolute;
+    bottom: -20px;
+    left: 100px;
+}
+
+.blkbox > h4 {
+    font-size: 1.3rem;
+}
+
+.blkbox > span {
+    padding: 0;
+    font-size: 1.3rem;
+}
+
+@media screen and (min-width: 1024px) {
+    .pg2 {
+        margin-bottom: 7rem;
+    }
+
+    .pg2 > .col-1-3 {
+        display: inline-block;
+        max-width: 33.3333%;
+    }
+    
+    .pg2 > .floatl {
+        float: left;
+        max-width: 33.3333%;
+    }
+
+}
+
+.stylist {
+    margin-bottom: 0;
+}
+
+/* ===== offer ===== */
+
+.offer {
+    min-width: 900px;
+    max-width: 100%;
+    height: 300px;
+    background-image: url(Gallery-08.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-color: grey;
+}
+
+/* box3 */
+
+.box3 {
+
+    width: 250px;
+    height: 250px;
+    padding: 7rem 2.4rem 2.4rem 2.4rem;
+    font-weight: 700;
+    line-height: 2.6rem;
+}
+
+.box3 p {
+}
+
+.box3 > p:first-child {
+    padding-left: 2.4rem;
+    margin-bottom: .8rem;
+}
+
+.box3 > p:nth-child(+2) {
+    padding-left: 2.6rem;
+    margin-bottom: 1.2rem;
+}
+
+
+.box3 > div {
+    padding-left: 2.6rem;
+}
+
+.box3 > div > p {
+    width: 100%;
+    height: 100%;
+    padding: 0 12px;
+    font-weight: 400;
+    font-variant: small-caps;
+    color: white;
+    background-color: black;
+}
+
+/* ===== lookbook ===== */
+
+.lookbook div i {
+    margin-bottom: 2rem;
+}
+
+.lookbook img {
+    margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 1024px) {
+    .lookbook-models {
+        width: 1120px;
+        margin: 0 auto;
+    }
+    
+    .lookbook-models .col-1-3 {
+        max-width: 33%;
+        float: left;
+    }
+
+    .lookbook-models img {
+        max-width: 95%;
+
+    }
+}
+
+/* stylist row */
+
+
+
+
+
+
+
+/*
+========================================
+Footer
+========================================
+*/
+
+/*
+========================================
+
+========================================
+*/
+
+/*
+========================================
+
+========================================
+*/
+
+/*
+========================================
+
+========================================
+*/
+
+/*
+========================================
+Clearfix
+========================================
+*/
+
+.clearfix::before, .clearfix::after {
+    display: table;
+    content: "";
+}
+
+.clearfix::after {
+    clear: both;
+}
+
+.clearfix {
+    clear: both;
+    *zoom: 1;
+}
