@@ -4096,3 +4096,9 @@ function updateLight(current) {
 }
 
 //#5
+//
+//https://www.codewars.com/kata/5875b200d520904a04000003
+function enough(cap, on, wait) {
+  const currCap = (cap - on);
+  return (currCap >= wait) ? 0 : (wait - currCap);
+}
