@@ -4032,7 +4032,7 @@ function alternate(n, firstValue, secondValue){
 }
 
 //#5
-//Looking for a benefactor
+//Looking for a benefactor///////////
 //https://www.codewars.com/kata/569b5cec755dd3534d00000f
 function newAvg(arr, newavg) {
   try {
@@ -4046,4 +4046,39 @@ function newAvg(arr, newavg) {
   catch(err){
     throw err;
   }
+}
+
+/*
+==========
+2025_10_29
+==========
+*/
+//#1
+//Drone Fly-By
+//https://www.codewars.com/kata/58356a94f8358058f30004b5
+function flyBy(lamps, drone){
+  return lamps.split('').fill('o', 0, drone.length).join('');
+}
+
+//#2
+//Double Sort
+//https://www.codewars.com/kata/57cc79ec484cf991c900018d
+function dbSort(a){
+  const numArr = a.filter(ele => typeof ele == 'number');
+  const strArr = a.filter(ele => typeof ele == 'string');
+  return [...numArr.sort((a, b) => a - b), ...strArr.sort()];
+}
+
+//#3
+//Move 10
+//https://www.codewars.com/kata/57cf50a7eca2603de0000090
+function moveTen(s){
+  return s.split('').map((ele) => {
+    const codePos = ele.charCodeAt(ele[0]) + 10;
+    if (codePos > 122) {
+      return String.fromCharCode(codePos - 26)
+    } else {
+      return String.fromCharCode(codePos);
+    }
+  }).join('');
 }
