@@ -4082,3 +4082,17 @@ function moveTen(s){
     }
   }).join('');
 }
+
+//#4
+//Thinkful - Logic Drils: Traffic light
+//http://codewars.com/kata/58649884a1659ed6cb000072
+function updateLight(current) {
+  let lights = {
+    'green': 'yellow',
+    'yellow': 'red',
+    'red': 'green'
+  };
+  return lights[current];
+}
+
+//#5
