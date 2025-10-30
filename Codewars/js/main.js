@@ -4120,3 +4120,19 @@ sortme = function( names ){
   return names.sort();
 }
 
+//#3
+//Who's Online
+//https://www.codewars.com/kata/5b6375f707a2664ada00002a
+const whosOnline = (friends) => {
+  let statuses = {};
+  for (let obj of friends) {
+    if (obj.lastActivity > 10 && obj.status == 'online') {
+      (statuses.away == undefined) ? statuses.away = [obj.username] : statuses.away.push(obj.username);
+    } else if (obj.status == 'offline') {
+      (statuses.offline == undefined) ? statuses.offline = [obj.username] : statuses.offline.push(obj.username);
+    } else {
+      (statuses.online == undefined) ? statuses.online = [obj.username] : statuses.online.push(obj.username);
+    }
+  }
+  return statuses;
+}
