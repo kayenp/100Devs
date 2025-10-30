@@ -4102,3 +4102,17 @@ function enough(cap, on, wait) {
   const currCap = (cap - on);
   return (currCap >= wait) ? 0 : (wait - currCap);
 }
+
+/*
+==========
+2025_10_30
+==========
+*/
+//#1
+//Is every value in the array an array?
+//https://www.codewars.com/kata/582c81d982a0a65424000201
+const arrCheck = value => value.every(ele => Array.isArray(ele));
+
+//#2
+//
+//
