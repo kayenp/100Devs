@@ -4136,3 +4136,16 @@ const whosOnline = (friends) => {
   }
   return statuses;
 }
+
+//#4
+//Numbers to Objects
+//https://www.codewars.com/kata/57ced2c1c6fdc22123000316
+function numObj(s){
+  const arrOfObj = [];
+  s.forEach(ele => {
+    arrOfObj.push({
+      [ele]: `${String.fromCharCode(ele)}`
+    });
+  });
+  return arrOfObj;
+}
