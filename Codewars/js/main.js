@@ -4169,3 +4169,36 @@ function sumItUp(numbersWithBases){
   return numbersWithBases.reduce(((a, cV) => a + Number.parseInt(...cV)), 0);
 }
 
+//#2
+//Number Of Occurrences
+//https://www.codewars.com/kata/52829c5fe08baf7edc00122b
+Object.defineProperty(Array.prototype, 'numberOfOccurrences',{ 
+  value : function numberOfOccurrences(element) {
+    return this.reduce(((a, cV) => {
+      if (cV == element) {
+        a++;
+      }
+      return a;
+    }), 0)
+}})
+
+//#3
+//Hells Kitchen
+//https://www.codewars.com/kata/57d1f36705c186d018000813
+function gordon(a){
+  return (a.toUpperCase()
+          .replaceAll('A', '@')
+          .split(' ')
+          .map(ele => {
+            return ele.padEnd(ele.length + 4, '!');
+          })
+          .join(' ')
+          .split('')
+          .map(ele => {
+            return (ele == 'E') ||
+              (ele == 'I') ||
+              (ele == 'O') ||
+              (ele == 'U') ? '*' : ele
+          })
+          .join(''));
+}
