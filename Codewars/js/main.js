@@ -4156,3 +4156,16 @@ function numObj(s){
 function broken(x){
   return x.split('').map(ele => (ele == 1) ? 0 : 1).join('');
 }
+
+/*
+==========
+2025_10_31
+==========
+*/
+//#1
+//Sum Array with different bases
+//https://www.codewars.com/kata/5a005f4fba2a14897f000086
+function sumItUp(numbersWithBases){
+  return numbersWithBases.reduce(((a, cV) => a + Number.parseInt(...cV)), 0);
+}
+
