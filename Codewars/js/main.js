@@ -4209,3 +4209,10 @@ function gordon(a){
 function hoopCount (n) {
    return n >= 10 ? "Great, now move on to tricks" : "Keep at it until you get it"
 };
+
+//#5
+//Grasshopper - Check for factor
+//https://www.codewars.com/kata/55cbc3586671f6aa070000fb
+function checkForFactor (base, factor) {
+  return base % factor == 0
+}
