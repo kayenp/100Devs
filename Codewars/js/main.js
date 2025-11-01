@@ -4216,3 +4216,21 @@ function hoopCount (n) {
 function checkForFactor (base, factor) {
   return base % factor == 0
 }
+
+/*
+==========
+2025_11_01
+==========
+*/
+//#1
+//Scrolling Text
+//https://www.codewars.com/kata/5a995c2aba1bb57f660001fd
+function scrollingText(text){
+  text = text.toUpperCase();
+  let arr = [text];
+  for (let i = 0; i < text.length - 1; i++) {
+    text = (text.slice(1) + text.slice(0,1));
+    arr.push(text);
+  }
+  return arr;
+}
