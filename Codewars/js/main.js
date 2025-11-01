@@ -4249,3 +4249,13 @@ function powersOfTwo(n){
   return Array.from({ length: n+1 }, ((v, k) => 2**k));
 }
 
+//#4
+//Grasshopper - Messi goals function
+//https://www.codewars.com/kata/55f73be6e12baaa5900000d4
+function goals (laLigaGoals, copaDelReyGoals, championsLeagueGoals) {
+  return laLigaGoals + copaDelReyGoals + championsLeagueGoals;
+}
+
+//#5
+//
+//
