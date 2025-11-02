@@ -4283,3 +4283,12 @@ function well(x){
 function nthChar(words) {
   return words.reduce(((a, _, cI, arr) => a += arr[cI][cI]), '');
 }
+
+//#3
+//Multiply Word in String
+//https://www.codewars.com/kata/5ace2d9f307eb29430000092
+function modifyMultiply (str,loc,num) {
+  const word = str.split(' ')[loc];
+  return (word + '-').repeat(num-1) + word;
+} 
+
