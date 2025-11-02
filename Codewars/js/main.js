@@ -4292,3 +4292,10 @@ function modifyMultiply (str,loc,num) {
   return (word + '-').repeat(num-1) + word;
 } 
 
+//#4
+//Return a string's even characters.
+//https://www.codewars.com/kata/566044325f8fddc1c000002c
+function evenChars(string) {
+  return (string.length < 2 || string.length > 100) ? 'invalid string'
+    : string.split('').filter((_, ind) => (ind % 2 != 0));
+}
