@@ -4262,3 +4262,12 @@ function goals (laLigaGoals, copaDelReyGoals, championsLeagueGoals) {
 function sayHello(name) {
   return `Hello, ${name}`;
 }
+
+/*
+==========
+2025_11_02
+==========
+*/
+//#1
+//Well of Ideas - Harder Version
+//https://www.codewars.com/kata/57f22b0f1b5432ff09001cab
