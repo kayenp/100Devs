@@ -4271,3 +4271,15 @@ function sayHello(name) {
 //#1
 //Well of Ideas - Harder Version
 //https://www.codewars.com/kata/57f22b0f1b5432ff09001cab
+function well(x){
+  const newArr = x.flat().filter(ele => Number.isNaN(Number(ele))).map(ele => ele.toLowerCase()).filter(ele => ele == 'good');
+  return (newArr.length > 2) ? 'I smell a series!'
+    : (newArr.length > 0) ? 'Publish!' : 'Fail!';
+}
+
+//#2
+//Substring fun
+//https://www.codewars.com/kata/565b112d09c1adfdd500019c
+function nthChar(words) {
+  return words.reduce(((a, _, cI, arr) => a += arr[cI][cI]), '');
+}
