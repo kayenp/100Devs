@@ -4299,3 +4299,12 @@ function evenChars(string) {
   return (string.length < 2 || string.length > 100) ? 'invalid string'
     : string.split('').filter((_, ind) => (ind % 2 != 0));
 }
+
+//#5
+//Working with arrays I (and why your code failes in some katas)
+//https://www.codewars.com/kata/5a4ff3c5fd56cbaf9800003e
+function withoutLast(arr) {
+  const copy = arr.slice();
+  copy.pop()
+  return copy;
+}
