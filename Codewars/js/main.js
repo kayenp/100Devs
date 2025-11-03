@@ -4341,6 +4341,15 @@ function doubleEveryOther(a) {
  return a.map((ele, ind) => (ind % 2 != 0) ? ele*2 : ele);
 }                                                                              
   
-  
+//#4
+//Number Pairs
+//https://www.codewars.com/kata/563b1f55a5f2079dc100008a
+function getLargerNumbers(a, b) {
+  return a.map((ele, ind) => (ele >= b[ind]) ? ele : b[ind]);
+};
+
+//#5
+//
+//
   
   
