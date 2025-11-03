@@ -4349,7 +4349,11 @@ function getLargerNumbers(a, b) {
 };
 
 //#5
-//
-//
-  
+//Odd Ones Out
+//https://www.codewars.com/kata/5d376cdc9bcee7001fcb84c0
+function oddOnesOut(nums) {
+  const numSet = [...new Set(nums)];
+  const odds = numSet.filter(ele => nums.filter(ele2 => ele2 == ele).length % 2 != 0)
+  return nums.filter(ele => !odds.includes(ele));
+}  
   
