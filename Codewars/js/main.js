@@ -4333,7 +4333,13 @@ function mergeArrays(a, b) {
                       : [a[k], b[k]]
   ).flat();
 }
-                                                                              
+
+//#3
+//Double Every Other
+//https://www.codewars.com/kata/5809c661f15835266900010a
+function doubleEveryOther(a) {
+ return a.map((ele, ind) => (ind % 2 != 0) ? ele*2 : ele);
+}                                                                              
   
   
   
