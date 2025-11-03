@@ -4308,3 +4308,33 @@ function withoutLast(arr) {
   copy.pop()
   return copy;
 }
+
+/*
+==========
+2025_11_03
+==========
+*/
+//#1
+//Filter unused digits
+//https://www.codewars.com/kata/55de6173a8fbe814ee000061
+function unusedDigits(...args) {
+  const nums = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+  const sorted = args.join('').split('').sort((a, b) => a - b);
+  return nums.filter(ele => sorted.indexOf(ele.toString()) == -1).join('')
+}
+
+//#2
+//Merge two arrays
+//https://www.codewars.com/kata/583af10620dda4da270000c5
+function mergeArrays(a, b) {
+  return Array.from({ length: (a.length >= b.length ? a.length : b.length) }, 
+                    (_, k) => (b[k] == undefined) ? a[k]
+                      : (a[k] == undefined) ? b[k]
+                      : [a[k], b[k]]
+  ).flat();
+}
+                                                                              
+  
+  
+  
+  
