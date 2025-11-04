@@ -4386,5 +4386,18 @@ function convertHashToArray(hash){
 }
 
 //#4
-//
-//
+//LinkedList -> Array
+//https://www.codewars.com/kata/557dd2a061f099504a000088
+function listToArray(list, listArr=[]) {
+  return (listArr.push(list.value), (list.next == null) ? listArr : listToArray(list.next, listArr));
+};
+
+//#5
+//Mirror, mirror, on the wall...
+//https://www.codewars.com/kata/5f55ecd770692e001484af7d
+function mirror(data) {
+  return (data.length == 0) ? data : data.slice()
+    .sort((a, b) => b - a)
+    .reduce(((a, cV) => (a.length == 0) ? (a.push(cV), a)
+        : ((a.push(cV), a.unshift(cV)), a)), [])                                     
+}
