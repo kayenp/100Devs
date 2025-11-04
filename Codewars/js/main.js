@@ -4377,3 +4377,14 @@ function pendulum(values) {
 function diagonalSum(matrix){
   return matrix.reduce(((a, _, cI, arr) => a + arr[cI][cI]), 0);
 };
+
+//#3
+//Convert Hash To An Array
+//https://www.codewars.com/kata/59557b2a6e595316ab000046/train/javascript
+function convertHashToArray(hash){
+  return Object.keys(hash).map(ele => [ele, hash[ele]]);
+}
+
+//#4
+//
+//
