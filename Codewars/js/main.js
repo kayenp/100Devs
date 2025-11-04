@@ -4356,4 +4356,17 @@ function oddOnesOut(nums) {
   const odds = numSet.filter(ele => nums.filter(ele2 => ele2 == ele).length % 2 != 0)
   return nums.filter(ele => !odds.includes(ele));
 }  
-  
+
+/*
+==========
+2025_11_04
+==========
+*/
+//#1
+//The Poet And The Pendulum
+//https://www.codewars.com/kata/5bd776533a7e2720c40000e5
+function pendulum(values) {
+  return values.sort((a, b) => a - b).reduce(((a, cV, cI) => {
+    return ((cI % 2 == 0) ? a.unshift(cV) : a.push(cV), a)
+  }), []);
+};
