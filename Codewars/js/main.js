@@ -4370,3 +4370,10 @@ function pendulum(values) {
     return ((cI % 2 == 0) ? a.unshift(cV) : a.push(cV), a)
   }), []);
 };
+
+//#2
+//Find sum of top-left to bottom-right diagonals
+//https://www.codewars.com/kata/5497a3c181dd7291ce000700
+function diagonalSum(matrix){
+  return matrix.reduce(((a, _, cI, arr) => a + arr[cI][cI]), 0);
+};
