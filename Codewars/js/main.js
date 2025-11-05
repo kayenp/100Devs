@@ -4401,3 +4401,15 @@ function mirror(data) {
     .reduce(((a, cV) => (a.length == 0) ? (a.push(cV), a)
         : ((a.push(cV), a.unshift(cV)), a)), [])                                     
 }
+
+/*
+==========
+2025_11_05
+==========
+*/
+//#1
+//Get key/value pairs as arrays
+//https://www.codewars.com/kata/515dfd2f1db09667a0000003
+function keysAndValues(data){
+  return [Object.keys(data), Object.values(data)];
+}
