@@ -4421,3 +4421,8 @@ var isSquare = function(arr) {
   return (!arr.length) ? undefined
     : (arr.every(ele => Number.isInteger(Math.sqrt(ele))));
 }
+
+//#3
+//First-Class Function Factory
+//https://www.codewars.com/kata/563f879ecbb8fcab31000041
+const factory = x => arr => arr.map(ele => ele * x)
