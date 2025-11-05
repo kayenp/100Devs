@@ -4432,3 +4432,9 @@ const factory = x => arr => arr.map(ele => ele * x)
 //http://codewars.com/kata/53a8beaca9198e77b9000309
 const squeakyClean = arr => arr.filter(ele => ele)
 
+//#5
+//Replace all items
+//https://www.codewars.com/kata/57ae18c6e298a7a6d5000c7a
+function replaceAll(seq, find, replace) {
+  return (Array.isArray(seq)) ? seq.fill(replace) : seq.replaceAll(find, replace);
+}
