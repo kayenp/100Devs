@@ -4426,3 +4426,9 @@ var isSquare = function(arr) {
 //First-Class Function Factory
 //https://www.codewars.com/kata/563f879ecbb8fcab31000041
 const factory = x => arr => arr.map(ele => ele * x)
+
+//#4
+//Squeaky Clean
+//http://codewars.com/kata/53a8beaca9198e77b9000309
+const squeakyClean = arr => arr.filter(ele => ele)
+
