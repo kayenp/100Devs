@@ -4413,3 +4413,11 @@ function mirror(data) {
 function keysAndValues(data){
   return [Object.keys(data), Object.values(data)];
 }
+
+//#2
+//Are they square?
+//https://www.codewars.com/kata/56853c44b295170b73000007
+var isSquare = function(arr) {
+  return (!arr.length) ? undefined
+    : (arr.every(ele => Number.isInteger(Math.sqrt(ele))));
+}
