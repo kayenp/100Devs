@@ -4438,3 +4438,23 @@ const squeakyClean = arr => arr.filter(ele => ele)
 function replaceAll(seq, find, replace) {
   return (Array.isArray(seq)) ? seq.fill(replace) : seq.replaceAll(find, replace);
 }
+
+/*
+==========
+2025_11_06
+==========
+*/
+//#1
+//Homogenous arrays
+//https://www.codewars.com/kata/57ef016a7b45ef647a00002d
+function filterHomogenous(arrays) {
+  return arrays.filter(ele => {
+    return ((ele.every(item => typeof item == 'number' ) 
+            || ele.every(item => typeof item == 'string'))
+            && ele.length > 0);
+  });
+}
+
+//#2
+//The Lazy Startup Office
+//https://www.codewars.com/kata/578fdcfc75ffd1112c0001a1
