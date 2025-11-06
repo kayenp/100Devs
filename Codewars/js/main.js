@@ -4458,3 +4458,10 @@ function filterHomogenous(arrays) {
 //#2
 //The Lazy Startup Office
 //https://www.codewars.com/kata/578fdcfc75ffd1112c0001a1
+function binRota(arr){
+  return arr.map((ele, ind) => (ind % 2 != 0) ? ele.reverse() : ele).flat();
+}
+
+//#3
+//Combine objects
+//https://www.codewars.com/kata/56bd9e4b0d0b64eaf5000819
