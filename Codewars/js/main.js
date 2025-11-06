@@ -4470,5 +4470,15 @@ function combat(health, damage) {
 }
 
 //#4
-//What's the real floor?
-//https://www.codewars.com/kata/574b3b1599d8f897470018f6
+//Exclusive "or" (xor) Logical Operator
+//https://www.codewars.com/kata/56fa3c5ce4d45d2a52001b3c
+function xor(a, b) {
+  return (a ^ b) == 1;
+}
+
+//#5
+//get character from ASCII Value
+//https://www.codewars.com/kata/55ad04714f0b468e8200001c
+function getChar(c){
+  return String.fromCharCode(c);
+}
