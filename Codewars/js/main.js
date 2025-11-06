@@ -4463,5 +4463,12 @@ function binRota(arr){
 }
 
 //#3
-//Combine objects
-//https://www.codewars.com/kata/56bd9e4b0d0b64eaf5000819
+//Grasshopper - Terminal game combat function
+//https://www.codewars.com/kata/586c1cf4b98de0399300001d
+function combat(health, damage) {
+  return (damage > health) ? 0 : health - damage;
+}
+
+//#4
+//What's the real floor?
+//https://www.codewars.com/kata/574b3b1599d8f897470018f6
