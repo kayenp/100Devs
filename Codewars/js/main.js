@@ -4489,5 +4489,17 @@ function getChar(c){
 ==========
 */
 //#1
-//
-//
+//Complete Series
+//https://www.codewars.com/kata/580a4001d6df740d61000301
+function completeSeries(arr) {
+  return ([...new Set(arr)].length < arr.length) ? [0]
+    : Array.from({ length: Math.max(...arr)+1}, (_, k) => k);
+}
+
+//#2
+//Possibilities Array
+//https://www.codewars.com/kata/59b710ed70a3b7dd8f000027
+function isAllPossibilities(x){
+  return (Math.min(...x) != 0) ? false
+    : ((new Set(x).size) == x.length) && (x.length - 1 == Math.max(...x));
+}
