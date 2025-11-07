@@ -4512,5 +4512,12 @@ function golfScoreCalculator(parList, scoreList){
 }
 
 //#4
-//Transpose two strings in an array
-//https://www.codewars.com/kata/581f4ac139dc423f04000b99
+//Bin to Decimal
+//https://www.codewars.com/kata/57a5c31ce298a7e6b7000334
+function binToDec(bin) {
+  return Number.parseInt(bin, 2);
+}
+
+//#5
+//
+//
