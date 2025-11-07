@@ -4503,3 +4503,14 @@ function isAllPossibilities(x){
   return (Math.min(...x) != 0) ? false
     : ((new Set(x).size) == x.length) && (x.length - 1 == Math.max(...x));
 }
+
+//#3
+//What's my golf score?
+//https://www.codewars.com/kata/59f7a0a77eb74bf96b00006a
+function golfScoreCalculator(parList, scoreList){
+  return (scoreList.split('').reduce(((a, cV) => Number(a) + Number(cV)), 0)) - (parList.split('').reduce(((a, cV) => Number(a) + Number(cV)), 0))
+}
+
+//#4
+//Transpose two strings in an array
+//https://www.codewars.com/kata/581f4ac139dc423f04000b99
