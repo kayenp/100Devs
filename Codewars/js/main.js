@@ -4525,3 +4525,19 @@ function saleHotdogs(n){
   return (n < 5) ? n * 100
     : (n >= 5 && n < 10) ? n * 95 : n * 90;
 }
+
+/*
+==========
+2025_11_08
+==========
+*/
+//#1
+//Array comparator
+//https://www.codewars.com/kata/561046a9f629a8aac000001d
+function matchArrays(v,r){
+  return v.filter(ele => r.includes(ele)).length
+}
+
+//#2
+//
+//
