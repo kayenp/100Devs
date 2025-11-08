@@ -4574,3 +4574,11 @@ function dropCap(n) {
   }
   return nArr.join(' ');
 }
+
+//#4
+//Return a sorted list of objects
+//https://www.codewars.com/kata/52705ed65de62b733f000064
+function sortList (sortBy, list) {
+  return list.sort((a, b) => (sortBy == 'a') ? b.a - a.a
+   : b.b - a.b);
+}
