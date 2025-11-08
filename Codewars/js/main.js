@@ -4560,5 +4560,17 @@ function getNaughtyNames(people, callback=[0]){
 };
 
 //#3
-//
-//
+//Dropcaps
+//https://www.codewars.com/kata/559e5b717dd758a3eb00005a
+function dropCap(n) {
+  const nArr = n.split(' ');
+  for (let i = 0; i < nArr.length; i++) {
+    if (nArr[i].length < 3) {
+      continue;
+    }
+    if (nArr[i][0] != ' ') {
+      nArr[i] = nArr[i].slice(0, 1).toUpperCase() + nArr[i].slice(1).toLowerCase();
+    };
+  }
+  return nArr.join(' ');
+}
