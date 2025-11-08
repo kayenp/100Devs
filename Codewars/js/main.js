@@ -4539,5 +4539,26 @@ function matchArrays(v,r){
 }
 
 //#2
+//Naughty or Nice
+//https://www.codewars.com/kata/52a6b34e43c2484ac10000cd
+function getNiceNames(people, callback=[0]){
+  let niceList = [];
+  for (let person of people) {
+      (person.wasNice) && (niceList.push(person.name));
+  }
+  return (niceList.length + callback.length > niceList.length) ? niceList
+    : [];
+};
+
+function getNaughtyNames(people, callback=[0]){
+  let naughtyList = [];
+  for (let person of people) {
+      (!person.wasNice) && (naughtyList.push(person.name));
+  }
+  return (naughtyList.length + callback.length > naughtyList.length) ? naughtyList
+    : [];
+};
+
+//#3
 //
 //
