@@ -4682,5 +4682,8 @@ function solve(a, b) {
 };
 
 //#5
-//
+//Strange mathematics
 //https://www.codewars.com/kata/604517d65b464d000d51381f
+function strangeMath(n, k){
+  return [...Array(n)].map((ele, ind) => ind+1 ).sort().indexOf(k) + 1;
+}
