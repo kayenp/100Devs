@@ -4645,7 +4645,7 @@ function paul(x){
     : (levelOfMisery < 100 && levelOfMisery >= 70) ? 'Sad!' : 'Miserable!';
 }
 
-//#1
+//#2
 //Slaphead
 //https://www.codewars.com/kata/57efab9acba9daa4d1000b30
 function bald(x){
@@ -4659,3 +4659,7 @@ function bald(x){
   return (hairCount > 5) ? [shaved, "Hobo!"]
     : (hairCount >= 3) ? [shaved, "Careless!"] : [shaved, hairMap[hairCount]];
 }
+
+//#3
+//Pluck
+//https://www.codewars.com/kata/530017aac7c0f49926000084
