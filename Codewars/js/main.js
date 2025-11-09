@@ -4646,5 +4646,16 @@ function paul(x){
 }
 
 //#1
-//Paul's Misery
-//https://www.codewars.com/kata/57ee31c5e77282c24d000024
+//Slaphead
+//https://www.codewars.com/kata/57efab9acba9daa4d1000b30
+function bald(x){
+  const hairCount = x.split('/').length - 1;
+  const shaved = x.slice().replaceAll('/', '-');
+  const hairMap = {
+    0: "Clean!",
+    1: "Unicorn!",
+    2: "Homer!"
+  }
+  return (hairCount > 5) ? [shaved, "Hobo!"]
+    : (hairCount >= 3) ? [shaved, "Careless!"] : [shaved, hairMap[hairCount]];
+}
