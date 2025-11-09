@@ -4663,3 +4663,24 @@ function bald(x){
 //#3
 //Pluck
 //https://www.codewars.com/kata/530017aac7c0f49926000084
+function pluck(objs, name) {
+  return objs.map(obj => obj[name]);
+}
+
+//#4
+//Rock Off!
+//http://codewars.com/kata/5b097da6c3323ac067000036
+function solve(a, b) {
+  let aliceScore = 0;
+  let bobScore = 0;
+  a.forEach((ele, ind, arr) => {
+    return (ele > b[ind]) ? aliceScore++ 
+    : (b[ind] > ele) ? bobScore++ : '';
+  });
+  return `${aliceScore}, ${bobScore}: ` + ((aliceScore > bobScore) ? 'Alice made "Kurt" proud!'
+    : (bobScore > aliceScore) ? 'Bob made "Jeff" proud!' : 'that looks like a "draw"! Rock on!')
+};
+
+//#5
+//
+//https://www.codewars.com/kata/604517d65b464d000d51381f
