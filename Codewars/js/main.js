@@ -4623,3 +4623,28 @@ function equal5(){
       b =  v3; //set number value to b
   return a % b;
 }
+
+/*
+==========
+2025_11_09
+==========
+*/
+//#1
+//Paul's Misery
+//https://www.codewars.com/kata/57ee31c5e77282c24d000024
+function paul(x){
+  const misery = {
+    kata: 5,
+    'Petes kata': 10,
+    life: 0,
+    eating: 1
+  }
+  const levelOfMisery = x.reduce(((a, cV) => a + misery[cV]), 0);
+  return (levelOfMisery < 40) ? 'Super happy!'
+    : (levelOfMisery < 70 && levelOfMisery >= 40) ? 'Happy!'
+    : (levelOfMisery < 100 && levelOfMisery >= 70) ? 'Sad!' : 'Miserable!';
+}
+
+//#1
+//Paul's Misery
+//https://www.codewars.com/kata/57ee31c5e77282c24d000024
