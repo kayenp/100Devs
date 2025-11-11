@@ -4774,3 +4774,10 @@ function rainAmount(mm){
 function animal(obj){
   return `This ${obj.color} ${obj.name} has ${obj.legs} legs.`
 }
+
+//#4
+//Holiday VIII - Duty Free
+//https://www.codewars.com/kata/57e92e91b63b6cbac20001e5
+function dutyFree(normPrice, discount, hol){
+  return Math.floor(hol/(normPrice * (discount/100)));
+}
