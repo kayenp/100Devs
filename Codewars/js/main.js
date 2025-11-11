@@ -4687,3 +4687,35 @@ function solve(a, b) {
 function strangeMath(n, k){
   return [...Array(n)].map((ele, ind) => ind+1 ).sort().indexOf(k) + 1;
 }
+
+/*
+==========
+2025_11_10
+==========
+*/
+//#1
+//List of Presents
+//https://www.codewars.com/kata/5a84d485742ba347b90006b7
+function howManyGifts(maxBudget, gifts){
+  let quantity = 0;
+  const sorted = gifts.slice().sort((a, b) => a - b).reduce(((a, cV) => {
+    if (a - cV < 0) {
+      return -1;
+    } else {
+      quantity++;
+      return a - cV;
+    }
+  }), maxBudget)
+  return quantity;
+}
+
+//#2
+//Determine offspring sex based on genes XX and XY chromosomes
+//https://www.codewars.com/kata/56530b444e831334c0000020
+function chromosomeCheck(sperm) {
+  return 'Congratulations! You\'re going to have a ' + ((sperm.includes('Y')) ? 'son.' : 'daughter.')
+}
+
+//#3
+//
+//
