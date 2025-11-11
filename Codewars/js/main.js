@@ -4740,3 +4740,20 @@ function howManyDalmatians(number) {
 function main(verb, noun) {
   return verb + noun;
 }
+
+/*
+==========
+2025_11_11
+==========
+*/
+//#1
+//Birthday I - Cake
+//https://www.codewars.com/kata/5805ed25c2799821cb000005
+function cake(x, y) {
+  const candlesFallen = y
+    .split('')
+    .map((ele, ind) => (ind % 2 == 0) ? ele.charCodeAt(0) : ele.charCodeAt(0) - 96)
+    .reduce(((a, cV) => a + cV), 0);
+  return (candlesFallen/x > .7) ? 'Fire!' : 'That was close!';
+}
+
