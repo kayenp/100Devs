@@ -4733,3 +4733,10 @@ function howManyDalmatians(number) {
                  : (number == 101) ? dogs[3] : dogs[2]
   return respond
 }
+
+//#5
+//Grasshopper - Function syntax debugging
+//https://www.codewars.com/kata/56dae9dc54c0acd29d00109a
+function main(verb, noun) {
+  return verb + noun;
+}
