@@ -4858,3 +4858,14 @@ function exponent(a,b){
 function subt(a,b){
     return a - b;
 }
+
+//#4
+//Grasshopper-Combine strings
+//https://www.codewars.com/kata/55f73f66d160f1f1db000059
+function combineNames(first, last) {
+  return `${first} ${last}`;
+}
+
+//#5
+//
+//
