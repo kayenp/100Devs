@@ -4867,5 +4867,13 @@ function combineNames(first, last) {
 }
 
 //#5
-//
-//
+//Check same case
+//https://www.codewars.com/kata/5dd462a573ee6d0014ce715b
+function sameCase(a, b){
+  const aCharCode = a.charCodeAt(0);
+  const bCharCode = b.charCodeAt(0);
+  return ((aCharCode >= 65 && aCharCode <= 90) && (bCharCode >= 65 && bCharCode <= 90)) ? 1
+    : ((aCharCode >= 97 && aCharCode <= 122) && (bCharCode >= 97 && bCharCode <= 122)) ? 1
+    : ((aCharCode >= 65 && aCharCode <= 90) && (bCharCode >= 97 && bCharCode <= 122)) ? 0
+    : ((aCharCode >= 97 && aCharCode <= 122) && (bCharCode >= 65 && bCharCode <= 90)) ? 0 : -1;
+}
