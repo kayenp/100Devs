@@ -4788,3 +4788,15 @@ function dutyFree(normPrice, discount, hol){
 function include(arr, item){
   return arr.includes(item);
 }
+
+/*
+==========
+2025_11_12
+==========
+*/
+//#1
+//Array Mash
+//https://www.codewars.com/kata/582642b1083e12521f0000da
+function arrayMash (array1, array2) {
+  return [...Array(array1.length)].map((ele, ind, arr) => [array1[ind], array2[ind]]).flat();
+}
