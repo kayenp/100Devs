@@ -4877,3 +4877,12 @@ function sameCase(a, b){
     : ((aCharCode >= 65 && aCharCode <= 90) && (bCharCode >= 97 && bCharCode <= 122)) ? 0
     : ((aCharCode >= 97 && aCharCode <= 122) && (bCharCode >= 65 && bCharCode <= 90)) ? 0 : -1;
 }
+
+/*
+==========
+2025_11_13
+==========
+*/
+//#1
+//Change two-dimensional array
+//https://www.codewars.com/kata/581214d54624a8232100005f
