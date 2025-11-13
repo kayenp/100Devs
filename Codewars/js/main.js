@@ -4899,3 +4899,14 @@ function matrix(array) {
 function numbers(...nums) {
   return nums.every(ele => typeof ele == 'number');
 }
+
+//#3
+//Mean vs. Median
+//https://www.codewars.com/kata/5806445c3f1f9c2f72000031
+function meanVsMedian(numbers) {
+  const mean = numbers.reduce(((a, cV) => a + cV), 0)/numbers.length;
+  const median = numbers.slice().sort((a, b) => a - b)[Math.ceil(numbers.length/2)-1];
+  return (mean > median) ? 'mean'
+    : (mean < median) ? 'median' : 'same';
+}
+
