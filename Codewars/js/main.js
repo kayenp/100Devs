@@ -4928,3 +4928,8 @@ function part(x){
   return (instances < 1) ? "Lynn, I've pierced my foot on a spike!!"
     : `Mine's a Pint${'!'.repeat(instances)}`;
 }
+
+//#5
+//Matrix creation
+//https://www.codewars.com/kata/5a34da5dee1aae516d00004a
+const getMatrix = (number) => Array.from({ length: number }, (_, k) => [...Array(number)].map((_, ind) => (ind == k) ? 1 : 0))
