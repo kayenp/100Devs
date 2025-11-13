@@ -4886,3 +4886,16 @@ function sameCase(a, b){
 //#1
 //Change two-dimensional array
 //https://www.codewars.com/kata/581214d54624a8232100005f
+function matrix(array) {
+  let newArr = array.slice();
+  newArr.forEach((ele, ind) => (ele[ind] < 0) ? newArr[ind].splice(ind, 1, 0) 
+             : newArr[ind].splice(ind, 1, 1));
+  return newArr;
+}
+
+//#2
+//For the sake of the argument
+//https://www.codewars.com/kata/5258b272e6925db09900386a
+function numbers(...nums) {
+  return nums.every(ele => typeof ele == 'number');
+}
