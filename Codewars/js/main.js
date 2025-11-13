@@ -4910,3 +4910,21 @@ function meanVsMedian(numbers) {
     : (mean < median) ? 'median' : 'same';
 }
 
+//#4
+//Alan Partridge I - Partridge Watch
+//https://www.codewars.com/kata/5808c8eff0ed4210de000008
+function part(x){
+  const mapArr = [
+    'Partridge',
+    'PearTree',
+    'Chat',
+    'Dan',
+    'Toblerone',
+    'Lynn',
+    'AlphaPapa',
+    'Nomad'
+  ];
+  const instances = x.reduce(((a, cV) => (mapArr.includes(cV)) ? a += 1 : a), 0);
+  return (instances < 1) ? "Lynn, I've pierced my foot on a spike!!"
+    : `Mine's a Pint${'!'.repeat(instances)}`;
+}
