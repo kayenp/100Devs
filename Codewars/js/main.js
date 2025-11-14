@@ -4933,3 +4933,15 @@ function part(x){
 //Matrix creation
 //https://www.codewars.com/kata/5a34da5dee1aae516d00004a
 const getMatrix = (number) => Array.from({ length: number }, (_, k) => [...Array(number)].map((_, ind) => (ind == k) ? 1 : 0))
+
+/*
+==========
+2025_11_14
+==========
+*/
+//#1
+//Sort with Arrow Functions
+//https://www.codewars.com/kata/559f3e20f4f29869cf0000ea
+var OrderPeople = function(people){
+  return people.sort( (a, b) => a.age - b.age ); //complete this function
+}
