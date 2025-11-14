@@ -4959,3 +4959,35 @@ function arrayLowerCase(arr) {
 function add(...args) {
   return Math.round(args.reduce(((a, cV, cI) => a + (cV/(cI+1))), 0));
 }
+
+//#4
+//All, None & Any
+//https://www.codewars.com/kata/54589f3b52756d34d6000158
+Array.prototype.all = function (p) {
+  for (let i = 0; i < this.length; i++) {
+    if (this[i] < 0) {
+      return false;
+    }
+  }
+  return true;
+};
+
+Array.prototype.none = function (p) {
+  console.log(this);
+  for (let i = 0; i < this.length; i++) {
+    if (!(this[i] < 0)) {
+      return false;
+    }
+  }
+  return true;
+};
+
+Array.prototype.any = function (p) {
+  console.log(this);
+  for (let i = 0; i < this.length; i++) {
+    if (this[i] > 0) {
+      return true;
+    }
+  }
+  return false;
+};
