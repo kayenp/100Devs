@@ -4945,3 +4945,10 @@ const getMatrix = (number) => Array.from({ length: number }, (_, k) => [...Array
 var OrderPeople = function(people){
   return people.sort( (a, b) => a.age - b.age ); //complete this function
 }
+
+//#2
+//Lowercase strings in array
+//https://www.codewars.com/kata/5729fa716c7d26dc84000040
+function arrayLowerCase(arr) {
+  return arr.map(ele => (typeof ele == 'string') ? ele.toLowerCase() : ele);
+}
