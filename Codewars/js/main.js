@@ -4952,3 +4952,10 @@ var OrderPeople = function(people){
 function arrayLowerCase(arr) {
   return arr.map(ele => (typeof ele == 'string') ? ele.toLowerCase() : ele);
 }
+
+//#3
+//Decreasing Inputs
+//https://www.codewars.com/kata/555de49a04b7d1c13c00000e
+function add(...args) {
+  return Math.round(args.reduce(((a, cV, cI) => a + (cV/(cI+1))), 0));
+}
