@@ -5016,5 +5016,26 @@ function findEmployeesRole(name) {
 }
 
 //#2
-//
+//Find missing numbers
 //https://www.codewars.com/kata/56d02e6cc6c8b49c510005bb
+function findMissingNumbers(arr){
+  let result = [];
+  for (let i = 0; i < arr.length-1; i++) {
+    if ((arr[i] + 1) != arr[i+1]) {
+      let j = arr[i];
+      while ((j + 1) != arr[i+1]) {
+        result.push(j+1);
+        j++;
+      }
+    }
+  }
+  return result;
+}
+
+//#3
+//Multiplication table for number
+//https://www.codewars.com/kata/5a2fd38b55519ed98f0000ce
+function multiTable(number) {
+  let table = [...Array(10)].map((_, ind) => `${ind+1} * ${number} = ${(ind+1) * number}\n`).join('');
+  return table.slice(0, table.length-1);
+}
