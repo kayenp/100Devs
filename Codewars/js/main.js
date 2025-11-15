@@ -5046,4 +5046,9 @@ function multiTable(number) {
 function multiply(number){
   const numDigits = Math.abs(number).toString().length;
   return ( number * (5**numDigits) );
-}S
+}
+
+//#5
+//Exclamation marks series #6: Remove n exclamation marks in the sentence from left to right
+//https://www.codewars.com/kata/57faf7275c991027af000679
+const remove = (s,n) => (n == 0) ? s : remove(s.replace('!', ''), n-1)
