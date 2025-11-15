@@ -5014,3 +5014,7 @@ function findEmployeesRole(name) {
   });
   return person.length < 1 ? 'Does not work here!' : (([person] = person), person.role);
 }
+
+//#2
+//
+//https://www.codewars.com/kata/56d02e6cc6c8b49c510005bb
