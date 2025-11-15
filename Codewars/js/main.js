@@ -4998,3 +4998,19 @@ Array.prototype.any = function (p) {
 function unique(arr) {
   return arr.filter((ele, ind) => ind == arr.indexOf(ele));
 };
+
+/*
+==========
+2025_11_15
+==========
+*/
+//#1
+//Find an employees role in the company
+//https://www.codewars.com/kata/55c9fb1b407024afe6000055
+function findEmployeesRole(name) {
+  let [firstName, lastName] = name.split(' ');
+  let person = employees.filter(obj => {
+    return (obj.firstName == firstName && obj.lastName == lastName) ? obj : '';
+  });
+  return person.length < 1 ? 'Does not work here!' : (([person] = person), person.role);
+}
