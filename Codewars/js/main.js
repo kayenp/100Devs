@@ -5039,3 +5039,11 @@ function multiTable(number) {
   let table = [...Array(10)].map((_, ind) => `${ind+1} * ${number} = ${(ind+1) * number}\n`).join('');
   return table.slice(0, table.length-1);
 }
+
+//#4
+//Multiply the number
+//https://www.codewars.com/kata/5708f682c69b48047b000e07
+function multiply(number){
+  const numDigits = Math.abs(number).toString().length;
+  return ( number * (5**numDigits) );
+}S
