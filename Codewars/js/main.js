@@ -5052,3 +5052,19 @@ function multiply(number){
 //Exclamation marks series #6: Remove n exclamation marks in the sentence from left to right
 //https://www.codewars.com/kata/57faf7275c991027af000679
 const remove = (s,n) => (n == 0) ? s : remove(s.replace('!', ''), n-1)
+
+/*
+==========
+2025_11_16
+==========
+*/
+//#1
+//Pair Zeroes
+//https://www.codewars.com/kata/54e2213f13d73eb9de0006d2
+function pairZeros(arr) {
+  let zeroes = 0;
+  return arr.slice().filter(ele => {
+    return (ele) ? ele 
+      : (!ele && !zeroes) ? (zeroes++, true) : zeroes = 0;
+  });
+}
