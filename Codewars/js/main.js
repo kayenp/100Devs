@@ -5068,3 +5068,12 @@ function pairZeros(arr) {
       : (!ele && !zeroes) ? (zeroes++, true) : zeroes = 0;
   });
 }
+
+//#2
+//Password Check - Binary to String
+//https://www.codewars.com/kata/5a731b36e19d14400f000c19
+function decodePass( passArr, bin ){
+  const intArr = bin.split(' ').map(ele => Number.parseInt(ele, 2));
+  const str = String.fromCharCode(...intArr);
+  return (passArr.includes(str) && str)
+}
