@@ -5077,3 +5077,10 @@ function decodePass( passArr, bin ){
   const str = String.fromCharCode(...intArr);
   return (passArr.includes(str) && str)
 }
+
+//#3
+//Multiple the strings in the array
+//https://www.codewars.com/kata/59b2963132779166d2001018
+function arrMultiply(arr){
+  return `${arr.reduce((a, cV) => +a * +cV)}`;
+}
