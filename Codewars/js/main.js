@@ -5136,3 +5136,16 @@ function getMean(arr, x, y) {
   return (x <= 1 || y <= 1) ? -1 
     : (x > arr.length || y > arr.length) ? -1 : (meanOfX + meanOfY)/2
 }
+
+//#3
+//OOP: Object Oriented Piracy
+//https://www.codewars.com/kata/54fe05c4762e2e3047000add
+class Ship {
+  constructor(draft, crew) {
+    this.draft = draft
+    this.crew = crew
+  }
+  isWorthIt = function() {
+    return (this.draft - (this.crew * 1.5) > 20)
+  }
+}
