@@ -5149,3 +5149,14 @@ class Ship {
     return (this.draft - (this.crew * 1.5) > 20)
   }
 }
+
+//#4
+//Training JS #6: Basic data types--Boolean and conditional statements if..else
+//https://www.codewars.com/kata/571f832f07363d295d001ba8
+function trueOrFalse(val){
+  if (!val) {
+    return 'false'
+  } else {
+    return 'true'
+  };
+}
