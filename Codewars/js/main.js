@@ -5126,3 +5126,13 @@ function xMarksTheSpot(matrix) {
     : (!matrix.flat().includes('x')) ? [] 
     : matrix.reduce(((a, cV, cI) => cV.includes('x') ? (a.push((cI), cV.indexOf('x')), a) : a), [])
 }
+
+//#2
+//The mean of two means
+//https://www.codewars.com/kata/583df40bf30065fa9900010c
+function getMean(arr, x, y) {
+  const meanOfX = arr.slice(0,x).reduce(((a, cV) => a + cV), 0)/x;
+  const meanOfY = arr.slice(-y).reduce(((a, cV) => a + cV), 0)/y;
+  return (x <= 1 || y <= 1) ? -1 
+    : (x > arr.length || y > arr.length) ? -1 : (meanOfX + meanOfY)/2
+}
