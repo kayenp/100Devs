@@ -5111,3 +5111,18 @@ var championsLeagueGoals = 10;
 var copaDelReyGoals = 5
 
 var totalGoals = (() => laLigaGoals + championsLeagueGoals + copaDelReyGoals)();
+
+
+/*
+==========
+2025_11_17
+==========
+*/
+//#1
+//'x' marks the spot.
+//https://www.codewars.com/kata/5777fe3f355edbf0a5000d11
+function xMarksTheSpot(matrix) {
+  return (matrix.flat().indexOf('x') !== matrix.flat().lastIndexOf('x')) ? []
+    : (!matrix.flat().includes('x')) ? [] 
+    : matrix.reduce(((a, cV, cI) => cV.includes('x') ? (a.push((cI), cV.indexOf('x')), a) : a), [])
+}
