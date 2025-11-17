@@ -5160,3 +5160,12 @@ function trueOrFalse(val){
     return 'true'
   };
 }
+
+//#5
+//Kata Example Twist
+//https://www.codewars.com/kata/525c1a07bb6dda6944000031
+let websites = [];
+
+while (websites.length < 1000) {
+  websites.push('codewars');
+}
