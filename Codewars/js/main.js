@@ -5169,3 +5169,13 @@ let websites = [];
 while (websites.length < 1000) {
   websites.push('codewars');
 }
+
+/*
+==========
+2025_11_18
+==========
+*/
+//#1
+//Write shortest function to calculate Average number of Array
+//https://www.codewars.com/kata/56c22cdbe0c0f7cae2001789
+const avg = a => a.reduce(((a, v) => a + v), 0)/a.length
