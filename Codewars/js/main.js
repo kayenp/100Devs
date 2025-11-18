@@ -5179,3 +5179,32 @@ while (websites.length < 1000) {
 //Write shortest function to calculate Average number of Array
 //https://www.codewars.com/kata/56c22cdbe0c0f7cae2001789
 const avg = a => a.reduce(((a, v) => a + v), 0)/a.length
+
+//#2
+//Game Hit the target
+//https://www.codewars.com/kata/5ffc226ce1666a002bf023d2
+const solution = mtrx => {
+  let aRow;
+  let xRow; 
+  mtrx.forEach(ele => {
+    if (ele.includes('x')) {
+      xRow = mtrx.indexOf(ele);
+    }
+    if (ele.includes('>')) {
+      aRow = mtrx.indexOf(ele);
+    }
+  })
+  const xPosition = mtrx[xRow].indexOf('x');
+  const aPosition = mtrx[aRow].indexOf('>');
+  if (xRow !== aRow) {
+    return false;
+  }
+  if (xPosition < aPosition) {
+    return false;
+  }
+  return true;
+}
+
+//#3
+//Operations with sequence
+//https://www.codewars.com/kata/596ddaccdd42c1cf0e00005c
