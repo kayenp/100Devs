@@ -5233,3 +5233,10 @@ function Sleigh() {}
 Sleigh.prototype.authenticate = function(name, password) {
   return (name == 'Santa Claus' && password == 'Ho Ho Ho!');
 };
+
+//#5
+//Chuck Norris VII - True or False? (Beginner)
+//https://www.codewars.com/kata/570669d8cb7293a2d1001473
+function ifChuckSaysSo(){
+  return (!true);
+}
