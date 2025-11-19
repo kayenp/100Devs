@@ -5283,5 +5283,27 @@ function leo(oscar){
 }
 
 //#4
-//
-//
+//Classy Classes
+//https://www.codewars.com/kata/55a144eff5124e546400005a
+class Person {
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  };
+  get info() {
+    return `${this.name}s age is ${this.age}`;
+  };
+}
+
+//#5
+//Compare within margin
+//https://www.codewars.com/kata/56453a12fcee9a6c4700009c
+function closeCompare(a, b, margin=0){
+  if (margin >= Math.abs(a - b)) {
+    return 0;
+  } else if (a > b) {
+    return 1;
+  } else {
+    return -1;
+  }
+}
