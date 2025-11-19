@@ -5206,5 +5206,21 @@ const solution = mtrx => {
 }
 
 //#3
-//Operations with sequence
-//https://www.codewars.com/kata/596ddaccdd42c1cf0e00005c
+//Holiday VI-Shark Pontoon
+//https://www.codewars.com/kata/57e921d8b36340f1fd000059
+function shark(pontoonDistance, sharkDistance, youSpeed, sharkSpeed, dolphin){
+  if(dolphin){
+    if((pontoonDistance/youSpeed)<(sharkDistance/(sharkSpeed/2))){
+    return "Alive!";
+    } else {
+      return "Shark Bait!"
+    };
+  } else {
+    if((pontoonDistance/youSpeed<sharkDistance/sharkSpeed)) {
+      return "Alive!";
+    }
+    else {
+      return "Shark Bait!"
+    };
+  }
+}
