@@ -5267,5 +5267,8 @@ function olympicRing(a){
 };
 
 //#2
-//Sorting Arrays
-//https://www.codewars.com/kata/57fe864854685b1c420002e0
+//Array Appender
+//https://www.codewars.com/kata/53a8a476947277a3020001cc
+function appendArrays (arr1, arr2) {
+  return arr1.concat(arr2);
+}
