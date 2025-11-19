@@ -5240,3 +5240,32 @@ Sleigh.prototype.authenticate = function(name, password) {
 function ifChuckSaysSo(){
   return (!true);
 }
+
+/*
+==========
+2025_11_19
+==========
+*/
+//#1
+//Olympic Rings
+//https://www.codewars.com/kata/57d06663eca260fe630001cc
+function olympicRing(a){
+  const singleRings = ['a', 'b', 'd', 'e', 'g', 'o', 'p', 'q', 'A', 'D', 'O', 'P', 'Q', 'R'];
+  const doubleRings = ['B'];
+  let points = 0;
+  for (let ele of a) {
+    if (singleRings.includes(ele)) {
+      points++;
+    } else if (doubleRings.includes(ele)) {
+      points += 2;
+    } 
+  }
+  points = Math.floor(points/2);
+  return (points > 3) ? 'Gold!'
+    : (points === 3) ? 'Silver!'
+    : (points === 2) ? 'Bronze!' : 'Not even a medal!';
+};
+
+//#2
+//Sorting Arrays
+//https://www.codewars.com/kata/57fe864854685b1c420002e0
