@@ -5329,3 +5329,19 @@ function sortItOut(array){
   const sortedEvens = array.filter(ele => Math.floor(ele) % 2 === 0).sort((a, b) => b - a);
   return sortedOdds.concat(sortedEvens);
 }
+
+//#3
+//Training JS #9: loop statement --while and do..while
+//https://www.codewars.com/kata/57216d4bcdd71175d6000560
+function padIt(str,n){
+  let newStr = str;
+  while (n > 0) {
+    if (n % 2 !== 0) {
+      newStr = '*'.concat(newStr);
+    } else {
+      newStr = newStr.concat('*');
+    }
+    n--;
+  }
+  return newStr;
+}
