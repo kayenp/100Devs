@@ -5314,5 +5314,18 @@ function closeCompare(a, b, margin=0){
 ==========
 */
 //#1
-//
-//
+//The average length
+//https://www.codewars.com/kata/5a430359e1ce0e35540000b1
+function averageLength(array) {
+  const meanLength = array.reduce(((a, cV) => a + cV.length), 0)/array.length;
+  return array.map(ele => ele.slice(0,1).repeat(Math.round(meanLength)));
+}
+
+//#2
+//Sorting the Odd way!
+//https://www.codewars.com/kata/57fb79784e2d0639c9000066
+function sortItOut(array){
+  const sortedOdds = array.filter(ele => Math.floor(ele) % 2 !== 0).sort((a, b) => a - b);
+  const sortedEvens = array.filter(ele => Math.floor(ele) % 2 === 0).sort((a, b) => b - a);
+  return sortedOdds.concat(sortedEvens);
+}
