@@ -5354,5 +5354,17 @@ function splitAndMerge(string, separator) {
 }
 
 //#5
-//
-//
+//Training JS #12: loop statement --for..in and for..of
+//https://www.codewars.com/kata/5722b3f0bd5583cf44001000
+function giveMeFive(obj){
+  const result = [];
+  for (let key in obj) {
+    if (key.length === 5) {
+      result.push(key);
+    }
+    if (obj[key].length === 5) {
+      result.push(obj[key]);
+    }
+  }
+  return result;
+}
