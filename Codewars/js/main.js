@@ -5398,3 +5398,10 @@ function grabDoll(dolls){
 function toFreud(string) {
   return (string) ?  string.split(' ').map(ele => 'sex').join(' ') : '';
 }
+
+//#3
+//Grasshopper-Order of operations
+//https://www.codewars.com/kata/560ecf0cb040de130e00007d
+function orderOperations () {
+  return (2 + 2) * (2 + 2) * 2
+}
