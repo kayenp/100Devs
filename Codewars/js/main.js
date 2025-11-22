@@ -5458,3 +5458,14 @@ function factors(x, n=x, arr=[]) {
     : (x % n !== 0) ? factors(x, n-1, arr) 
     : (arr.push(n), factors(x, n-1, arr));
 }
+
+//#3
+//Is integer safe to use?
+//https://www.codewars.com/kata/55a4f9afeffe4231090000d6
+function SafeInteger(n) {
+  return n <= Number.MAX_SAFE_INTEGER;
+}
+
+//#4
+//
+//
