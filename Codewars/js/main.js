@@ -5434,3 +5434,27 @@ var rooms = {
 function firstToLast(str,c){
   return (str.indexOf(c) === -1) ? -1 : str.lastIndexOf(c) - str.indexOf(c);
 }
+
+/*
+==========
+2025_11_22
+==========
+*/
+//#1
+//Every nth array element. (Basic)
+//https://www.codewars.com/kata/5753b987aeb792508d0010e2
+function every(arr, interval=1, start=0) {
+  return arr.reduce(((a, _, cI) => {
+    return ((cI % interval === 0) && (arr.slice(start)[cI] !== undefined)) ? (a.push(arr.slice(start)[cI]), a) : a;
+  }), []);
+}
+
+//#2
+//Find factors of a number
+//https://www.codewars.com/kata/564fa92d1639fbefae00009d
+function factors(x, n=x, arr=[]) {
+  return (x <= 0 || !Number.isInteger(x)) ? -1
+    : (n === 0) ? arr
+    : (x % n !== 0) ? factors(x, n-1, arr) 
+    : (arr.push(n), factors(x, n-1, arr));
+}
