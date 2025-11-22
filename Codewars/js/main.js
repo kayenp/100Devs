@@ -5467,5 +5467,30 @@ function SafeInteger(n) {
 }
 
 //#4
-//
-//
+//Simple Fun #352: Reagent Formula
+//https://www.codewars.com/kata/59c8b38423dacc7d95000008
+function isValid(formula){
+  console.log(formula)
+  if (!(formula.includes(7) || formula.includes(8))) {
+    console.log('1');
+    return false;
+  } else if ((formula.includes(5) ^ formula.includes(6))) {
+    console.log('2')
+    return false;
+  } else if (formula.includes(3) && formula.includes(4)) {
+    console.log('3')
+    return false;
+  } else if (formula.includes(1) && formula.includes(2)) {
+    console.log('4')
+    return false
+  } else {
+    return true;
+  }
+}
+
+//#5
+//Be Concise III - Sum Squares
+//https://www.codewars.com/kata/56f8fe6a2e6c0dc83b0008a7
+function sumSquares(array) {
+  return array.reduce(((a, cV) => a + cV**2), 0);
+}
