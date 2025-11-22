@@ -5405,3 +5405,29 @@ function toFreud(string) {
 function orderOperations () {
   return (2 + 2) * (2 + 2) * 2
 }
+
+//#4
+//Grasshopper - Create the rooms
+//https://www.codewars.com/kata/56a29b237e9e997ff2000048
+// Add rooms here
+var rooms = {
+  room1: {
+    name: 'living',
+    description: 'a room that is lived in',
+    completed: 'yes'
+  },
+  room2: {
+    name: 'toilet',
+    description: 'toilet room',
+    completed: 'twice'
+  },
+  room3: {
+    name: 'kitchen',
+    description: 'a room for kitch"s',
+    completed: 'never'
+  } 
+}
+
+//#5
+//
+//
