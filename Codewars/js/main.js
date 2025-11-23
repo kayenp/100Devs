@@ -5528,3 +5528,18 @@ function doTurn () {
 function findStrangeValue() {
   return NaN;
 }
+
+//#4
+//Lexical this
+//https://www.codewars.com/kata/55a13556ca4a6d0ab4000003
+var Person = function(){
+  var person = {
+    _name: "Leroy",
+    _friends: [],
+    fillFriends(f) { 
+      this._name = f;
+      this._friends = this._name;
+    }
+  }
+  return person;
+}
