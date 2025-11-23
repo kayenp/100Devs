@@ -5494,3 +5494,22 @@ function isValid(formula){
 function sumSquares(array) {
   return array.reduce(((a, cV) => a + cV**2), 0);
 }
+
+/*
+==========
+2025_11_23
+==========
+*/
+//#1
+//Grid blast!
+//https://www.codewars.com/kata/54fdfe14762e2edf4a000a33
+function fire(x,y) {
+  let grid = ['top left',    'top middle',    'top right',
+ 'middle left', 'center',        'middle right',
+ 'bottom left', 'bottom middle', 'bottom right'];
+  return grid[x + (3 * y)];
+}
+
+//#2
+//
+//
