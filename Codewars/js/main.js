@@ -5559,3 +5559,16 @@ function yourFutureCareer() {
 }
 
 yourFutureCareer();
+
+/*
+==========
+2025_11_24
+==========
+*/
+//#1
+//Wealth equality, finally!
+//https://www.codewars.com/kata/5815f7e789063238b30001aa
+function redistributeWealth(wealth) {
+  const individualWealth = wealth.reduce(((a, cV) => a + cV), 0)/wealth.length;
+  wealth.fill(individualWealth);
+}
