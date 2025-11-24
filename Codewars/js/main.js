@@ -5592,3 +5592,10 @@ function conferencePicker(citiesVisited, citiesOffered) {
 	const citiesFiltered = citiesOffered.filter(city => !citiesVisited.includes(city));
   return citiesFiltered < 1 ? 'No worthwhile conferences this year!' : citiesFiltered[0];
 }
+
+//#4
+//Sort with a sorting array
+//https://www.codewars.com/kata/59dc8288fc3c49cc3f000039
+function sort(initialArray, sortingArray) {
+  return Array.from({ length: initialArray.length }, (v, k) => v = initialArray[sortingArray.indexOf(k)]);
+}
