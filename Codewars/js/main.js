@@ -5572,3 +5572,15 @@ function redistributeWealth(wealth) {
   const individualWealth = wealth.reduce(((a, cV) => a + cV), 0)/wealth.length;
   wealth.fill(individualWealth);
 }
+
+//#2
+//Loop Array
+//https://www.codewars.com/kata/5fd8aa5743b49e0012d43e50
+function loopArr(arr, direction, steps) {
+  const arrCopy = arr.slice();
+  for (let i = 0; i < steps; i++) {
+    (direction === 'left') ? arrCopy.push(arrCopy.shift())
+      : arrCopy.unshift(arrCopy.pop());
+  }
+  return arrCopy;
+}
