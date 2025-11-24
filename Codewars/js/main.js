@@ -5584,3 +5584,11 @@ function loopArr(arr, direction, steps) {
   }
   return arrCopy;
 }
+
+//#3
+//Conference Traveller
+//https://www.codewars.com/kata/56f5594a575d7d3c0e000ea0
+function conferencePicker(citiesVisited, citiesOffered) {
+	const citiesFiltered = citiesOffered.filter(city => !citiesVisited.includes(city));
+  return citiesFiltered < 1 ? 'No worthwhile conferences this year!' : citiesFiltered[0];
+}
