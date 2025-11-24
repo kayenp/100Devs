@@ -5599,3 +5599,21 @@ function conferencePicker(citiesVisited, citiesOffered) {
 function sort(initialArray, sortingArray) {
   return Array.from({ length: initialArray.length }, (v, k) => v = initialArray[sortingArray.indexOf(k)]);
 }
+
+//#5
+//Sort by Example
+//https://www.codewars.com/kata/5747fcfce2fab91f43000697
+function exampleSort(arr,exampleArr){
+  let resultArr = [];
+  for (let i = 0; i < exampleArr.length; i++) {
+    for (let j = 0; j < arr.length; j++) {
+      if (!arr.includes(exampleArr[i])) {
+        continue;
+      }
+      if (arr[j] === exampleArr[i]) {
+        resultArr.push(arr[j]);
+      };
+    };
+  };
+  return resultArr;
+}
