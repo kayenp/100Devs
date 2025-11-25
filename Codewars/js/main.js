@@ -5678,3 +5678,14 @@ const configuration = {
     "mssql": "^12.0.0"
   }
 }
+
+//#4
+//Training JS #13: Number object and its properties
+//https://www.codewars.com/kata/5722fd3ab7162a3a4500031f
+function whatNumberIsIt(n){
+  return 'Input number is ' + (Number.isNaN(n) ? 'Number.NaN'
+                                : (!Number.isFinite(n) && n > 0) ? 'Number.POSITIVE_INFINITY'
+                                : (!Number.isFinite(n) && n < 0) ? 'Number.NEGATIVE_INFINITY'
+                                : (n === Number.MIN_VALUE) ? 'Number.MIN_VALUE'
+                                : (n === Number.MAX_VALUE) ? 'Number.MAX_VALUE' : `${n}`)                                 
+}
