@@ -5689,3 +5689,10 @@ function whatNumberIsIt(n){
                                 : (n === Number.MIN_VALUE) ? 'Number.MIN_VALUE'
                                 : (n === Number.MAX_VALUE) ? 'Number.MAX_VALUE' : `${n}`)                                 
 }
+
+//#5
+//Training JS #14: Methods of Number object--toString() and toLocaleString()
+//https://www.codewars.com/kata/57238ceaef9008adc7000603
+function colorOf(...rgb) {
+  return `#${rgb.map(ele => (ele.toString(16).length < 2) ? '0' + ele.toString(16) : ele.toString(16)).join('')}`
+}
