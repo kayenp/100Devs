@@ -5643,3 +5643,14 @@ function ìsZeroBalanced(n) {
   }
   return true;
 }
+
+//#2
+//Ball and Cups
+//https://www.codewars.com/kata/5b715fd11db5ce5912000019
+function cupAndBalls(b, arr) {
+  return (arr.length > 0) ? arr.reduce((a, cV) => {
+    return (!cV.includes(a)) ? a 
+      : (!cV.find((ele => ele !== a))) ? a
+      : a = cV.find(ele => ele !== a);
+  }, b) : b;
+}
