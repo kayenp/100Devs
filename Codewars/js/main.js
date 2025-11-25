@@ -5654,3 +5654,27 @@ function cupAndBalls(b, arr) {
       : a = cV.find(ele => ele !== a);
   }, b) : b;
 }
+
+//#3
+//Configure package json for a node application
+//https://www.codewars.com/kata/5692a582cc22387ccf000017
+const configuration = {
+  "name": "server",
+  "version": "1.0.0",
+  "description": "Codewars",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "node --watch --env-file=.env server.js"
+  },
+  "author": "Mike Jablowski",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^24.9.2",
+    "express": "^5.1.0",
+    "tedious": "^18.6.1"
+  },
+  "dependencies": {
+    "mssql": "^12.0.0"
+  }
+}
