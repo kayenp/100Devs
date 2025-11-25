@@ -5617,3 +5617,29 @@ function exampleSort(arr,exampleArr){
   };
   return resultArr;
 }
+
+/*
+==========
+2025_11_25
+==========
+*/
+//#1
+//zero-balanced Array
+//https://www.codewars.com/kata/59c6fa6972851e8959000067
+function ìsZeroBalanced(n) {
+  if ((n.length < 1) || (n.reduce((a, cV) => a + cV)) !== 0) {
+    return false;
+  };
+  if (n.indexOf(0) !== -1) {
+    n.splice(n.indexOf(0), 1);
+  };
+  n.sort((a, b) => a - b);
+  let j = n.length-1;
+  for (let i = 0; i < n.length/2; i++) {
+    if (n[i] + n[j] !== 0) {
+      return false;
+    }
+    j--;
+  }
+  return true;
+}
