@@ -5708,3 +5708,18 @@ function colorOf(...rgb) {
 const flip=(d, a)=>{
   return (d === 'R') ? a.sort((a, b) => a - b) : a.sort((a, b) => b - a);
 }
+
+
+//#2
+//Logical calculator
+//https://www.codewars.com/kata/57096af70dad013aa200007b
+function logicalCalc(array, op){
+  switch(op) {
+      case "AND":
+        return array.every(ele => ele);
+      case "OR":
+        return array.some(ele => ele);
+      case "XOR":
+        return array.reduce(((a, cV) => (a !== cV) ? true : false));
+  }
+}
