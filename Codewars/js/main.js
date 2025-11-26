@@ -5723,3 +5723,9 @@ function logicalCalc(array, op){
         return array.reduce(((a, cV) => (a !== cV) ? true : false));
   }
 }
+
+//#3
+//Push a hash/an object into array
+//https://www.codewars.com/kata/527b3cd0492b6b15250060af
+items = []
+items.push({a: "b", c: "d"});
