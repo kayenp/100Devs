@@ -5729,3 +5729,14 @@ function logicalCalc(array, op){
 //https://www.codewars.com/kata/527b3cd0492b6b15250060af
 items = []
 items.push({a: "b", c: "d"});
+
+//#4
+//Grasshopper - Grade book
+//https://www.codewars.com/kata/55cbd4ba903825f7970000f5
+function getGrade (...scores) {
+  const avg = scores.reduce(((a, cV) => a + cV), 0)/3;
+  return (avg >= 90) ? 'A'
+    : (avg >= 80) ? 'B'
+    : (avg >= 70) ? 'C'
+    : (avg >= 60) ? 'D' : 'F';
+}
