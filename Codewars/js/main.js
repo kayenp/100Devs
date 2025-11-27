@@ -5740,3 +5740,14 @@ function getGrade (...scores) {
     : (avg >= 70) ? 'C'
     : (avg >= 60) ? 'D' : 'F';
 }
+
+//#5
+//Cat years, Dog years
+//https://www.codewars.com/kata/5a6663e9fd56cb5ab800008b
+var humanYearsCatYearsDogYears = function(humanYears) {
+  const cat = (humanYears > 2) ? 15 + 9 + ((humanYears - 2) * 4)
+    : (humanYears > 1) ? 15 + 9 : 15;
+  const dog = (humanYears > 2) ? 15 + 9 + ((humanYears - 2) * 5)
+    : (humanYears > 1) ? 15 + 9 : 15;
+  return [humanYears, cat, dog];
+}
