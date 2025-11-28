@@ -5751,3 +5751,15 @@ var humanYearsCatYearsDogYears = function(humanYears) {
     : (humanYears > 1) ? 15 + 9 : 15;
   return [humanYears, cat, dog];
 }
+
+/*
+==========
+2025_11_27
+==========
+*/
+//#1
+//Arguments to Binary addition
+//https://www.codewars.com/kata/57642a90dee2da8dd3000161
+function arr2bin(arr){
+  return arr.reduce(((a, cV) => (typeof cV !== 'number') ? a + 0 : a + cV), 0).toString(2);
+}
