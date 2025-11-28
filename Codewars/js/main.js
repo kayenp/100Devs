@@ -5770,3 +5770,16 @@ function arr2bin(arr){
 function swapValues(args) {
     args.reverse();
 }
+
+//#3
+//Implement Array.prototype.filter()
+//https://www.codewars.com/kata/56dd9b84fe5754786f0014f7
+Array.prototype.filter = function (func) {
+  let result = [];
+  for (let i = 0; i < this.length; i++) {
+   if (func(this[i])) {
+     result.push(this[i]);
+   }
+  }
+  return result;
+}
