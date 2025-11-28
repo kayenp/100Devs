@@ -5800,3 +5800,11 @@ function sorter(textbooks) {
     })
   });
 }
+
+//#2
+//Enumerable Magic #20 - Cascading Subsets
+//https://www.codewars.com/kata/545af3d185166a3dec001190
+function eachCons(array, n, i=0, subArr=[]) {
+	return (i >= (array.length-n + 1)) ? subArr
+    : (subArr.push(array.slice(i, i+n)), eachCons(array, n, i+1, subArr));
+}
