@@ -5763,3 +5763,10 @@ var humanYearsCatYearsDogYears = function(humanYears) {
 function arr2bin(arr){
   return arr.reduce(((a, cV) => (typeof cV !== 'number') ? a + 0 : a + cV), 0).toString(2);
 }
+
+//#2
+//Swap Values
+//https://www.codewars.com/kata/5388f0e00b24c5635e000fc6
+function swapValues(args) {
+    args.reverse();
+}
