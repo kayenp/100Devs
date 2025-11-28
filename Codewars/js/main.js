@@ -5783,3 +5783,20 @@ Array.prototype.filter = function (func) {
   }
   return result;
 }
+
+/*
+==========
+2025_11_28
+==========
+*/
+//#1
+//Sort My Textbooks
+//https://www.codewars.com/kata/5a07e5b7ffe75fd049000051
+function sorter(textbooks) {
+  const textbooksCopy = textbooks.map(ele => ele.toUpperCase()).sort();
+  return textbooks.map((_, ind) => {
+    return textbooks.find(ele => {
+      return ele.toUpperCase() === textbooksCopy[ind]
+    })
+  });
+}
