@@ -5837,3 +5837,15 @@ function correctPolishLetters (string) {
   }
   return newStr;
 };
+
+//#2
+//Define a card suit
+//https://www.codewars.com/kata/5a360620f28b82a711000047
+function defineSuit(card) {
+  const dict = {9827: 'clubs', 
+                9824: 'spades', 
+                9830: 'diamonds', 
+                9829: 'hearts' };
+  
+  return dict[card.charCodeAt(card.length-1)];
+}
