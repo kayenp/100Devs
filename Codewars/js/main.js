@@ -5849,3 +5849,4 @@ function defineSuit(card) {
   
   return dict[card.charCodeAt(card.length-1)];
 }
+
