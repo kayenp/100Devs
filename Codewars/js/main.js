@@ -5808,3 +5808,32 @@ function eachCons(array, n, i=0, subArr=[]) {
 	return (i >= (array.length-n + 1)) ? subArr
     : (subArr.push(array.slice(i, i+n)), eachCons(array, n, i+1, subArr));
 }
+
+/*
+==========
+2025_11_29
+==========
+*/
+//#1
+//Polish alphabet
+//https://www.codewars.com/kata/57ab2d6072292dbf7c000039
+function correctPolishLetters (string) {
+  let newStr = '';
+  const map = {
+    ą: 'a',
+    ć: 'c',
+    ę: 'e',
+    ł: 'l',
+    ń: 'n',
+    ó: 'o',
+    ś: 's',
+    ź: 'z',
+    ż: 'z'
+  };
+  
+  for (let char of string) {
+    (char in map) ? newStr += map[char]
+      : newStr += char;
+  }
+  return newStr;
+};
