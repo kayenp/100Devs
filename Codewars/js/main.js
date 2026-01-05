@@ -5846,7 +5846,62 @@ function defineSuit(card) {
                 9824: 'spades', 
                 9830: 'diamonds', 
                 9829: 'hearts' };
-  
   return dict[card.charCodeAt(card.length-1)];
+};
+
+/*
+==========
+2026_01_04
+==========
+*/
+//#1
+//Count words
+//https://www.codewars.com/kata/570cc83df616a85944001315
+function countWords(str) {
+  let strArr;
+  (str.includes('\ufeff')) ? strArr = str.split('\ufeff') : strArr = str.split(' ');
+  return strArr.flatMap(ele => ele.split(' ')).filter(ele => ele !== "").length;
 }
 
+//#2
+//Simple Change Machine
+//https://www.codewars.com/kata/57238766214e4b04b8000011
+function changeMe(moneyIn){
+  const currencyMap = {
+    '£5': 50,
+    '£2': 20,
+    '£1': 10,
+    '50p': 5, 
+    '20p': 2
+  }
+  return (!currencyMap[moneyIn]) ? moneyIn
+    : (currencyMap[moneyIn] == 5) ? "20p 20p 10p"
+    : (currencyMap[moneyIn] == 2) ? "10p 10p" : `${'20p '.repeat(currencyMap[moneyIn]/2).trim()}`;
+}
+
+//#3
+//Dollars and Cents
+//https://www.codewars.com/kata/55902c5eaa8069a5b4000083
+function formatMoney(amount){
+  if (Number.isInteger(amount)) {
+    return `$${amount}.00`
+  } else {
+    let numArr = amount.toString().split('.');
+    if (numArr[1].length < 2) {
+      numArr[1] = numArr[1] + '0';
+    };
+    return `$${numArr.join('.')}`;
+  }
+}
+
+//#4
+//A Strange Trip to the Market
+//https://www.codewars.com/kata/55ccdf1512938ce3ac000056
+function isLochNessMonster(s) {
+  return (s.includes('tree fiddy') || s.includes('3.50') || s.includes('three fifty'));
+}
+
+//#5
+//Up and down, the string grows
+//https://www.codewars.com/kata/644b17b56ed5527b09057987
+const STRANGE_STRING = 'ß'
