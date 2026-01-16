@@ -5916,13 +5916,11 @@ const STRANGE_STRING = 'ß'
 //Vowel Balance
 //https://www.freecodecamp.org/learn/daily-coding-challenge/2025-08-11
 
+function isBalanced(s) {
+  const vowelMap = ['a', 'e', 'i', 'o', 'u'];
+  const strArr = s.toLowerCase().split('');
+  const firstHArr = strArr.slice(0, s.length/2).filter(ele => vowelMap.includes(ele)).length;
+  const secondHArr = strArr.slice(-(strArr.length/2)).filter(ele => vowelMap.includes(ele)).length;
+  return firstHArr === secondHArr;
+}
 
-/* 
-Constraints
-  1. Return highest product between 2 adjacent numbers in array
-  2. Input will be an array of at least 2 elements
-  3. Input will be numbers consisting of positive, negative and 0
-Operations
-  1. Multiply each pair that's adjacent
-    1. Store the product of each operation in new array
-    2. Compare that product to the other products
