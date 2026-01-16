@@ -5905,3 +5905,24 @@ function isLochNessMonster(s) {
 //Up and down, the string grows
 //https://www.codewars.com/kata/644b17b56ed5527b09057987
 const STRANGE_STRING = 'ß'
+
+/*
+==========
+2026_01_15
+==========
+*/
+//freeCodeCamp
+//#1
+//Vowel Balance
+//https://www.freecodecamp.org/learn/daily-coding-challenge/2025-08-11
+
+
+/* 
+Constraints
+  1. Return highest product between 2 adjacent numbers in array
+  2. Input will be an array of at least 2 elements
+  3. Input will be numbers consisting of positive, negative and 0
+Operations
+  1. Multiply each pair that's adjacent
+    1. Store the product of each operation in new array
+    2. Compare that product to the other products
