@@ -5961,3 +5961,18 @@ function greetDevelopers(list) {
 function isRubyComing(list) {
   return list.some(ele => ele.language === 'Ruby');
 }
+
+//#4
+//Coding Meetup #4 - Higher-Order Functions Series - Find the first Python developer
+//https://www.codewars.com/kata/5827bc50f524dd029d0005f2
+function getFirstPython(list) {
+  if (!list.some(ele => ele.language === 'Python')) {
+    return 'There will be no Python developers';
+  } else {
+    for (let ele of list) {
+      if (ele.language === 'Python') {
+        return `${ele.firstName}, ${ele.country}`;
+      }
+    }
+  };
+};
