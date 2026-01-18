@@ -5976,3 +5976,18 @@ function getFirstPython(list) {
     }
   };
 };
+
+/*
+==========
+2026_01_18
+==========
+*/
+//#1
+//Coding Meetup #5 - Higher-Order Functions Series - Prepare the count of languages
+//https://www.codewars.com/kata/5828713ed04efde70e000346
+function countLanguages(list) {
+  return list.reduce((acc, _, currInd) => {
+    !(list[currInd].language in acc) ? acc[list[currInd].language] = 1 : acc[list[currInd].language]++;
+    return acc;
+  }, {})
+}
