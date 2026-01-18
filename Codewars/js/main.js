@@ -5943,3 +5943,14 @@ function adjacentElementsProduct(array) {
   };
   return Number.isFinite(Math.max(...productArr)) ? Math.max(...productArr) : 0;
 }
+
+//#2
+//Coding Meetup #2 - Higher-Order Functions Series - Greet developers
+//https://www.codewars.com/kata/58279e13c983ca4a2a00002a
+function greetDevelopers(list) {
+  const list1 = list;
+  for (let ele of list1) {
+    ele.greeting = `Hi ${ele.firstName}, what do you like the most about ${ele.language}?`;
+  };
+  return list1;
+}
