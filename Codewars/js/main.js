@@ -5924,3 +5924,22 @@ function isBalanced(s) {
   return firstHArr === secondHArr;
 }
 
+/*
+==========
+2026_01_17
+==========
+*/
+//#1
+//Maximum Product
+//https://www.codewars.com/kata/5a4138acf28b82aa43000117
+function adjacentElementsProduct(array) {
+  let productArr = [];
+  for (let i = 0; i < array.length-1; i++) {
+    if (array[i+1] === undefined) {
+      break;
+    } else {
+      productArr.push(array[i] * array[i+1])
+    };
+  };
+  return Number.isFinite(Math.max(...productArr)) ? Math.max(...productArr) : 0;
+}
