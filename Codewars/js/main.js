@@ -6004,3 +6004,7 @@ function isSameLanguage(list) {
 //Coding Meetup #7 - Higher-Order Functions Series - Find the most senior developer
 //https://www.codewars.com/kata/582887f7d04efdaae3000090
 const findSenior = (list) => list.slice().filter(ele => ele.age === Math.max(...list.map(ele => ele.age)));
+
+//#4
+//Coding Meetup #8 - Higher-Order Functions Series - Will all continents be represented?
+//https://www.codewars.com/kata/58291fea7ff3f640980000f9
