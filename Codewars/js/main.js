@@ -5991,3 +5991,11 @@ function countLanguages(list) {
     return acc;
   }, {})
 }
+
+//#2
+//Coding Meetup #6 - Higher-Order Functions Series - Can they code in the same language?
+//https://www.codewars.com/kata/58287977ef8d4451f90001a0
+function isSameLanguage(list) {
+  const langs = list.map(ele => ele.language);
+  return (new Set(langs).size === 1) || false;
+};
