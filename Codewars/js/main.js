@@ -6008,3 +6008,24 @@ const findSenior = (list) => list.slice().filter(ele => ele.age === Math.max(...
 //#4
 //Coding Meetup #8 - Higher-Order Functions Series - Will all continents be represented?
 //https://www.codewars.com/kata/58291fea7ff3f640980000f9
+function allContinents(list) {
+  const regionMap = ['Africa', 'Americas', 'Asia', 'Europe', 'Oceania'];
+  return regionMap.every(ele => list.map(ele => ele.continent).includes(ele));
+}
+
+/*
+==========
+2026_01_19
+==========
+*/
+//#1
+//Coding Meetup #9 - Higher-Order Functions Series - Is the meetup age-diverse?
+//https://www.codewars.com/kata/5829ca646d02cd1a65000284
+function isAgeDiverse(list) {
+  if (!list.some(ele => ele.age >= 100)) {
+    return false
+  }
+  const digitList = [1, 2, 3, 4, 5, 6, 7, 8, 9].map(ele => ele.toString());
+  const ageList = list.map(ele => ele.age.toString()).filter(ele => ele.length === 2);
+  return digitList.every(ele => ageList.some(ele2 => ele2[0].includes(ele)));
+};
