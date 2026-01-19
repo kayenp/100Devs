@@ -5999,3 +5999,8 @@ function isSameLanguage(list) {
   const langs = list.map(ele => ele.language);
   return (new Set(langs).size === 1) || false;
 };
+
+//#3
+//Coding Meetup #7 - Higher-Order Functions Series - Find the most senior developer
+//https://www.codewars.com/kata/582887f7d04efdaae3000090
+const findSenior = (list) => list.slice().filter(ele => ele.age === Math.max(...list.map(ele => ele.age)));
