@@ -6029,3 +6029,12 @@ function isAgeDiverse(list) {
   const ageList = list.map(ele => ele.age.toString()).filter(ele => ele.length === 2);
   return digitList.every(ele => ageList.some(ele2 => ele2[0].includes(ele)));
 };
+
+//#2
+//Coding Meetup #10 - Higher-Order Functions Series - Create usernames
+//https://www.codewars.com/kata/582a53ed261c2af9d200018c
+function addUsername(list) {
+  const listCopy = list.slice();
+  listCopy.forEach(ele => ele.username = `${ele.firstName.toLowerCase()}${ele.lastName[0].toLowerCase()}${Number(new Date().getFullYear()) - ele.age}`);
+  return listCopy;
+}
