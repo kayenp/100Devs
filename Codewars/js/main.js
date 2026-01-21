@@ -6048,3 +6048,12 @@ function addUsername(list) {
 //Coding Meetup #11 - Higher-Order Functions Series - Find the average age
 //https://www.codewars.com/kata/582ba36cc1901399a70005fc
 const getAverageAge = list => Math.round(list.reduce((acc, currVal) => acc + currVal.age, 0)/list.length);
+
+//#2
+//Coding Meetup #12 - Higher-Order Functions Series - Find GitHub admins
+//https://www.codewars.com/kata/582dace555a1f4d859000058
+function findAdmin(list, lang) {
+  return list.filter(ele => ele.language === lang && ele.githubAdmin === 'yes');
+}
+
+//#3
