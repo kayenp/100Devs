@@ -6038,3 +6038,13 @@ function addUsername(list) {
   listCopy.forEach(ele => ele.username = `${ele.firstName.toLowerCase()}${ele.lastName[0].toLowerCase()}${Number(new Date().getFullYear()) - ele.age}`);
   return listCopy;
 }
+
+/*
+==========
+2026_01_20
+==========
+*/
+//#1
+//Coding Meetup #11 - Higher-Order Functions Series - Find the average age
+https://www.codewars.com/kata/582ba36cc1901399a70005fc
+const getAverageAge = list => Math.round(list.reduce((acc, currVal) => acc + currVal.age, 0)/list.length);
