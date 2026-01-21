@@ -6057,3 +6057,26 @@ function findAdmin(list, lang) {
 }
 
 //#3
+//Coding Meetup #13 - Higher-Order Functions Series - Is the meetup language-diverse?
+//https://www.codewars.com/kata/58381907f8ac48ae070000de
+function isLanguageDiverse(list) {
+  const langObj = {
+    'Python': 0,
+    'Ruby': 0,
+    'JavaScript': 0
+  };
+  list.forEach(ele => {
+    switch(ele.language) {
+        case 'Python': 
+          langObj['Python']++;
+          break;
+        case 'Ruby': 
+          langObj['Ruby']++;
+          break;
+        case 'JavaScript':
+          langObj['JavaScript']++;
+          break;
+    };
+  });
+  return Math.min(...Object.values(langObj)) *2 >= Math.max(...Object.values(langObj))
+}
