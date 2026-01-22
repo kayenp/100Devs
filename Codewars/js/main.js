@@ -6186,3 +6186,19 @@ var scoobydoo = new Dog("Great Dane");
 scoobydoo.bark = function() {
   return "Woof";
 };
+
+//#5
+//Finish Guess the Number Game
+//https://www.codewars.com/kata/568018a64f35f0c613000054
+class Guesser {
+  constructor(number, lives) {
+    this.number = number;
+    this.lives = lives;
+  }
+  
+  guess(n) {
+    return (this.lives === 0) ? (function() {throw new Error("You've run out of lives")})()
+			: (n !== this.number) ? (this.lives--, false)
+		  : true;
+  }
+}
