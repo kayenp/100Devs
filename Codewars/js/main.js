@@ -6113,3 +6113,39 @@ function askForMissingDetails(list) {
     return dev;
   }).filter(dev => dev.question);
 } 
+
+/*
+==========
+2026_01_22
+==========
+*/
+//#1
+//Basic subclasses - Adam and Eve
+//https://www.codewars.com/kata/547274e24481cfc469000416
+class God{
+  static create(){
+   return [new Man('Adam'), new Woman ('Eve')];
+  }
+}
+
+class Human {
+  constructor(name) {
+    this.name = name;
+  }
+}
+
+class Man extends Human {
+  constructor(name) {
+    super(name);
+  }
+}
+
+class Woman extends Human {
+  constructor(name) {
+    super(name);
+  }
+}
+
+//#2
+//Basic subclasses - Adam and Eve
+//https://www.codewars.com/kata/547274e24481cfc469000416
