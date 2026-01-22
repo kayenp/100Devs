@@ -6080,3 +6080,28 @@ function isLanguageDiverse(list) {
   });
   return Math.min(...Object.values(langObj)) *2 >= Math.max(...Object.values(langObj))
 }
+
+/*
+==========
+2026_01_21
+==========
+*/
+//#1
+//Coding Meetup #14 - Higher-Order Functions Series - Order the food
+//https://www.codewars.com/kata/583952fbc23341c7180002fd
+function orderFood(list) {
+  return list.reduce((acc, currVal) => {
+    return ((acc[currVal.meal]++) || (acc[currVal.meal] = 1), acc);
+  }, {})
+}
+
+//#2
+//Coding Meetup #15 - Higher-Order Functions Series - Find the odd names
+//https://www.codewars.com/kata/583a8bde28019d615a000035
+function findOddNames(list) {
+  return list.filter(dev => [...dev.firstName].reduce(((acc, char) => acc + char.charCodeAt(0)), 0) % 2 > 0);
+}
+
+//#3
+//Coding Meetup #15 - Higher-Order Functions Series - Find the odd names
+//https://www.codewars.com/kata/583a8bde28019d615a000035
