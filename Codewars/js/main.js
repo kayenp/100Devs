@@ -6103,5 +6103,13 @@ function findOddNames(list) {
 }
 
 //#3
-//Coding Meetup #15 - Higher-Order Functions Series - Find the odd names
-//https://www.codewars.com/kata/583a8bde28019d615a000035
+//Coding Meetup #16 - Higher-Order Functions Series - Ask for missing details
+//https://www.codewars.com/kata/583d972b8bbc0402cf000121
+function askForMissingDetails(list) {
+  return list.map(dev => {
+    for (let detail in dev) {
+      !dev[detail] && (dev.question = `Hi, could you please provide your ${detail}.`)
+    };
+    return dev;
+  }).filter(dev => dev.question);
+} 
