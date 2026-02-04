@@ -6212,3 +6212,13 @@ class Guesser {
 //Sum of odd numbers
 //https://www.codewars.com/kata/55fd2d567d94ac3bc9000064
 const rowSumOddNumbers = n => [...Array(n)].reduce((acc, _, currInd) => acc + (n + ((n - 1) * (n - 1)) + (currInd) * 2), 0);
+
+/*
+==========
+2026_02_04
+==========
+*/
+//#1
+//Sort by Last Char
+//https://www.codewars.com/kata/57eba158e8ca2c8aba0002a0
+
