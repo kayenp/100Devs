@@ -6221,4 +6221,34 @@ const rowSumOddNumbers = n => [...Array(n)].reduce((acc, _, currInd) => acc + (n
 //#1
 //Sort by Last Char
 //https://www.codewars.com/kata/57eba158e8ca2c8aba0002a0
+function last(x){
+  const wordArr = x.split(' ');
+  const lastCharArr = wordArr.map(ele => ele.slice(-1)).sort();
+  const resultArr = [];
+  for (let i = 0; i < lastCharArr.length; i++) {
+    for (let j = 0; j < wordArr.length; j++) {
+      if (lastCharArr[i] === wordArr[j].slice(-1)) {
+        resultArr.push(wordArr[j]);
+        wordArr.splice(j, 1, '*');
+      }
+    }
+  }
+  return resultArr;
+}
 
+/*
+==========
+2026_02_05
+==========
+*/
+//#1
+//Numbers to Letters
+//https://www.codewars.com/kata/57ebaa8f7b45ef590c00000c
+function switcher(x){
+  return x.map(ele => {
+    return (ele === '27') ? '!'
+      : (ele === '28') ? '?'
+      : (ele === '29') ? ' '
+      : String.fromCharCode(123 - ele);
+  }).join('');
+}
