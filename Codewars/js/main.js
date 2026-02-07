@@ -6252,3 +6252,41 @@ function switcher(x){
       : String.fromCharCode(123 - ele);
   }).join('');
 }
+
+/*
+==========
+2026_02_07
+==========
+*/
+//#1
+//Holiday II - Plane Seating
+//https://www.codewars.com/kata/57e8f757085f7c7d6300009a
+function planeSeat(a){
+  const numMap = [
+    {start: 1, end: 20, location: 'Front'},
+    {start: 21, end: 40, location: 'Middle'},
+    {start: 41, end: 60, location: 'Back'}
+  ];
+  
+  const letterMap = [
+    {start: 'a'.charCodeAt(0), end: 'c'.charCodeAt(0), location: 'Left'},
+    {start: 'd'.charCodeAt(0), end: 'f'.charCodeAt(0), location: 'Middle'},
+    {start: 'g'.charCodeAt(0), end: 'h'.charCodeAt(0), location: 'Right'},
+    {start: 'k'.charCodeAt(0), end: 'k'.charCodeAt(0), location: 'Right'}
+  ];
+  
+  const numArr = [];
+  const letterArr = [];
+  
+  for (let char of a) {
+    (Number(char) || char === '0') ? numArr.push(char) : letterArr.push(char.toLowerCase());
+  }
+  
+  if (numArr.join('') >= 61 || letterArr[0] === 'i' || letterArr[0] === 'j') {
+    return 'No Seat!!';
+  }
+  
+  const pos1 = numMap.find(pos => pos.start <= numArr.join('') && pos.end >= numArr.join('')).location;
+  const pos2 = letterMap.find(pos => pos.start <= letterArr[0].charCodeAt(0) && pos.end >= letterArr[0].charCodeAt(0)).location;
+  return pos1 + '-' + pos2;
+}
