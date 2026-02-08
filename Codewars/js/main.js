@@ -6320,7 +6320,7 @@ function legRoom (a, b){
 //https://www.codewars.com/kata/57e90bcc97a0592126000064
 function seaSick(x) {
   return (x.split('')
-          .map((ele, ind, arr) => (ele !== arr[ind+1] && arr[ind+1]) ? '*' : '.')
-          .filter(ele => ele !== '.')
+          .map((ele, ind, arr) => (ele !== arr[ind+1] && arr[ind+1]) ? '*' : '')
+          .filter(ele => ele)
           .length > x.length * .2) ? 'Throw Up' : 'No Problem';
 }
