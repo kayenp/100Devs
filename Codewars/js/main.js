@@ -6290,3 +6290,12 @@ function planeSeat(a){
   const pos2 = letterMap.find(pos => pos.start <= letterArr[0].charCodeAt(0) && pos.end >= letterArr[0].charCodeAt(0)).location;
   return pos1 + '-' + pos2;
 }
+
+//#2
+//Holiday III - Fire on the boat
+//https://www.codewars.com/kata/57e8fba2f11c647abc000944/
+function fireFight(s){
+  return s.split(' ')
+    .map(ele => (ele === 'Fire') ? '~~' : ele)
+    .join(' ');
+}
