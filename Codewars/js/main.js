@@ -6362,3 +6362,16 @@ const db = {
 };
   return (db[language]) ? db[language] : 'Welcome';
 }
+
+//#5
+//Expressions Matter
+//https://www.codewars.com/kata/5ae62fcf252e66d44d00008e
+function expressionMatter(a, b, c) {
+  const resultArr = [[a + b + c],
+                     [a * b * c],
+                     [a + b * c], 
+                     [a * b + c], 
+                     [(a + b) * c],
+                     [a * (b + c)]];
+  return Math.max(...resultArr);
+}
