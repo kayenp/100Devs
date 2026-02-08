@@ -6314,3 +6314,13 @@ function legRoom (a, b){
   return (b.includes('00')) ? 'Jackpot!'
     : (lRoom > .15 * lLength) ? (lRoom > .25 * lLength ? 'super comfy' : 'comfortable') : 'ouch';
 };
+
+//#2
+//Holiday V - SeaSick Snorkelling
+//https://www.codewars.com/kata/57e90bcc97a0592126000064
+function seaSick(x) {
+  return (x.split('')
+          .map((ele, ind, arr) => (ele !== arr[ind+1] && arr[ind+1]) ? '*' : '.')
+          .filter(ele => ele !== '.')
+          .length > x.length * .2) ? 'Throw Up' : 'No Problem';
+}
