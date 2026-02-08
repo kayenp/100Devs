@@ -6299,3 +6299,18 @@ function fireFight(s){
     .map(ele => (ele === 'Fire') ? '~~' : ele)
     .join(' ');
 }
+
+/*
+==========
+2026_02_08
+==========
+*/
+//#1
+//Holiday IV - Leg Room
+//https://www.codewars.com/kata/57e8ff073d1cb559280005de
+function legRoom (a, b){
+  const lRoom = b.split('').filter(char => !['a', 'e', 'i', 'o', 'u'].includes(char)).length * 2;
+  const lLength = Math.floor(a * .55);
+  return (b.includes('00')) ? 'Jackpot!'
+    : (lRoom > .15 * lLength) ? (lRoom > .25 * lLength ? 'super comfy' : 'comfortable') : 'ouch';
+};
