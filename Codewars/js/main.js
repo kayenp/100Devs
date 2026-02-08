@@ -6324,3 +6324,15 @@ function seaSick(x) {
           .filter(ele => ele)
           .length > x.length * .2) ? 'Throw Up' : 'No Problem';
 }
+
+//#3
+//Holiday VII - Local Talk
+//https://www.codewars.com/kata/57e92812750fcc051800004d
+function pak(s){
+  const sArr = s.split(' ').filter(ele => ele);
+  let resultArr = [];
+  for (let i = 0; i < sArr.length; i++) {
+    (i < sArr.length-1) ? resultArr.push(`${sArr[i]} pak`) : resultArr.push(sArr[i]);
+  };
+  return resultArr.join(' ');
+}
