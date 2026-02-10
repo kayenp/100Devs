@@ -6420,3 +6420,17 @@ const validateUsr = username => (username.length > 3 && username.length < 17) &&
 //validate code with simple regex
 //https://www.codewars.com/kata/56a25ba95df27b7743000016
 const validateCode = code => /^[1-3]/.test(code);
+
+//#5
+//How much coffee do you need?
+//https://www.codewars.com/kata/57de78848a8b8df8f10005b1/
+function howMuchCoffee(events) {
+  let coffees = 0;
+  const eventsArr = ['cw', 'dog', 'cat', 'movie'];
+  events.forEach(event => {
+    if (eventsArr.includes(event.toLowerCase())) {
+      (event === event.toLowerCase()) ? coffees++ : coffees += 2;
+    }
+  })
+  return (coffees > 3) ? 'You need extra sleep' : coffees;
+}
