@@ -6384,3 +6384,7 @@ function expressionMatter(a, b, c) {
 //#1
 //Holiday X - Bintang Vests
 //https://www.codewars.com/kata/57e93e4a2aee4974d4000c2f
+function vestBuy(price, haggle){
+  const strategyMap = { light: .2, medium: .3, heavy: .4, walkandswear: .9 }
+  return !strategyMap[haggle] ? 'Run!!' : price - (strategyMap[haggle] * price);
+};
