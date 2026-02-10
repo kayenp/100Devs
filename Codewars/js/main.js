@@ -6221,4 +6221,166 @@ const rowSumOddNumbers = n => [...Array(n)].reduce((acc, _, currInd) => acc + (n
 //#1
 //Sort by Last Char
 //https://www.codewars.com/kata/57eba158e8ca2c8aba0002a0
+function last(x){
+  const wordArr = x.split(' ');
+  const lastCharArr = wordArr.map(ele => ele.slice(-1)).sort();
+  const resultArr = [];
+  for (let i = 0; i < lastCharArr.length; i++) {
+    for (let j = 0; j < wordArr.length; j++) {
+      if (lastCharArr[i] === wordArr[j].slice(-1)) {
+        resultArr.push(wordArr[j]);
+        wordArr.splice(j, 1, '*');
+      }
+    }
+  }
+  return resultArr;
+}
 
+/*
+==========
+2026_02_05
+==========
+*/
+//#1
+//Numbers to Letters
+//https://www.codewars.com/kata/57ebaa8f7b45ef590c00000c
+function switcher(x){
+  return x.map(ele => {
+    return (ele === '27') ? '!'
+      : (ele === '28') ? '?'
+      : (ele === '29') ? ' '
+      : String.fromCharCode(123 - ele);
+  }).join('');
+}
+
+/*
+==========
+2026_02_07
+==========
+*/
+//#1
+//Holiday II - Plane Seating
+//https://www.codewars.com/kata/57e8f757085f7c7d6300009a
+function planeSeat(a){
+  const numMap = [
+    {start: 1, end: 20, location: 'Front'},
+    {start: 21, end: 40, location: 'Middle'},
+    {start: 41, end: 60, location: 'Back'}
+  ];
+  
+  const letterMap = [
+    {start: 'a'.charCodeAt(0), end: 'c'.charCodeAt(0), location: 'Left'},
+    {start: 'd'.charCodeAt(0), end: 'f'.charCodeAt(0), location: 'Middle'},
+    {start: 'g'.charCodeAt(0), end: 'h'.charCodeAt(0), location: 'Right'},
+    {start: 'k'.charCodeAt(0), end: 'k'.charCodeAt(0), location: 'Right'}
+  ];
+  
+  const numArr = [];
+  const letterArr = [];
+  
+  for (let char of a) {
+    (Number(char) || char === '0') ? numArr.push(char) : letterArr.push(char.toLowerCase());
+  }
+  
+  if (numArr.join('') >= 61 || letterArr[0] === 'i' || letterArr[0] === 'j') {
+    return 'No Seat!!';
+  }
+  
+  const pos1 = numMap.find(pos => pos.start <= numArr.join('') && pos.end >= numArr.join('')).location;
+  const pos2 = letterMap.find(pos => pos.start <= letterArr[0].charCodeAt(0) && pos.end >= letterArr[0].charCodeAt(0)).location;
+  return pos1 + '-' + pos2;
+}
+
+//#2
+//Holiday III - Fire on the boat
+//https://www.codewars.com/kata/57e8fba2f11c647abc000944/
+function fireFight(s){
+  return s.split(' ')
+    .map(ele => (ele === 'Fire') ? '~~' : ele)
+    .join(' ');
+}
+
+/*
+==========
+2026_02_08
+==========
+*/
+//#1
+//Holiday IV - Leg Room
+//https://www.codewars.com/kata/57e8ff073d1cb559280005de
+function legRoom (a, b){
+  const lRoom = b.split('').filter(char => !['a', 'e', 'i', 'o', 'u'].includes(char)).length * 2;
+  const lLength = Math.floor(a * .55);
+  return (b.includes('00')) ? 'Jackpot!'
+    : (lRoom > .15 * lLength) ? (lRoom > .25 * lLength ? 'super comfy' : 'comfortable') : 'ouch';
+};
+
+//#2
+//Holiday V - SeaSick Snorkelling
+//https://www.codewars.com/kata/57e90bcc97a0592126000064
+function seaSick(x) {
+  return (x.split('')
+          .map((ele, ind, arr) => (ele !== arr[ind+1] && arr[ind+1]) ? '*' : '')
+          .filter(ele => ele)
+          .length > x.length * .2) ? 'Throw Up' : 'No Problem';
+}
+
+//#3
+//Holiday VII - Local Talk
+//https://www.codewars.com/kata/57e92812750fcc051800004d
+function pak(s){
+  const sArr = s.split(' ').filter(ele => ele);
+  let resultArr = [];
+  for (let i = 0; i < sArr.length; i++) {
+    (i < sArr.length-1) ? resultArr.push(`${sArr[i]} pak`) : resultArr.push(sArr[i]);
+  };
+  return resultArr.join(' ');
+}
+
+//#4
+//Welcome!
+//https://www.codewars.com/kata/577ff15ad648a14b780000e7
+function greet(language) {
+const db = {
+  english: "Welcome",
+  czech: "Vitejte",
+  danish: "Velkomst",
+  dutch: "Welkom",
+  estonian: "Tere tulemast",
+  finnish: "Tervetuloa",
+  flemish: "Welgekomen",
+  french: "Bienvenue",
+  german: "Willkommen",
+  irish: "Failte",
+  italian: "Benvenuto",
+  latvian: "Gaidits",
+  lithuanian: "Laukiamas",
+  polish: "Witamy",
+  spanish: "Bienvenido",
+  swedish: "Valkommen",
+  welsh: "Croeso"
+};
+  return (db[language]) ? db[language] : 'Welcome';
+}
+
+//#5
+//Expressions Matter
+//https://www.codewars.com/kata/5ae62fcf252e66d44d00008e
+function expressionMatter(a, b, c) {
+  const resultArr = [[a + b + c],
+                     [a * b * c],
+                     [a + b * c], 
+                     [a * b + c], 
+                     [(a + b) * c],
+                     [a * (b + c)]];
+  return Math.max(...resultArr);
+}
+
+/*
+==========
+2026_02_09
+==========
+*/
+//#1
+//Holiday X - Bintang Vests
+//https://www.codewars.com/kata/57e93e4a2aee4974d4000c2f
