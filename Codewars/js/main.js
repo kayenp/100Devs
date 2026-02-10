@@ -6414,4 +6414,9 @@ const isDivisible = (n, x, y) => n % x === 0 && n % y === 0;
 //#3
 //Simple validation of a username with regex
 //https://www.codewars.com/kata/56a3f08aa9a6cc9b75000023
+const validateUsr = username => (username.length > 3 && username.length < 17) && (!/[^a-z0-9_]/.test(username))
 
+//#4
+//validate code with simple regex
+//https://www.codewars.com/kata/56a25ba95df27b7743000016
+const validateCode = code => /^[1-3]/.test(code);
