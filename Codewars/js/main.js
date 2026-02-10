@@ -6388,3 +6388,20 @@ function vestBuy(price, haggle){
   const strategyMap = { light: .2, medium: .3, heavy: .4, walkandswear: .9 }
   return !strategyMap[haggle] ? 'Run!!' : price - (strategyMap[haggle] * price);
 };
+
+/*
+==========
+2026_02_10
+==========
+*/
+//#1
+//Maximum Gap (Array Series #4)
+//https://www.codewars.com/kata/5a7893ef0025e9eb50000013
+function maxGap (numbers){
+  const numbersSort = numbers.sort((a, b) => a - b);
+  let maxGap = 0;
+  for (let i = 0; i < numbers.length-1; i++) {
+    (Math.abs(numbersSort[i+1] - numbersSort[i] > maxGap)) && (maxGap = Math.abs(numbersSort[i+1] - numbersSort[i]));
+    } 
+  return maxGap;
+}
