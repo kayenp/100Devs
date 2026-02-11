@@ -6444,3 +6444,7 @@ function howMuchCoffee(events) {
 //Alan Partridge III - London
 //https://www.codewars.com/kata/580a41b6d6df740d6100030c
 const alan = x => ['Rejection', 'Disappointment', 'Backstabbing Central', 'Shattered Dreams Parkway'].every(stop => x.includes(stop)) ? 'Smell my cheese you mother!' : 'No, seriously, run. You will miss it.';
+
+//#2
+//Robotic Tattoo Removal
+//https://www.codewars.com/kata/57658f3dedc6f7a751000e7b
