@@ -6448,3 +6448,4 @@ const alan = x => ['Rejection', 'Disappointment', 'Backstabbing Central', 'Shatt
 //#2
 //Robotic Tattoo Removal
 //https://www.codewars.com/kata/57658f3dedc6f7a751000e7b
+const robot = skinScan => skinScan.map(ele => ele.map(ele => (ele === 'X') ? '*' : ele))
