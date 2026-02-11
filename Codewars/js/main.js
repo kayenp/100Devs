@@ -6465,3 +6465,7 @@ function equalize(array){
 //https://www.codewars.com/kata/574b3b1599d8f897470018f6
 const getRealFloor = n => (n > 13) ? n - 2 : (n < 13 && n >= 1) ? n - 1 : n
 
+//#5
+//Convert to Binary
+//https://www.codewars.com/kata/59fca81a5712f9fa4700159a
+const toBinary = n => Number(n.toString(2))
