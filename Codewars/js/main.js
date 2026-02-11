@@ -6434,3 +6434,13 @@ function howMuchCoffee(events) {
   })
   return (coffees > 3) ? 'You need extra sleep' : coffees;
 }
+
+/*
+==========
+2026_02_11
+==========
+*/
+//#1
+//Alan Partridge III - London
+//https://www.codewars.com/kata/580a41b6d6df740d6100030c
+const alan = x => ['Rejection', 'Disappointment', 'Backstabbing Central', 'Shattered Dreams Parkway'].every(stop => x.includes(stop)) ? 'Smell my cheese you mother!' : 'No, seriously, run. You will miss it.';
