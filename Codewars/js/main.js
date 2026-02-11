@@ -6449,3 +6449,13 @@ const alan = x => ['Rejection', 'Disappointment', 'Backstabbing Central', 'Shatt
 //Robotic Tattoo Removal
 //https://www.codewars.com/kata/57658f3dedc6f7a751000e7b
 const robot = skinScan => skinScan.map(ele => ele.map(ele => (ele === 'X') ? '*' : ele))
+
+//#3
+//Equalize the array!
+//https://www.codewars.com/kata/580a1a4af195dbc9ed00006c
+function equalize(array){
+  return array.reduce((acc, currVal, currInd, arr) => {
+    acc.push(`${(currVal - arr[0] >= 0) ? '+' : ''}${currVal - arr[0]}`);
+    return acc;
+  }, [])
+}
