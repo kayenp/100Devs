@@ -6469,3 +6469,22 @@ const getRealFloor = n => (n > 13) ? n - 2 : (n < 13 && n >= 1) ? n - 1 : n
 //Convert to Binary
 //https://www.codewars.com/kata/59fca81a5712f9fa4700159a
 const toBinary = n => Number(n.toString(2))
+
+/*
+==========
+2026_02_12
+==========
+*/
+//#1
+//Grouping in string
+//https://www.codewars.com/kata/5ee8ba31b44cc30032cbce04
+const isConsecutive = (str) => {
+  for (let i = 0; i < str.length-1; i++) {
+    if (str[i] !== str[i+1]) {
+      if (i !== str.lastIndexOf(str[i])) {
+        return false
+      }
+    }
+  }
+  return true;
+}
