@@ -6488,3 +6488,16 @@ const isConsecutive = (str) => {
   }
   return true;
 }
+
+//#2
+//Get array elements with specified keys
+//https://www.codewars.com/kata/586a3270c66d18ad810001d4
+Array.prototype.only = function(keys)
+{
+  let outputArr = [];
+  let sourceArrCopy = this;
+  for (let key of keys.sort((a, b) => a - b)) {
+    outputArr.push(this[key]);
+  }
+  return outputArr;
+}
