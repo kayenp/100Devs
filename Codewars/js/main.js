@@ -6519,3 +6519,20 @@ Array.prototype.zip = function (arr, fn) {
 Array.prototype.sum = function() {
   return this.reduce((a, cV) => a+cV ,0);
 }
+
+//#5
+//Computer problem series #1: Fill the Hard Disk Drive
+//https://www.codewars.com/kata/5d49c93d089c6e000ff8428c
+function save(sizes, hd) {
+  let currCap = hd;
+  let fileArr = [];
+  for (let i = 0; i < sizes.length; i++) {
+    if (sizes[i] <= currCap) {
+      currCap -= sizes[i];
+      fileArr.push(sizes[i]);
+    } else {
+      break;
+    }
+  }
+  return fileArr.length;
+}
