@@ -6512,3 +6512,10 @@ Array.prototype.zip = function (arr, fn) {
   };
   return outputArr;
 }
+
+//#4
+//Sum The Array
+//https://www.codewars.com/kata/56bdf9d50d0b6433df001074
+Array.prototype.sum = function() {
+  return this.reduce((a, cV) => a+cV ,0);
+}
