@@ -6495,9 +6495,20 @@ const isConsecutive = (str) => {
 Array.prototype.only = function(keys)
 {
   let outputArr = [];
-  let sourceArrCopy = this;
   for (let key of keys.sort((a, b) => a - b)) {
     outputArr.push(this[key]);
   }
+  return outputArr;
+}
+
+//#3
+//Zip it!
+//https://www.codewars.com/kata/56aaf25213edd3a88a000002
+Array.prototype.zip = function (arr, fn) {
+  let outputArr = [];
+  const minLength = (this.length < arr.length) ? this.length : arr.length;
+  for (let i = 0; i < minLength; i++) {
+    outputArr.push(fn(this[i], arr[i]));
+  };
   return outputArr;
 }
