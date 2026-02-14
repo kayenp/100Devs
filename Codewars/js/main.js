@@ -6561,3 +6561,11 @@ function clean(arr) {
   const falsyMap = [false, null, undefined, 0, ''];
   return arr.filter(ele => ele || falsyMap.includes(ele) || Number.isNaN(ele));
 }
+
+//#3
+//Ski Jump
+//https://www.codewars.com/kata/57ed7214f670e99f7a000c73
+function skiJump(mountain){
+  const jump = ((mountain.length * (mountain.length * 1.5) * 9) /10).toFixed(2);
+  return `${jump} metres: ` + ((+jump > 25) ? (+jump > 50 ? `Gold!!` : `He's flying!`) : (+jump > 10 ? `He's ok!` : `He's crap!`));
+}
