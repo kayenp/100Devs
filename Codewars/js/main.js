@@ -6581,3 +6581,16 @@ function move_zeros(arrNum, isRight = true){
   };
   return (isRight) ? nonZeroArr.concat(zeroArr) : zeroArr.concat(nonZeroArr);
 }
+
+//#5
+//sum2total
+//https://www.codewars.com/kata/559fed8454b12433ff0000a2
+function total(arr, result = []) {
+  if (arr.length <= 1) {
+    return arr[0];
+  }
+  for (let i = 0; i < arr.length-1; i++) {
+    result.push(arr[i] + arr[i+1]);
+  }
+  return total(result);
+}
