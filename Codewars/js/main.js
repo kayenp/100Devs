@@ -6553,3 +6553,11 @@ function validateSequence(x) {
       : (Math.abs(arr[ind+1] - arr[ind]) !== steps) ? false : true;
   })
 }
+
+//#2
+//Remove Empty Items of Array
+//https://www.codewars.com/kata/5c857bab20089d4fe65a7f5b
+function clean(arr) {
+  const falsyMap = [false, null, undefined, 0, ''];
+  return arr.filter(ele => ele || falsyMap.includes(ele) || Number.isNaN(ele));
+}
