@@ -6529,10 +6529,27 @@ function save(sizes, hd) {
   for (let i = 0; i < sizes.length; i++) {
     if (sizes[i] <= currCap) {
       currCap -= sizes[i];
-      fileArr.push(sizes[i]);
+      fileArr.push(sizes[i])
     } else {
       break;
     }
   }
   return fileArr.length;
+}
+
+/*
+==========
+2026_02_14
+==========
+*/
+//#1
+//Simple Sequence Validator
+//https://www.codewars.com/kata/553f01db29490a69ff000049
+function validateSequence(x) {
+  let steps = 0;
+  return x.every((ele, ind, arr) => {
+    return (ind === 0) ? (steps = Math.abs(arr[ind+1] - arr[ind]), true)
+      : (ind === arr.length-1) ? true
+      : (Math.abs(arr[ind+1] - arr[ind]) !== steps) ? false : true;
+  })
 }
