@@ -6569,3 +6569,15 @@ function skiJump(mountain){
   const jump = ((mountain.length * (mountain.length * 1.5) * 9) /10).toFixed(2);
   return `${jump} metres: ` + ((+jump > 25) ? (+jump > 50 ? `Gold!!` : `He's flying!`) : (+jump > 10 ? `He's ok!` : `He's crap!`));
 }
+
+//#4
+//Move Zeros
+//https://www.codewars.com/kata/55c098aa8468f3b9030000f1
+function move_zeros(arrNum, isRight = true){
+  const zeroArr = [];
+  const nonZeroArr = [];
+  for (let i = 0; i < arrNum.length; i++) {
+    (arrNum[i] === 0) ? zeroArr.push(arrNum[i]) : nonZeroArr.push(arrNum[i]);
+  };
+  return (isRight) ? nonZeroArr.concat(zeroArr) : zeroArr.concat(nonZeroArr);
+}
