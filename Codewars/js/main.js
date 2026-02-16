@@ -6594,3 +6594,37 @@ function total(arr, result = []) {
   }
   return total(result);
 }
+
+/*
+==========
+2026_02_15
+==========
+*/
+//#1
+//Minimize Sum Of Array (Array Series #1)
+//https://www.codewars.com/kata/5a523566b3bfa84c2e00010b
+function minSum(arr) {
+  const products = [];
+  const arrSorted = arr.sort((a, b) => b - a);
+  for (let i = 0, j = arrSorted.length-1; i < arrSorted.length/2; i++, j--) {
+    products.push(arrSorted[i] * arrSorted[j]);
+  };
+  return products.reduce((acc, currVal) => acc + currVal);
+};
+
+/*
+==========
+2026_02_16
+==========
+*/
+//#1
+//Pillow on the Fridge
+//https://www.codewars.com/kata/57d147bcc98a521016000320
+function pillow(s){
+  const nInd = [];
+  const bInd = [];
+  s.forEach((ele, ind1) => ele.split('')
+                              .forEach((char, ind2) => (ind1 === 0 && char === 'n') ? nInd.push(ind2)
+                                              : (ind1 === 1 && char === 'B') ? bInd.push(ind2) : ''))
+  return nInd.findIndex(ele => bInd.includes(ele)) !== -1;
+}
