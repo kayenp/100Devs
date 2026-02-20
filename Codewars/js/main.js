@@ -6628,3 +6628,61 @@ function pillow(s){
                                               : (ind1 === 1 && char === 'B') ? bInd.push(ind2) : ''))
   return nInd.findIndex(ele => bInd.includes(ele)) !== -1;
 }
+
+/*
+==========
+2026_02_17
+==========
+*/
+//#1
+//https://www.codewars.com/kata/59656c69253c365e58000046
+function maxPossibleScore(obj, arr) {
+  let score = 0;
+  for (let question in obj) {
+    (arr.includes(question)) ? score += (2 * obj[question]) : score += obj[question];
+  }
+  return score;
+}
+
+/*
+==========
+2026_02_19
+==========
+*/
+//#1
+//Spanish Conjugator
+//https://www.codewars.com/kata/5a81b78d4a6b344638000183
+function conjugate(verb){
+  const inf = verb.slice(-2).toLowerCase();
+  const pref = verb.slice(0, -2);
+  let secSing = 'e', 
+      thirdSing = 'e', 
+      firstPlur = 'e', 
+      secPlur = 'éi', 
+      thirdPlur = 'e';
+  
+  if (inf === 'ar') {
+    secSing = 'a';
+    thirdSing = 'a';
+    firstPlur = 'a';
+    secPlur = 'ái';
+    thirdPlur = 'a';
+  } else if (inf === 'ir') {
+    firstPlur = 'i';
+    secPlur = 'í'
+  };
+  
+  const conjMap = {
+    [verb]: [
+      `${pref}o`,
+      `${pref}${secSing}s`,
+      `${pref}${thirdSing}`,
+      `${pref}${firstPlur}mos`,
+      `${pref}${secPlur}s`, 
+      `${pref}${thirdPlur}n`
+    ]
+  }
+  
+  return conjMap;
+  
+}
