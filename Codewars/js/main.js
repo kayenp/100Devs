@@ -6686,7 +6686,12 @@ function conjugate(verb){
   return conjMap; 
 }
 
-//#2
+/*
+==========
+2026_02_20
+==========
+*/
+//#1
 //Food combinations
 //https://www.codewars.com/kata/565f448e6e0190b0a40000cc
 function actuallyReallyGood(foods){
@@ -6699,3 +6704,11 @@ function actuallyReallyGood(foods){
   food2 = food2.toLowerCase();
   return `${yk} ` + ((food1.toLowerCase() === food2) ? `${food1} and more ${food2}.` : `${food1} and ${food2}.`)
 };
+
+//#2
+//Dinner Plans
+//https://www.codewars.com/kata/57212c55b6fa235edc0002a2
+function commonGround(s1, s2){
+  const s3 = s2.split(' ').filter(word => s1.split(' ').includes(word)).join(' ');
+  return (!s3.length) ? 'death' : s3;
+}
