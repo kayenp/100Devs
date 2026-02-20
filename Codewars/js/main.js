@@ -6683,6 +6683,19 @@ function conjugate(verb){
     ]
   }
   
-  return conjMap;
-  
+  return conjMap; 
 }
+
+//#2
+//Food combinations
+//https://www.codewars.com/kata/565f448e6e0190b0a40000cc
+function actuallyReallyGood(foods){
+  const yk = "You know what's actually really good?";
+  if (foods.length === 0) {
+    return `${yk} Nothing!`
+  }
+  const food1 = ((foods[0].slice(0, 1).toUpperCase()) + (foods[0].slice(1).toLowerCase()));
+  let food2 = (foods.find(food => !food[0])) || foods[0];
+  food2 = food2.toLowerCase();
+  return `${yk} ` + ((food1.toLowerCase() === food2) ? `${food1} and more ${food2}.` : `${food1} and ${food2}.`)
+};
