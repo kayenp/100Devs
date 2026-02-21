@@ -6712,3 +6712,28 @@ function commonGround(s1, s2){
   const s3 = s2.split(' ').filter(word => s1.split(' ').includes(word)).join(' ');
   return (!s3.length) ? 'death' : s3;
 }
+
+/*
+==========
+2026_02_21
+==========
+*/
+//#1
+//Bubble Sort
+//https://www.codewars.com/kata/57403b5ad67e87b5e7000d1d
+function bubble(arr) {
+  let arrCopy = arr.slice();
+  let snapshotArr = [];
+  
+  for (let i = arr.length-1; i >= 1; i--) {
+    for (let a = 0, b = a+1; b <= i; a++, b++) {
+      if (arrCopy[a] > arrCopy[b]) {
+      let [high, low] = arrCopy.slice(a, b+1);
+      arrCopy[b] = high;
+      arrCopy[a] = low;
+      snapshotArr.push(arrCopy.slice());
+      }
+    }
+  }
+  return snapshotArr;
+}
