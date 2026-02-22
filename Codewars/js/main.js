@@ -6737,3 +6737,17 @@ function bubble(arr) {
   }
   return snapshotArr;
 }
+
+/*
+==========
+2026_02_22
+==========
+*/
+//#1
+//Nice Array
+//https://www.codewars.com/kata/59b844528bcb7735560000a0
+const isNice = arr => arr.length ? arr.every(ele => arr.includes(ele+1) || arr.includes(ele-1)) : false;
+
+//#2
+//
+//
