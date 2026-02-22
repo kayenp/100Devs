@@ -6749,5 +6749,8 @@ function bubble(arr) {
 const isNice = arr => arr.length ? arr.every(ele => arr.includes(ele+1) || arr.includes(ele-1)) : false;
 
 //#2
-//
-//
+//Add property to every object in array
+//https://www.codewars.com/kata/54e8c3e89e2ae6f4900005a1
+for (let obj of questions) {
+  obj['usersAnswer'] = null;
+};
