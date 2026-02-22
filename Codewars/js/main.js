@@ -6754,3 +6754,15 @@ const isNice = arr => arr.length ? arr.every(ele => arr.includes(ele+1) || arr.i
 for (let obj of questions) {
   obj['usersAnswer'] = null;
 };
+
+//#3
+//Calculate Two People's Individual Ages
+//https://www.codewars.com/kata/58e0bd6a79716b7fcf0013b1
+function getAges(sum,difference){
+  if (sum < 0 || difference < 0) {
+    return null;
+  } 
+  const youngest = (sum - difference) / 2;
+  const oldest = ((sum - difference) / 2) + difference;
+  return ( youngest < 0 || oldest < 0) ? null : [oldest, youngest];
+};
