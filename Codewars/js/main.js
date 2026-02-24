@@ -6766,3 +6766,28 @@ function getAges(sum,difference){
   const oldest = ((sum - difference) / 2) + difference;
   return ( youngest < 0 || oldest < 0) ? null : [oldest, youngest];
 };
+
+
+/*
+==========
+2026_02_23
+==========
+*/
+//#1
+//Always perfect
+//https://www.codewars.com/kata/55f3facb78a9fd5b26000036
+function checkRoot(string){
+  const stringArr = string.split(',');
+  let product = 1;
+  if (stringArr.length !== 4 || stringArr.some(char => Number.isNaN(Number(char)))) {
+    return 'incorrect input'
+  }
+  for (let i = 0; i < stringArr.length; i++) {
+    if (i < stringArr.length-1 && Number(stringArr[i]) !== stringArr[i+1]-1) {
+      return 'not consecutive';
+    } else {
+      product *= stringArr[i];
+    }
+  }
+  return `${(product + 1).toString()}, ${Math.sqrt(product + 1)}`;
+}
