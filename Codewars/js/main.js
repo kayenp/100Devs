@@ -6798,3 +6798,22 @@ function checkRoot(string){
 Array.prototype.size = function() {
   return (this.lastIndexOf(...this.slice(-1)) + 1);
 };
+
+/*
+==========
+2026_02_24
+==========
+*/
+//#1
+//Split string by multiple delimiters
+//https://www.codewars.com/kata/575690ee34a34efb37001796
+function multipleSplit(string, delimiters=[]){
+  let stringArr;
+  for (let i = 0; i < delimiters.length; i++) {
+    (i > 0) ? stringArr = stringArr.map(ele => ele.split(`${delimiters[i]}`))
+                                   .flat(1)
+                                   .filter(ele => ele !== '')
+      : stringArr = string.split(`${delimiters[i]}`);
+  }
+  return (stringArr) ? stringArr : [string].filter(ele => ele !== '');
+}
