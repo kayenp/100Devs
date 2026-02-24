@@ -6830,3 +6830,10 @@ function consecutiveOnes(nums) {
   }
   return (currCount > prevCount) ? currCount : prevCount;
 };
+
+//#3
+//Shaving the Beard
+//https://www.codewars.com/kata/57efa1a2108d3f73f60000e9
+function trim(x){
+  return x.map((subArr, ind, arr) => (ind === arr.length-1) ? subArr.map(hair => '...') : subArr.map(hair => (hair === 'J') ? '|' : hair));
+}
