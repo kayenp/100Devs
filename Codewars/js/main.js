@@ -6791,3 +6791,10 @@ function checkRoot(string){
   }
   return `${(product + 1).toString()}, ${Math.sqrt(product + 1)}`;
 }
+
+//#2
+//Array.prototype.size()
+//https://www.codewars.com/kata/58638bd2210be9a9690001f7
+Array.prototype.size = function() {
+  return (this.lastIndexOf(...this.slice(-1)) + 1);
+};
