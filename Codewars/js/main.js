@@ -6817,3 +6817,16 @@ function multipleSplit(string, delimiters=[]){
   }
   return (stringArr) ? stringArr : [string].filter(ele => ele !== '');
 }
+
+//#2
+//ONE ONe One one
+//https://www.codewars.com/kata/588ac50727eb94c87700001f
+function consecutiveOnes(nums) {
+  let prevCount = 0;
+  let currCount = 0;
+  for (let i = 0; i < nums.length; i++) {
+    (nums[i] === 1)  ? currCount++ 
+      : (currCount > prevCount) ? (prevCount = currCount, currCount = 0) : currCount = 0;
+  }
+  return (currCount > prevCount) ? currCount : prevCount;
+};
