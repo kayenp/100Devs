@@ -6844,3 +6844,15 @@ function trim(x){
 Array.prototype.max = function() {
   return Math.max(...this);
 };
+
+/*
+==========
+2026_02_25
+==========
+*/
+//#1
+//The real size of a multi-dimensional array
+//https://www.codewars.com/kata/57f032307b45ef9c8f0001dd
+function realSize(arrays) {
+  return arrays.flat(Infinity).filter(ele => Number.isInteger(ele)).length;
+}
