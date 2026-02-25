@@ -6837,3 +6837,10 @@ function consecutiveOnes(nums) {
 function trim(x){
   return x.map((subArr, ind, arr) => (ind === arr.length-1) ? subArr.map(hair => '...') : subArr.map(hair => (hair === 'J') ? '|' : hair));
 }
+
+//#4
+//Basic method
+//https://www.codewars.com/kata/55da49c166949c319200003e
+Array.prototype.max = function() {
+  return Math.max(...this);
+};
