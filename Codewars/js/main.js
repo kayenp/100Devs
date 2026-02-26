@@ -6856,3 +6856,13 @@ Array.prototype.max = function() {
 function realSize(arrays) {
   return arrays.flat(Infinity).filter(ele => Number.isInteger(ele)).length;
 }
+
+/*
+==========
+2026_02_26
+==========
+*/
+//#1
+//That unites us
+//https://www.codewars.com/kata/5a3ddf58e1ce0e6f8f000030
+const thatUnitesUs = (array1, array2, n) => [...new Set(array1.concat(array2).sort())].slice(0, n)
