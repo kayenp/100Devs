@@ -6866,3 +6866,15 @@ function realSize(arrays) {
 //That unites us
 //https://www.codewars.com/kata/5a3ddf58e1ce0e6f8f000030
 const thatUnitesUs = (array1, array2, n) => [...new Set(array1.concat(array2).sort())].slice(0, n)
+
+/*
+==========
+2026_03_04
+==========
+*/
+//#1
+//Multidimensional array
+//https://www.codewars.com/kata/5a34e2eab6cfd7fcbc000008
+function getElement(array, indexes, i=0) {
+  return (i === indexes.length-1) ? array[indexes[i]] : getElement(array[indexes[i]], indexes, i+1)
+}
