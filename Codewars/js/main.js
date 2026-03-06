@@ -6906,3 +6906,11 @@ function map(arr, somefunction=func){
   }
   return output;
 }
+
+//#2
+//The sortReloaded() method
+//https://www.codewars.com/kata/5610a8eeb9a84d624b000005
+Array.prototype.sortReloaded = function(dir = 'asc') {
+  return (dir !== 'asc' && dir !== 'desc') ? false 
+    : (dir === 'asc') ? this.slice().sort((a, b) => a - b) : this.slice().sort((a, b) => b - a);
+}
