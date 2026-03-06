@@ -6878,3 +6878,31 @@ const thatUnitesUs = (array1, array2, n) => [...new Set(array1.concat(array2).so
 function getElement(array, indexes, i=0) {
   return (i === indexes.length-1) ? array[indexes[i]] : getElement(array[indexes[i]], indexes, i+1)
 }
+
+/*
+==========
+2026_03_06
+==========
+*/
+//#1
+//Map function issue
+//https://www.codewars.com/kata/560fbc2d636966b21e00009e
+var func = function(item){
+  return (!Number(item)) ? ''
+    : (item % 2 === 0) ? true : false;
+}
+
+function map(arr, somefunction=func){
+  const output = []
+  if (!somefunction.prototype) {
+    return 'given argument is not a function'
+  }
+  for (let i = 0; i < arr.length; i++) {
+    if (typeof somefunction(arr[i]) !== 'boolean') {
+      return 'array should contain only numbers';
+    } else {
+      output.push(somefunction(arr[i]));
+    }
+  }
+  return output;
+}
