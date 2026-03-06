@@ -6914,3 +6914,15 @@ Array.prototype.sortReloaded = function(dir = 'asc') {
   return (dir !== 'asc' && dir !== 'desc') ? false 
     : (dir === 'asc') ? this.slice().sort((a, b) => a - b) : this.slice().sort((a, b) => b - a);
 }
+
+//#3
+//Celebrity Baby Names
+//https://www.codewars.com/kata/577d5ce442a8d81e790002b2
+function validName(array) {
+  const ybna = ' your baby names are';
+  return (!array.length) ? 'You must test at least one name.'
+    : (array.length === 1) ? `Congratulations, you can choose any name you like!`
+    : (array.every((ele, ind, arr) => (ind === 0) ? true 
+                   : ele.slice(0,1).toLowerCase() === arr[ind-1].slice(-1).toLowerCase())) ? `Congratulations,${ybna} compatible!`
+                      : `Back to the drawing board,${ybna} not compatible.`
+}
