@@ -6926,3 +6926,22 @@ function validName(array) {
                    : ele.slice(0,1).toLowerCase() === arr[ind-1].slice(-1).toLowerCase())) ? `Congratulations,${ybna} compatible!`
                       : `Back to the drawing board,${ybna} not compatible.`
 }
+
+/*
+==========
+2026_03_07
+==========
+*/
+//#1
+//"Consonant Please"
+//https://www.codewars.com/kata/59727e04f6a02d0cde00001a
+function sortLetters() {
+  const vowelMap = ['A','E','I','O','U']
+  const vowelArr = [];
+  const consonantArr = [];
+  arguments[0].flat(Infinity).forEach(char => {
+    (Number(char) || char == 0) ? '' 
+      : (vowelMap.includes(char.toUpperCase())) ? vowelArr.push(char.toUpperCase()) : consonantArr.push(char.toUpperCase());
+  })
+  return [vowelArr, consonantArr];
+}
