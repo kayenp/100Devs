@@ -6936,12 +6936,25 @@ function validName(array) {
 //"Consonant Please"
 //https://www.codewars.com/kata/59727e04f6a02d0cde00001a
 function sortLetters() {
-  const vowelMap = ['A','E','I','O','U']
   const vowelArr = [];
   const consonantArr = [];
   arguments[0].flat(Infinity).forEach(char => {
     (Number(char) || char == 0) ? '' 
-      : (vowelMap.includes(char.toUpperCase())) ? vowelArr.push(char.toUpperCase()) : consonantArr.push(char.toUpperCase());
+      : (['A','E','I','O','U'].includes(char.toUpperCase())) ? vowelArr.push(char.toUpperCase()) : consonantArr.push(char.toUpperCase());
   })
   return [vowelArr, consonantArr];
 }
+
+//#2
+//Search JSON for any key value pair
+//https://www.codewars.com/kata/55d5da66a0e378b8bc0000c6
+function getCharacters(obj, key, val) {
+  var foundCharacters = [];
+  for (let i = 0; i < obj.characters.length; i++) {
+    (obj.characters[i]?.[key]) && 
+      ((obj.characters[i][key].toLowerCase() === val.toLowerCase()) 
+      && foundCharacters.push(obj.characters[i]))
+    }
+  return foundCharacters;
+}
+
