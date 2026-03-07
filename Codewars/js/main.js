@@ -6958,3 +6958,14 @@ function getCharacters(obj, key, val) {
   return foundCharacters;
 }
 
+//#3
+//Remove method in Arrays
+//https://www.codewars.com/kata/565d76490397dcf0e700001e
+Array.prototype.remove = function(index) {
+  if (!Number.isInteger(index) || (index > this.length || index < 0)) {
+    return this;
+  } else {
+    this.splice(index, 1);
+    return this;
+  }
+};
