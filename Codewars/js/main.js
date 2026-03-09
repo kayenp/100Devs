@@ -7007,3 +7007,14 @@ function secondLargest(array){
   }
   return (highest > secondH) ? Number(secondH) : undefined;
 }
+
+//#3
+//Did we win the Super Bowl?
+//https://www.codewars.com/kata/59f69fefa0143109e5000019
+function didWeWin(plays){
+  plays = plays.filter(subArr => subArr.length > 0);
+  return (plays.some(subArr => subArr.includes('turnover'))) ? false
+    : (plays.reduce((acc, currVal) => {
+        return (currVal[1] == 'sack') ? acc += (-1 * currVal[0]) : acc += currVal[0];
+        }, 0) > 10);
+}
