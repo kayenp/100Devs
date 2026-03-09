@@ -6969,3 +6969,21 @@ Array.prototype.remove = function(index) {
     return this;
   }
 };
+
+/*
+==========
+2026_03_08
+==========
+*/
+//#1
+//Validate Passwords
+//https://www.codewars.com/kata/5838719c6754d618240000ff
+let passArr = [];
+
+var signIn = function(newPassword) {
+  passArr.push(newPassword);
+};
+
+var logIn = function(password) {
+  return (passArr.includes(password));
+};
