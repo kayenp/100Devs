@@ -6987,3 +6987,23 @@ var signIn = function(newPassword) {
 var logIn = function(password) {
   return (passArr.includes(password));
 };
+
+//#2
+//Second largest in Array
+//https://www.codewars.com/kata/578fe7e2149935740f000525
+function secondLargest(array){
+  if (!Array.isArray(array)) {
+    return;
+  }
+  let highest;
+  let secondH;
+  for (let i = 0; i < array.length; i++) {
+    if (((typeof array[i] == 'number' || typeof array[i] == 'string') && Number(array[i])) || array[i] === 0) {
+      (highest === undefined) ? highest = array[i]
+        : (array[i] <= highest && secondH === undefined) ? secondH = array[i]
+        : (array[i] > highest) ? (secondH = highest, highest = array[i])
+        : (array[i] > secondH) ? secondH = array[i] : '';
+    }
+  }
+  return (highest > secondH) ? Number(secondH) : undefined;
+}
