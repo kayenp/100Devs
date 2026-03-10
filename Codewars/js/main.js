@@ -7018,3 +7018,62 @@ function didWeWin(plays){
         return (currVal[1] == 'sack') ? acc += (-1 * currVal[0]) : acc += currVal[0];
         }, 0) > 10);
 }
+
+/*
+==========
+2026_03_10
+==========
+*/
+//#1
+//I'm already Tracer
+//https://www.codewars.com/kata/5c15dd0fb48e91d81b0000c6
+function teamComp(heroes) {
+  const teamComp = [0, 0, 0];
+  if (heroes.length > 6 || heroes.length < 6) {
+    return 'GG';
+  }
+  for (let i = 0; i < heroes.length; i++) {
+    if (heroes.indexOf(heroes[i]) !== heroes.lastIndexOf(heroes[i])) {
+      return 'GG';
+    }
+    (TANK.includes(heroes[i])) ? teamComp[0]++
+      : (DAMAGE.includes(heroes[i])) ? teamComp[1]++ : teamComp[2]++;
+  }
+  return teamComp;
+}
+
+//#2
+//Selection in elementary school
+//https://www.codewars.com/kata/5a2e2499b6cfd7f828000014
+function schoolSelection(array) {
+  const gradeMap = {
+    'Kindergarten': 0,
+    '1st grade': 0,
+    '2nd grade': 0,
+    '3rd grade': 0,
+    '4th grade': 0
+  }
+  
+  for (let i = 0; i < array.length; i++) {
+    switch(array[i]) {
+        case 5:
+          gradeMap['Kindergarten']++;
+          break;
+        case 6:
+          gradeMap['1st grade']++;
+          break;
+        case 7:
+          gradeMap['2nd grade']++;
+          break;
+        case 8:
+          gradeMap['3rd grade']++;
+          break;
+        case 9:
+          gradeMap['4th grade']++;
+          break;
+        default:
+          break;
+    }
+  }
+    return gradeMap;
+}
