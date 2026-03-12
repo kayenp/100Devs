@@ -7077,3 +7077,17 @@ function schoolSelection(array) {
   }
     return gradeMap;
 }
+
+/*
+==========
+2026_03_12
+==========
+*/
+//#1
+//Oktober Fest: Bjorg's Got A Drinking Problem
+//https://www.codewars.com/kata/59e71f7e23324365ce000026
+function gameOfFives(bBB,sS){
+  const bBB5s = bBB.filter(num => num === 5).length;
+  const sS5s = sS.filter(num => num === 5).length;
+  return (bBB5s === sS5s) ? "Drinks All Round! Free Beers on Bjorg!" : "Uh Oh! Bjorg's a donut! No beer for anyone!"
+}
