@@ -7103,3 +7103,10 @@ function spanishSent(arr) {
   const plural = (spanishSentNum > 1 || spanishSentNum == 0) ? 'sentences' : 'sentence'
   return `¡${spanishSentNum} spanish ${plural} here and hasta la vista, baby!`
 }
+
+//#3
+//A twisted way to select an element from an array.
+//https://www.codewars.com/kata/5a1c84c1c374cb6f7e000104
+function select (arrSearch, arrTake){
+  return arrTake.find(str => arrSearch.sort().reverse()[2][2] == str.slice(0,1)) || 'Nothing here';
+}
