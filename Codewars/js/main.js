@@ -7110,3 +7110,10 @@ function spanishSent(arr) {
 function select (arrSearch, arrTake){
   return arrTake.find(str => arrSearch.sort().reverse()[2][2] == str.slice(0,1)) || 'Nothing here';
 }
+
+//#4
+//Work out is it falsy or truthy?
+//https://www.codewars.com/kata/583310c5dbeb310c34000352
+function falsyOrTruthy(arr) {
+  return (arr.length % 2 > 0) ? arr.filter(ele => !ele) : arr.filter(ele => ele);
+}
