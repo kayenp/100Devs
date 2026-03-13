@@ -7117,3 +7117,25 @@ function select (arrSearch, arrTake){
 function falsyOrTruthy(arr) {
   return (arr.length % 2 > 0) ? arr.filter(ele => !ele) : arr.filter(ele => ele);
 }
+
+/*
+==========
+2026_03_13
+==========
+*/
+//#1
+//Shorten your speech
+//https://www.codewars.com/kata/5b5b12e705f04b3a740000d0
+var shortenSpeech = function (str) {	
+  let strArr = str.split(' ');
+  for (let i = 0; i < strArr.length; i++) {
+    if (strArr[i].length > 3) {
+      for (let j = 3; j < strArr[i].length; j++) {
+        if (['a','e','i','o','u'].includes(strArr[i][j])) {
+          strArr[i] = strArr[i].slice(0,j) + '.';
+        }
+      }
+    }
+  }
+  return strArr.join(' ');
+}
