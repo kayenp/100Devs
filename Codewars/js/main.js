@@ -7091,3 +7091,15 @@ function gameOfFives(bBB,sS){
   const sS5s = sS.filter(num => num === 5).length;
   return (bBB5s === sS5s) ? "Drinks All Round! Free Beers on Bjorg!" : "Uh Oh! Bjorg's a donut! No beer for anyone!"
 }
+
+//#2
+//Spanish sentences #1
+//https://www.codewars.com/kata/5a30ae82ee1aaef63300001a
+function spanishSent(arr) {
+  const spanishSentNum = 
+        arr.filter(str => {
+          return ((str.slice(0,1) == '¡' && str.slice(-1) == '!') || (str.slice(0,1) == '¿' && str.slice(-1) == '?'))
+        }).length;
+  const plural = (spanishSentNum > 1 || spanishSentNum == 0) ? 'sentences' : 'sentence'
+  return `¡${spanishSentNum} spanish ${plural} here and hasta la vista, baby!`
+}
