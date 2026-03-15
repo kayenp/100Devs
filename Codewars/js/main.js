@@ -7148,3 +7148,55 @@ var shortenSpeech = function (str) {
 //#1
 //Make techno.
 //https://www.codewars.com/kata/563c8540d50eb20bab00009a
+function perc (mins) {
+  return (mins >= 1 && mins <= 100) ? 
+    [
+      `${Math.round(mins * 120)} kicks`, 
+      `${Math.round(mins * 240)} hihats`, 
+      `${Math.round(mins * 60)} claps`
+    ] : 'invalid track time';
+};
+
+/*
+==========
+2026_03_15
+==========
+*/
+//#1
+//Podcast Speed Listening Calculator
+//https://www.codewars.com/kata/5a08bb3c80171f4b040000fc
+function speedListen(audioLength, playSpeed) {
+  let calculatedSeconds = Math.floor(audioLength.split(':').map((ele, ind) => {
+    ele = Number(ele);
+    return (ind == 0) ? ele = ele * 60 * 60 
+      : (ind == 1) ? ele = ele * 60 : ele = ele;
+  }).reduce((acc, currVal) => acc + currVal, 0))/playSpeed;
+  
+  let listeningSeconds = 0;
+  let listeningMinutes = 0;
+  let listeningHours = 0;
+  
+  while (calculatedSeconds >= 3600) {
+    calculatedSeconds -= 3600;
+    listeningHours++;
+  }
+  while (calculatedSeconds >= 60) {
+    calculatedSeconds -= 60;
+    listeningMinutes++;
+  }
+  listeningSeconds = calculatedSeconds;
+  
+  const output = [listeningHours, listeningMinutes, listeningSeconds]
+    .map(duration => {
+      return Math.floor(duration)
+    })
+    .reduce((acc, currVal, currInd) => {
+      if (currInd == 0) {
+        return acc += (currVal < 10) ? ('0' + currVal) : currVal;
+      } else {
+        return acc += ':' + ((currVal < 10) ? ('0' + currVal) : currVal);
+      } 
+    }, '')
+  
+  return output;
+}
