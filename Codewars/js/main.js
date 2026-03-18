@@ -7200,3 +7200,18 @@ function speedListen(audioLength, playSpeed) {
   
   return output;
 }
+
+/*
+==========
+2026_03_17
+==========
+*/
+//#1
+//Adaptive Security System
+//https://www.codewars.com/kata/69b58aaee8f1deef7ece7d0e
+function breachAttempts(hackers, securityLevel, increase) {
+  return hackers.reduce((breaches, hacker) => {
+  (hacker > securityLevel) ? breaches++ : securityLevel += increase;
+  return breaches;
+  }, 0)
+}
