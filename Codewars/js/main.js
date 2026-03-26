@@ -7215,3 +7215,19 @@ function breachAttempts(hackers, securityLevel, increase) {
   return breaches;
   }, 0)
 }
+
+/*
+==========
+2026_03_25
+==========
+*/
+//#1
+//Holiday Array Repair
+//https://www.codewars.com/kata/5579906f2f0c0d0766000127
+function holidayCount (a1, a2){
+  const hisVacation = a1.filter(ele => typeof ele === 'number');
+  const myVacation = a2.filter(ele => typeof ele === 'number');
+  return (!hisVacation.length || !myVacation.length) ? 'Not possible'
+    : (hisVacation[0] === myVacation[0]) ? 'Same'
+    : (hisVacation[0] > myVacation[0]) ? 'Right' : 'Wrong';
+}
