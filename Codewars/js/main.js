@@ -7260,3 +7260,11 @@ function formatDataValue(data) {
   
   return outputStr.trim();
 }
+
+//#2
+//Bicycle gear inch calculator
+//https://www.codewars.com/kata/581f9a387a3a635dfc000128
+function gearInchCalculator(chainrings, sprockets){
+	var wheelDiameter = 26;
+  return chainrings.map(chainring => sprockets.map(sprocket => Number((wheelDiameter * (chainring/sprocket)).toFixed(1))));
+};
