@@ -7231,3 +7231,32 @@ function holidayCount (a1, a2){
     : (hisVacation[0] === myVacation[0]) ? 'Same'
     : (hisVacation[0] > myVacation[0]) ? 'Right' : 'Wrong';
 }
+
+/*
+==========
+2026_03_29
+==========
+*/
+//#1
+//Format data value
+//https://www.codewars.com/kata/5a329fc9b6cfd7e8320000c9
+function formatDataValue(data) {
+  let tb, gb, mb;
+  let outputStr = '';
+  
+  tb = Math.floor(data/1000000), data -= (tb * 1000000);
+  gb = Math.floor(data/1000), data -= (gb * 1000);
+  mb = data;
+  
+  (tb > 0) && (outputStr += `${tb}TB `);
+  (gb > 0) && (outputStr += `${gb}GB `);
+  (gb < 1 && tb > 0 && mb > 0) && (outputStr += '0GB ');
+  
+  if (mb > 0) {
+    outputStr += `${mb}MB`
+  } else if (mb < 1 && !outputStr) {
+    outputStr += '0MB'
+  };
+  
+  return outputStr.trim();
+}
