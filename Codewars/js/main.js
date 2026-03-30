@@ -7268,3 +7268,44 @@ function gearInchCalculator(chainrings, sprockets){
 	var wheelDiameter = 26;
   return chainrings.map(chainring => sprockets.map(sprocket => Number((wheelDiameter * (chainring/sprocket)).toFixed(1))));
 };
+
+/*
+==========
+2026_03_30
+==========
+*/
+//#1
+//Thirsty Robot (Updated)
+//https://www.codewars.com/kata/5b598ad0578c6ae27e00002b
+function thirstyRobot(arr){
+  console.log(arr);
+  let wine = drink => drink > 8 && drink <= 15;
+  let beer = drink => drink <= 8;
+  let liquor = drink => drink > 15;
+  let liquorPresent = arr.find(liquor);
+  if (arr.findIndex(wine) > -1) { // checks position of wine and if found...
+    console.log(arr.findIndex(wine));
+    console.log(arr.slice(arr.findIndex(wine)));
+    if (arr.slice(arr.findIndex(wine)).findIndex(beer) > -1) {
+      if (liquorPresent) {
+        return 'Poor robot'
+      } else {
+        return 'Oh dear'
+      };
+    } else if (liquorPresent) {
+      return 'Wonky robot'
+    } else {
+      return 'Fine'
+    }
+  } else if (arr.findIndex(beer) > -1) {
+    if (liquorPresent) {
+      return 'Wonky robot'
+    } else {
+      return 'Fine'
+    }
+  } else if (liquorPresent) {
+    return 'Wonky robot'
+  } else {
+    return 'Fine'
+  };
+};
