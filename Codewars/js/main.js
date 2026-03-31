@@ -7309,3 +7309,19 @@ function thirstyRobot(arr){
     return 'Fine'
   };
 };
+
+/*
+==========
+2026_03_31
+==========
+*/
+//#1
+//Pythagorean Triple
+//https://www.codewars.com/kata/5951d30ce99cf2467e000013
+function isPythagoreanTriple(integers) {
+  return !integers.every((num, ind, arr) => {
+    const aInd = (arr.indexOf(num) >= arr.length-1) ? 0 : ind + 1;
+    const bInd = (aInd >= arr.length-1) ? 0 : aInd + 1;
+    return num**2 !== arr[aInd]**2 + arr[bInd]**2;
+  });
+}
