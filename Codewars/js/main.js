@@ -7325,3 +7325,16 @@ function isPythagoreanTriple(integers) {
     return num**2 !== arr[aInd]**2 + arr[bInd]**2;
   });
 }
+
+/*
+==========
+2026_04_01
+==========
+*/
+//#1
+//Collatz Conjecture (3n+1)
+//https://www.codewars.com/kata/577a6e90d48e51c55e000217
+var hotpo = function(n, i=0){
+  return (n == 1 || n == 0) ? i 
+    : (n % 2 == 0) ? hotpo(n/2, i+1) : hotpo(3*n+1, i+1);
+}
