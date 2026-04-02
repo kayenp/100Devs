@@ -7355,3 +7355,16 @@ function identifyMonster(observedWeaknesses, bestiary) {
   }
   return 'Unknown monster';
 }
+
+//#2
+//Maximum Triplet Sum (Array Series #7)
+//https://www.codewars.com/kata/5aa1bcda373c2eb596000112
+function maxTriSum(numbers){
+  return [...new Set(numbers)]
+    .slice()
+    .sort((a, b) => b - a)
+    .reduce((acc, currVal, currInd) => {
+      console.log(acc, currVal);
+      return (currInd < 3) ? acc += currVal : acc + 0;
+    }, 0);
+}
