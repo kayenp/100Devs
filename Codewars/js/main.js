@@ -7338,3 +7338,20 @@ var hotpo = function(n, i=0){
   return (n == 1 || n == 0) ? i 
     : (n % 2 == 0) ? hotpo(n/2, i+1) : hotpo(3*n+1, i+1);
 }
+
+/*
+==========
+2026_04_02
+==========
+*/
+//#1
+//Witcher's Contract: The Bestiary
+//https://www.codewars.com/kata/69b9359e8af0beedadc87db9
+function identifyMonster(observedWeaknesses, bestiary) {
+  for (let monster in bestiary) {
+    if (observedWeaknesses.every(weakness => bestiary[monster].includes(weakness))) {
+      return monster;
+    }
+  }
+  return 'Unknown monster';
+}
