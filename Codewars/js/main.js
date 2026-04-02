@@ -7363,8 +7363,5 @@ function maxTriSum(numbers){
   return [...new Set(numbers)]
     .slice()
     .sort((a, b) => b - a)
-    .reduce((acc, currVal, currInd) => {
-      console.log(acc, currVal);
-      return (currInd < 3) ? acc += currVal : acc + 0;
-    }, 0);
+    .reduce((acc, currVal, currInd) => (currInd < 3) ? acc + currVal : acc + 0);
 }
