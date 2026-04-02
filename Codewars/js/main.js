@@ -7365,3 +7365,14 @@ function maxTriSum(numbers){
     .sort((a, b) => b - a)
     .reduce((acc, currVal, currInd) => (currInd < 3) ? acc + currVal : acc + 0);
 }
+
+//#3
+//Minimum Steps (Array Series #6)
+//https://www.codewars.com/kata/5a91a7c5fd8c061367000002
+function minimumSteps(numbers, value){
+  let operationCount = 0;
+  numbers.slice()
+    .sort((a, b) => a - b)
+    .reduce((acc, currVal) => (acc >= value) ? acc : (operationCount++, acc + currVal));
+  return operationCount;
+ }
