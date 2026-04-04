@@ -7399,3 +7399,19 @@ function sabb(s, val, happiness){
           .map(char => ['s', 'a', 'b', 't', 'i', 'c', 'l'].includes(char) ? 1 : 0)
           .reduce((acc, currVal) => acc + currVal) + val + happiness > 22) ? 'Sabbatical! Boom!' : 'Back to your desk, boy.'
 }
+
+//#3
+//Coding Meetup #17 - Higher-Order Functions Series - Sort by programming language
+//https://www.codewars.com/kata/583ea278c68d96a5fd000abd
+function sortByLanguage(list) {
+  return list.sort((a, b) => {
+    const aLang = a.language.toLowerCase();
+    const bLang = b.language.toLowerCase();
+    const aName = a.firstName.toLowerCase();
+    const bName = b.firstName.toLowerCase();
+    return (aLang < bLang) ? -1
+      : (aLang > bLang) ? 1 
+      : (aName < bName) ? -1
+      : (aName > bName) ? 1 : 0;
+  })
+}
