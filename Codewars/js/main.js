@@ -7376,3 +7376,17 @@ function minimumSteps(numbers, value){
     .reduce((acc, currVal) => (acc >= value) ? acc : (operationCount++, acc + currVal));
   return operationCount;
  }
+
+ /*
+==========
+2026_04_03
+==========
+*/
+//#1
+//Extra Perfect Numbers (Special Numbers Series #7)
+//https://www.codewars.com/kata/5a662a02e626c54e87000123
+function extraPerfect(n) {
+  return [...Array(n)].map((ele, ind) => ele = ind+1)
+    .filter(num => num.toString(2).startsWith('1') && num.toString(2).endsWith('1'))
+    .sort((a, b) => a - b);
+}
