@@ -7390,3 +7390,12 @@ function extraPerfect(n) {
     .filter(num => num.toString(2).startsWith('1') && num.toString(2).endsWith('1'))
     .sort((a, b) => a - b);
 }
+
+//#2
+//The Office VI - Sabbatical
+//https://www.codewars.com/kata/57fe50d000d05166720000b1
+function sabb(s, val, happiness){
+  return (s.split('')
+          .map(char => ['s', 'a', 'b', 't', 'i', 'c', 'l'].includes(char) ? 1 : 0)
+          .reduce((acc, currVal) => acc + currVal) + val + happiness > 22) ? 'Sabbatical! Boom!' : 'Back to your desk, boy.'
+}
