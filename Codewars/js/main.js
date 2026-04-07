@@ -7429,3 +7429,27 @@ function quadrant(x, y) {
     : (x < 0 && y > 0) ? 2
     : (x < 0 && y < 0) ? 3 : 4
 }
+
+ /*
+==========
+2026_04_07
+==========
+*/
+//#1
+//Basics 04: Rotate Matrix
+//https://www.codewars.com/kata/56b5dd1702a30326ce000b02
+function rotateMatrix(matrix) {
+  const subArrCount = matrix.length;  
+  const elemCount = matrix[0].length;
+  const outputArr = [];
+
+  for (let i = elemCount-1; i >= 0; i--) {
+    const outputSubArr = [];    
+   
+    for (let j = 0; j < subArrCount; j++) {
+      outputSubArr.push(matrix[j][i])  
+    }
+    outputArr.push(outputSubArr)
+  }
+  return outputArr;
+}
