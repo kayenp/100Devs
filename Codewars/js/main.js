@@ -7453,3 +7453,22 @@ function rotateMatrix(matrix) {
   }
   return outputArr;
 }
+
+ /*
+==========
+2026_04_08
+==========
+*/
+//#1
+//Training JS #25: methods of arrayObject---reverse() and sort()
+//https://www.codewars.com/kata/572df796914b5ba27c000c90
+function sortIt(arr){
+  return arr.slice().sort((a, b) => {
+    const aLength = arr.filter(ele => ele == a).length;
+    const bLength = arr.filter(ele => ele == b).length;
+    return aLength < bLength ? -1
+      : aLength > bLength ? 1
+      : a > b ? -1
+      : a < b ? 1 : 0;
+  });
+}
