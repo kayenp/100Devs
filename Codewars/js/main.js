@@ -7472,3 +7472,18 @@ function sortIt(arr){
       : a < b ? 1 : 0;
   });
 }
+
+ /*
+==========
+2026_04_09
+==========
+*/
+//#1
+//Chuck Norris IV - Bearded Fist
+//https://www.codewars.com/kata/57066708cb7293901a0013a1
+const fistBeard = arr => String.fromCharCode(...arr.flat(Infinity));
+
+//#2
+//Pirate Code
+//https://www.codewars.com/kata/59e77930233243a7b7000026
+const amaroPlan = pirateNum => [...Array(pirateNum)].map((ele, ind, arr) => (ind == 0) ? (20 * pirateNum) - (Math.floor((pirateNum-1)/2)) : (ind % 2 > 0) ? 0 : 1)
