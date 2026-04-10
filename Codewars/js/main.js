@@ -7487,3 +7487,14 @@ const fistBeard = arr => String.fromCharCode(...arr.flat(Infinity));
 //Pirate Code
 //https://www.codewars.com/kata/59e77930233243a7b7000026
 const amaroPlan = pirateNum => [...Array(pirateNum)].map((ele, ind, arr) => (ind == 0) ? (20 * pirateNum) - (Math.floor((pirateNum-1)/2)) : (ind % 2 > 0) ? 0 : 1)
+
+ /*
+==========
+2026_04_10
+==========
+*/
+//#1
+//Chuck Norris III - Cage Match
+//https://www.codewars.com/kata/57061b6fcb7293901a000ac7
+const headSmash = array => (Number.isInteger(array)) ? "This isn't the gym!!"
+    : ((array.length == 0) || !array[0]) ? 'Gym is empty' : array.map(ele => ele.replaceAll('O', ' '))
