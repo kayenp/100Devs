@@ -7497,4 +7497,15 @@ const amaroPlan = pirateNum => [...Array(pirateNum)].map((ele, ind, arr) => (ind
 //Chuck Norris III - Cage Match
 //https://www.codewars.com/kata/57061b6fcb7293901a000ac7
 const headSmash = array => (Number.isInteger(array)) ? "This isn't the gym!!"
-    : ((array.length == 0) || !array[0]) ? 'Gym is empty' : array.map(ele => ele.replaceAll('O', ' '))
+    : ((array.length == 0) || !array[0]) ? 'Gym is empty' : array.map(ele => ele.replaceAll('O', ' '));
+
+//#2
+//Birthday II - Presents
+//https://www.codewars.com/kata/5805f0663f1f9c49be00011f
+function present(x, y){ 
+  return (x == 'badpresent') ? 'Take this back!'
+    : (x == 'crap' || x == 'empty') ? x.split('').sort().join('')
+    : (x == 'goodpresent') ? x.split('').map((_, ind) => x.charCodeAt(ind)).map(code => String.fromCharCode(code + y)).join('')
+    : (x == 'bang') ? x.split('').map((_, ind) => x.charCodeAt(ind)).map(code => code - y).reduce((acc, currVal) => acc + currVal, 0)
+    : `pass out from excitement ${y} times`;
+}
