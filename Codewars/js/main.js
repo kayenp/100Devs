@@ -7522,3 +7522,17 @@ function distanceBetweenPoints(a, b) {
   return Math.sqrt((a.x - b.x)**2 + (a.y - b.y)**2);
 }
 
+ /*
+==========
+2026_04_14
+==========
+*/
+//#1
+//Evil or Odious
+//https://www.codewars.com/kata/56fcfad9c7e1fa2472000034
+function evil(n) {
+  return (n.toString(2)
+          .split('')
+          .filter(char => char == 1)
+          .length % 2 > 0) ? "It's Odious!" : "It's Evil!"
+};
