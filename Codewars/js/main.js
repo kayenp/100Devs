@@ -7509,3 +7509,15 @@ function present(x, y){
     : (x == 'bang') ? x.split('').map((_, ind) => x.charCodeAt(ind)).map(code => code - y).reduce((acc, currVal) => acc + currVal, 0)
     : `pass out from excitement ${y} times`;
 }
+
+ /*
+==========
+2026_04_13
+==========
+*/
+//#1
+//Geometry Basics: Distance between points in 2D
+//https://www.codewars.com/kata/58dced7b702b805b200000be
+function distanceBetweenPoints(a, b) {
+  return Math.sqrt((a.x - b.x)**2 + (a.y - b.y)**2);
+}
