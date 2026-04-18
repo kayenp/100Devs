@@ -7536,3 +7536,36 @@ function evil(n) {
           .filter(char => char == 1)
           .length % 2 > 0) ? "It's Odious!" : "It's Evil!"
 };
+
+ /*
+==========
+2026_04_18
+==========
+*/
+//#1
+//Simple Fun #380: Find d = a + b + c
+//https://www.codewars.com/kata/5a139df8ba2a14e041000055
+function findD(arr){
+  const outputArr = [];
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = 0; j < arr.length; j++) {
+      if (j == i) {
+        continue;
+      }
+      for (let k = 0; k < arr.length; k++) {
+        if (k == i || k == j) {
+          continue;
+        }
+        for (let l = 0; l < arr.length; l++ ) {
+          if (l == i || l == j || l == k) {
+            continue;
+          }
+          if (arr[i] + arr[j] + arr[k] == arr[l]) {
+            outputArr.push(arr[l]);
+          }
+        }
+      }
+    }
+  }
+  return (Number.isFinite(Math.max(...outputArr)) ? Math.max(...outputArr) : null);
+}
