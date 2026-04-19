@@ -7588,3 +7588,8 @@ function operate(pcSet, operation) {
   
   return output.sort((a, b) => a - b);
 }
+
+//#2
+//Vowel Count
+//https://www.codewars.com/kata/54ff3102c1bad923760001f3
+const getCount = str => str.length - str.replaceAll(/[aeiou]/g, '').length
