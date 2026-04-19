@@ -7569,3 +7569,22 @@ function findD(arr){
   }
   return (Number.isFinite(Math.max(...outputArr)) ? Math.max(...outputArr) : null);
 }
+
+ /*
+==========
+2026_04_19
+==========
+*/
+//#1
+//Pitch Class Set - Transpositions/Inversions
+//https://www.codewars.com/kata/5a1fe6b1ffe75f9f5a00009f
+function operate(pcSet, operation) {
+  let output;
+  const inversion = operation.slice(-1).toLowerCase() == 'i';
+  const digits = Number(operation.toLowerCase().replace('t', '').replace('i', ''));
+  
+  output = (inversion) ? pcSet.map(pc => 12 - pc + digits - ((12 - pc + digits > 11) ? 12 : 0))
+    : pcSet.map(pc => pc + digits - ((pc + digits > 11) ? 12 : 0));
+  
+  return output.sort((a, b) => a - b);
+}
