@@ -7596,5 +7596,20 @@ const getCount = str => str.length - str.replaceAll(/[aeiou]/g, '').length
 
 //#3
 //Disemvowel Trolls
-//
+//https://www.codewars.com/kata/52fba66badcd10859f00097e
 const disemvowel = str => str.replaceAll(/[aeiou]/gi, '')
+
+ /*
+==========
+2026_04_20
+==========
+*/
+//#1
+//Tidy Number (Special Numbers Series #9)
+//https://www.codewars.com/kata/5a87449ab1710171300000fd
+function tidyNumber(n){
+  return n.toString()
+          .split('')
+          .map(char => Number(char))
+          .every((digit, ind, arr) => (ind == arr.length-1) ? true : digit <= arr[ind+1]);
+}
