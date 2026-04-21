@@ -7613,3 +7613,23 @@ function tidyNumber(n){
           .map(char => Number(char))
           .every((digit, ind, arr) => (ind == arr.length-1) ? true : digit <= arr[ind+1]);
 }
+
+ /*
+==========
+2026_04_21
+==========
+*/
+//#1
+//Product Array (Array Series #5)
+//https://www.codewars.com/kata/5a905c2157c562994900009d
+function productArray(numbers){
+  const output = [];
+  
+  for (let i = 0; i < numbers.length; i++) {
+    const numbersCopy = numbers.slice(); 
+    numbersCopy.splice(i, 1);
+    output.push(numbersCopy.reduce((acc, currVal) => acc * currVal, 1));
+  }
+ 
+  return output;
+}
