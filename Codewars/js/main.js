@@ -7633,3 +7633,26 @@ function productArray(numbers){
  
   return output;
 }
+
+ /*
+==========
+2026_04_22
+==========
+*/
+//#1
+//Max-min arrays
+//https://www.codewars.com/kata/5a090c4e697598d0b9000004
+function solve(arr){
+  const arrCopy = arr.slice();
+  const outputArr = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (i % 2 < 1) {
+      outputArr.push(Math.max(...arrCopy));
+      arrCopy.splice(arrCopy.indexOf(Math.max(...arrCopy)), 1);
+    } else {
+      outputArr.push(Math.min(...arrCopy));
+      arrCopy.splice(arrCopy.indexOf(Math.min(...arrCopy)), 1)
+    }
+  }
+  return outputArr
+};
