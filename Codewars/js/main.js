@@ -7681,3 +7681,25 @@ function duplicates(arr) {
   }
   return dupArr;
 }
+
+//#2
+//Combine objects
+//https://www.codewars.com/kata/56bd9e4b0d0b64eaf5000819
+function combine(...objects) {
+  const output = {}
+  for (let obj of objects) {
+    for (let prop in obj) {
+      if (output[prop] == undefined) {
+        output[prop] = obj[prop];
+      } else {
+        output[prop] += obj[prop];
+      }
+    }
+  }
+  return output;
+}
+
+//#3
+//The reject() function
+//https://www.codewars.com/kata/52988f3f7edba9839c00037d
+const reject = (array, predicate) => array.filter(value => !predicate(value));
