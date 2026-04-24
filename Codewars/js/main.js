@@ -7703,3 +7703,24 @@ function combine(...objects) {
 //The reject() function
 //https://www.codewars.com/kata/52988f3f7edba9839c00037d
 const reject = (array, predicate) => array.filter(value => !predicate(value));
+
+ /*
+==========
+2026_04_24
+==========
+*/
+//#1
+//Transpose two strings in an array
+//https://www.codewars.com/kata/581f4ac139dc423f04000b99
+function transposeTwoStrings (array) {
+  const longest = Math.max(array[0].length, array[1].length);
+  let output = '';
+  
+  for (let i = 0; i < longest; i++) {
+    output += (array[0][i] || ' ') + ' ' + (array[1][i] || ' ');
+    if (i !== longest-1) {
+      output += '\n';
+    };
+  };
+  return output;
+}
