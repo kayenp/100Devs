@@ -7746,3 +7746,21 @@ function iTri(s){
     : (s >= 130.7 && s <= 140.59) ? { 'Run': 'Nearly there!'} 
     : { [activity.find(portion => s >= portion.start && s <= portion.end).leg]: `${remainDist.toFixed(2)} to go!` };
 }
+
+ /*
+==========
+2026_04_26
+==========
+*/
+//#1
+//Find Your Villain Name
+//https://www.codewars.com/kata/536c00e21da4dc0a0700128b
+function getVillainName(birthday){
+  const m = ["Evil","Vile","Cruel","Trashy","Despicable","Embarrassing","Disreputable","Atrocious","Twirling","Orange","Terrifying","Awkward"];
+  const d = ["Mustache","Pickle","Hood Ornament","Raisin","Recycling Bin","Potato","Tomato","House Cat","Teaspoon","Laundry Basket"];
+  
+  const month = birthday.getMonth(); // number value
+  const day = Number(birthday.getDate().toString().slice(-1)); // // last digit number value;
+  
+  return `The ${m[month]} ${d[day]}`;
+}
