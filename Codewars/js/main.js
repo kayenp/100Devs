@@ -7724,3 +7724,25 @@ function transposeTwoStrings (array) {
   };
   return output;
 }
+
+ /*
+==========
+2026_04_25
+==========
+*/
+//#1
+//Ironman Triathlon
+//https://www.codewars.com/kata/57d001b405c186ccb6000304
+function iTri(s){
+  const remainDist = 140.6 - s;
+  const activity = [
+    { start: 0.01, end: 2.39, leg: 'Swim'},
+    { start: 2.4, end: 114.39, leg: 'Bike'},
+    { start: 114.4, end: 130.6, leg: 'Run'}
+  ];
+  
+  return (s == 0) ?  'Starting Line... Good Luck!' 
+    : (s >= 140.6) ? "You're done! Stop running!" 
+    : (s >= 130.7 && s <= 140.59) ? { 'Run': 'Nearly there!'} 
+    : { [activity.find(portion => s >= portion.start && s <= portion.end).leg]: `${remainDist.toFixed(2)} to go!` };
+}
