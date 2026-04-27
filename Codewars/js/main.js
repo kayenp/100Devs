@@ -7764,3 +7764,19 @@ function getVillainName(birthday){
   
   return `The ${m[month]} ${d[day]}`;
 }
+
+ /*
+==========
+2026_04_27
+==========
+*/
+//#1
+//Sum ALL the arrays!
+//https://www.codewars.com/kata/5594463eaf1701909c0000d4
+const arraySum = arr => arr.flat(Infinity)
+  .filter(ele => Number(ele))
+  .reduce((acc, currVal) => acc + currVal, 0)
+
+//#2
+//Tetris Series #1 — Scoring System
+//https://www.codewars.com/kata/5da9af1142d7910001815d32
