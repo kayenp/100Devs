@@ -7780,3 +7780,24 @@ const arraySum = arr => arr.flat(Infinity)
 //#2
 //Tetris Series #1 — Scoring System
 //https://www.codewars.com/kata/5da9af1142d7910001815d32
+function getScore(arr) {
+  let line = 0;
+  let currentScore = 0;
+  let cleared = 0;
+  
+  const clearMap = { 0: 0, 1: 40, 2: 100, 3: 300, 4: 1200 };
+  
+  for (let i = 0; i < arr.length; i++) {
+    currentScore += clearMap[arr[i]] * (line + 1);
+    cleared += arr[i];
+    if (cleared >= 10) {
+      line++;
+      cleared -= 10;
+    };
+  }
+  return currentScore;
+}
+
+//#3
+//Count strings in objects
+//https://www.codewars.com/kata/565b3542af398bfb50000003
