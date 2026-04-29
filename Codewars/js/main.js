@@ -7812,3 +7812,37 @@ var calc = function(a) {
     .map((ele, ind) => ((ind +1) % 5 == 0) ? -1 * (ele) : ele)
     .reduce((acc, currVal) => acc + currVal, 0);
 }
+
+//#2
+//Sum of differences between products and LCMs
+//https://www.codewars.com/kata/56e56756404bb1c950000992
+function sumDifferencesBetweenProductsAndLCMs(pairs){
+  const output = [];
+  for (let i = 0; i < pairs.length; i++) {
+    let prod;
+    let lcm;
+    for (let j = 0; j < pairs[i].length-1; j++) {
+      if (pairs[i][j] == 0 || pairs[i][j+1] == 0) {
+        prod = 0;
+        lcm = 0;
+        break;
+      }
+      prod = pairs[i][j] * pairs[i][j+1];
+      for (let k = 1; k <= prod; k++) {
+        if (pairs[i][j] <= pairs[i][j+1]) {
+          if ((pairs[i][j] * k) % pairs[i][j+1] == 0) {
+            lcm = pairs[i][j] * k;
+            break;
+          }
+        } else {
+          if ((pairs[i][j+1] * k) % pairs[i][j] == 0) {
+            lcm = pairs[i][j+1] * k;
+            break;
+          }
+        }
+      }
+    }
+    output.push(prod - lcm);
+  }
+  return output.reduce((acc, currVal) => acc + currVal, 0);
+}
