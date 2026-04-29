@@ -7798,6 +7798,17 @@ function getScore(arr) {
   return currentScore;
 }
 
-//#3
-//Count strings in objects
-//https://www.codewars.com/kata/565b3542af398bfb50000003
+ /*
+==========
+2026_04_27
+==========
+*/
+//#1
+//Operations with sequence
+//https://www.codewars.com/kata/596ddaccdd42c1cf0e00005c
+var calc = function(a) {
+  return a.map(ele => (ele > 0) ? ele**2 : ele)
+    .map((ele, ind) => ((ind + 1) % 3 == 0) ? ele * 3 : ele)
+    .map((ele, ind) => ((ind +1) % 5 == 0) ? -1 * (ele) : ele)
+    .reduce((acc, currVal) => acc + currVal, 0);
+}
