@@ -7846,3 +7846,18 @@ function sumDifferencesBetweenProductsAndLCMs(pairs){
   }
   return output.reduce((acc, currVal) => acc + currVal, 0);
 }
+
+//#3
+//Swap items in a dictionary
+//https://www.codewars.com/kata/5a21e090f28b824def00013c
+function switchDict(dic) {
+  const newDic = {};
+  for (let prop in dic) {
+    if (newDic[dic[prop]] == undefined) {
+      newDic[dic[prop]] = [prop];
+    } else {
+      newDic[dic[prop]].push(prop);
+    }
+  }
+  return newDic;
+}
