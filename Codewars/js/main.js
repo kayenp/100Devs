@@ -7798,9 +7798,9 @@ function getScore(arr) {
   return currentScore;
 }
 
- /*
+/*
 ==========
-2026_04_27
+2026_04_29
 ==========
 */
 //#1
@@ -7860,4 +7860,17 @@ function switchDict(dic) {
     }
   }
   return newDic;
+}
+
+/*
+==========
+2026_04_30
+==========
+*/
+//#1
+//Sorting Arrays
+//https://www.codewars.com/kata/57fe864854685b1c420002e0
+function sortArray(a1, a2) {  
+  return [...Array(a1.length)]
+    .map((str, ind) => a2.find(a2Str => a2Str[0] == a1[ind][0]));
 }
