@@ -7874,3 +7874,15 @@ function sortArray(a1, a2) {
   return [...Array(a1.length)]
     .map((str, ind) => a2.find(a2Str => a2Str[0] == a1[ind][0]));
 }
+
+/*
+==========
+2026_05_01
+==========
+*/
+//#1
+//NBA full 48 minutes average
+//https://www.codewars.com/kata/587c2d08bb65b5e8040004fd
+function pointsPer48(ppg, mpg) {
+  return (!ppg || !mpg) ? 0 : Number(((ppg/mpg) * 48).toFixed(1));
+} 
