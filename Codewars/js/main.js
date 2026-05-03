@@ -7885,4 +7885,14 @@ function sortArray(a1, a2) {
 //https://www.codewars.com/kata/587c2d08bb65b5e8040004fd
 function pointsPer48(ppg, mpg) {
   return (!ppg || !mpg) ? 0 : Number(((ppg/mpg) * 48).toFixed(1));
-} 
+}
+
+/*
+==========
+2026_05_02
+==========
+*/
+//#1
+//Price of Mangoes
+//https://www.codewars.com/kata/57a77726bb9944d000000b06
+const mango = (quantity, price) => (quantity - Math.floor(quantity/3)) * price
