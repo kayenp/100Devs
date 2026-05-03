@@ -7896,3 +7896,13 @@ function pointsPer48(ppg, mpg) {
 //Price of Mangoes
 //https://www.codewars.com/kata/57a77726bb9944d000000b06
 const mango = (quantity, price) => (quantity - Math.floor(quantity/3)) * price
+
+/*
+==========
+2026_05_03
+==========
+*/
+//#1
+//Sequence generator
+//https://www.codewars.com/kata/56ba8a9b022c16017d0001f3
+const sequence = (n, pattern) => [...Array(n)].map((ele, ind) => (typeof pattern == 'function') ? pattern(0, ind) : pattern)
