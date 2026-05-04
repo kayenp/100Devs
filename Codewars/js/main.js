@@ -7930,7 +7930,3 @@ function sortGrades(arr){
     return grade1 - grade2;
   })
 }
-
-//#2
-//80's Kids #3: Punky Brewster's Socks
-//https://www.codewars.com/kata/5662292ee7e2da24e900012f
