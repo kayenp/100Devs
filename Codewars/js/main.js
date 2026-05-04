@@ -7906,3 +7906,31 @@ const mango = (quantity, price) => (quantity - Math.floor(quantity/3)) * price
 //Sequence generator
 //https://www.codewars.com/kata/56ba8a9b022c16017d0001f3
 const sequence = (n, pattern) => [...Array(n)].map((ele, ind) => (typeof pattern == 'function') ? pattern(0, ind) : pattern)
+
+
+/*
+==========
+2026_05_04
+==========
+*/
+//#1
+//Sort the climbing grades
+//https://www.codewars.com/kata/58a08e622e7fb654a300000e
+function sortGrades(arr){
+  const arrCopy = arr.slice();
+  const gradeMap = { 'B':-2, '0': -1, '0+': 0};
+  let grade1;
+  let grade2;
+  
+  return arrCopy.sort((a, b) => {
+    grade1 = ((a.length > 2) ? a.slice(-2) : a.slice(-1));
+    grade2 = ((b.length > 2) ? b.slice(-2) : b.slice(-1));
+    (gradeMap[grade1] !== undefined) && (grade1 = gradeMap[grade1]);
+    (gradeMap[grade2] !== undefined) && (grade2 = gradeMap[grade2]);
+    return grade1 - grade2;
+  })
+}
+
+//#2
+//80's Kids #3: Punky Brewster's Socks
+//https://www.codewars.com/kata/5662292ee7e2da24e900012f
