@@ -7942,3 +7942,11 @@ function sortGrades(arr){
 const dontGiveMeFive = (start, end) => Array.from({ length: (Math.abs(start - end) + 1) }, (v, k) => k + start)
   .filter(val => !val.toString().includes('5'))
   .length
+
+//#2
+//Two Oldest Ages
+//https://www.codewars.com/kata/511f11d355fe575d2c000001
+function twoOldestAges(ages){
+  const sortedArr = ages.slice().sort((a, b) => b - a);
+  return [sortedArr[1], sortedArr[0]];
+}
