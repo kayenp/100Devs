@@ -7930,3 +7930,15 @@ function sortGrades(arr){
     return grade1 - grade2;
   })
 }
+
+/*
+==========
+2026_05_05
+==========
+*/
+//#1
+//Don't give me five!
+//https://www.codewars.com/kata/5813d19765d81c592200001a
+const dontGiveMeFive = (start, end) => Array.from({ length: (Math.abs(start - end) + 1) }, (v, k) => k + start)
+  .filter(val => !val.toString().includes('5'))
+  .length
