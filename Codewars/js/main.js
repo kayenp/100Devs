@@ -7950,3 +7950,19 @@ function twoOldestAges(ages){
   const sortedArr = ages.slice().sort((a, b) => b - a);
   return [sortedArr[1], sortedArr[0]];
 }
+
+//#3
+//Parts of a list
+//https://www.codewars.com/kata/56f3a1e899b386da78000732
+function partlist(arr) {
+  const outputArr = [];
+  for (let i = 0; i < arr.length-1; i++) {
+    outputArr.push([arr.slice(0,i+1).join(' '), arr.slice(i+1).join(' ')]);
+  }
+  return outputArr;
+}
+
+//#4
+//Lost number in number sequence
+//https://www.codewars.com/kata/595aa94353e43a8746000120
+const findDeletedNumber = (arr, mixArr) => arr.find(ele => !mixArr.includes(ele)) || 0
