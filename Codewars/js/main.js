@@ -7966,3 +7966,15 @@ function partlist(arr) {
 //Lost number in number sequence
 //https://www.codewars.com/kata/595aa94353e43a8746000120
 const findDeletedNumber = (arr, mixArr) => arr.find(ele => !mixArr.includes(ele)) || 0
+
+/*
+==========
+2026_05_06
+==========
+*/
+//#1
+//My Language Skills
+//https://www.codewars.com/kata/5b16490986b6d336c900007d
+const myLanguages = results => Object.keys(results)
+  .filter(lang => results[lang] >= 60)
+  .sort((a, b) => results[b] - results[a])
