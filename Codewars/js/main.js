@@ -7976,5 +7976,14 @@ const findDeletedNumber = (arr, mixArr) => arr.find(ele => !mixArr.includes(ele)
 //My Language Skills
 //https://www.codewars.com/kata/5b16490986b6d336c900007d
 const myLanguages = results => Object.keys(results)
-  .filter(lang => results[lang] >= 60)
+  .filter(lang => results[lang] > 59)
   .sort((a, b) => results[b] - results[a])
+
+//#2
+//Array element parity
+//https://www.codewars.com/kata/5a092d9e46d843b9db000064
+function solve(arr){
+  const unpairedTotal = [...new Set(arr)].reduce((acc, currVal) => acc + currVal);
+  return (arr.includes(unpairedTotal)) ? arr.find(num => num === unpairedTotal) 
+    : arr.find(num => arr.indexOf(num) !== arr.lastIndexOf(num))
+};
