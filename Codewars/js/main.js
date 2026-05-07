@@ -8014,3 +8014,10 @@ function absentVowel(x){
   const vowelMap = ['a','e','i','o','u'];
   return vowelMap.indexOf(vowelMap.find(vowel => !x.includes(vowel)));
 }
+
+//#4
+//Determine if the poker hand is flush
+//https://www.codewars.com/kata/5acbc3b3481ebb23a400007d
+function isFlush(cards) {
+  return cards.every((suit, ind, arr) => arr[ind+1] == undefined || suit.slice(-1) == arr[ind+1].slice(-1))
+}
