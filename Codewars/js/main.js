@@ -7996,3 +7996,10 @@ function solve(arr){
 //#1
 //Find The Duplicated Number in a Consecutive Unsorted List
 //https://www.codewars.com/kata/558dd9a1b3f79dc88e000001
+function findDup( arr ){
+  return arr.filter((int, _, arr) => arr.indexOf(int) !== arr.lastIndexOf(int))[0];
+};
+
+//#2
+//Find how many times did a team from a given country win the Champions League?
+//https://www.codewars.com/kata/581b30af1ef8ee6aea0015b9
