@@ -8003,3 +8003,14 @@ function findDup( arr ){
 //#2
 //Find how many times did a team from a given country win the Champions League?
 //https://www.codewars.com/kata/581b30af1ef8ee6aea0015b9
+function countWins(winnerList, nation) {
+  return winnerList.filter(winner => winner.country === nation).length;
+}
+
+//#3
+//Absent vowel
+//https://www.codewars.com/kata/56414fdc6488ee99db00002c
+function absentVowel(x){
+  const vowelMap = ['a','e','i','o','u'];
+  return vowelMap.indexOf(vowelMap.find(vowel => !x.includes(vowel)));
+}
