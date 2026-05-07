@@ -7987,3 +7987,12 @@ function solve(arr){
   return (arr.includes(unpairedTotal)) ? arr.find(num => num === unpairedTotal) 
     : arr.find(num => arr.indexOf(num) !== arr.lastIndexOf(num))
 };
+
+/*
+==========
+2026_05_07
+==========
+*/
+//#1
+//Find The Duplicated Number in a Consecutive Unsorted List
+//https://www.codewars.com/kata/558dd9a1b3f79dc88e000001
