@@ -8021,3 +8021,35 @@ function absentVowel(x){
 function isFlush(cards) {
   return cards.every((suit, ind, arr) => arr[ind+1] == undefined || suit.slice(-1) == arr[ind+1].slice(-1))
 }
+
+/*
+==========
+2026_05_10
+==========
+*/
+//#1
+//MinMaxMin: Bounded Nums
+//https://www.codewars.com/kata/58d3487a643a3f6aa20000ff
+function minMinMax(array) {
+  const arraySorted = [...new Set(array.slice().sort((a, b) => a - b))];
+  let minNum;
+  
+  for (let i = 0; i < arraySorted.length-1; i++) {
+    if ((arraySorted[i] + 1) !== arraySorted[i+1]) {
+      minNum = arraySorted[i] + 1;
+      break;
+    }
+  }
+  return [arraySorted[0], minNum, arraySorted[arraySorted.length-1]];
+}
+
+//#2
+//Sum of Array Averages
+//https://www.codewars.com/kata/56d5166ec87df55dbe000063
+function sumAverage(arrays) {  
+  return arrays.reduce((acc, currSubArr) => {
+    return acc += currSubArr.reduce((acc, currVal) => {
+      return acc + currVal;
+    })/currSubArr.length;
+  }, 0)
+};
