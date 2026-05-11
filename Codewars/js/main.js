@@ -8053,3 +8053,16 @@ function sumAverage(arrays) {
     })/currSubArr.length;
   }, 0)
 };
+
+//#3
+//Find the missing element between two arrays
+//https://www.codewars.com/kata/5a5915b8d39ec5aa18000030
+function findMissing(arr1, arr2) {
+  const arr1Sorted = arr1.slice().sort((a, b) => a - b);
+  const arr2Sorted = arr2.slice().sort((a, b) => a - b);
+  for (let i = 0; i < arr1Sorted.length; i++) {
+    if (arr1Sorted[i] !== arr2Sorted[i]) {
+      return arr1Sorted[i];
+    }
+  }
+}
