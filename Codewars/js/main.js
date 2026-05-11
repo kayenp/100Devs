@@ -8066,3 +8066,15 @@ function findMissing(arr1, arr2) {
     }
   }
 }
+
+//#4
+//Least Larger
+//https://www.codewars.com/kata/5f8341f6d030dc002a69d7e4
+function leastLarger(a,i) {
+  const aSorted = a.slice().sort((a, b) => a - b);
+  for (let j = 0; j < aSorted.length; j++) { 
+    if (a[i] < aSorted[j]) {
+      return a.indexOf(aSorted[j]);
+    }
+  } return -1;
+}
