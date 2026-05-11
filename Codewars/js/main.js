@@ -8101,3 +8101,22 @@ function smaller(nums) {
   output.push(0);
   return output;
 }
+
+//#2
+//What dominates your array?
+//https://www.codewars.com/kata/559e10e2e162b69f750000b4
+function dominator(arr) {
+  const arrMap = {};
+  
+  for (let i = 0; i < arr.length; i++) {
+    if (arrMap[arr[i]] == undefined) {
+      arrMap[arr[i]] = 1;
+    } else {
+      arrMap[arr[i]]++;
+    }
+    if (arrMap[arr[i]] > arr.length/2) {
+      return arr[i];
+    }
+  }
+  return -1;
+}
