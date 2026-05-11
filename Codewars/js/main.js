@@ -8078,3 +8078,26 @@ function leastLarger(a,i) {
     }
   } return -1;
 }
+
+/*
+==========
+2026_05_11
+==========
+*/
+//#1
+//How many are smaller than me?
+//https://www.codewars.com/kata/56a1c074f87bc2201200002e
+function smaller(nums) {
+  const output = [];
+  for (let i = 0; i < nums.length-1; i++) {
+    let count = 0;
+    for (let j = i+1; j < nums.length; j++) {
+      if (nums[i] > nums[j]) {
+        count++;
+      }
+    }
+    output.push(count);
+  }
+  output.push(0);
+  return output;
+}
