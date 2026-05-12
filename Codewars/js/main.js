@@ -8120,3 +8120,19 @@ function dominator(arr) {
   }
   return -1;
 }
+
+/*
+==========
+2026_05_12
+==========
+*/
+//#1
+//Sort Santa's Reindeer
+//https://www.codewars.com/kata/52ab60b122e82a6375000bad
+function sortReindeer(reindeerNames) {
+  return reindeerNames.slice()
+    .map(names => names.split(' '))
+    .sort((a, b) => (a[1] < b[1]) ? -1 : (b[1] > a[1]) ? 1 : 0)
+    .map(subArr => subArr.join(' '));
+}
+s
