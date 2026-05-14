@@ -8152,3 +8152,17 @@ function likeOrDislike(buttons) {
                         : (acc === currVal) ? 'Nothing' 
                         : currVal, 'Nothing')
 }
+
+//#2
+//Multiply array values and filter non-numeric
+//https://www.codewars.com/kata/55ed875819ae85ca8b00005c
+const multiplyAndFilter = (array, multiplier) => array.filter(ele => typeof ele === 'number').map(num => num * multiplier);
+
+//#3
+//Finding length of the sequence
+//https://www.codewars.com/kata/5566b0dd450172dfc4000005
+var lengthOfSequence = function (arr, n) {
+  const arrSorted = arr.slice().sort((a, b) => a - b);
+  return (arrSorted.indexOf(n) !== (arrSorted.lastIndexOf(n) - 1)) ? 0 : (arr.lastIndexOf(n) - arr.indexOf(n) + 1)
+};
+
