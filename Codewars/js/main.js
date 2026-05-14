@@ -8166,3 +8166,10 @@ var lengthOfSequence = function (arr, n) {
   return (arrSorted.indexOf(n) !== (arrSorted.lastIndexOf(n) - 1)) ? 0 : (arr.lastIndexOf(n) - arr.indexOf(n) + 1)
 };
 
+//#4
+//The dropWhile Function
+//https://www.codewars.com/kata/54f9c37106098647f400080a
+function dropWhile(array, predicate) {
+  const booleanArr = array.map(ele => predicate(ele));
+  return (booleanArr.indexOf(false) == -1) ? [] : array.slice(booleanArr.indexOf(false));
+};
