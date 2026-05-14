@@ -8135,4 +8135,20 @@ function sortReindeer(reindeerNames) {
     .sort((a, b) => (a[1] < b[1]) ? -1 : (b[1] > a[1]) ? 1 : 0)
     .map(subArr => subArr.join(' '));
 }
-s
+
+/*
+==========
+2026_05_13
+==========
+*/
+//#1
+//Likes Vs Dislikes
+//https://www.codewars.com/kata/62ad72443809a4006998218a
+function likeOrDislike(buttons) {
+  if (buttons.length === 1) {
+    return buttons[0];
+  }
+  return buttons.reduce((acc, currVal) => (acc !== currVal && acc === 'Nothing') ? currVal 
+                        : (acc === currVal) ? 'Nothing' 
+                        : currVal, 'Nothing')
+}
