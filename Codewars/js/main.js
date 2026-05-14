@@ -8173,3 +8173,23 @@ function dropWhile(array, predicate) {
   const booleanArr = array.map(ele => predicate(ele));
   return (booleanArr.indexOf(false) == -1) ? [] : array.slice(booleanArr.indexOf(false));
 };
+
+/*
+==========
+2026_05_14
+==========
+*/
+//#1
+//What is my name score? #1
+//https://www.codewars.com/kata/576a29ab726f4bba4b000bb1
+function nameScore(name){
+  let score = 0;
+  for (let group in alpha) {
+    for (let char of name.toUpperCase()) {
+      if (group.includes(char)) {
+        score += alpha[group];
+      }
+    }
+  }
+  return { [name]: score };
+}
