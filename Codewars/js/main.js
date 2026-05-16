@@ -8193,3 +8193,29 @@ function nameScore(name){
   }
   return { [name]: score };
 }
+
+/*
+==========
+2026_05_15
+==========
+*/
+//#1
+//80's Kids #2: Help ALF Find His Spaceship
+//https://www.codewars.com/kata/5660aa3d5e011dfd6e000063
+function findSpaceship(map) {
+  if (!map || !map.includes('X')) {
+    return 'Spaceship lost forever.'
+  }
+  const mapArr = map.split('\n');
+  for (let i = mapArr.length-1; i < mapArr.length; i--) {
+    let x = mapArr[i].indexOf('X');
+    let y = mapArr.length-1 - i;
+    if (x !== -1) {
+      return [x, y];
+    }
+  }
+}
+
+//#2
+//Array - squareUp b!
+//https://www.codewars.com/kata/5a8bcd980025e99381000099
