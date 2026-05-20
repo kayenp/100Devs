@@ -8265,3 +8265,15 @@ function hasSurvived(attackers, defenders){
     : (dCopy.length === aCopy.length) ? attackers.reduce((acc, currVal) => acc + currVal) <= defenders.reduce((acc, currVal) => acc + currVal)
     : false;
 }
+
+/*
+==========
+2026_05_20
+==========
+*/
+//#1
+//Sorted Union
+//https://www.codewars.com/kata/5729c30961cecadc4f001878
+function uniteUnique() {
+  return [...new Set([...arguments].flat())];
+};
