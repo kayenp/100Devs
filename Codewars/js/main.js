@@ -8245,3 +8245,23 @@ function unflatten (flatArray) {
   };
   return outputArr;
 }
+
+//#3
+//Survive the attack
+//https://www.codewars.com/kata/634d0f7c562caa0016debac5
+function hasSurvived(attackers, defenders){
+
+  const aCopy = [];
+  const dCopy = [];
+  
+  for (let i = 0; i < Math.max(attackers.length, defenders.length); i++) {
+    if (attackers[i] > defenders[i] || defenders[i] === undefined) {
+      aCopy.push(attackers[i]);
+    } else if (attackers[i] < defenders[i] || attackers[i] === undefined) {
+      dCopy.push(defenders[i]);
+    }
+  }
+  return (dCopy.length > aCopy.length) ? true 
+    : (dCopy.length === aCopy.length) ? attackers.reduce((acc, currVal) => acc + currVal) <= defenders.reduce((acc, currVal) => acc + currVal)
+    : false;
+}
