@@ -8286,3 +8286,19 @@ function removeNthElement(arr, n) {
   arrCopy.splice(n, 1);
   return arrCopy;
 }
+
+//#3
+//Sectional Array Sort
+//https://www.codewars.com/kata/58ef87dc4db9b24c6c000092
+function sectSort(arr, start=0, items=0) {
+  const arrStart = arr.slice(0, start);
+  const subset = (items) && arr.slice(start, start+items).sort((a, b) => a - b);
+  
+  if (!start && !items) {
+    return arr.slice().sort((a, b) => a - b);
+  };
+  
+  return [].concat(arrStart, ((!items) ? arr.slice(start).sort((a, b) => a - b) 
+                              : (start+items < arr.length) ? [subset, arr.slice(start+items)] 
+                              : [arrStart, subset])).flat();
+}
