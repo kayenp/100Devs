@@ -8228,3 +8228,20 @@ function getNewNotes(salary,bills){
   const totalBills = bills.reduce((acc, currVal) => acc + currVal, 0);
   return (salary - totalBills > 0) ? Math.floor((salary - totalBills)/5) : 0;
 }
+
+//#2
+//Unflatten a list (Easy)
+//https://www.codewars.com/kata/57e2dd0bec7d247e5600013a
+function unflatten (flatArray) {
+  const flatCopy = flatArray.slice();
+  const outputArr = [];
+  
+  while (flatCopy.length > 0) {
+    if (flatCopy[0] < 3) {
+      outputArr.push(flatCopy[0]) && flatCopy.splice(0, 1); 
+    } else {
+      outputArr.push(flatCopy.slice(0, flatCopy[0])) && flatCopy.splice(0, flatCopy[0]);
+    };
+  };
+  return outputArr;
+}
