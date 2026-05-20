@@ -8216,6 +8216,15 @@ function findSpaceship(map) {
   }
 }
 
-//#2
-//Array - squareUp b!
-//https://www.codewars.com/kata/5a8bcd980025e99381000099
+/*
+==========
+2026_05_19
+==========
+*/
+//#1
+//New £5 notes collectors!
+//https://www.codewars.com/kata/58029cc9af749f80e3001e34
+function getNewNotes(salary,bills){
+  const totalBills = bills.reduce((acc, currVal) => acc + currVal, 0);
+  return (salary - totalBills > 0) ? Math.floor((salary - totalBills)/5) : 0;
+}
