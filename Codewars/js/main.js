@@ -8327,3 +8327,12 @@ function diffBig2(arr) {
   const second = Math.max(...arrCopy);
   return first - second;
 }
+
+//#3
+//Make a square box!
+//https://www.codewars.com/kata/58644e8ddf95f81a38001d8d
+function box(n) {
+  return [...Array(n)].map((ele, ind) => (ind === 0 || ind === n-1) ? '-'.repeat(n) 
+                           : (n > 2) ? '-' + ' '.repeat(n-2) + '-' 
+                           : '--')
+}
