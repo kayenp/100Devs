@@ -8311,3 +8311,19 @@ function sectSort(arr, start=0, items=0) {
 //#1
 //Reducing Problems - Bug Fixing #8
 //https://www.codewars.com/kata/55d2603d506a40e162000056
+function calculateTotal(team1, team2) {
+  let t1s = team1.reduce((t, c) => t + c, 0);
+  let t2s = team2.reduce((t, c, i) => t + c, 0);
+  return t1s > t2s;
+}
+
+//#2
+//Difference between biggest 2 numbers
+//https://www.codewars.com/kata/55e3f27d5dee52d8dd0000a9
+function diffBig2(arr) {
+  const arrCopy = arr.slice();
+  const first = Math.max(...arrCopy);
+  arrCopy.splice(arrCopy.indexOf(first), 1);
+  const second = Math.max(...arrCopy);
+  return first - second;
+}
