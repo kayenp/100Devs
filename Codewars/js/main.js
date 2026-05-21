@@ -8302,3 +8302,12 @@ function sectSort(arr, start=0, items=0) {
                               : (start+items < arr.length) ? [subset, arr.slice(start+items)] 
                               : [arrStart, subset])).flat();
 }
+
+/*
+==========
+2026_05_21
+==========
+*/
+//#1
+//Reducing Problems - Bug Fixing #8
+//https://www.codewars.com/kata/55d2603d506a40e162000056
