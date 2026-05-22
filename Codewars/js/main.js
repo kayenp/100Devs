@@ -8336,3 +8336,19 @@ function box(n) {
                            : (n > 2) ? '-' + ' '.repeat(n-2) + '-' 
                            : '--')
 }
+
+/*
+==========
+2026_05_22
+==========
+*/
+//#1
+//Array.prototype.reverse()
+//https://www.codewars.com/kata/53b2ff49b82af296ce001139
+Array.prototype.reverse = function() {
+  const copyArr = this.slice();
+  for (let i = copyArr.length-1; i >= 0; i--) {
+    this[(copyArr.length-1) - i] = copyArr[i];
+  };
+  return this;
+};
