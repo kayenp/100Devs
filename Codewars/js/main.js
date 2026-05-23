@@ -8361,3 +8361,24 @@ Array.prototype.reverse = function() {
 //#1
 //Array Manipulation
 //https://www.codewars.com/kata/58d5e6c114286c8594000027
+function arrayManip(array){
+  const outputArr = [];      
+  for (let i = 0; i < array.length; i++) {
+    let lowest;
+    for (let j = i+1; j < array.length; j++) {
+      if (array[i] < array[j]) {
+        if (lowest === undefined) {
+          lowest = array[j];
+        } else if (array[j] < lowest) {
+          lowest = array[j];
+        }
+      }
+    }
+    if (lowest !== undefined) {
+      outputArr.push(lowest);
+    } else {
+      outputArr.push(-1);
+    }
+  }
+  return outputArr;
+}
