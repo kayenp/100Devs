@@ -8423,3 +8423,19 @@ function noonerize(numbers) {
   workingArr[1][0] = interim;
   return workingArr.map(sub => Number(sub.join(''))).reduce((acc, currVal) => Math.abs(acc - currVal));
 }
+
+//#3
+//Sort by binary ones
+//https://www.codewars.com/kata/59eb28fb0a2bffafbb0000d6
+function sortByBinaryOnes(list){
+  return list.slice().map(num => num.toString(2)).sort((a, b) => {
+    let a1 = a.split('0').join('').length;
+    let b1 = b.split('0').join('').length;
+    return (a1 > b1) ? -1 
+      : (b1 > a1) ? 1 
+      : (a.length < b.length) ? -1
+      : (b.length < a.length) ? 1
+      : (Number.parseInt(a, 2) < Number.parseInt(b, 2)) ? -1
+      : (Number.parseInt(b, 2) < Number.parseInt(a, 2)) ? 1 : 0
+  }).map(bit => Number.parseInt(bit, 2));
+}
