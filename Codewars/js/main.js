@@ -8403,3 +8403,23 @@ function playerManager(players) {
     return [];
   }
 };
+
+//#2
+//Noonerize Me
+//https://www.codewars.com/kata/56dbed3a13c2f61ae3000bcd
+function noonerize(numbers) {
+  let workingArr = [];
+  let interim;
+  for (let i = 0; i < numbers.length; i++) {
+    if (typeof numbers[i] !== 'number') {
+      return 'invalid array';
+    } else {
+      workingArr.push(numbers[i].toString());
+    }
+  }
+  workingArr = workingArr.map(str => str.split(''));
+  interim = workingArr[0][0];
+  workingArr[0][0] = workingArr[1][0];
+  workingArr[1][0] = interim;
+  return workingArr.map(sub => Number(sub.join(''))).reduce((acc, currVal) => Math.abs(acc - currVal));
+}
