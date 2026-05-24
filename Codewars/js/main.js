@@ -8382,3 +8382,24 @@ function arrayManip(array){
   }
   return outputArr;
 }
+
+/*
+==========
+2026_05_24
+==========
+*/
+//#1
+//Player Contact Manager
+//https://www.codewars.com/kata/5b203de891c7469b520000b4
+function playerManager(players) {
+  if (players) {
+    const playersArr = players.split(', ')
+    const outputArr = [];
+    for (let i = 0; i < playersArr.length; i+=2) {
+      outputArr.push({player: playersArr[i], contact: Number(playersArr[i+1])})
+    }
+    return outputArr;
+  } else {
+    return [];
+  }
+};
