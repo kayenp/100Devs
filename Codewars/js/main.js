@@ -8455,3 +8455,14 @@ function elementsSum(arr,d=0){
   }
   return outputArr.reduce((acc, currVal) => acc + currVal);
 }
+
+//#2
+//Genetic Algorithm Series - #1 Generate
+//https://www.codewars.com/kata/genetic-algorithm-series-number-1-generate
+const generate = length => {  
+  let string = '';
+  for (let i = 0; i < length && length !== 0; i++) {
+    string += String(Math.floor(Math.random() * (2)))
+  }
+  return string;  
+}
