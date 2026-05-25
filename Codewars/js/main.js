@@ -8439,3 +8439,19 @@ function sortByBinaryOnes(list){
       : (Number.parseInt(b, 2) < Number.parseInt(a, 2)) ? 1 : 0
   }).map(bit => Number.parseInt(bit, 2));
 }
+
+/*
+==========
+2026_05_24
+==========
+*/
+//#1
+//Sub-array elements sum
+//https://www.codewars.com/kata/5b5e0ef007a26632c400002a
+function elementsSum(arr,d=0){
+  const outputArr = [];
+  for (let i = arr.length-1, j = 0; i >= 0; i--, j++) {
+    (arr[i][j] === undefined) ? outputArr.push(d) : outputArr.push(arr[i][j])
+  }
+  return outputArr.reduce((acc, currVal) => acc + currVal);
+}
