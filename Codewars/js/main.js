@@ -8442,7 +8442,7 @@ function sortByBinaryOnes(list){
 
 /*
 ==========
-2026_05_24
+2026_05_25
 ==========
 */
 //#1
@@ -8465,4 +8465,25 @@ const generate = length => {
     string += String(Math.floor(Math.random() * (2)))
   }
   return string;  
+}
+
+/*
+==========
+2026_05_26
+==========
+*/
+//#1
+//Latin Squares
+//https://www.codewars.com/kata/645fb55ecf8c290031b779ef
+function makeLatinSquare(n) {
+  const outputArr = [];
+  
+  for (let i = 0; i < n; i++) {
+		const subArr = [];
+    for (let j = 0; j < n; j++) {
+      subArr[(i+j) % n] = j+1;
+    }
+		outputArr.push(subArr);
+  }
+	return outputArr;
 }
