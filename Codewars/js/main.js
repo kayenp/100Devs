@@ -8515,3 +8515,14 @@ function possiblyPerfect(key,answers) {
 var parseNumbers = function(intStrs) {
   return intStrs.map(ele => Number.parseInt(ele));
 }
+
+//#4
+//Duck Shoot - Easy Version
+//https://www.codewars.com/kata/57d27a0a26427672b900046f
+function duckShoot(ammo, aim, ducks){
+  let ducksCopy = ducks.slice();
+  for (let i = 0; i < Math.floor(ammo * aim); i++) {
+    ducksCopy = ducksCopy.replace('2', 'X');
+  }
+  return ducksCopy;
+}
