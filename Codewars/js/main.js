@@ -8496,3 +8496,15 @@ function makeLatinSquare(n) {
 //#1
 //Spin Around, Touch the Ground
 //https://www.codewars.com/kata/65127141a5de2b1dcb40927e
+function spinAround(turns) {
+  return (Math.floor(Math.abs(turns.map(dir => dir === 'right' ? 90 : -90)
+                              .reduce((acc, currVal) => acc + currVal, 0))/360));
+}
+
+//#2
+//All or Nothing
+//https://www.codewars.com/kata/65112af7056ad6004b5672f8
+function possiblyPerfect(key,answers) {
+  return key.every((ans, pos) => (ans === '_') || ans === answers[pos]) 
+  || key.every((ans, pos) => (ans === '_') || ans !== answers[pos]);
+}
