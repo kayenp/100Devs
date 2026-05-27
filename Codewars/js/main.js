@@ -8487,3 +8487,12 @@ function makeLatinSquare(n) {
   }
 	return outputArr;
 }
+
+/*
+==========
+2026_05_27
+==========
+*/
+//#1
+//Spin Around, Touch the Ground
+//https://www.codewars.com/kata/65127141a5de2b1dcb40927e
