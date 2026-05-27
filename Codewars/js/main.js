@@ -8508,3 +8508,10 @@ function possiblyPerfect(key,answers) {
   return key.every((ans, pos) => (ans === '_') || ans === answers[pos]) 
   || key.every((ans, pos) => (ans === '_') || ans !== answers[pos]);
 }
+
+//#3
+//[JS] Parse integers in array
+//https://www.codewars.com/kata/535d118ccdbf501816001101
+var parseNumbers = function(intStrs) {
+  return intStrs.map(ele => Number.parseInt(ele));
+}
