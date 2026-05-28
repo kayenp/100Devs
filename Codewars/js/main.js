@@ -8526,3 +8526,20 @@ function duckShoot(ammo, aim, ducks){
   }
   return ducksCopy;
 }
+
+/*
+==========
+2026_05_28
+==========
+*/
+//#1
+//Job Matching #2
+//https://www.codewars.com/kata/56c2578be8b139bd5c001bd8
+function match(job, candidates) {
+  let candidatesFiltered = candidates.slice();
+  if (!job.equityMax) {
+    candidatesFiltered = candidatesFiltered.filter(candidate => !candidate.desiresEquity)
+  };
+  candidatesFiltered = candidatesFiltered.filter(candidate => job.locations.some(location => candidate.currentLocation === location || candidate.desiredLocations.includes(location)));
+  return candidatesFiltered;
+}
