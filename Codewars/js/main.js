@@ -8543,3 +8543,22 @@ function match(job, candidates) {
   candidatesFiltered = candidatesFiltered.filter(candidate => job.locations.some(location => candidate.currentLocation === location || candidate.desiredLocations.includes(location)));
   return candidatesFiltered;
 }
+
+/*
+==========
+2026_05_29
+==========
+*/
+//#1
+//JavaScript seems to be broken
+//https://www.codewars.com/kata/565d6d1696e154b51b000076
+function semicolonSeparationToCommaSeparation(input) {
+  Array.prototype.join = function(separator) {
+    let str = '';
+    for (let elem of this) {
+      str += elem + separator;
+    }
+    return str.slice(0, str.length-1);
+  }
+  return input.split(";").join(",");  
+}
