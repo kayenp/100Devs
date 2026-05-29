@@ -8591,7 +8591,3 @@ const maxSpan = (array) => {
   }
   return span;
 }
-
-//#5
-//Find square within a given rectangle.
-//https://www.codewars.com/kata/5c2deeea41e2304c133c1d1b
