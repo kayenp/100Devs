@@ -8562,3 +8562,12 @@ function semicolonSeparationToCommaSeparation(input) {
   }
   return input.split(";").join(",");  
 }
+
+//#2
+//Magic Index
+//https://www.codewars.com/kata/57d5fed61a6282bf6f002a5f
+const findMagic = arr => arr.find((num, pos) => num === pos) || -1;
+
+//#3
+//What rank is this card?
+//https://www.codewars.com/kata/59cbcb4523dacc2ccd000030
