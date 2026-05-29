@@ -8578,3 +8578,20 @@ function rank(card) {
     : (cardMap[cardVal] || Number(cardVal));
 }
 
+//#4
+//Max span
+//https://www.codewars.com/kata/5a3f26dbb6486aa9c3000081
+const maxSpan = (array) => {
+  let span = 0;
+  for (let i = 0; i < array.length; i++) {
+    let tempArr = array.slice(array.indexOf(array[i]), array.lastIndexOf(array[i])+1).length;
+    if (tempArr > span) {
+      span = tempArr;
+    }
+  }
+  return span;
+}
+
+//#5
+//Find square within a given rectangle.
+//https://www.codewars.com/kata/5c2deeea41e2304c133c1d1b
