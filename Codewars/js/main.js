@@ -8571,3 +8571,10 @@ const findMagic = arr => arr.find((num, pos) => num === pos) || -1;
 //#3
 //What rank is this card?
 //https://www.codewars.com/kata/59cbcb4523dacc2ccd000030
+function rank(card) {
+  const cardMap = { t:10, j:11, q:12, k:13, a:14 };
+  const cardVal = card.slice(0, 1).toLowerCase();
+  return ((!cardMap[cardVal] && Number.isNaN(Number(cardVal))) || cardVal < 2) ? 0 
+    : (cardMap[cardVal] || Number(cardVal));
+}
+
