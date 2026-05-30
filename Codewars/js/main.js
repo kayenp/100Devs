@@ -8591,3 +8591,17 @@ const maxSpan = (array) => {
   }
   return span;
 }
+
+/*
+==========
+2026_05_30
+==========
+*/
+//#1
+//noobCode 04: HOT SINGLES...compare two arrays, return the unpaired items !
+//https://www.codewars.com/kata/57475353facb0e7431000651
+function hotSingles(arr1, arr2) {
+    const arr1Filtered = arr1.filter(ele => !arr2.includes(ele)); 
+    const arr2Filtered = arr2.filter(ele => !arr1.includes(ele));
+    return [...new Set(arr1Filtered.concat(arr2Filtered))];
+}
