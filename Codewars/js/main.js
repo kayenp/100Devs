@@ -8605,3 +8605,30 @@ function hotSingles(arr1, arr2) {
     const arr2Filtered = arr2.filter(ele => !arr1.includes(ele));
     return [...new Set(arr1Filtered.concat(arr2Filtered))];
 }
+
+/*
+==========
+2026_05_31
+==========
+*/
+//#1
+//Tree Photography
+//https://www.codewars.com/kata/64fd5072fa88ae669bf15342
+function treePhotography(trees) {
+  
+  let compNum = trees[0];
+  let left = 1;
+  let right = 1;
+  
+  for (let i = 1; i < trees.length; i++) {
+     (compNum < trees[i]) && (left++, compNum = trees[i]);
+  }
+  
+  compNum = trees[trees.length-1];
+  
+  for (let i = trees.length-2; i >= 0; i--) {
+    (compNum < trees[i]) && (right++, compNum = trees[i]);
+  }
+  
+  return (left > right) ? 'left' : 'right'
+}
