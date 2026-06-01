@@ -8632,3 +8632,19 @@ function treePhotography(trees) {
   
   return (left > right) ? 'left' : 'right'
 }
+
+
+/*
+==========
+2026_05_31
+==========
+*/
+//#1
+//Stalin Sort
+//https://www.codewars.com/kata/699af631058f5c12b04f4efe
+function stalinSort(array) {
+  let i = 0;
+  while (array[i+1] !== undefined) {
+    (array[i] <= array[i+1]) ? i++ : array.splice(i+1,1);
+  }
+}
