@@ -8636,7 +8636,7 @@ function treePhotography(trees) {
 
 /*
 ==========
-2026_05_31
+2026_06_01
 ==========
 */
 //#1
@@ -8647,4 +8647,17 @@ function stalinSort(array) {
   while (array[i+1] !== undefined) {
     (array[i] <= array[i+1]) ? i++ : array.splice(i+1,1);
   }
+}
+
+//#2
+//Deletion in an array
+//https://www.codewars.com/kata/5505552bd181b990d9000caf
+function deleteValues(array, pred) {
+  for(var i = 0; i < array.length; i++) {
+    if ( pred(array[i]) ) {
+      array.splice(i, 1);
+      i--;
+    }
+  }
+  return array;
 }
