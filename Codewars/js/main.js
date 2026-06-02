@@ -8674,3 +8674,27 @@ function swapTwo(array, a, b) {
   const arrayCopy = array.slice();
   return (arrayCopy[array.indexOf(a)] = b, arrayCopy[array.lastIndexOf(b)] = a, arrayCopy);
 }
+
+//#2
+//Pernicious Numbers
+//https://www.codewars.com/kata/56e195d02bb22479e50016af
+function pernicious(n){
+  if (n < 3) {
+    return 'No pernicious numbers';
+  };
+  let nCopy = Math.floor(n);
+  const outputArr = [];
+  for (let i = 1; i <= nCopy; i++) {
+    let biValSum = i.toString(2).split('').reduce((acc, currVal) => Number(acc) + Number(currVal), 0);  
+    for (let j = 1; j < biValSum; j++) {
+      if (biValSum % j === 0 && j !== 1) {
+       break;
+      };
+      if (j === biValSum-1) {
+        outputArr.push(i);
+      };
+    };
+  };
+  return outputArr;
+};
+
