@@ -8661,3 +8661,16 @@ function deleteValues(array, pred) {
   }
   return array;
 }
+
+/*
+==========
+2026_06_02
+==========
+*/
+//#1
+//Swap two elements
+//https://www.codewars.com/kata/5a3f4eace1ce0eeda600003d
+function swapTwo(array, a, b) {
+  const arrayCopy = array.slice();
+  return (arrayCopy[array.indexOf(a)] = b, arrayCopy[array.lastIndexOf(b)] = a, arrayCopy);
+}
