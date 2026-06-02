@@ -8698,3 +8698,16 @@ function pernicious(n){
   return outputArr;
 };
 
+//#3
+//Prison Break
+//https://www.codewars.com/kata/6507e3170b7009117e0c7865
+function freedPrisoners(prison){
+  if (!prison[0]) {
+    return 0;
+  }
+  const outputArr = [prison[0]];
+  for (let i = 1; i < prison.length; i++) {
+    prison[i] !== outputArr[outputArr.length-1] && outputArr.push(prison[i]);
+  }
+  return outputArr.length;
+}
