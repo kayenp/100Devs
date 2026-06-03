@@ -8711,3 +8711,19 @@ function freedPrisoners(prison){
   }
   return outputArr.length;
 }
+
+/*
+==========
+2026_06_03
+==========
+*/
+//#1
+//Party People
+//https://www.codewars.com/kata/65013fc50038a68939098dcf
+function partyPeople(party) {
+  let partyCopy = party.slice();
+  while(partyCopy.find(num => num > partyCopy.length)) {
+    partyCopy = partyCopy.filter(num => num < partyCopy.length);
+  };
+  return partyCopy.length;
+}
