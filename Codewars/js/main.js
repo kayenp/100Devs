@@ -8727,3 +8727,21 @@ function partyPeople(party) {
   };
   return partyCopy.length;
 }
+
+/*
+==========
+2026_06_05
+==========
+*/
+//#1
+//Lost Lineup
+//https://www.codewars.com/kata/6914c975e159c8f7e120cc84function findLineup(distances) {
+  let sorted = distances.slice().sort((a, b) => a - b);
+  for (let i = 0; i < distances.length; i++) {
+    if (sorted[i] !== i) {
+      return [];
+    }
+  } 
+  sorted = sorted.map(num => distances.indexOf(num)+1);
+  return sorted;
+}
