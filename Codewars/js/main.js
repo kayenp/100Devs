@@ -8774,4 +8774,12 @@ function getMiddle(s) {
 //https://www.codewars.com/kata/5667e8f4e3f572a8f2000039
 const accum = s => s.split('')
    .map((char, ind) => char.toUpperCase() + char.toLowerCase().repeat(ind))
-   .join('-')
+   .join('-');
+
+//#4
+//Isograms
+//https://www.codewars.com/kata/54ba84be607a92aa900000f1
+function isIsogram(str){
+  const setStr = [...new Set(str.toLowerCase())];
+  return (setStr.length === str.length);
+}
