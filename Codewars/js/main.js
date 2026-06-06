@@ -8783,3 +8783,4 @@ function isIsogram(str){
   const setStr = [...new Set(str.toLowerCase())];
   return (setStr.length === str.length);
 }
+
