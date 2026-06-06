@@ -8798,3 +8798,13 @@ Object.defineProperty(
    }
   }
 );
+
+//#6
+//Complementary DNA
+//https://www.codewars.com/kata/554e4a2f232cdd87d9000038
+function dnaStrand(dna){
+  return dna.split('')
+    .map(sym => (sym === 'A') ? 'T' 
+         : (sym === 'T') ? 'A' 
+         : (sym === 'C') ? 'G' : 'C').join('');
+}
