@@ -8768,3 +8768,10 @@ function getMiddle(s) {
   const middle = Math.floor(length/2);
   return s.slice(middle-((length % 2 > 0) ? 0 : 1), middle+1);
 }
+
+//#3
+//Mumbling
+//https://www.codewars.com/kata/5667e8f4e3f572a8f2000039
+const accum = s => s.split('')
+   .map((char, ind) => char.toUpperCase() + char.toLowerCase().repeat(ind))
+   .join('-')
