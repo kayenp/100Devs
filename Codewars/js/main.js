@@ -8759,3 +8759,15 @@ function highAndLow(numbers) {
   const strArr = numbers.split(' ');
   return `${Math.max(...strArr)} ${Math.min(...strArr)}`;
 }
+
+//#2
+//Get the Middle Character
+//https://www.codewars.com/kata/56747fd5cb988479af000028
+function getMiddle(s) {
+  let length = s.length;
+  const middle = Math.floor(length/2);
+  return s.slice(middle-((length % 2 > 0) ? 0 : 1), middle+1);
+}
+
+//#3
+//
