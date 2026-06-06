@@ -8768,6 +8768,3 @@ function getMiddle(s) {
   const middle = Math.floor(length/2);
   return s.slice(middle-((length % 2 > 0) ? 0 : 1), middle+1);
 }
-
-//#3
-//
