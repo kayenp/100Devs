@@ -8746,3 +8746,16 @@ function findLineup(distances) {
   sorted = sorted.map(num => distances.indexOf(num)+1);
   return sorted;
 }
+
+/*
+==========
+2026_06_06
+==========
+*/
+//#1
+//Highest and Lowest
+//https://www.codewars.com/kata/554b4ac871d6813a03000035
+function highAndLow(numbers) {  
+  const strArr = numbers.split(' ');
+  return `${Math.max(...strArr)} ${Math.min(...strArr)}`;
+}
