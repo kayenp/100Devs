@@ -8835,3 +8835,20 @@ var isAnagram = function(test, original) {
   return testSorted.every((char, ind) => char === originalSorted[ind] 
                           && testSorted.length === originalSorted.length);
 };
+
+//#3
+//Remove anchor from URL
+//https://www.codewars.com/kata/51f2b4448cadf20ed0000386
+const removeUrlAnchor = url => url.split('#')[0];
+
+//#4
+//Alternate capitalization
+//https://www.codewars.com/kata/59cfc000aeb2844d16000075
+function capitalize(s){
+  let s1 = '', s2 = '';
+  for (let i = 0; i < s.length; i++) {
+    (i % 2 < 1) ? (s1 += s[i].toUpperCase(), s2 += s[i].toLowerCase()) 
+      : (s1 += s[i].toLowerCase(), s2 += s[i].toUpperCase());
+  }
+  return [s1, s2];
+};
