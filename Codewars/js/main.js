@@ -8808,3 +8808,20 @@ function dnaStrand(dna){
          : (sym === 'T') ? 'A' 
          : (sym === 'C') ? 'G' : 'C').join('');
 }
+
+/*
+==========
+2026_06_07
+==========
+*/
+//#1
+//Reverse words
+//https://www.codewars.com/kata/5259b20d6021e9e14c0010d4
+function reverseWords(str) {
+  return str.split(' ')
+    .map(word => word
+         .split('')
+         .reverse()
+         .join(''))
+    .join(' ');
+}
