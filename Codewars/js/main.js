@@ -8825,3 +8825,13 @@ function reverseWords(str) {
          .join(''))
     .join(' ');
 }
+
+//#2
+//Anagram Detection
+//https://www.codewars.com/kata/529eef7a9194e0cbc1000255
+var isAnagram = function(test, original) {
+  let testSorted = test.toLowerCase().split('').sort();
+  let originalSorted = original.toLowerCase().split('').sort();  
+  return testSorted.every((char, ind) => char === originalSorted[ind] 
+                          && testSorted.length === originalSorted.length);
+};
