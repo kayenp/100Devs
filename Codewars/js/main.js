@@ -8852,3 +8852,13 @@ function capitalize(s){
   }
   return [s1, s2];
 };
+
+//#5
+//The Coupon Code
+//https://www.codewars.com/kata/539de388a540db7fec000642
+function checkCoupon(enteredCode, correctCode, currentDate, expirationDate) {
+  const currDate = new Date(currentDate);
+  const lastDate = new Date(expirationDate);
+  lastDate.setDate(lastDate.getDate()+1);
+  return (enteredCode === correctCode && currDate <= lastDate)
+}
