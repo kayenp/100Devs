@@ -8924,3 +8924,17 @@ function sortGiftCode(code){
     .sort()
     .join('');
 }
+
+//#6
+//Switcheroo
+//https://www.codewars.com/kata/57f759bb664021a30300007d
+function switcheroo(x){
+  let output = '';
+  
+  for (let i = 0; i < x.length; i++) {
+    output += ((x[i] === 'a') ? 'b'
+      : (x[i] === 'b') ? 'a' : 'c')
+    }
+  
+  return output;
+}
