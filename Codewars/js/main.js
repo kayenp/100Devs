@@ -8938,3 +8938,12 @@ function switcheroo(x){
   
   return output;
 }
+
+//#7
+//Filter the number
+//https://www.codewars.com/kata/55b051fac50a3292a9000025
+function filterString(value) {
+ return Number(value.split('')
+               .filter(char => !Number.isNaN(Number(char)))
+               .join(''));
+}
