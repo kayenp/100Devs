@@ -8913,3 +8913,14 @@ var greet = function(name) {
   let nameCopy = name[0].toUpperCase() + name.slice(1).toLowerCase();
   return `Hello ${nameCopy}!`;
 };
+
+//#5
+//Sort the Gift Code
+//https://www.codewars.com/kata/52aeb2f3ad0e952f560005d3
+function sortGiftCode(code){
+  return code
+    .slice()
+    .split('')
+    .sort()
+    .join('');
+}
