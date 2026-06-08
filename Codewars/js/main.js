@@ -8894,4 +8894,14 @@ function alphabetWar(fight) {
 const digits = n => n.toString().length
 
 //#3
-//
+//Bumps in the Road
+//https://www.codewars.com/kata/57ed30dde7728215300005fa
+function bump(x){
+  let bumps = 0;
+  
+  for (let i = 0; i < x.length; i++) {
+    (x[i] === 'n') && bumps++;
+  };
+  
+  return (bumps <= 15) ? 'Woohoo!' : 'Car Dead';
+}
