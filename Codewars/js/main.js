@@ -8905,3 +8905,11 @@ function bump(x){
   
   return (bumps <= 15) ? 'Woohoo!' : 'Car Dead';
 }
+
+//#4
+//Greet Me
+//https://www.codewars.com/kata/535474308bb336c9980006f2
+var greet = function(name) {
+  let nameCopy = name[0].toUpperCase() + name.slice(1).toLowerCase();
+  return `Hello ${nameCopy}!`;
+};
