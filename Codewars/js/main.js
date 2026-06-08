@@ -8887,3 +8887,11 @@ function alphabetWar(fight) {
   return (leftTotal === rightTotal) ? "Let's fight again!" :
     ((leftTotal > rightTotal) ? 'Left' : 'Right') + ' side wins!';
 }
+
+//#2
+//Number of Decimal Digits
+//https://www.codewars.com/kata/58fa273ca6d84c158e000052
+const digits = n => n.toString().length
+
+//#3
+//
