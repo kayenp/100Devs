@@ -8862,3 +8862,28 @@ function checkCoupon(enteredCode, correctCode, currentDate, expirationDate) {
   lastDate.setDate(lastDate.getDate()+1);
   return (enteredCode === correctCode && currDate <= lastDate)
 }
+
+/*
+==========
+2026_06_08
+==========
+*/
+//#1
+//Alphabet war
+//https://www.codewars.com/kata/59377c53e66267c8f6000027
+function alphabetWar(fight) {
+
+  const leftMap = ['s','b','p','w'];
+  const rightMap = ['z','d','q','m'];
+  let leftTotal = 0;
+  let rightTotal = 0;
+  
+  for (let i = 0; i < fight.length; i++) {
+    let char = fight[i];
+    leftMap.includes(char) && (leftTotal += leftMap.indexOf(char) +1);
+    rightMap.includes(char) && (rightTotal += rightMap.indexOf(char) +1);
+  }
+
+  return (leftTotal === rightTotal) ? "Let's fight again!" :
+    ((leftTotal > rightTotal) ? 'Left' : 'Right') + ' side wins!';
+}
