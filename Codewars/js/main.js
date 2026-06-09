@@ -8956,3 +8956,23 @@ function filterString(value) {
 //#1
 //Moves in squared strings (I)
 //https://www.codewars.com/kata/56dbe0e313c2f63be4000b25
+function transformString(s) {
+  return s.split('\n').map(chars => chars.split(''));
+}
+
+function vertMirror(strng) {
+  return strng.map(subArr => subArr.reverse().join('')).join('\n');
+}
+
+function horMirror(strng) {
+  const s = strng.map(subArr => subArr.join(''));
+  for (let i = 0, j = s.length-1; i < s.length/2; i++, j--) {
+    let interim = s[i];
+    s[i] = s[j], s[j] = interim;
+  }
+  return s.join('\n');
+}
+
+function oper(fct, s) {
+  return fct(transformString(s));
+}
