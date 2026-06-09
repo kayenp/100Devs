@@ -8989,3 +8989,17 @@ function solve(arr){
     return count;
   })
 }
+
+//#3
+//Odd-Even String Sort
+//https://www.codewars.com/kata/580755730b5a77650500010c
+function sortMyString(S) {
+    let evens = '';
+    let odds = '';
+  
+    for (let i = 0; i < S.length; i++) {
+      (i % 2 < 1) ? evens += S[i] : odds += S[i]
+    }
+  
+    return `${evens} ${odds}`;
+};
