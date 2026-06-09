@@ -8976,3 +8976,16 @@ function horMirror(strng) {
 function oper(fct, s) {
   return fct(transformString(s));
 }
+
+//#2
+//Alphabet symmetry
+//http://codewars.com/kata/59d9ff9f7905dfeed50000b0
+function solve(arr){  
+  return arr.map(elem => {
+    let count = 0;
+    for (let i = 0; i < elem.length; i++) {
+      (elem[i].toLowerCase() === String.fromCharCode(i+97)) && count++;
+      }
+    return count;
+  })
+}
