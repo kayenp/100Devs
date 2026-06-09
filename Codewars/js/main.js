@@ -8947,3 +8947,12 @@ function filterString(value) {
                .filter(char => !Number.isNaN(Number(char)))
                .join(''));
 }
+
+/*
+==========
+2026_06_09
+==========
+*/
+//#1
+//Moves in squared strings (I)
+//https://www.codewars.com/kata/56dbe0e313c2f63be4000b25
