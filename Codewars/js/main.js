@@ -9086,3 +9086,11 @@ function swap (string) {
 //Cat and Mouse - Easy Version
 //https://www.codewars.com/kata/57ee24e17b45eff6d6000164
 const catMouse = x => (x.indexOf('m') - x.indexOf('C') > 4) ? "Escaped!" : "Caught!";
+
+//#3
+//String Merge!
+//https://www.codewars.com/kata/597bb84522bc93b71e00007e
+function stringMerge(string1, string2, letter) {
+  return string1.slice(0, string1.indexOf(letter)+1) 
+    + string2.slice(string2.indexOf(letter)+1)
+}
