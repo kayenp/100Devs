@@ -9003,3 +9003,19 @@ function sortMyString(S) {
   
     return `${evens} ${odds}`;
 };
+
+/*
+==========
+2026_06_16
+==========
+*/
+//#1
+//Caffeine Script
+//https://www.codewars.com/kata/5434283682b0fdb0420000e6
+function caffeineBuzz(n) {
+    let outputStr = '';
+    outputStr += ((n % 3 === 0 && n % 4 === 0) ? 'Coffee' 
+                  : (n % 3 === 0) ? 'Java' : '');
+    (outputStr && n % 2 === 0) && (outputStr += 'Script');
+    return (outputStr) ? outputStr : 'mocha_missing!';
+}
