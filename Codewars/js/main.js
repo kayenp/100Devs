@@ -9065,3 +9065,19 @@ function solve(s){
   }
   return (prevChain > currChain) ? prevChain : currChain;
 }
+
+/*
+==========
+2026_06_17
+==========
+*/
+//#1
+//Changing letters
+//https://www.codewars.com/kata/5831c204a31721e2ae000294
+function swap (string) {
+  let outputStr = '';
+  for (let char of string) {
+    outputStr += ('aeiou'.includes(char) ? char.toUpperCase() : char)
+  }
+  return outputStr;
+}
