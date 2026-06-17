@@ -9081,3 +9081,8 @@ function swap (string) {
   }
   return outputStr;
 }
+
+//#2
+//Cat and Mouse - Easy Version
+//https://www.codewars.com/kata/57ee24e17b45eff6d6000164
+const catMouse = x => (x.indexOf('m') - x.indexOf('C') > 4) ? "Escaped!" : "Caught!";
