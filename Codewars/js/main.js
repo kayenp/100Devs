@@ -9023,3 +9023,25 @@ function caffeineBuzz(n) {
 //#2
 //All Inclusive?
 //https://www.codewars.com/kata/5700c9acc1555755be00027e
+function containAllRots(strng, arr) {
+  if (!strng) {
+    return true;
+  }
+  for (let i = 0; i < strng.length; i++) {
+    let compareStr = '';
+    for (let j = 0; j < strng.length; j++) {
+      compareStr += strng[(i+j) % strng.length]
+    }
+    if (!arr.includes(compareStr)) {
+      return false;
+    }
+  }
+  return true;
+}
+
+//#3
+//Substituting Variables Into Strings: Padded Numbers
+//https://www.codewars.com/kata/51c89385ee245d7ddf000001
+function solution(value){
+  return `Value is ${String(value).padStart(5, '0')}`;
+}
