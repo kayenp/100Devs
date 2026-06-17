@@ -9045,3 +9045,23 @@ function containAllRots(strng, arr) {
 function solution(value){
   return `Value is ${String(value).padStart(5, '0')}`;
 }
+
+//#4
+//Longest vowel chain
+//https://www.codewars.com/kata/59c5f4e9d751df43cf000035
+function solve(s){
+  let prevChain = 0;
+  let currChain = 0;
+  const vowelMap = ['a','e','i','o','u'];
+  for (let i = 0; i < s.length; i++) {
+    if (vowelMap.includes(s[i])) {
+      currChain++;
+    } else {
+      if (currChain > prevChain) {
+        prevChain = currChain;
+      }
+      currChain = 0;
+    }
+  }
+  return (prevChain > currChain) ? prevChain : currChain;
+}
