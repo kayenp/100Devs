@@ -9019,3 +9019,7 @@ function caffeineBuzz(n) {
     (outputStr && n % 2 === 0) && (outputStr += 'Script');
     return (outputStr) ? outputStr : 'mocha_missing!';
 }
+
+//#2
+//All Inclusive?
+//https://www.codewars.com/kata/5700c9acc1555755be00027e
