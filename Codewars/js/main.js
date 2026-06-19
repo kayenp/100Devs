@@ -9129,3 +9129,21 @@ function shorterReverseLonger(a,b){
   (b.length > a.length) ? (longest = b, shortest = a) : (longest = a, shortest = b);
   return shortest + (longest.split('').reverse().join('')) + shortest
 }
+
+//#4
+//Basic Math (Add or Subtract)
+//https://www.codewars.com/kata/5809b62808ad92e31b000031
+function calculate(str) {
+  let outputStr = str.replaceAll('plus',' + ')
+    .replaceAll('minus',' - ')
+    .split(' ')
+    .map(ele => !Number.isNaN(Number(ele)) ? Number(ele) : ele);
+  
+  let lOp = outputStr[0];
+  
+  for (let i = 1; i < outputStr.length-1; i = i+2) {
+    lOp = ((outputStr[i] === '+') ? lOp + outputStr[i+1] : lOp - outputStr[i+1]);
+  }
+  
+  return lOp.toString();
+}
