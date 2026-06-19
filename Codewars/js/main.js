@@ -9158,3 +9158,21 @@ var makeBackronym = function(string){
   }
   return outputStr.trim();
 };
+
+/*
+==========
+2026_06_19
+==========
+*/
+//#1
+//Vowel one
+//https://www.codewars.com/kata/580751a40b5a777a200000a1
+function vowelOne(s){
+  const vowelMap = ['a','e','i','o','u'];
+  const sCopy = s.toLowerCase();
+  let outputStr = '';
+  for (let i = 0; i < sCopy.length; i++) {
+    outputStr += (vowelMap.includes(sCopy[i]) ? '1' : '0')
+  }
+  return outputStr;
+}
