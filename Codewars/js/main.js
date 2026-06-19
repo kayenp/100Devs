@@ -9176,3 +9176,21 @@ function vowelOne(s){
   }
   return outputStr;
 }
+
+//#2
+//Initialize my name
+//https://www.codewars.com/kata/5768a693a3205e1cc100071f
+function initializeNames(name){
+  const nameArr = name.split(' ');
+  let outputArr = [nameArr[0]];
+  const middle = (nameArr.length >= 3) && true;
+  let initialsArr = [];
+  
+  for (let i = 1; i < nameArr.length-1; i++) {
+    initialsArr.push(nameArr[i][0] + '.');
+  };
+  
+  outputArr.push(...initialsArr), (nameArr.length > 1) && outputArr.push(nameArr[nameArr.length-1]);
+  
+  return outputArr.join(' ');
+}
