@@ -9147,3 +9147,14 @@ function calculate(str) {
   
   return lOp.toString();
 }
+
+//#5
+//makeBackronym
+//https://www.codewars.com/kata/55805ab490c73741b7000064
+var makeBackronym = function(string){
+  let outputStr = '';
+  for (let i = 0; i < string.length; i++) {
+    outputStr += dict[string[i].toUpperCase()] + ' '
+  }
+  return outputStr.trim();
+};
