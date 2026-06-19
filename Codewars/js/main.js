@@ -9194,3 +9194,25 @@ function initializeNames(name){
   
   return outputArr.join(' ');
 }
+
+//#3
+//Dot Calculator
+//https://www.codewars.com/kata/6071ef9cbe6ec400228d9531
+function dotCalculator(equation) {
+  const opMap = ['+','-','*','//'];
+  let eArr = equation.split(' ');
+  eArr = eArr.map(ele => (!opMap.includes(ele)) ? ele.length : ele);
+  
+  switch(eArr[1]) {
+      case '+': eArr = eArr[0] + eArr[2];
+        break;
+      case '-': eArr = eArr[0] - eArr[2];
+        break;
+      case '*': eArr = eArr[0] * eArr[2];
+        break;
+      case '//': eArr = eArr[0] / eArr[2];
+        break;
+  }
+  
+  return '.'.repeat(eArr);
+}
