@@ -9216,3 +9216,16 @@ function dotCalculator(equation) {
   
   return '.'.repeat(eArr);
 }
+
+//#4
+//Help Bob count letters and digits.
+//https://www.codewars.com/kata/5738f5ea9545204cec000155
+function countLettersAndDigits(input) {
+  return (
+    input.toLowerCase()
+      .split('')
+      .filter(char => ((char.charCodeAt(0) >= 97 && char.charCodeAt(0) <= 122) 
+                      || char.charCodeAt(0) >= 48 && char.charCodeAt(0) <= 57))
+      .length
+  )
+}
