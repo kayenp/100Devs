@@ -9094,3 +9094,20 @@ function stringMerge(string1, string2, letter) {
   return string1.slice(0, string1.indexOf(letter)+1) 
     + string2.slice(string2.indexOf(letter)+1)
 }
+
+/*
+==========
+2026_06_18
+==========
+*/
+//#1
+//Unique string characters
+//https://www.codewars.com/kata/5a262cfb8f27f217f700000b
+function solve(a,b){
+  let outputStr = '';
+  const aB = a+b
+  for (let i = 0; i < aB.length; i++) {
+    (a.includes(aB[i]) ^ b.includes(aB[i])) && (outputStr += aB[i])
+  }
+  return outputStr;
+};
