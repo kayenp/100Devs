@@ -9120,3 +9120,12 @@ function longestWord(stringOfWords) {
     .sort((a,b) => a.length - b.length)
     .slice(-1)[0]
 }
+
+//#3
+//shorter concat [reverse longer]
+//https://www.codewars.com/kata/54557d61126a00423b000a45
+function shorterReverseLonger(a,b){
+  let shortest, longest;
+  (b.length > a.length) ? (longest = b, shortest = a) : (longest = a, shortest = b);
+  return shortest + (longest.split('').reverse().join('')) + shortest
+}
