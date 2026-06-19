@@ -9111,3 +9111,12 @@ function solve(a,b){
   }
   return outputStr;
 };
+
+//#2
+//Inspiring Strings
+//https://www.codewars.com/kata/5939ab6eed348a945f0007b2
+function longestWord(stringOfWords) {
+  return stringOfWords.split(' ')
+    .sort((a,b) => a.length - b.length)
+    .slice(-1)[0]
+}
