@@ -9238,3 +9238,26 @@ function countLettersAndDigits(input) {
 //#1
 //Building Strings From a Hash
 //https://www.codewars.com/kata/51c7d8268a35b6b8b40002f2
+function solution(pairs){
+  let outputStr = '';
+  for (let prop in pairs) {
+    outputStr += `${prop} = ${pairs[prop]},`
+  }
+  return outputStr.slice(0,outputStr.length-1);
+}
+
+//#2
+//Interview Question (easy)
+//https://www.codewars.com/kata/5b358a1e228d316283001892
+function getStrings(city){
+  const charMap = {};
+  const cityCopy = city.toLowerCase();
+  
+  for (let char of cityCopy) {
+    if (char === ' ') {
+      continue;
+    }
+    (!charMap[char+':']) ? charMap[char+':'] = '*' : charMap[char+':'] += '*';
+  }
+  return Object.entries(charMap).map(subArr => subArr.join('')).join() 
+}
