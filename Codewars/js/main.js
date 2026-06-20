@@ -9261,3 +9261,16 @@ function getStrings(city){
   }
   return Object.entries(charMap).map(subArr => subArr.join('')).join() 
 }
+
+//#3
+//Search for letters
+//https://www.codewars.com/kata/52dbae61ca039685460001ae
+function change(string){
+  let outputArr = '0'.repeat(26).split('');
+  string
+    .toLowerCase()
+    .split('')
+    .forEach(char => (char.charCodeAt(0) >= 97 && char.charCodeAt(0) <= 122) 
+             && (outputArr[char.charCodeAt(0) - 97] = '1'))
+  return outputArr.join('');
+}
