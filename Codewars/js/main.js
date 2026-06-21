@@ -9314,3 +9314,12 @@ function findScreenHeight(width, ratio) {
 //Return substring instance count
 //https://www.codewars.com/kata/5168b125faced29f66000005
 const solution = (fullText, search) => fullText.split(search).length -1
+
+
+//#4
+//Count consonants
+//https://www.codewars.com/kata/564e7fc20f0b53eb02000106
+const consonantCount = str => str.toLowerCase()
+                                  .split('')
+                                  .reduce((acc, currVal) => (currVal.charCodeAt(0) > 122 || currVal.charCodeAt(0) < 97) ? acc 
+                                            : ('aeiou'.includes(currVal) ? acc : acc + 1), 0)
