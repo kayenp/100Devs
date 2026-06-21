@@ -9309,3 +9309,8 @@ function findScreenHeight(width, ratio) {
 
   return ratioArr.join('x');
 }
+
+//#3
+//Return substring instance count
+//https://www.codewars.com/kata/5168b125faced29f66000005
+const solution = (fullText, search) => fullText.split(search).length -1
