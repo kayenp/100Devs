@@ -9281,4 +9281,31 @@ function change(string){
 ==========
 */
 //#1
-//
+//Scaling Squared Strings
+//https://www.codewars.com/kata/56ed20a2c4e5d69155000301
+function scale(strng, k, n) {
+  if (!strng) {
+    return '';
+  }
+  
+  return strng
+    .split('\n')
+    .map(elem => elem
+         .split('')
+         .map(char => char
+              .repeat(k))
+         .join(''))
+    .map(ele => ele + (('\n'+ele).repeat(n-1))).join('\n');
+}
+
+//#2
+//Find Screen Size
+//https://www.codewars.com/kata/5bbd279c8f8bbd5ee500000f
+function findScreenHeight(width, ratio) {  
+  const ratioArr = ratio.split(':').map(num => Number(num));
+  
+  ratioArr[1] = (width/ratioArr[0]) * ratioArr[1];
+  ratioArr[0] = width;
+
+  return ratioArr.join('x');
+}
