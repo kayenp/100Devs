@@ -9337,5 +9337,23 @@ const freqSeq = (str, sep) => str.split('')
   .join(sep);
 
 //#2
-//
+//Broken sequence
+//https://www.codewars.com/kata/5512e5662b34d88e44000060
+function findMissingNumber(sequence){
+  const seqArr = sequence.split(' ').map(ele => Number(ele)).sort((a, b) => a - b);
+  if (sequence.length === 0) {
+    return 0;
+  }
+ if (seqArr.includes(NaN) || seqArr[0] !== 1) {
+   return 1;
+ }
+  for (let i = 0; i < seqArr.length; i++) {
+    if (seqArr[i+1] !== undefined) {
+      if (seqArr[i+1] !== seqArr[i]+1) {
+        return seqArr[i] + 1;
+      }
+    }
+  }
+  return 0
+}
                                           
