@@ -9322,4 +9322,20 @@ const solution = (fullText, search) => fullText.split(search).length -1
 const consonantCount = str => str.toLowerCase()
                                   .split('')
                                   .reduce((acc, currVal) => (currVal.charCodeAt(0) > 122 || currVal.charCodeAt(0) < 97) ? acc 
-                                            : ('aeiou'.includes(currVal) ? acc : acc + 1), 0)
+                                            : ('aeiou'.includes(currVal) ? acc : acc + 1), 0);
+
+/*
+==========
+2026_06_22
+==========
+*/
+//#1
+//Frequency sequence
+//https://www.codewars.com/kata/585a033e3a36cdc50a00011c
+const freqSeq = (str, sep) => str.split('')
+  .map((char, _, arr) => arr.reduce((acc, currVal) => (currVal === char) ? ++acc : acc, 0))
+  .join(sep);
+
+//#2
+//
+                                          
