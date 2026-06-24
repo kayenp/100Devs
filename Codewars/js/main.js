@@ -9389,4 +9389,9 @@ const borrow = s => s
   .join('')
 
 //#4
-//
+//Number to digit tiers
+//https://www.codewars.com/kata/586bca7fa44cfc833e00005c
+const createArrayOfTiers = num => num
+  .toString()
+  .split('')
+  .map((ele, ind, arr) => num.toString().slice(0, ind+1))
