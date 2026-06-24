@@ -9376,4 +9376,17 @@ const spongeMeme = sentence => sentence
   .toLowerCase()
   .split('')
   .map((char, ind) => (ind % 2 < 1) ? char.toUpperCase() : char)
-  .join('');                                           
+  .join('');
+  
+//#3
+//Borrower Speak
+//https://www.codewars.com/kata/57d2ba8095497e484e00002e
+const borrow = s => s
+  .toLowerCase()
+  .split('')
+  .map(char => (char.charCodeAt(0) < 97 
+                || char.charCodeAt(0) > 122) ? '' : char)
+  .join('')
+
+//#4
+//
