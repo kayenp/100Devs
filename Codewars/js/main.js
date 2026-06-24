@@ -9356,4 +9356,18 @@ function findMissingNumber(sequence){
   }
   return 0
 }
-                                          
+
+/*
+==========
+2026_06_23
+==========
+*/
+//#1
+//The old switcheroo 2
+//https://www.codewars.com/kata/55d6a0e4ededb894be000005
+const encode = str => str
+  .toLowerCase()
+  .split('')
+  .map(char => (char.charCodeAt(0) >= 97 
+    && char.charCodeAt(0) <= 122) ? (char.charCodeAt(0) - 96) : char)
+  .join('')
