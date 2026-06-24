@@ -9421,3 +9421,11 @@ const encode = str => str
   .map(char => (char.charCodeAt(0) >= 97 
     && char.charCodeAt(0) <= 122) ? (char.charCodeAt(0) - 96) : char)
   .join('')
+
+//#2
+//Scrabble Score
+//https://www.codewars.com/kata/558fa34727c2d274c10000ae
+const scrabbleScore = str => str
+  .toUpperCase()
+  .split('')
+  .reduce((acc, currVal) => acc + ((!$dict[currVal]) ? 0 : $dict[currVal]),0)
