@@ -9395,3 +9395,14 @@ const createArrayOfTiers = num => num
   .toString()
   .split('')
   .map((ele, ind, arr) => num.toString().slice(0, ind+1))
+
+//#5
+//Hungarian Vowel Harmony (easy)
+//https://www.codewars.com/kata/57fd696e26b06857eb0011e7
+function dative(word) {
+  const front = ['e', 'é', 'i', 'í', 'ö', 'ő', 'ü', 'ű'];
+  const back = ['a', 'á', 'o', 'ó', 'u', 'ú'];
+  
+  return word + word.split('').reduceRight((acc, cV) => (front.includes(cV)) ? acc 
+                                           : (back.includes(cV)) ? (acc = 'nak', acc) : acc,'nek')
+}
