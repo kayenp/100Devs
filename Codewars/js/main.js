@@ -9429,3 +9429,12 @@ const scrabbleScore = str => str
   .toUpperCase()
   .split('')
   .reduce((acc, currVal) => acc + ((!$dict[currVal]) ? 0 : $dict[currVal]),0)
+
+//#3
+//Move all vowels
+//https://www.codewars.com/kata/56bf3287b5106eb10f000899
+const moveVowel = input => input
+    .toLowerCase()
+    .split('')
+    .sort((a,b) => (!'aeiou'.includes(a) && 'aeiou'.includes(b)) ? -1
+                                                : ('aeiou'.includes(a) && 'aeiou'.includes(b) ? 1 : 0)).join('')
