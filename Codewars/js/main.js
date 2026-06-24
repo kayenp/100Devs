@@ -9438,3 +9438,10 @@ const moveVowel = input => input
     .split('')
     .sort((a,b) => (!'aeiou'.includes(a) && 'aeiou'.includes(b)) ? -1
                                                 : ('aeiou'.includes(a) && 'aeiou'.includes(b) ? 1 : 0)).join('')
+
+//#4
+//Ch4113ng3
+//https://www.codewars.com/kata/59e9f404fc3c49ab24000112
+const nerdify = txt => txt.split('').map(char => (char === 'a' || char === 'A') ? '4'
+                               : (char === 'e' || char === 'E') ? '3'
+                               : (char === 'l') ? '1' : char).join('')
