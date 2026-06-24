@@ -9357,3 +9357,17 @@ function findMissingNumber(sequence){
   return 0
 }
                                           
+/*
+==========
+2026_06_23
+==========
+*/
+//#1
+//Find the index of the second occurrence of a letter in a string
+//https://www.codewars.com/kata/63f96036b15a210058300ca9
+const secondSymbol = (s, symbol) => s.split('').reduce((acc, cV, cI) => (acc !== -1 
+                                              || cV !== symbol 
+                                              || cI == s.indexOf(symbol)) ? acc : acc = cI,-1)
+
+//#2
+//                                            
