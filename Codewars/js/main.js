@@ -9356,10 +9356,60 @@ function findMissingNumber(sequence){
   }
   return 0
 }
-
+                    
 /*
 ==========
 2026_06_23
+==========
+*/
+//#1
+//Find the index of the second occurrence of a letter in a string
+//https://www.codewars.com/kata/63f96036b15a210058300ca9
+const secondSymbol = (s, symbol) => s.split('').reduce((acc, cV, cI) => (acc !== -1 
+                                              || cV !== symbol 
+                                              || cI == s.indexOf(symbol)) ? acc : acc = cI,-1)
+
+//#2
+//sPoNgEbOb MeMe
+//https://www.codewars.com/kata/5982619d2671576e90000017
+const spongeMeme = sentence => sentence
+  .toLowerCase()
+  .split('')
+  .map((char, ind) => (ind % 2 < 1) ? char.toUpperCase() : char)
+  .join('');
+  
+//#3
+//Borrower Speak
+//https://www.codewars.com/kata/57d2ba8095497e484e00002e
+const borrow = s => s
+  .toLowerCase()
+  .split('')
+  .map(char => (char.charCodeAt(0) < 97 
+                || char.charCodeAt(0) > 122) ? '' : char)
+  .join('')
+
+//#4
+//Number to digit tiers
+//https://www.codewars.com/kata/586bca7fa44cfc833e00005c
+const createArrayOfTiers = num => num
+  .toString()
+  .split('')
+  .map((ele, ind, arr) => num.toString().slice(0, ind+1))
+
+//#5
+//Hungarian Vowel Harmony (easy)
+//https://www.codewars.com/kata/57fd696e26b06857eb0011e7
+function dative(word) {
+  const front = ['e', 'é', 'i', 'í', 'ö', 'ő', 'ü', 'ű'];
+  const back = ['a', 'á', 'o', 'ó', 'u', 'ú'];
+  
+  return word + word.split('').reduceRight((acc, cV) => (front.includes(cV)) ? acc 
+                                           : (back.includes(cV)) ? (acc = 'nak', acc) : acc,'nek')
+}
+
+/*
+==========
+2026_06_24
 ==========
 */
 //#1
