@@ -9456,3 +9456,10 @@ const lottery = str => str
           && (!arr.slice(0,ind).includes(char)))
   .join('') || 'One more run!';                    
 
+//#6
+//SillyCASE
+//https://www.codewars.com/kata/552ab0a4db0236ff1a00017a
+const sillycase = silly => silly
+  .split('')
+  .map((ele, ind) => (ind < Math.ceil(silly.length/2)) ? ele.toLowerCase() : ele.toUpperCase())
+  .join('')
