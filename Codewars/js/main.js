@@ -9445,3 +9445,14 @@ const moveVowel = input => input
 const nerdify = txt => txt.split('').map(char => (char === 'a' || char === 'A') ? '4'
                                : (char === 'e' || char === 'E') ? '3'
                                : (char === 'l') ? '1' : char).join('')
+
+
+//#5
+//Lottery machine
+//https://www.codewars.com/kata/5832db03d5bafb7d96000107
+const lottery = str => str
+  .split('')
+  .filter((char, ind, arr) => (!Number.isNaN(Number(char))) 
+          && (!arr.slice(0,ind).includes(char)))
+  .join('') || 'One more run!';                    
+
