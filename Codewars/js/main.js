@@ -9370,4 +9370,10 @@ const secondSymbol = (s, symbol) => s.split('').reduce((acc, cV, cI) => (acc !==
                                               || cI == s.indexOf(symbol)) ? acc : acc = cI,-1)
 
 //#2
-//                                            
+//sPoNgEbOb MeMe
+//https://www.codewars.com/kata/5982619d2671576e90000017
+const spongeMeme = sentence => sentence
+  .toLowerCase()
+  .split('')
+  .map((char, ind) => (ind % 2 < 1) ? char.toUpperCase() : char)
+  .join('');                                           
