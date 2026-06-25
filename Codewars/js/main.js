@@ -9463,3 +9463,16 @@ const sillycase = silly => silly
   .split('')
   .map((ele, ind) => (ind < Math.ceil(silly.length/2)) ? ele.toLowerCase() : ele.toUpperCase())
   .join('')
+
+/*
+==========
+2026_06_25
+==========
+*/
+//#1
+//FIXME: Replace all dots
+//https://www.codewars.com/kata/596c6eb85b0f515834000049
+var replaceDots = function(str) {
+  const regExp = /\./g
+  return str.replace(regExp, '-');
+}
