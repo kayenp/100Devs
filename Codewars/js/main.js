@@ -9513,3 +9513,22 @@ function compare(s1, s2) {
   
   return val1 === val2;
 };
+
+/*
+==========
+2026_06_29
+==========
+*/
+//#1
+//Exclamation marks series #7: Remove words from the sentence if it contains one exclamation mark
+//https://www.codewars.com/kata/57fafb6d2b5314c839000195
+function remove (string) {
+  const outputStr = (
+    string
+    .split(' ')
+    .map(sentence => (sentence
+                      .split('')
+                      .reduce((count, char) => (char === '!') ? count+1 : count,0) === 1) ? '' : sentence)
+    .filter(ele => (ele)));
+  return (!outputStr.join('')) ? outputStr.join('') : outputStr.join(' ');
+}
