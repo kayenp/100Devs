@@ -9563,3 +9563,15 @@ function sortVowels(s) {
     .map(char => ('aeiou'.includes(char.toLowerCase()) ? `|${char}` : `${char}|`))
     .join('\n');
 }
+
+//#5
+//String Reordering
+//https://www.codewars.com/kata/5b047875de4c7f9af800011b
+function sentence(arrayOfObjects) {
+  return arrayOfObjects
+    .map(obj => Object.keys(obj))
+    .flat()
+    .sort((a,b) => Number(a) - Number(b))
+    .map(key => arrayOfObjects.filter(obj => obj[key])[0][key])
+    .join(' ');
+}
