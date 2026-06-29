@@ -9490,3 +9490,26 @@ function sevenAte9(str) {
                                                           || arr[ind-1] !== '7' 
                                                           || arr[ind+1] !== '7') ? num : '').join('');
 };
+
+//#2
+//Compare Strings by Sum of Chars
+//https://www.codewars.com/kata/576bb3c4b1abc497ec000065
+function compare(s1, s2) {
+  let val1 = (typeof s1 !== 'string') ? 0
+    : (s1 === '') ? 0 : s1.toUpperCase().split('')
+  
+  let val2 = (typeof s2 !== 'string') ? 0
+    : (s1 === '') ? 0 : s2.toUpperCase().split('')
+  
+  if (val1 !== 0) {
+    val1 = (val1.every(char => (char.charCodeAt(0) >= 65) && (char.charCodeAt(0) <= 90)) 
+            && val1.reduce((acc, cV) => acc + cV.charCodeAt(0), 0)) || 0;
+  }
+  
+  if (val2 !== 0) {
+    val2 = (val2.every(char => (char.charCodeAt(0) >= 65) && (char.charCodeAt(0) <= 90)) 
+            && val2.reduce((acc, cV) => acc + cV.charCodeAt(0), 0)) || 0;
+  }
+  
+  return val1 === val2;
+};
