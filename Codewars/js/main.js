@@ -9476,3 +9476,17 @@ var replaceDots = function(str) {
   const regExp = /\./g
   return str.replace(regExp, '-');
 }
+
+/*
+==========
+2026_06_28
+==========
+*/
+//#1
+//SevenAte9
+//https://www.codewars.com/kata/559f44187fa851efad000087
+function sevenAte9(str) {
+  return str.split('').map((num, ind, arr) => (num !== '9' 
+                                                          || arr[ind-1] !== '7' 
+                                                          || arr[ind+1] !== '7') ? num : '').join('');
+};
