@@ -9532,3 +9532,16 @@ function remove (string) {
     .filter(ele => (ele)));
   return (!outputStr.join('')) ? outputStr.join('') : outputStr.join(' ');
 }
+
+//#2
+//Reversing Fun
+//https://www.codewars.com/kata/566efcfbf521a3cfd2000056
+function flipNumber(s) {
+  let sRev = s.slice().split('').reverse().join('');
+  
+  for (let i = 1; i < sRev.length; i++) {
+    sRev = sRev.slice(0, i) + sRev.slice(i).split('').reverse().join('');
+  }
+  
+  return sRev;
+}
