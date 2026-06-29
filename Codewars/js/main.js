@@ -9545,3 +9545,12 @@ function flipNumber(s) {
   
   return sRev;
 }
+
+//#3
+//Eliminate the intruders! Bit manipulation
+//https://www.codewars.com/kata/5a0d38c9697598b67a000041
+function eliminateUnsetBits(number) {
+  return Number.parseInt(number.split('')
+                         .filter(ele => ele !== '0')
+                         .join(''), 2) || 0;
+}
