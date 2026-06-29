@@ -9554,3 +9554,12 @@ function eliminateUnsetBits(number) {
                          .filter(ele => ele !== '0')
                          .join(''), 2) || 0;
 }
+
+//#4
+//Sort the Vowels!
+//https://www.codewars.com/kata/59e49b2afc3c494d5d00002a
+function sortVowels(s) {
+  return (typeof s !== 'string' || !s) ? '' : s.split('')
+    .map(char => ('aeiou'.includes(char.toLowerCase()) ? `|${char}` : `${char}|`))
+    .join('\n');
+}
