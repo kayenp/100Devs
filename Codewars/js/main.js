@@ -9626,3 +9626,13 @@ const lineupStudents = students => students
   .sort((a, b) => ((a.length - b.length) < 0) ? 1
       : ((a.length - b.length) > 0) ? -1
       : ((a < b) ? 1 : (a > b) ? -1 : 0))
+
+/*
+==========
+2026_07_01
+==========
+*/
+//#1
+//Ordering the words!
+//https://www.codewars.com/kata/55d7e5aa7b619a86ed000070
+const orderWord = s => (!s) ? 'Invalid String!' : s.split('').sort().join('');
