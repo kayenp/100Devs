@@ -9617,3 +9617,7 @@ function countConsonants(str) {
 
   return strCopy.length - (strCopy.length - strSet.size)
 }
+
+//#4
+//Suzuki needs help lining up his students!
+//https://www.codewars.com/kata/5701800886306a876a001031
