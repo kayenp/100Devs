@@ -9575,3 +9575,20 @@ function sentence(arrayOfObjects) {
     .map(key => arrayOfObjects.filter(obj => obj[key])[0][key])
     .join(' ');
 }
+
+/*
+==========
+2026_06_30
+==========
+*/
+//#1
+//The First Non Repeated Character In A String
+//https://www.codewars.com/kata/570f6436b29c708a32000826
+function firstNonRepeated(s) {
+  for (let i = 0; i < s.length; i++) {
+    if (s.indexOf(s[i]) === s.lastIndexOf(s[i])) {
+      return s[i];
+    }
+  }
+  return null;
+}
