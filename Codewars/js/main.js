@@ -9592,3 +9592,14 @@ function firstNonRepeated(s) {
   }
   return null;
 }
+
+//#2
+//Ce*s*r*d Strings
+//https://www.codewars.com/kata/5ff6060ed14f4100106d8e6f
+function uncensor(infected, discovered) {
+  let outputStr = '';
+  for (let i = 0, j = 0; i < infected.length; i++) {
+    (infected[i] === '*') ? (outputStr += discovered[j], j++) : outputStr += infected[i];
+  }
+  return outputStr;
+}
