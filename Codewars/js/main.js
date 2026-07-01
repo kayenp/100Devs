@@ -9621,3 +9621,8 @@ function countConsonants(str) {
 //#4
 //Suzuki needs help lining up his students!
 //https://www.codewars.com/kata/5701800886306a876a001031
+const lineupStudents = students => students
+  .split(' ')
+  .sort((a, b) => ((a.length - b.length) < 0) ? 1
+      : ((a.length - b.length) > 0) ? -1
+      : ((a < b) ? 1 : (a > b) ? -1 : 0))
