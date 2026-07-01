@@ -9603,3 +9603,17 @@ function uncensor(infected, discovered) {
   }
   return outputStr;
 }
+
+//#3
+//How Many Unique Consonants?
+//https://www.codewars.com/kata/5a19226646d843de9000007d
+function countConsonants(str) {
+  const strCopy = str
+    .toLowerCase()
+    .split('')
+    .filter(char => !'aeiou'.includes(char) && (char.charCodeAt(0) >= 97 && char.charCodeAt(0) <= 122))
+  
+  const strSet = new Set(strCopy)
+
+  return strCopy.length - (strCopy.length - strSet.size)
+}
