@@ -9636,3 +9636,13 @@ const lineupStudents = students => students
 //Ordering the words!
 //https://www.codewars.com/kata/55d7e5aa7b619a86ed000070
 const orderWord = s => (!s) ? 'Invalid String!' : s.split('').sort().join('');
+
+/*
+==========
+2026_07_06
+==========
+*/
+//#1
+//Array.diff
+//https://www.codewars.com/kata/523f5d21c841566fde000009/train/javascript
+const arrayDiff = (a, b) => a.filter(num => !b.includes(num))
