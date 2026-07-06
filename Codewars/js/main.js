@@ -9646,3 +9646,16 @@ const orderWord = s => (!s) ? 'Invalid String!' : s.split('').sort().join('');
 //Array.diff
 //https://www.codewars.com/kata/523f5d21c841566fde000009/train/javascript
 const arrayDiff = (a, b) => a.filter(num => !b.includes(num))
+
+//#2
+//Sushi-go-round (Beginner's)
+//https://www.codewars.com/kata/59619e4609868dd923000041
+function totalBill(str) {
+  let strArr = str.split(' ').join('').length;
+  (strArr >= 5) && (strArr = Math.ceil(strArr - (strArr/5)))
+  return strArr * 2;
+}
+
+//#3
+//Count salutes
+//https://www.codewars.com/kata/605ae9e1d2be8a0023b494ed
