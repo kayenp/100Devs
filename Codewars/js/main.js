@@ -9671,3 +9671,30 @@ function spot(s1,s2){
   };
   return outputArr;
 }
+
+/*
+==========
+2026_07_08
+==========
+*/
+//#1
+//Resistor Color Codes
+//https://www.codewars.com/kata/57cf3dad05c186ba22000348
+function decodeResistorColors(bands) {
+  const ohmMap = ['black','brown','red','orange','yellow','green','blue','violet','gray','white'];
+  const toleranceMap = {gold: 5, silver: 10}
+  const [ band1, band2, band3 ] = bands.split(' ').map(band => ohmMap.indexOf(band));
+  const band4 = bands.split(' ').slice(-1)[0];
+  let ohms = Number(band1.toString() + band2.toString()) * 10**band3;
+  
+  const ohmStr = (ohms >= 1000000) 
+    ? (Number.isInteger(ohms/1000000) 
+       ? (ohms/1000000).toString()
+       : (ohms/1000000).toFixed(1)) + 'M'
+    : (ohms >= 1000) ? (Number.isInteger(ohms/1000) 
+                        ? (ohms/1000).toString() 
+                        : (ohms/1000).toFixed(1)) + 'k'
+    : ohms.toString();
+  
+  return `${ohmStr} ohms, ${(!toleranceMap[band4]) ? '20' : toleranceMap[band4]}%`
+}
