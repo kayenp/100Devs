@@ -9698,3 +9698,17 @@ function decodeResistorColors(bands) {
   
   return `${ohmStr} ohms, ${(!toleranceMap[band4]) ? '20' : toleranceMap[band4]}%`
 }
+
+//#2
+//Consecutive Vowels in a String
+//https://www.codewars.com/kata/62a933d6d6deb7001093de16
+function getTheVowels(word) {
+  let count = 0;
+  for (let i = 0, j = 0; i < word.length; i++) {
+    if (word[i] === 'aeiou'[(j % 5)]) {
+      count++;
+      j++;
+    }  
+  }
+  return count;
+}
