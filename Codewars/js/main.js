@@ -9656,6 +9656,18 @@ function totalBill(str) {
   return strArr * 2;
 }
 
-//#3
-//Count salutes
-//https://www.codewars.com/kata/605ae9e1d2be8a0023b494ed
+/*
+==========
+2026_07_07
+==========
+*/
+//#1
+//Spot the Differences
+//https://www.codewars.com/kata/5881460c780e0dd207000084
+function spot(s1,s2){
+  const outputArr = [];
+  for (let i = 0; i < s1.length; i++) {
+    (s1[i] !== s2[i]) && outputArr.push(i);
+  };
+  return outputArr;
+}
