@@ -9712,3 +9712,28 @@ function getTheVowels(word) {
   }
   return count;
 }
+
+/*
+==========
+2026_07_09
+==========
+*/
+//#1
+//Invalid Input - Error Handling #1
+//https://www.codewars.com/kata/55e6125ad777b540d9000042
+function getCount(words) {
+  
+  const alphabet = /[a-z]/i
+  const output = {vowels: 0, consonants: 0};
+  
+  if (typeof words !== "string") {
+    return output;
+  };
+  
+  for (let i = 0; i < words.length; i++) {
+    ('aeiou'.includes(words[i].toLowerCase())) ? output.vowels++ 
+      : (alphabet.test(words[i])) ? output.consonants++ : "";
+  }
+  
+  return output;
+}
