@@ -9737,3 +9737,13 @@ function getCount(words) {
   
   return output;
 }
+
+//#2
+//Which string is worth more?
+//https://www.codewars.com/kata/5840586b5225616069000001
+function highestValue(a, b) {
+  const bVal = b.split('').map(char => char.charCodeAt(0)).reduce((acc, cV) => acc + cV);
+  const aVal = a.split('').map(char => char.charCodeAt(0)).reduce((acc, cV) => acc + cV);
+  return (bVal > aVal) ? b : a;
+}
+
