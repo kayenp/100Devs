@@ -9747,3 +9747,17 @@ function highestValue(a, b) {
   return (bVal > aVal) ? b : a;
 }
 
+//#3
+//Middle Me
+//https://www.codewars.com/kata/59cd155d1a68b70f8e000117
+function middleMe(N, X, Y){
+  let half = Y.repeat(N/2);
+  return (N % 2 < 1) ? half + X + half : X;
+}
+
+//#4
+//Is it a vowel on this position?
+//https://www.codewars.com/kata/5a2b7edcb6486a856e00005b
+function checkVowel(string, position) {
+  return 'aeiou'.includes(string.toLowerCase()[position]);
+};
