@@ -9761,3 +9761,17 @@ function middleMe(N, X, Y){
 function checkVowel(string, position) {
   return 'aeiou'.includes(string.toLowerCase()[position]);
 };
+
+/*
+==========
+2026_07_10
+==========
+*/
+//#1
+//The old switcheroo
+//https://www.codewars.com/kata/55d410c492e6ed767000004f
+function vowel2index(str) {
+  return str.split('')
+    .map((ele, ind) => /[aeiou]/i.test(ele) ? ind+1 : ele)
+    .join('')
+}
