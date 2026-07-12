@@ -9803,3 +9803,19 @@ const remove = string => string.split(' ').map(word => word.replace(/!+$/i, ''))
 function sumOfABeach(beach) {
   return beach.match(/sand+|water+|fish+|sun+/gi)?.length || 0;
 }
+
+//#3
+//Fix My Phone Numbers!
+//https://www.codewars.com/kata/596343a24489a8b2a00000a2
+function isItANum(str) {
+  const digit = str.match(/\d/);
+  
+  if (!digit || digit[0] !== '0') {
+    return 'Not a phone number';
+  }
+  if (str.match(/\d/g)?.length !== 11) {
+    return 'Not a phone number';
+  } else {
+    return str.match(/\d/g).join('');
+  }
+}
