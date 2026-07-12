@@ -9796,3 +9796,10 @@ const tripleX = str => /x{3,}/.exec(str)?.index === str.indexOf('x')
 //Exclamation marks series #5: Remove all exclamation marks from the end of words
 //https://www.codewars.com/kata/57faf32df815ebd49e000117
 const remove = string => string.split(' ').map(word => word.replace(/!+$/i, '')).join(' ')
+
+//#2
+//Sum of a Beach
+//https://www.codewars.com/kata/5b37a50642b27ebf2e000010
+function sumOfABeach(beach) {
+  return beach.match(/sand+|water+|fish+|sun+/gi)?.length || 0;
+}
