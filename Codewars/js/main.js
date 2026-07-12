@@ -9775,3 +9775,13 @@ function vowel2index(str) {
     .map((ele, ind) => /[aeiou]/i.test(ele) ? ind+1 : ele)
     .join('')
 }
+
+/*
+==========
+2026_07_11
+==========
+*/
+//#1
+//L2: Triple X
+//https://www.codewars.com/kata/568dc69683322417eb00002c
+const tripleX = str => /x{3,}/.exec(str)?.index === str.indexOf('x')
