@@ -62,6 +62,7 @@ const simpleMultiplication = number => (number % 2 === 0) ? number * 8 : number 
 /*
 2 -> 3 (1 + 2)
 8 -> 36 (1 + 2 + 3 + 4 + 5 + 6 + 7 + 8)
+
 */
 const summation = num => {
     let sum = 0;
@@ -9785,3 +9786,13 @@ function vowel2index(str) {
 //L2: Triple X
 //https://www.codewars.com/kata/568dc69683322417eb00002c
 const tripleX = str => /x{3,}/.exec(str)?.index === str.indexOf('x')
+
+/*
+==========
+2026_07_12
+==========
+*/
+//#1
+//Exclamation marks series #5: Remove all exclamation marks from the end of words
+//https://www.codewars.com/kata/57faf32df815ebd49e000117
+const remove = string => string.split(' ').map(word => word.replace(/!+$/i, '')).join(' ')
