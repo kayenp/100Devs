@@ -9849,6 +9849,7 @@ function greet(name){
   return "Hello, " + ((name === "Johnny") ? "my love!" : name + "!");
 }
 
+//#3
 //Get Planet Name By ID
 //https://www.codewars.com/kata/515e188a311df01cba000003
 function getPlanetName(id){
@@ -9881,4 +9882,11 @@ function getPlanetName(id){
   }
   
   return name;
+}
+
+//#4
+//Count Odd Numbers below n
+//https://www.codewars.com/kata/59342039eb450e39970000a6
+function oddCount(n){
+  return Math.floor(n/2);
 }
