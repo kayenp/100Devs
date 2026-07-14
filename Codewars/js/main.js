@@ -9819,3 +9819,13 @@ function isItANum(str) {
     return str.match(/\d/g).join('');
   }
 }
+
+/*
+==========
+2026_07_12
+==========
+*/
+//#1
+//Calculate Price Excluding VAT
+//https://www.codewars.com/kata/5890d8bc9f0f422cf200006b
+const excludingVatPrice = price => (!price && price !== 0) ? -1 : price/1.15; 
