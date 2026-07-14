@@ -9841,3 +9841,12 @@ const excludingVatPrice = price => (!price && price !== 0) ? -1 : price/1.15;
 function validatePIN (pin) {
   return (!pin.match(/\D/) && (pin.length === 4 || pin.length === 6))
 }
+
+//#2
+//Jenny's secret message
+//https://www.codewars.com/kata/55225023e1be1ec8bc000390
+function greet(name){
+  return "Hello, " + ((name === "Johnny") ? "my love!" : name + "!");
+}
+
+
