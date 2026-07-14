@@ -9890,3 +9890,10 @@ function getPlanetName(id){
 function oddCount(n){
   return Math.floor(n/2);
 }
+
+//#5
+//Basic variable assignment
+//https://www.codewars.com/kata/50ee6b0bdeab583673000025
+var a = "code";
+var b = "wa.rs";
+var name = a + b;
