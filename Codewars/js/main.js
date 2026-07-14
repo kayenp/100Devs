@@ -9829,3 +9829,15 @@ function isItANum(str) {
 //Calculate Price Excluding VAT
 //https://www.codewars.com/kata/5890d8bc9f0f422cf200006b
 const excludingVatPrice = price => (!price && price !== 0) ? -1 : price/1.15; 
+
+/*
+==========
+2026_07_13
+==========
+*/
+//#1
+//Validate a PIN code
+//https://www.codewars.com/kata/55f8a9c06c018a0d6e000132
+function validatePIN (pin) {
+  return (!pin.match(/\D/) && (pin.length === 4 || pin.length === 6))
+}
