@@ -9897,3 +9897,19 @@ function oddCount(n){
 var a = "code";
 var b = "wa.rs";
 var name = a + b;
+
+/*
+==========
+2026_07_14
+==========
+*/
+//#1
+//Unfinished Loop - Bug Fixing #1
+//https://www.codewars.com/kata/55c28f7304e3eaebef0000da
+function createArray(number) {
+    const newArray = [];
+    for (let counter = 1; counter <= number; counter++) {
+        newArray.push(counter);
+    }
+    return newArray;
+}
