@@ -9980,3 +9980,21 @@ function findWaldo(crowd) {
   crowd.forEach(ele => ele.includes(waldo) && (y = crowd.indexOf(ele), x = ele.indexOf(waldo)));
   return [y,x]
 }
+
+/*
+==========
+2026_07_16
+==========
+*/
+//#1
+//Generate range of integers
+//https://www.codewars.com/kata/55eca815d0d20962e1000106
+function generateRange(min, max, step){
+  const output = [];
+  
+  for (let i = min; i <= max; i = i+step) {
+    output.push(i);
+  }
+  
+  return output;
+}
