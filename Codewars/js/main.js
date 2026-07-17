@@ -9961,3 +9961,22 @@ function convertToCelsius(temperature) {
   var celsius = ((temperature - 32) * (5/9))
   return celsius
 }
+
+/*
+==========
+2026_07_15
+==========
+*/
+//#1
+//Where's Waldo?
+//https://www.codewars.com/kata/638244fb08da6c61361d2c40/solutions/javascript
+function findWaldo(crowd) {
+  let y = 0, x = 0;
+  const waldo = (
+    crowd.join('')
+    .split('')
+    .find((ele, _, arr) => arr.indexOf(ele) === arr.lastIndexOf(ele))
+  );
+  crowd.forEach(ele => ele.includes(waldo) && (y = crowd.indexOf(ele), x = ele.indexOf(waldo)));
+  return [y,x]
+}
