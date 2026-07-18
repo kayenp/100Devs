@@ -10015,3 +10015,20 @@ function canEscape(walls) {
   }
   return true;
 }
+
+//#2
+//Mew Cipher
+//https://www.codewars.com/kata/671bd5419ea261fbb8d0a0ca
+function decipher(code) {
+  const numArr = code.map(elem => elem.split('').map(char => (char === ' ') ? 0 : char.charCodeAt(0) - 96));
+  const outputArr = [];
+  
+  for (let i = 0; i < code[0].length; i++) {
+    let temp = 0;
+    for (let j = 0; j < code.length; j++) {
+      temp += numArr[j][i];
+    }
+    outputArr.push(String.fromCharCode(Math.floor((temp)/code.length)+96))
+  }
+  return outputArr.map(char => (char === '`') ? ' ' : char).join('')
+}
