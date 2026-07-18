@@ -9998,3 +9998,20 @@ function generateRange(min, max, step){
   
   return output;
 }
+
+/*
+==========
+2026_07_17
+==========
+*/
+//#1
+//Hurry up, the walls are closing in!
+//https://www.codewars.com/kata/63ab271e96a48e000e577442
+function canEscape(walls) {
+  for (let i = 1; i <= walls.length; i++) {
+    if (i >= walls[i-1][0] || i >= walls[i-1][1]) {
+      return false;
+    }
+  }
+  return true;
+}
