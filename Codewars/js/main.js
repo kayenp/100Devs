@@ -10049,4 +10049,10 @@ function maskify(cc) {
   return '#'.repeat((cc.slice(0, cc.length-4).length)) + cc.slice(cc.length-4);
 }
 
+//#2
+//All unique
+//https://www.codewars.com/kata/553e8b195b853c6db4000048
+function hasUniqueChars(str){
+  return new Set(str).size === str.length;
+}
 
