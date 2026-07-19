@@ -10056,3 +10056,18 @@ function hasUniqueChars(str){
   return new Set(str).size === str.length;
 }
 
+//#3
+//Valid Parentheses
+//https://www.codewars.com/kata/6411b91a5e71b915d237332d
+function validParentheses(parenStr) {
+  let lParens = 0;
+  let rParens = 0;
+  for (let i = 0; i < parenStr.length; i++) {
+    (parenStr[i] === '(') ? lParens++ 
+      : (parenStr[i] === ')') ? rParens++ : '';
+    if (rParens > lParens) {
+      return false;
+    }
+  }
+  return rParens === lParens
+}
