@@ -10032,3 +10032,21 @@ function decipher(code) {
   }
   return outputArr.map(char => (char === '`') ? ' ' : char).join('')
 }
+
+/*
+==========
+2026_07_18
+==========
+*/
+//#1
+//Credit Card Mask
+//https://www.codewars.com/kata/5412509bd436bd33920011bc
+function maskify(cc) {
+  const strLength = cc.length;
+  if (strLength <= 4) {
+    return cc;
+  }
+  return '#'.repeat((cc.slice(0, cc.length-4).length)) + cc.slice(cc.length-4);
+}
+
+
