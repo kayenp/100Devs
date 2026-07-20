@@ -10071,3 +10071,19 @@ function validParentheses(parenStr) {
   }
   return rParens === lParens
 }
+
+/*
+==========
+2026_07_19
+==========
+*/
+//#1
+//Complete The Pattern #1
+//https://www.codewars.com/kata/5572f7c346eb58ae9c000047
+function pattern(n){
+  let output = [];
+  for (let i = 1; i <= n; i++) {
+    output.push(`${i}`.repeat(i));
+  }
+  return output.join('\n');
+}
