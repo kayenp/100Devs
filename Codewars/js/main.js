@@ -10103,3 +10103,14 @@ function mystery() {
     {sanity: 'Hello'};
   return results;
 }
+
+//#4
+//Triple Trouble
+//https://www.codewars.com/kata/5704aea738428f4d30000914
+function tripleTrouble(one, two, three){
+  let output = '';
+  for (let i = 0; i < one.length; i++) {
+    output += one[i] + two[i] + three[i];
+  };
+  return output;
+ }
