@@ -10087,3 +10087,10 @@ function pattern(n){
   }
   return output.join('\n');
 }
+
+//#2
+//Simple Fun #1: Seats in Theater
+//https://www.codewars.com/kata/588417e576933b0ec9000045
+function seatsInTheater(nCols, nRows, col, row) {
+  return (nCols - (col - 1)) * (nRows - row);
+}
