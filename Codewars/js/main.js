@@ -10140,3 +10140,10 @@ function nearestSq(n){
 function lowercaseCount(str){
   return [...str.matchAll(/[a-z]/g)].length
 }
+
+//#3
+//The falling speed of petals
+//https://www.codewars.com/kata/5a0be7ea8ba914fc9c00006b
+function sakuraFall(v) {
+  return (v <= 0) ? 0 : 400/v;
+}
