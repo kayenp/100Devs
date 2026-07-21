@@ -10114,3 +10114,10 @@ function tripleTrouble(one, two, three){
   };
   return output;
  }
+
+//#5
+//Miles per gallon to kilometers per liter
+//https://www.codewars.com/kata/557b5e0bddf29d861400005d
+function converter (mpg) {
+  return Number((mpg/4.54609188*1.609344).toFixed(2));
+}
