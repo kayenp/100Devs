@@ -10121,3 +10121,16 @@ function tripleTrouble(one, two, three){
 function converter (mpg) {
   return Number((mpg/4.54609188*1.609344).toFixed(2));
 }
+
+/*
+==========
+2026_07_20
+==========
+*/
+//#1
+//Find Nearest square number
+//https://www.codewars.com/kata/5a805d8cafa10f8b930005ba
+function nearestSq(n){
+  return Math.round(Math.sqrt(n))**2;
+}
+
