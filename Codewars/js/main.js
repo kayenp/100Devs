@@ -10152,3 +10152,10 @@ function sakuraFall(v) {
 //Incorrect division method
 //https://www.codewars.com/kata/54d1c59aba326343c80000e7
 const solve = (x, y) => x/y
+
+//#5
+//Closest elevator
+//https://www.codewars.com/kata/5c374b346a5d0f77af500a5a
+function elevator(left, right, call){
+  return (Math.abs(call - left) < Math.abs(call - right)) ? "left" : "right"
+}
