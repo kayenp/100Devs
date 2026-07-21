@@ -10094,3 +10094,12 @@ function pattern(n){
 function seatsInTheater(nCols, nRows, col, row) {
   return (nCols - (col - 1)) * (nRows - row);
 }
+
+//#3
+//Return to Sanity
+//https://www.codewars.com/kata/514a7ac1a33775cbb500001e
+function mystery() {
+  var results =
+    {sanity: 'Hello'};
+  return results;
+}
