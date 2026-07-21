@@ -10147,3 +10147,8 @@ function lowercaseCount(str){
 function sakuraFall(v) {
   return (v <= 0) ? 0 : 400/v;
 }
+
+//#4
+//Incorrect division method
+//https://www.codewars.com/kata/54d1c59aba326343c80000e7
+const solve = (x, y) => x/y
