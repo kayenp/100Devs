@@ -10162,7 +10162,7 @@ function elevator(left, right, call){
 
 /*
 ==========
-2026_07_21
+2026_07_22
 ==========
 */
 //#1
@@ -10227,4 +10227,24 @@ function getStatus(isBusy) {
   return {
     status: msg
   }
+}
+
+/*
+==========
+2026_07_23
+==========
+*/
+//#1
+//Array - squareUp b!
+//https://www.codewars.com/kata/5a8bcd980025e99381000099
+function squareUp(n) {
+  const outputArr = [];
+  for (let i = 0; i < n; i++) {
+    const subArr = [];
+    for (let j = 0; j < n; j++) {
+      (j > i) ? subArr.push(0) : subArr.push(j+1);
+    }
+    outputArr.push(subArr.reverse());
+  }
+  return outputArr.flat();
 }
