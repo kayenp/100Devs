@@ -10174,3 +10174,13 @@ function sortByValueAndIndex(array) {
     .sort((a, b) => a[1] - b[1])
     .map(ele => ele[0])
 }
+
+//#2
+//BASIC: Making Six Toast.
+//https://www.codewars.com/kata/5834fec22fb0ba7d080000e8
+function sixToast(num) {
+  return Math.abs(num - 6);
+}
+
+//#3
+//
