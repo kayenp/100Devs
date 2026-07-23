@@ -10159,3 +10159,18 @@ const solve = (x, y) => x/y
 function elevator(left, right, call){
   return (Math.abs(call - left) < Math.abs(call - right)) ? "left" : "right"
 }
+
+/*
+==========
+2026_07_21
+==========
+*/
+//#1
+//Sort an array by value and index
+//https://www.codewars.com/kata/58e0cb3634a3027180000040
+function sortByValueAndIndex(array) {
+  return array
+    .map((num, ind) => [num, (num * (ind+1))])
+    .sort((a, b) => a[1] - b[1])
+    .map(ele => ele[0])
+}
