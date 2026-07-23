@@ -10248,3 +10248,14 @@ function squareUp(n) {
   }
   return outputArr.flat();
 }
+
+//#2
+//Numbers in strings
+//https://www.codewars.com/kata/59dd2c38f703c4ae5e000014
+function solve(s) {
+  return Number(
+    [...s.matchAll(/\d+/g)]
+      .map(match => match[0])
+      .reduce((acc, cV) => Number(acc) > Number(cV) ? acc : cV)
+  );
+};
