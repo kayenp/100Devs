@@ -10183,4 +10183,16 @@ function sixToast(num) {
 }
 
 //#3
-//
+//Draw stairs
+//https://www.codewars.com/kata/5b4e779c578c6a898e0005c5
+function drawStairs(n) {
+  let stairs = "";
+  for (let i = 0; i < n; i++) {
+    if (i === n-1) {
+      stairs += "I";
+    } else {
+      stairs += "I\n" + " ".repeat(i+1);
+    }
+  }
+  return stairs;
+}
