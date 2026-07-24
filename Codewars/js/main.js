@@ -10277,3 +10277,16 @@ function validateWord(s) {
   }
   return Object.values(charCount).every((count, ind, arr) => count === arr[0]);
 }
+
+//#4
+//They say that only the name is long enough to attract attention. They also said that only a simple Kata will have someone to solve it. This is a sadly story #1: Are they opposite?
+//https://www.codewars.com/kata/574b1916a3ebd6e4fa0012e7
+function isOpposite(s1, s2){
+  if (!s1 || !s2 || (s1.length !== s2.length)) {
+    return false;
+  };
+  return s1.split('')
+  .every((char, ind, arr) => (char !== s2[ind]) 
+    && (char.toLowerCase() === s2[ind].toLowerCase())
+  );
+}
