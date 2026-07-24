@@ -10290,3 +10290,15 @@ function isOpposite(s1, s2){
     && (char.toLowerCase() === s2[ind].toLowerCase())
   );
 }
+
+//#5
+//Pirates!! Are the Cannons ready!??
+//https://www.codewars.com/kata/5748a883eb737cab000022a6
+const cannonsReady = (gunners) => {
+  for (let gunner in gunners) {
+    if (gunners[gunner] === "nay") {
+      return "Shiver me timbers!";
+    }
+  }
+  return "Fire!";
+}
