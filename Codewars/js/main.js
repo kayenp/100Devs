@@ -10333,3 +10333,14 @@ function NameMe(first, last) {
     this.lastName = last;
     this.name = this.firstName + ' ' + this.lastName;
 }
+
+//#3
+//Power
+//https://www.codewars.com/kata/562926c855ca9fdc4800005b
+function numberToPower(number, power){
+  let output = 0;
+  for (let i = 1; i <= power; i++) {
+    (i === 1) ? output = number : output = output * number;
+  }
+  return (power === 0) ? 1 : output;
+}
