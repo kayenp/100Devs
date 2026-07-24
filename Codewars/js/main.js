@@ -10259,3 +10259,21 @@ function solve(s) {
       .reduce((acc, cV) => Number(acc) > Number(cV) ? acc : cV)
   );
 };
+
+//#3
+//Character Counter
+//https://www.codewars.com/kata/56786a687e9a88d1cf00005d
+function validateWord(s) {
+  let charCount = {};
+  let sLower = s.toLowerCase();
+  for (let char of sLower) {
+    if (/\w|[:!]/i.test(char)) {
+      if (!charCount[char]) {
+        charCount[char] = 1;
+      } else {
+        charCount[char]++;
+      }
+    }
+  }
+  return Object.values(charCount).every((count, ind, arr) => count === arr[0]);
+}
