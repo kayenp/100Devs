@@ -10301,4 +10301,26 @@ const cannonsReady = (gunners) => {
     }
   }
   return "Fire!";
+
+}
+
+/*
+==========
+2026_07_24
+==========
+*/
+//#1
+//From A to Z
+//https://www.codewars.com/kata/6512b3775bf8500baea77663
+function gimmeTheLetters(sp) {
+  const strMap = "abcdefghijklmnopqrstuvwxyz";
+  let output = '';
+  for (let i = strMap.indexOf(sp[0].charAt(0).toLowerCase()); i <= strMap.indexOf(sp[2].charAt(0).toLowerCase()); i++) {
+    output += strMap[i];
+  };
+  if (output[0] === sp[0]) {
+    return output;
+  } else {
+    return output.toUpperCase();
+  }
 }
