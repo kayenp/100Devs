@@ -10360,6 +10360,19 @@ function myFirstKata(a, b) {
 //https://www.codewars.com/kata/521cd52e790405a74800032c
 function wrap(value) {
   return {
-    value 
+    value,
   };
+}
+
+/*
+==========
+2026_07_25
+==========
+*/
+//#1
+//Is it a number?
+//https://www.codewars.com/kata/57126304cdbf63c6770012bd
+function isDigit(s) {
+  const sCopy = s.trim();
+  return (!Number.isNaN(Number(sCopy)) && sCopy !== "");
 }
