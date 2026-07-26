@@ -10388,8 +10388,8 @@ function isToday(date) {
 }
 
 //#3
-//
-//
+//Fuel Calculator: Total Cost
+//https://www.codewars.com/kata/57b58827d2a31c57720012e8
 function fuelPrice(litres, pricePerLitre) { 
   const discount = (litres >= 10) ? .25 : (Math.floor(litres/2) * .05)
   const total = litres * (pricePerLitre - discount);
