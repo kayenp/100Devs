@@ -10395,3 +10395,33 @@ function fuelPrice(litres, pricePerLitre) {
   const total = litres * (pricePerLitre - discount);
   return Number(Math.round(total + 'e2') + 'e-2');
 }
+
+/*
+==========
+2026_07_26
+==========
+*/
+//#1
+//Create Phone Number
+//https://www.codewars.com/kata/525f50e3b73515a6db000b83
+function createPhoneNumber(numbers){
+  return ("(" + numbers.slice(0,3).join("") + ")") + " " + (numbers.slice(3,6).join("") + "-" + numbers.slice(6).join(""));
+}
+
+//#2
+//Take a Ten Minutes Walk
+//https://www.codewars.com/kata/54da539698b8a2ad76000228
+function isValidWalk(walk) {
+  let n = 0, 
+      s = 0, 
+      e = 0, 
+      w = 0;
+  
+  if (walk.length === 10) {
+    walk.forEach(dir => (dir === "n") ? n++ 
+                : (dir === "s") ? s++
+                : (dir === "e") ? e++ : w++);
+    return (n === s && e === w)
+  }
+  return false;
+}
