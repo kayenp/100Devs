@@ -10435,3 +10435,10 @@ function spoonerize(words) {
   wordArr[1][0] = words[0];
   return wordArr.map(char => char.join("")).join(" ");
 }
+
+//#4
+//Covfefe
+//https://www.codewars.com/kata/592fd8f752ee71ac7e00008a
+function covfefe(str){
+  return str.includes("coverage") ? str.replaceAll("coverage", "covfefe") : str + " covfefe";
+}
