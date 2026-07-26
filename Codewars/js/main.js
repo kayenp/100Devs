@@ -10376,3 +10376,13 @@ function isDigit(s) {
   const sCopy = s.trim();
   return (!Number.isNaN(Number(sCopy)) && sCopy !== "");
 }
+
+//#2
+//Is the date today
+//https://www.codewars.com/kata/563c13853b07a8f17c000022
+function isToday(date) {
+  const currDate = new Date();
+  return (date.getDate() === currDate.getDate() 
+          && date.getYear() === currDate.getYear() 
+          && date.getMonth() === currDate.getMonth());
+}
