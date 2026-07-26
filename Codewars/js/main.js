@@ -10425,3 +10425,13 @@ function isValidWalk(walk) {
   }
   return false;
 }
+
+//#3
+//Spoonerize Me
+//https://www.codewars.com/kata/56b8903933dbe5831e000c76
+function spoonerize(words) {
+  const wordArr = words.split(" ").map(word => word.split(""));
+  wordArr[0][0] = wordArr[1][0];
+  wordArr[1][0] = words[0];
+  return wordArr.map(char => char.join("")).join(" ");
+}
