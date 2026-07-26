@@ -10386,3 +10386,12 @@ function isToday(date) {
           && date.getYear() === currDate.getYear() 
           && date.getMonth() === currDate.getMonth());
 }
+
+//#3
+//
+//
+function fuelPrice(litres, pricePerLitre) { 
+  const discount = (litres >= 10) ? .25 : (Math.floor(litres/2) * .05)
+  const total = litres * (pricePerLitre - discount);
+  return Number(Math.round(total + 'e2') + 'e-2');
+}
