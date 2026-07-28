@@ -10531,3 +10531,12 @@ function tribonacci(signature,n){
 function findUniq(arr) {
   return arr.find(val => arr.indexOf(val) === arr.lastIndexOf(val));
 }
+
+//#3
+//Ghostbusters (whitespace removal)
+//https://www.codewars.com/kata/5668e3800636a6cd6a000018
+function ghostBusters(building) {
+  const regex = /\s/g;
+  return (regex.test(building)) ? building.replaceAll(regex, () => '') : "You just wanted my autograph didn't you?"
+}
+
