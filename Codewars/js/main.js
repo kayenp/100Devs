@@ -10478,3 +10478,12 @@ Object.freeze(MrFreeze);
 function find(a, e) {
   return (a.indexOf(e) === -1) ? "Not found" : a.indexOf(e);
 }
+
+//#4
+//Simple Fun #261: Whose Move
+//https://www.codewars.com/kata/59126992f9f87fd31600009b
+function whoseMove(lastPlayer, win) {
+  return (lastPlayer === "white" && win) ? "white"
+    : (lastPlayer === "white") ? "black"
+    : (win) ? "black" : "white";
+};
