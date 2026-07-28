@@ -10551,3 +10551,16 @@ function infected(s) {
   const infectedArr = matchedArr.filter(region => region.includes("1"));
   return (infectedArr.join('').length/matchedArr.join('').length) * 100;
 }
+
+//#5
+//Replace every nth
+//https://www.codewars.com/kata/57fcaed83206fb15fd00027a
+function replaceNth(text, n, oldValue, newValue) {
+  let instance = 0;
+  return text.split("")
+    .map(char => (char === oldValue) 
+         ? (instance++, (instance === n 
+                         ? (instance = 0, newValue) : char)) 
+         : char)
+    .join("");
+}
