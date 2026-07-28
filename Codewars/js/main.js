@@ -10540,3 +10540,14 @@ function ghostBusters(building) {
   return (regex.test(building)) ? building.replaceAll(regex, () => '') : "You just wanted my autograph didn't you?"
 }
 
+//#4
+//Pandemia
+//https://www.codewars.com/kata/5e2596a9ad937f002e510435
+function infected(s) {
+  const matchedArr = s.match(/\d+/g);
+  if (!matchedArr) {
+    return 0;
+  }
+  const infectedArr = matchedArr.filter(region => region.includes("1"));
+  return (infectedArr.join('').length/matchedArr.join('').length) * 100;
+}
