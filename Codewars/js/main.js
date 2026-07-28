@@ -10454,3 +10454,15 @@ if (candidate.minSalary === undefined || job.maxSalary === undefined) {
   }
   return false;
 }
+
+/*
+==========
+2026_07_27
+==========
+*/
+//#1
+//Be Concise II - I Need Squares
+//https://www.codewars.com/kata/56f4f7cfaf5b1f8cd100060e/train/javascript
+function squaresOnly(array) {
+  return array.filter(ele => Number.isInteger(Math.sqrt(ele)));
+}
