@@ -10506,3 +10506,21 @@ Counter.prototype.getValue = function() {
 Counter.prototype.reset = function() {
   this.value = 0;
 };
+
+/*
+==========
+2026_07_28
+==========
+*/
+//#1
+//Tribonacci Sequence
+//https://www.codewars.com/kata/556deca17c58da83c00002db
+function tribonacci(signature,n){
+  if (signature.length >= n) {
+    return signature.slice(0,n);
+  } else {
+  signature.push(signature.slice(-3).reduce((acc, cV) => acc + cV, 0));
+  tribonacci(signature, n);
+  };
+  return signature;
+}
