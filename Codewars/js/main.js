@@ -10472,4 +10472,9 @@ function squaresOnly(array) {
 //https://www.codewars.com/kata/514a3996d22ce03198000003
 Object.freeze(MrFreeze);
 
-//#
+//#3
+//Be Concise IV - Index of an element in an array
+//https://www.codewars.com/kata/5703c093022cd1aae90012c9/solutions/javascript
+function find(a, e) {
+  return (a.indexOf(e) === -1) ? "Not found" : a.indexOf(e);
+}
