@@ -10524,3 +10524,10 @@ function tribonacci(signature,n){
   };
   return signature;
 }
+
+//#2
+//Find the unique number
+//https://www.codewars.com/kata/585d7d5adb20cf33cb000235
+function findUniq(arr) {
+  return arr.find(val => arr.indexOf(val) === arr.lastIndexOf(val));
+}
