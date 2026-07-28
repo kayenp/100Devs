@@ -10466,3 +10466,10 @@ if (candidate.minSalary === undefined || job.maxSalary === undefined) {
 function squaresOnly(array) {
   return array.filter(ele => Number.isInteger(Math.sqrt(ele)));
 }
+
+//#2
+//Mr. Freeze
+//https://www.codewars.com/kata/514a3996d22ce03198000003
+Object.freeze(MrFreeze);
+
+//#
