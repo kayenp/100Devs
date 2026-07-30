@@ -10628,3 +10628,13 @@ class Person {
     return `Welcome to Planet Earth ${raceName}`
   };
 };
+
+//#5
+//Training JS #32: methods of Math---round() ceil() and floor()
+//https://www.codewars.com/kata/5732d3c9791aafb0e4001236
+function roundIt(n){
+  const nArr = n.toString().split(".");
+  
+  return (nArr[0].length < nArr[1].length) ? Math.ceil(n)
+    : (nArr[0].length > nArr[1].length) ? Math.floor(n) : Math.round(n);
+} 
