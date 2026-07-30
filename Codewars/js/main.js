@@ -10576,3 +10576,18 @@ function replaceNth(text, n, oldValue, newValue) {
 function periodIsLate(last, today, cycleLength) {
   return ((today - last)/86400000 > cycleLength); 
 }
+
+//#2
+//Shifty Closures
+//https://www.codewars.com/kata/514aa0dc21607ae236000017
+let name;
+
+const greetAbe = () => {
+  name = 'Abe'
+  return 'Hello, ' + name + '!';
+}
+
+const greetBen = () => {
+  name = 'Ben';
+  return 'Hello, ' + name + '!'
+}
