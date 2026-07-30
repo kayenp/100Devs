@@ -10564,3 +10564,15 @@ function replaceNth(text, n, oldValue, newValue) {
          : char)
     .join("");
 }
+
+/*
+==========
+2026_07_29
+==========
+*/
+//#1
+//Is your period late?
+//https://www.codewars.com/kata/578a8a01e9fd1549e50001f1
+function periodIsLate(last, today, cycleLength) {
+  return ((today - last)/86400000 > cycleLength); 
+}
