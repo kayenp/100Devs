@@ -10638,3 +10638,18 @@ function roundIt(n){
   return (nArr[0].length < nArr[1].length) ? Math.ceil(n)
     : (nArr[0].length > nArr[1].length) ? Math.floor(n) : Math.round(n);
 } 
+
+/*
+==========
+2026_07_30
+==========
+*/
+//#1
+//Duplicate Encoder
+//https://www.codewars.com/kata/54b42f9314d9229fd6000d9c
+function duplicateEncode(word){
+  const charCount = {};
+  const wordArr = word.toLowerCase().split('');
+  wordArr.forEach(char => (charCount[char]) ? charCount[char] += 1 : charCount[char] = 1);
+  return wordArr.map(char => (charCount[char] > 1) ? ")" : "(").join("");
+}
