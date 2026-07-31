@@ -10681,3 +10681,13 @@ function removeDuplicateWords (s) {
   return [...new Set(s.split(" "))].join(" ");
 }
 
+//#4
+//Digits explosion
+//https://www.codewars.com/kata/585b1fafe08bae9988000314
+function explode(s) {
+  let outputStr = "";
+  for (let i = 0; i < s.length; i++) {
+    outputStr += s[i].repeat(Number(s[i]));
+  };
+  return outputStr;
+}
