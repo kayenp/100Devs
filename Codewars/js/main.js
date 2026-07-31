@@ -10653,3 +10653,23 @@ function duplicateEncode(word){
   wordArr.forEach(char => (charCount[char]) ? charCount[char] += 1 : charCount[char] = 1);
   return wordArr.map(char => (charCount[char] > 1) ? ")" : "(").join("");
 }
+
+//#2
+//Equal Sides Of An Array
+//https://www.codewars.com/kata/5679aa472b8f57fb8c000047
+function findEvenIndex(arr) {
+  for (let i = 0; i < arr.length; i++) {
+    if (i === 0) {
+      if (arr.slice(1).reduce((acc, cV) => acc + cV, 0) === 0) {
+        return i;
+      }
+    } else if (i === arr.length-1) {
+      if (arr.slice(0, i).reduce((acc, cV) => acc + cV, 0) === 0) {
+        return i;
+      }
+    } else if (arr.slice(0, i).reduce((acc, cV) => acc + cV, 0) === arr.slice(i+1).reduce((acc, cV) => acc + cV, 0)) {
+      return i;
+    }
+  }
+  return -1;
+}
