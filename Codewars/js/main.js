@@ -10673,3 +10673,11 @@ function findEvenIndex(arr) {
   }
   return -1;
 }
+
+//#3
+//Remove duplicate words
+//https://www.codewars.com/kata/5b39e3772ae7545f650000fc
+function removeDuplicateWords (s) {
+  return [...new Set(s.split(" "))].join(" ");
+}
+
