@@ -10691,3 +10691,11 @@ function explode(s) {
   };
   return outputStr;
 }
+
+//#5
+//Nickname Generator
+//https://www.codewars.com/kata/593b1909e68ff627c9000186
+function nicknameGenerator(name){
+  return (name.length < 4) ? "Error: Name too short" 
+  : ("aeiou".includes(name.slice(2,3)[0])) ? name.slice(0,4) : name.slice(0,3);
+}
