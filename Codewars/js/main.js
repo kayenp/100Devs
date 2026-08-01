@@ -10788,3 +10788,10 @@ function computerToPhone(numbers) {
       };
     });
 }
+
+//#4
+//String to integer conversion
+//https://www.codewars.com/kata/54fdadc8762e2e51e400032c
+function myParseInt(str) {
+  return !/\D/g.test(str.trim()) ? Number(str) : "NaN";
+}
