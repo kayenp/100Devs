@@ -10699,3 +10699,24 @@ function nicknameGenerator(name){
   return (name.length < 4) ? "Error: Name too short" 
   : ("aeiou".includes(name.slice(2,3)[0])) ? name.slice(0,4) : name.slice(0,3);
 }
+
+/*
+==========
+2026_07_31
+==========
+*/
+//#1
+//Smallest unused ID
+//https://www.codewars.com/kata/55eea63119278d571d00006a
+function nextId(ids){
+  const idsSorted = ids.sort((a, b) => a - b);
+  for (let i = 0; i < ids.length-1; i++) {
+    if (idsSorted[0] !== 0) {
+      return 0;
+    }
+    if (idsSorted[i]+1 !== idsSorted[i+1] && idsSorted[i] !== idsSorted[i+1]) {
+      return idsSorted[i]+1;
+    }
+  }
+  return idsSorted[idsSorted.length-1]+1;
+}
