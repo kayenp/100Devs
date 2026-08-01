@@ -10764,3 +10764,10 @@ function high(x){
   xArr.forEach(word => valMap.push([word, word.split("").map(char => (char.charCodeAt(0) - 96)).reduce((acc, cV) => acc + cV, 0)]));
   return valMap.sort((a, b) => b[1] - a[1])[0][0];
 }
+
+//#2
+//Email Address Obfuscator
+//https://www.codewars.com/kata/562d8d4c434582007300004e
+obfuscate = function(email) {
+  return email.replace("@", " [at] ").replaceAll(".", " [dot] ");
+}
