@@ -10795,3 +10795,10 @@ function computerToPhone(numbers) {
 function myParseInt(str) {
   return !/\D/g.test(str.trim()) ? Number(str) : "NaN";
 }
+
+//#5
+//Failed Filter - Bug Fixing #3
+//https://www.codewars.com/kata/55c606e6babfc5b2c500007c
+let filterNumbers = function(str) {
+  return str.split('').filter(c => !Number.parseInt(c) && c !== "0").join('');
+}
