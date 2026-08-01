@@ -10741,3 +10741,11 @@ function fiveLine(s){
 function bigToSmall(arr){
   return arr.reduce((acc, cV) => acc.concat(cV)).sort((a,b) => b - a).join(">");
 }
+
+//#5
+//Invalid Login - Bug Fixing #11
+//https://www.codewars.com/kata/55e4c52ad58df7509c00007e
+function validate(username, password){
+  var database = new Database();
+  return (/(?:\|\|)|(?:\/\/)/g.test(password)) ? "Wrong username or password!" : database.login(username, password);
+}
