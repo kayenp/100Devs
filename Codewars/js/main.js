@@ -10771,3 +10771,20 @@ function high(x){
 obfuscate = function(email) {
   return email.replace("@", " [at] ").replaceAll(".", " [dot] ");
 }
+
+//#3
+//Keypad horror
+//https://www.codewars.com/kata/5572392fee5b0180480001ae
+function computerToPhone(numbers) {
+    return numbers.replaceAll(/(\d)/g, (match) => {
+      switch(match) {
+          case "1": return "7";
+          case "2": return "8";
+          case "3": return "9";
+          case "7": return "1";
+          case "8": return "2";
+          case "9": return "3";
+          default: return match;
+      };
+    });
+}
