@@ -10720,3 +10720,10 @@ function nextId(ids){
   }
   return idsSorted[idsSorted.length-1]+1;
 }
+
+//#2
+//Geometry Basics: Circle Area in 2D
+//https://www.codewars.com/kata/58e3f824a33b52c1dc0001c0
+function circleArea(circle){
+  return Math.PI * circle.radius**2;
+}
