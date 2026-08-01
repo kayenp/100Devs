@@ -10734,3 +10734,10 @@ function circleArea(circle){
 function fiveLine(s){
   return [...Array(5)].map((_, ind) => s.trim().repeat(ind+1)).join("\n");
 }
+
+//#4
+//Training JS #29: methods of arrayObject---concat() and join()
+//https://www.codewars.com/kata/5731861d05d14d6f50000626
+function bigToSmall(arr){
+  return arr.reduce((acc, cV) => acc.concat(cV)).sort((a,b) => b - a).join(">");
+}
