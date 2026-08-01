@@ -10727,3 +10727,10 @@ function nextId(ids){
 function circleArea(circle){
   return Math.PI * circle.radius**2;
 }
+
+//#3
+//Training JS #21: Methods of String object--trim() and the string template
+//https://www.codewars.com/kata/5729b103dd8bac11a900119e
+function fiveLine(s){
+  return [...Array(5)].map((_, ind) => s.trim().repeat(ind+1)).join("\n");
+}
