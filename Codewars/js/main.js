@@ -10749,3 +10749,18 @@ function validate(username, password){
   var database = new Database();
   return (/(?:\|\|)|(?:\/\/)/g.test(password)) ? "Wrong username or password!" : database.login(username, password);
 }
+
+/*
+==========
+2026_08_01
+==========
+*/
+//#1
+//Highest Scoring Word
+//https://www.codewars.com/kata/57eb8fcdf670e99d9b000272
+function high(x){
+  const valMap = [];
+  const xArr = x.split(" ");
+  xArr.forEach(word => valMap.push([word, word.split("").map(char => (char.charCodeAt(0) - 96)).reduce((acc, cV) => acc + cV, 0)]));
+  return valMap.sort((a, b) => b[1] - a[1])[0][0];
+}
