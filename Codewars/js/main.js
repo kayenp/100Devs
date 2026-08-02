@@ -10841,3 +10841,20 @@ var sing = function () {
   outputArr.push('Go to the store and buy some more, 99 bottles of beer on the wall.');
   return outputArr;
 };
+
+//#4
+//Hello World - Without Strings
+//https://www.codewars.com/kata/584c7b1e2cb5e1a727000047
+const helloWorld = () => {
+  let output; 
+  const arr = [72, 101, 108, 108, 111, 44,  32,  87, 111, 114, 108, 100, 33];
+  
+  for (let i = 0; i < arr.length; i++) {
+    if (i === 0) {
+      output = String.fromCharCode(arr[i]); 
+    } else {
+      output += String.fromCharCode(arr[i]);
+    };
+  };
+  return output;
+};
