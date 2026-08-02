@@ -10802,3 +10802,21 @@ function myParseInt(str) {
 let filterNumbers = function(str) {
   return str.split('').filter(c => !Number.parseInt(c) && c !== "0").join('');
 }
+
+/*
+==========
+2026_08_02
+==========
+*/
+//#1
+//Two Sum
+//https://www.codewars.com/kata/52c31f8e6605bcc646000082
+function twoSum(numbers, target) {
+  for (let i = 0; i < numbers.length-1; i++) {
+    for (let j = i+1; j < numbers.length; j++) {
+      if (numbers[i] + numbers[j] === target) {
+        return [i, j]
+      };
+    }
+  }
+}
