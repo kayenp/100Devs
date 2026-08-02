@@ -10820,3 +10820,10 @@ function twoSum(numbers, target) {
     }
   }
 }
+
+//#2
+//Which are in?
+//https://www.codewars.com/kata/550554fd08b86f84fe000a58
+function inArray(array1,array2){
+  return array1.filter(subset => array2.find(superset => superset.includes(subset))).sort();
+}
