@@ -10827,3 +10827,17 @@ function twoSum(numbers, target) {
 function inArray(array1,array2){
   return array1.filter(subset => array2.find(superset => superset.includes(subset))).sort();
 }
+
+//#3
+//99 Bottles of Beer
+//https://www.codewars.com/kata/52a723508a4d96c6c90005ba
+var sing = function () {
+  const outputArr = [];
+  for (let i = 99; i > 0; i-- ) {
+    outputArr.push(`${(i)} ${(i > 1 || i === 0) ? "bottles" : "bottle"} of beer on the wall, ${i} ${(i > 1 || i === 0) ? "bottles" : "bottle"} of beer.`);
+    outputArr.push(`Take one down and pass it around, ${((i-1 > 0) ? i-1 : "no more")} ${(i-1 > 1 || i-1 === 0) ? "bottles" : "bottle"} of beer on the wall.`);
+  }
+  outputArr.push(`No more bottles of beer on the wall, no more bottles of beer.`);
+  outputArr.push('Go to the store and buy some more, 99 bottles of beer on the wall.');
+  return outputArr;
+};
