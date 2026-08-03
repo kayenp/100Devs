@@ -10858,3 +10858,19 @@ const helloWorld = () => {
   };
   return output;
 };
+
+/*
+==========
+2026_08_03
+==========
+*/
+//#1
+//Histogram - H1
+//https://www.codewars.com/kata/57d532d2164a67cded0001c7
+function histogram(results) {
+  const output = [];  
+  for (let i = results.length; i > 0; i--) {
+    output.push(`${i}|${'#'.repeat(results[i-1])}${results[i-1] > 0 ? ' ' : ''}${results[i-1] || ''}\n`)
+  }
+  return output.join("");
+}
