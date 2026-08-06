@@ -10890,3 +10890,19 @@ function dataReverse(data) {
   }; 
   return output.reverse().flat();
 }
+
+//#2
+//Encrypt this!
+//https://www.codewars.com/kata/5848565e273af816fb000449
+var encryptThis = function(text) {
+  return text
+    .slice()
+    .split(" ")
+    .map(word => word
+         .split("")
+         .map((ele, ind, arr) => (ind === 0) ? ele.charCodeAt(0)
+                                                               : (ind === 1) ? arr[arr.length-1]
+                                                               : (ind === arr.length-1) ? arr[1] : ele)
+         .join(""))
+    .join(" ");
+}
